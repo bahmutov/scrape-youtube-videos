@@ -1,0 +1,836 @@
+[
+  {
+    "videoId": "vsH2SESJuik",
+    "title": "Wait For jQuery slideDown Animation To Finish",
+    "description": "In this video, I show how to wait for the JavaScript animation to finish before continuing with the test. The element slides down, using the style attribute to change its position. We can check if the element is visible and has an empty style attribute using Cypress assertions, before the test continues. Find the full source code in the application https://github.com/bahmutov/chat.io",
+    "publishedAt": "2021-09-23T22:25:17Z"
+  },
+  {
+    "videoId": "f2n6cZVMS34",
+    "title": "Detect Document Reload",
+    "description": "Here is a nice little trick that is useful when submitting the forms, or when the application reloads. Make the Cypress test wait until the reload happens by checking the document reference.\n\ncy.document().then(function (doc) {\n  cy.contains('button', 'create').click()\n  cy.document().should(function (d) {\n    assert(d !== doc, 'document changed')\n  })\n})\n\nSee more tricks like this in https://glebbahmutov.com/blog/cypress-tips-and-tricks/",
+    "publishedAt": "2021-09-22T16:25:02Z"
+  },
+  {
+    "videoId": "DlGQEQ2q35w",
+    "title": "Introduction to cy.session command",
+    "description": "In this video, I replace beforeEach hook with beforeEach + cy.session callback that creates todos and stores them in the local storage. Each test after that starts almost instantly because the session restores the local storage, the application reads the todos, and is ready to continue testing. Find the command documentation at https://on.cypress.io/session and the source code from my example in https://github.com/bahmutov/cyclope",
+    "publishedAt": "2021-09-21T15:40:30Z"
+  },
+  {
+    "videoId": "mmKOSQxQwEU",
+    "title": "Test Dragging Items",
+    "description": "In this video, we will drag an item by dispatching custom events to the right elements. Then we will confirm the correct updated order by checking the localStorage where the application writes the updated list. Find the source code in https://github.com/bahmutov/cyclope",
+    "publishedAt": "2021-09-21T13:12:08Z"
+  },
+  {
+    "videoId": "KZqYqsjgKco",
+    "title": "Use LocalStorage From Cypress Test To Set Initial Data",
+    "description": "We can set the initial data to be read by the application by using localStorage from the Cypress test. We can then verify the application shows that data correctly. If we interact with the page, we can confirm the localStorage is updated. Find the full source code in https://github.com/bahmutov/cyclope",
+    "publishedAt": "2021-09-21T12:52:34Z"
+  },
+  {
+    "videoId": "yt5eVUOxf_0",
+    "title": "Cyclope: Save A Full Page With Styles If A Cypress Test Fails",
+    "description": "One can save the full page DOM snapshot using the utility https://github.com/bahmutov/cyclope It uses Cypress DOM utility to extract static HTML with CSS and other resources but without any JavaScript. You can save such pages automatically if a test fails and store them on CI as test artifacts. Then you can inspect the page to understand its structure - and this is a nice addition to the Cypress images and videos.",
+    "publishedAt": "2021-09-20T22:25:01Z"
+  },
+  {
+    "videoId": "sG_ulvTKJzw",
+    "title": "Conditionally Clear Items In A Cypress Test",
+    "description": "In this example, we clear the items in the application by clicking the delete button on each item. But we have to be careful about writing this test to avoid the default assertions built inside Cypress commands like cy.get. \n\ncy.visit('/').wait(100)\n\ncy.get('.todo')\n  .should('have.length.gte', 0)\n  .then(function ($todos) {\n    if (!$todos.length) {\n      cy.log('nothing to delete')\n      return\n    }\n    cy.wrap($todos)\n      .find('.destroy')\n      .click({ force: true, multiple: true })\n  })\n\n// confirm there are no items\ncy.get('.todo', { timeout: 100 }).should('have.length', 0)\n\nSee the full source code in https://github.com/bahmutov/cypress-workshop-basics",
+    "publishedAt": "2021-09-20T12:59:02Z"
+  },
+  {
+    "videoId": "raWgcTzPAww",
+    "title": "Use Cypress Aliases Set Inside The beforeEach and before Hooks",
+    "description": "We can conveniently avoid the pyramid of Doom of .then callbacks by using \"beforeEach\" hook to fetch our data. We can also fetch or prepare the data once using the \"before\" hook, but then we need to recreate the aliases from that data value using \"beforeEach\" hooks. See more details in https://github.com/bahmutov/cypress-workshop-basics",
+    "publishedAt": "2021-09-18T17:18:00Z"
+  },
+  {
+    "videoId": "-aptS3yvqcc",
+    "title": "When To Use Cypress .Then Callback To Use The Value",
+    "description": "Often, people ask when they should use .then callback in Cypress tests. This video answers it: when you are using a value from the application page, or from the application server, or from another Cypress command, you must use .then to have this value.\n\nFind more details in https://github.com/bahmutov/cypress-workshop-basics and read https://docs.cypress.io/guides/core-concepts/introduction-to-Cypress#Commands-Are-Asynchronous Also watch the video \"Why cy.log sometimes prints nothing\" https://www.youtube.com/watch?v=uGWWoq0ECY8",
+    "publishedAt": "2021-09-18T17:16:15Z"
+  },
+  {
+    "videoId": "XadOqS0YNJE",
+    "title": "Directly Spying on GraphQL Calls Made By The Application",
+    "description": "In this video, I show how to directly spy on the GraphQL client method calls like \"client.mutate\" made by the application. Find the source in the repo https://github.com/bahmutov/todo-graphql-example",
+    "publishedAt": "2021-09-17T13:47:07Z"
+  },
+  {
+    "videoId": "CBQdo-22jzQ",
+    "title": "Call API Using cy.request To Create Data For The Test",
+    "description": "In this example (coming from https://github.com/bahmutov/cypress-workshop-basics) I am using the cy.request command and Lodash methods to create items on the server before visiting the page. This creates the data much faster than using the page itself to post new Todo items.",
+    "publishedAt": "2021-09-17T13:20:43Z"
+  },
+  {
+    "videoId": "l7E7K7x7V8g",
+    "title": "Delete All Items Using GraphQL Client As Part Of Cypress Test",
+    "description": "In this video, I am fetching all items using the Apollo GraphQL client. Then I call a mutation operation to delete each item one by one. Find the full source code in https://github.com/bahmutov/todo-graphql-example",
+    "publishedAt": "2021-09-16T13:38:51Z"
+  },
+  {
+    "videoId": "IxgWmzy26gM",
+    "title": "Stub The Initial Data Load Using A Fixture",
+    "description": "When the application fetches all todos at the start, we can use a fixture to respond with the same list of items. This video is a good example of stubbing a GraphQL network call using cy.intercept and returning a fixture. We then check the number of items, including filtering the elements using the cy.not command and jQuery \":not\" selector. Find the full code in https://github.com/bahmutov/todo-graphql-example",
+    "publishedAt": "2021-09-15T19:21:49Z"
+  },
+  {
+    "videoId": "6ykTS40_scM",
+    "title": "Use Application GraphQL Client To Make Calls From The Cypress Test",
+    "description": "In this video, instead of cy.request, we use the application's GraphQL client helper to make calls from the Cypress test. Find the full source code in https://github.com/bahmutov/todo-graphql-example",
+    "publishedAt": "2021-09-15T18:32:58Z"
+  },
+  {
+    "videoId": "ubnJ9kWD1yQ",
+    "title": "Add A New Item By Making GraphQL Call Using cy.request Command",
+    "description": "In this video, I am making a GraphQL call from the Cypress test using the cy.request command. Then I verify that the new item has been added. Find the full spec in the repo https://github.com/bahmutov/todo-graphql-example",
+    "publishedAt": "2021-09-15T17:45:55Z"
+  },
+  {
+    "videoId": "AcU5mkedchM",
+    "title": "Set GraphQL Operation Name As Custom Header And Use It In cy.intercept",
+    "description": "This video shows how to set the graphql operation name as a custom request header, and then use cy.intercept command to match the requests using this header. Find the full code in https://github.com/bahmutov/todo-graphql-example",
+    "publishedAt": "2021-09-15T14:55:50Z"
+  },
+  {
+    "videoId": "jN1vsGGXAjw",
+    "title": "Set GraphQL Network Intercept Alias",
+    "description": "We can set an alias using cy.intercept by inspecting the GraphQL request body object. For example, we could use the operation name property as an alias. Then our test can wait for that specific network call and confirm the request and response data. Find the full source code in the https://github.com/bahmutov/todo-graphql-example repo",
+    "publishedAt": "2021-09-15T14:40:02Z"
+  },
+  {
+    "videoId": "QA_moq_Yh5M",
+    "title": "Toggle Todo When Using GraphQL Calls",
+    "description": "This example Cypress.io test from https://github.com/bahmutov/todo-graphql-example shows how to spy on the GraphQL query and then confirm the page classes are set correctly.",
+    "publishedAt": "2021-09-15T13:15:49Z"
+  },
+  {
+    "videoId": "HGju0gZdZ6o",
+    "title": "Overlapping Elements",
+    "description": "In this video, I show how to get several DOM elements and then check if they are overlapping on the page. We are going to use the element's getBoundingClientRect method to get the rectangles, and then a small utility function to check if a pair of elements are overlapping. You can find the full source code at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2021-09-13T14:01:59Z"
+  },
+  {
+    "videoId": "RAFdYqRO2vI",
+    "title": "Mock ES6 Module From Cypress E2E Test",
+    "description": "In this video, I show how without modifying the application code we can replace a module inside a Webpack dev bundle with a mock value or code. We will replace a named method that generates a Sudoku board, and then we will replace a Timer component with a different React component during the test. For more, see https://github.com/bahmutov/mock-in-bundle utility (this is still alpha-alpha-alpha work) and the demo repo https://github.com/bahmutov/sudoku-mock-module\n\nFollow my blog https://glebbahmutov.com/blog/ where I plan to describe how this utility works in detail.",
+    "publishedAt": "2021-09-03T15:45:03Z"
+  },
+  {
+    "videoId": "qDn-segvIhw",
+    "title": "Cypress DOM Snapshot To Static HTML File",
+    "description": "In this video, I show how to take DOM snapshots you can create using Cypress utility code, clean them up, and save them as a static HTML file.\nSee video https://youtu.be/pKi6nUMw6Tc for how the snapshot creation works.",
+    "publishedAt": "2021-08-26T19:15:58Z"
+  },
+  {
+    "videoId": "zRAjO6rccfI",
+    "title": "Spy On Console Method From Component Tests",
+    "description": "When using Cypress Component Testing https://on.cypress.io/component-testing you can stub console methods like console.error - and it is easier than you think. Components run in the same JavaScript context as the spec itself, thus you can directly stub \"console.error\" - it is the same console object in the spec as is in the component!\n\ncy.stub(console, 'error').as('consoleError')\nmount(your component)\ncy.get('@consoleError').should('have.been.calledOnce')",
+    "publishedAt": "2021-08-26T15:36:25Z"
+  },
+  {
+    "videoId": "CMOjrKoBBwc",
+    "title": "How To Avoid Element Detached From DOM Error",
+    "description": "In this video, I go through a Cypress test that gets the dreaded \"element is detached from the DOM\" error. This example is provided in the issue https://github.com/cypress-io/cypress/issues/9032 which is linked from the main issue https://github.com/cypress-io/cypress/issues/7306\n\nI explain why the problem happens and 3 different ways to solve it. The takeaway is to tell the test runner to wait for the application to finish doing whatever it is doing before the test proceeds. \n\nThis particular situation was described in the blog post https://cypress.io/blog/2020/11/17/when-can-the-test-submit-a-form/ and you can find similar bog posts for other situations under the tag https://cypress.io/blog/tag/flake/ For more info on how to minimize flake in your tests, read the Cypress retry-ability guide https://on.cypress.io/retry-ability",
+    "publishedAt": "2021-08-25T21:47:40Z"
+  },
+  {
+    "videoId": "HC0T9aEO6yM",
+    "title": "Test A Downshift.js Dropdown Using Keyboard",
+    "description": "The example comes from https://github.com/bahmutov/cypress-downshift-examples where we test the basic select widget using keyboard events only while checking the selection options.",
+    "publishedAt": "2021-08-25T19:10:48Z"
+  },
+  {
+    "videoId": "0lnOnO84nvY",
+    "title": "Testing A Basic Downshift.js Dropdown Example",
+    "description": "An example from https://github.com/bahmutov/cypress-downshift-examples where I test the basic dropdown created using Downshift.js library https://www.downshift-js.com/",
+    "publishedAt": "2021-08-25T18:31:05Z"
+  },
+  {
+    "videoId": "bbJ2ygOOZ4c",
+    "title": "Confirm The List Of Items Is Sorted By Price",
+    "description": "This video shows how to extract all elements that show the price number, convert them into actual floats, and then check that they are listed in the sorted order from the smallest price to the largest.\n\nYou can find this recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2021-08-25T18:03:55Z"
+  },
+  {
+    "videoId": "RaKbf1c2-9o",
+    "title": "Scrape Reveal.js Slides Using Cypress Test Runner Into Algolia",
+    "description": "In this video, I show the scraper for my slides.com https://slides.com/bahmutov Reveal.js decks. The scraper uses Cypress.io to browse the slides (see video https://www.youtube.com/watch?v=oq2P1wtIZYY explaining how all slides are visited), then transforms the individual headings, paragraphs, and list items into Algolia record to be uploaded. You can read the step-by-step instructions in the blog post \"Scrape Slides\" at https://glebbahmutov.com/blog/scrape-slides/ and find the full source code at https://github.com/bahmutov/scrape-book-quotes Finally, you can search my Cypress-related presentations using the https://cypress.tips/search page.",
+    "publishedAt": "2021-08-24T22:00:16Z"
+  },
+  {
+    "videoId": "oq2P1wtIZYY",
+    "title": "Browse Reveal.js Slides Using Cypress and cypress-recurse",
+    "description": "By using https://github.com/bahmutov/cypress-recurse we can browse vertical and horizontal slides at slides.com (made using Reveal.js). In this video I create a new project, add Cypress and implement the browse test. Find the full source code in https://github.com/bahmutov/browse-slides",
+    "publishedAt": "2021-08-17T19:27:27Z"
+  },
+  {
+    "videoId": "UMtvmVgpZdU",
+    "title": "Upgrading Cypress",
+    "description": "In this video, I show upgrading the Cypress version from 8.2.0 to 8.3.0\n- the update is available button\n- the changelog shows if upgrade is worth it https://on.cypress.io/changelog\n- renovate bot (see my blog post https://glebbahmutov.com/blog/renovate-app/)",
+    "publishedAt": "2021-08-16T20:11:40Z"
+  },
+  {
+    "videoId": "UjGONGE3vws",
+    "title": "Cypress Voice Transcription",
+    "description": "In this video, I set up voice transcription using Cypress and Chrome browser, play the video, and get the transcript when the video finishes. See the full source code in https://github.com/bahmutov/video-example",
+    "publishedAt": "2021-08-14T17:56:39Z"
+  },
+  {
+    "videoId": "w5vZspiCiuQ",
+    "title": "Test And Play Video From Cypress",
+    "description": "From a Cypress test, we can find the video element, check its properties, invoke play, and wait for the video to finish playing. See the full code in https://github.com/bahmutov/video-example\n\nit('plays video', function () {\n  cy.visit('index.html')\n  // https://html.spec.whatwg.org/multipage/media.html#playing-the-media-resource\n  cy.get('video')\n    .should('have.prop', 'paused', true)\n    .and('have.prop', 'ended', false)\n    .then(function ($video) {\n      $video[0].play()\n    })\n  cy.get('video', { timeout: 10000 }).should('have.prop', 'ended', true)\n})",
+    "publishedAt": "2021-08-13T17:18:11Z"
+  },
+  {
+    "videoId": "LV9Hm0cQ_lQ",
+    "title": "Cypress And Promises",
+    "description": "In this video, I explain how to create promises correctly during Cypress tests (because promises are eager), and how to make Cypress test wait for the promise to resolve using https://on.cypress.io/wrap and https://on.cypress.io/then The full code is below\n\nfunction delay(ms) {\n  console.log('delay start')\n  return new Promise(function (resolve) {\n    setTimeout(function () {\n      console.log('delay stop')\n      resolve(42)\n    }, ms)\n  })\n}\n\nit('delays by 2 seconds', function () {\n  cy.visit('/')\n    .then(function () {\n      // create the promise only after the visit\n      // has finished. Promises are eager\n      // so this promise starts running right away\n      // By returning it from the Cypress .then command\n      // you make Cypress wait for the promise to resolve\n      return delay(2000)\n    })\n    // the resolved value of the promise is passed\n    // to the assertion here\n    .should('eq', 42)\n})",
+    "publishedAt": "2021-08-12T18:06:37Z"
+  },
+  {
+    "videoId": "IEtK3QOMHYc",
+    "title": "Cypress.tips Search Page",
+    "description": "From a single page https://cypress.tips/search you can search my Cypress blog posts, my code examples, and even the official Cypress.io documentation.",
+    "publishedAt": "2021-08-12T17:37:33Z"
+  },
+  {
+    "videoId": "GyjCGKzFjWA",
+    "title": "Use Utility as-a To Load Multiple Secrets And Pass To Cypress",
+    "description": "Using NPM module as-a https://github.com/bahmutov/as-a I load multiple environment variables and launch Cypress command. The variables are only available to Cypress process and are gone when it exits. This is a perfect way to use secrets in Cypress tests without exposing them to the outside world.",
+    "publishedAt": "2021-08-11T19:19:25Z"
+  },
+  {
+    "videoId": "33Hq41O0bvU",
+    "title": "Stub Network Calls Made by Next.js App in getServerSideProps Method",
+    "description": "This video shows how to run Next.js server inside Cypress plugin process. We can mock network calls using \"nock\" utility in this process and thus the app returns the expected results, even if the network call happens in the getServerSideProps function. For more details, read https://glebbahmutov.com/blog/mock-network-from-server/",
+    "publishedAt": "2021-08-10T16:12:40Z"
+  },
+  {
+    "videoId": "mIyTBtUmmdE",
+    "title": "Re-run Cypress Tests When Application Files Change",
+    "description": "Using the plugin https://github.com/bahmutov/cypress-watch-and-reload we can watch the application's source files and re-run the tests on file save.",
+    "publishedAt": "2021-08-09T18:38:18Z"
+  },
+  {
+    "videoId": "Axr1Je9KKB8",
+    "title": "How To Use PubSub From Cypress Test To Publish Events To Application",
+    "description": "In this video, I show how to use the same PubSub from the Cypress test as the application uses. The test can deliver events to the application and then confirm the UI is updated correctly. Read the blog post https://glebbahmutov.com/blog/test-pubsub/",
+    "publishedAt": "2021-08-06T17:46:28Z"
+  },
+  {
+    "videoId": "Uo99lvfZLJQ",
+    "title": "Testing DOM Events Sent to ref.current Element By React App",
+    "description": "Cypress can listen to the events dispatched to the native DOM element from the React Application. \nRead the blog post https://glebbahmutov.com/blog/listen-to-events/ Find the source code in https://github.com/bahmutov/listen-to-custom-event\n\nThe relevant app code\nconsole.log('sending DOM event loading to the ref element')\n\nconst myEvent = new CustomEvent('clicked', {\n  detail: {\n    message: 'Button clicked',\n  },\n})\nref.current.dispatchEvent(myEvent)\n\nThe test code\ncy.visit('/')\ncy.get('[data-cy=ref]').invoke('on', 'clicked', cy.stub().as('clicked'))\ncy.get('button').click().click()\ncy.get('@clicked').should('have.been.calledTwice')",
+    "publishedAt": "2021-08-05T14:15:15Z"
+  },
+  {
+    "videoId": "h3O-ZxIItPk",
+    "title": "Listen To The Application Dispatching Events To The Document",
+    "description": "Sometimes an application dispatches a custom DOM to the document. This video shows how to listen to such events from the Cypress test. Read the blog post https://glebbahmutov.com/blog/listen-to-events/ Find the app in https://github.com/bahmutov/listen-to-custom-event\n\nThe application code:\n\nconst loadingEvent = new CustomEvent('loading', {\n  detail: {\n    message: 'Loading...',\n  },\n})\ndocument.dispatchEvent(loadingEvent)\n\nThe spec code:\ncy.document()\n  .invoke('addEventListener', 'loading', cy.stub().as('loading'))\n\n// on load the app should have sent an event\ncy.get('@loading')\n  .should('have.been.calledOnce')\n  .its('firstCall.args.0.detail')\n  .should('deep.equal', {\n    message: 'Loading...',\n  })",
+    "publishedAt": "2021-08-05T13:50:05Z"
+  },
+  {
+    "videoId": "09KbTRLrgWA",
+    "title": "Install Node and Cypress",
+    "description": "In this video, I install Node on a new development machine, install Cypress and open a sample test. You can download the Node installer from https://nodejs.org/en/download/ Pro tip: if you need to install multiple versions of Node, you can use NVM tool https://github.com/nvm-sh/nvm or a tool called \"n\" https://www.npmjs.com/package/n\n\nWatch my video https://youtu.be/CNnCz6StbbY to learn how to install and use NVM to install multiple Node versions on the same machine.",
+    "publishedAt": "2021-08-04T14:23:43Z"
+  },
+  {
+    "videoId": "q4bhaXl3pEc",
+    "title": "Test The Custom jQuery Events Using Cypress",
+    "description": "In this video, I show how to correctly listen to the custom jQuery events sent by the application from Cypress tests. Read the blog post https://glebbahmutov.com/blog/listen-to-events/ Find the full source code in repo https://github.com/bahmutov/jquery-custom-events-example",
+    "publishedAt": "2021-08-03T14:58:23Z"
+  },
+  {
+    "videoId": "pKi6nUMw6Tc",
+    "title": "Cypress DOM Snapshots From DevTools Console",
+    "description": "In this video, I show how to create a DOM snapshot of the application right from the DevTools console using Cypress utility method. Then I restore that DOM snapshot when I want to show it instead of the application.",
+    "publishedAt": "2021-08-03T13:58:23Z"
+  },
+  {
+    "videoId": "H04KlMirMYs",
+    "title": "Visit The Blank Page Between The Tests",
+    "description": "We will visit the blank page at the start of each test to make sure all code callbacks and network calls from the previous test are stopped and do not leak into the current test. For more details, read https://glebbahmutov.com/blog/visit-blank-page-between-tests/",
+    "publishedAt": "2021-08-02T19:01:36Z"
+  },
+  {
+    "videoId": "HxAjSUxr84w",
+    "title": "Burn Tests Using cypress-grep And CircleCI Pipelines",
+    "description": "This video shows how to run a particular test using cypress-grep multiple times in a row (called burning a test) from the browser DevTools Console. I also show how to set up burning using CircleCI pipeline parameters, so that we can start a new pipeline run and run a single test multiple times in a row on demand. \n\nSee the code in https://github.com/bahmutov/todomvc-tests-circleci and use the plugin https://github.com/cypress-io/cypress-grep\n\nRead the blog post https://glebbahmutov.com/blog/burn-tests-on-circle/",
+    "publishedAt": "2021-07-29T17:56:39Z"
+  },
+  {
+    "videoId": "MIIEndCTVxc",
+    "title": "Avoid The Pyramid Of Doom Using Aliases",
+    "description": "We will rewrite a test that uses nested \".then\" callbacks to get several elements into a test that uses aliases. We will access all the aliased values using \"this.alias name\" syntax.\n\nNote: you need to use \"function () { }\" callback format to correctly get the \"this\" object. Read the blog post https://glebbahmutov.com/blog/avoid-cypress-pyramid-of-doom/ for details.",
+    "publishedAt": "2021-07-27T21:05:18Z"
+  },
+  {
+    "videoId": "uGWWoq0ECY8",
+    "title": "Why cy.log prints null or undefined",
+    "description": "Sometimes we call cy.log(variable) yet it always prints null or undefined. In this video, I explain why this happens and how to solve this problem by moving the cy.log call into .then callback.\n\nSee the code in https://glebbahmutov.com/cypress-examples and read the blog post https://glebbahmutov.com/blog/why-cy-log-prints-nothing/ for full details.",
+    "publishedAt": "2021-07-08T16:40:48Z"
+  },
+  {
+    "videoId": "LtjAUzmPHIY",
+    "title": "Play Video When The Videoplayer is Ready",
+    "description": "In this video I show how to spy on the videoplayer to only execute \"play\" method call when the video is ready to be played.",
+    "publishedAt": "2021-07-07T21:20:24Z"
+  },
+  {
+    "videoId": "soNyOqpi_gQ",
+    "title": "Mock WebSocket Connection from Cypress test using socket.io-mock",
+    "description": "In this example, we will mock the socket used by the application. The mock will be created by the Cypress spec file and injected into the page using cy.intercept\n\nFind the code at https://github.com/bahmutov/cypress-socketio-chat",
+    "publishedAt": "2021-06-28T14:42:59Z"
+  },
+  {
+    "videoId": "MFGQB0nQ2J0",
+    "title": "Testing WebBrowser.openBrowserAsync",
+    "description": "We can confirm the RN application is calling WebBrowser.openBrowserAsync method by stubbing window.open method and confirming it was called with the right arguments. Find the source code at https://github.com/bahmutov/expo-cypress-examples",
+    "publishedAt": "2021-06-18T20:32:54Z"
+  },
+  {
+    "videoId": "y4Z5ywhd85s",
+    "title": "Test React Native Tabs",
+    "description": "In this test we will navigate from tab to tab using Cypress and confirm the React Native running inside the browser using Expo works correctly. Find the source code in https://github.com/bahmutov/expo-cypress-examples",
+    "publishedAt": "2021-06-18T19:53:45Z"
+  },
+  {
+    "videoId": "fg5ituAWexQ",
+    "title": "Add Cypress Custom Commands To Access Elements By Aria Role",
+    "description": "We will abstract finding elements by aria attribute into custom commands to be in the support file.\n\nThe code is at https://github.com/bahmutov/react-native-web-example and find the Cypress documentation at https://on.cypress.io/custom-commands",
+    "publishedAt": "2021-06-17T14:21:12Z"
+  },
+  {
+    "videoId": "rADMQUpUpSc",
+    "title": "Add Cypress Test To React-Native-Web Example",
+    "description": "I am adding the first Cypress test to a React Native project that uses react-native-web to show the app in the browser.\n\n- the source code is at https://github.com/bahmutov/react-native-web-example\n- https://necolas.github.io/react-native-web/",
+    "publishedAt": "2021-06-17T14:13:48Z"
+  },
+  {
+    "videoId": "Yaxi26X2wyg",
+    "title": "Adding Code Coverage To React Native Tests",
+    "description": "I have configured the code coverage following the Cypress code coverage guide at https://on.cypress.io/code-coverage The coverage shows that we missed testing what happens when the Ajax call to load the data fails. We add a test that simulates a network error using cy.intercept and get a 100% code coverage.",
+    "publishedAt": "2021-06-16T20:36:00Z"
+  },
+  {
+    "videoId": "3YfgZnlPSNo",
+    "title": "Stub Ajax Network Call From The Application Using cy.intercept and Fixture File",
+    "description": "The cy.intercept command can stub a network call using a fixture file. In this video we will save a JSON response from the server and then use it in our tests. Find the source code at https://github.com/bahmutov/my-react-native-project",
+    "publishedAt": "2021-06-16T15:26:23Z"
+  },
+  {
+    "videoId": "7YoHLJ69ijA",
+    "title": "Testing The Loading Indicator by Slowing Down The Request",
+    "description": "Using cy.intercept we slow down the Ajax call and confirm the loading indicator is first visible, then is removed from the DOM.\n\nThe source code is at https://github.com/bahmutov/my-react-native-project\nAlso read https://glebbahmutov.com/blog/negative-assertions/",
+    "publishedAt": "2021-06-16T15:18:47Z"
+  },
+  {
+    "videoId": "ChzzKbpXl9w",
+    "title": "Test an Ajax Call From React Native App Using Cypress",
+    "description": "We use cy.intercept command to spy on the Ajax call the React Native application is making to fetch the list of users. Then we verify the list is displayed by the application. Tip: we use testID and accessibilityLabel props in our application to be able to select elements using either \"[data-testid=user]\" or \"[aria-label=user]\" selectors.\n\nSee also:\n- the code at https://github.com/bahmutov/my-react-native-project\n- cy.intercept documentation at https://on.cypress.io/intercept",
+    "publishedAt": "2021-06-16T14:49:26Z"
+  },
+  {
+    "videoId": "nZnnqX6nMdI",
+    "title": "Run Cypress React Native Tests Using GitHub Actions",
+    "description": "We will set up a GitHub Actions workflow to run Expo + Cypress React Native tests on CI. See the code in https://github.com/bahmutov/my-react-native-project\n\nTools used:\n- https://github.com/cypress-io/github-action",
+    "publishedAt": "2021-06-16T14:21:02Z"
+  },
+  {
+    "videoId": "m0dAL83rnRc",
+    "title": "Testing React Native Application Using Cypress: Introduction",
+    "description": "In this video I create a new React Native project using Expo CLI, then add a simple test using Cypress. The application runs in the Web mode. You can find the application at https://github.com/bahmutov/my-react-native-project\n\nTools used:\n- https://expo.io/\n- https://www.cypress.io/\n- https://github.com/bahmutov/start-server-and-test",
+    "publishedAt": "2021-06-16T13:55:37Z"
+  },
+  {
+    "videoId": "m8gxagI4IM8",
+    "title": "Confirm The Responsive Image is Loaded by the Picture Element",
+    "description": "Using cy.intercept we can confirm from the Cypress test that the right image is loaded depending on the viewport width. Find the full recipe in the https://github.com/cypress-io/cypress-example-recipes repo",
+    "publishedAt": "2021-06-10T20:40:19Z"
+  },
+  {
+    "videoId": "Fo2S7l23eOA",
+    "title": "Confirm Class Names using Custom Logic",
+    "description": "Using have.prop \"classList\" we get the full class list from an element. We can convert that result into an Array and use \"some\" method with custom logic to check if the list of classes includes a name matching some predicate. See the full test at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2021-06-08T16:57:00Z"
+  },
+  {
+    "videoId": "hjM-hhw4Llk",
+    "title": "Check Elements Classes",
+    "description": "Using should('have.class') assertions we can confirm the classes on the element. We can also get the entire class name using the prop assertion. Find this test at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2021-06-08T16:41:28Z"
+  },
+  {
+    "videoId": "xdVRVhUUgCI",
+    "title": "Cypress and StackBlitz: stubbing server-side Ajax call",
+    "description": "StackBlitz has recently announced Node containers running right in the browser https://blog.stackblitz.com/posts/introducing-webcontainers/. This video shows a little experiment: running a Next.js server making a server-side Ajax call to fetch data, and stubbing this call using Cypress cy.intercept command. See the code in https://github.com/bahmutov/cypress-stackblitz",
+    "publishedAt": "2021-06-04T20:43:15Z"
+  },
+  {
+    "videoId": "EBzEEwCroIM",
+    "title": "Running tests and suites of tests using cypress-grep",
+    "description": "The https://github.com/bahmutov/cypress-grep plugin allows you to grep tests by tag. You can also run the entire suite of tests using tags.",
+    "publishedAt": "2021-06-04T15:29:46Z"
+  },
+  {
+    "videoId": "VSIaDbv4GyE",
+    "title": "Use a Single cy.contains Command",
+    "description": "You should use a single \"cy.contains(selector, text)\" command instead of \"cy.get(selector).contains(text)\" chain. The entire command will be retried, which is more robust (see https://on.cypress.io/retry-ability guide). You also do not need to add \"cy.contains(...).should('exist')` assertion, since the existence assertion is built-in, see https://on.cypress.io/contains page.",
+    "publishedAt": "2021-06-04T14:01:25Z"
+  },
+  {
+    "videoId": "SgTsCJCujNw",
+    "title": "How to use Cypress cy.log command to output messages to the Command Log",
+    "description": "We can use `.then(cy.log)` to quickly dump some info into the Cypress Command Log. If needed, we can use `.then(JSON.stringify).then(cy.log)` to print larger objects. For more Cypress tips like this, read the blog post  https://glebbahmutov.com/blog/cypress-tips-and-tricks/",
+    "publishedAt": "2021-06-03T16:25:45Z"
+  },
+  {
+    "videoId": "mML36U62-fQ",
+    "title": "Replace window.location.replace from Cypress test",
+    "description": "In this video, I show how to use cy.intercept to rewrite application code to avoid an application redirect via window.location.replace method call. For more details, read the blog post https://glebbahmutov.com/blog/cypress-tips-and-tricks/",
+    "publishedAt": "2021-06-02T13:44:35Z"
+  },
+  {
+    "videoId": "WGigbAupExQ",
+    "title": "Canvas image diffing in the browser using pixelmatch",
+    "description": "See the full source code in https://github.com/bahmutov/monalego repository. We will use pixelmatch library to compare the canvas to itself after a short delay to detect when the animation has finished. Then we can compare the image to the baseline image on disk, or save the baseline image.",
+    "publishedAt": "2021-05-29T20:37:02Z"
+  },
+  {
+    "videoId": "4eEc3x24D64",
+    "title": "Give Chrome Browser Clipboard Permissions from Cypress Test",
+    "description": "Using \"Cypress.automation\" command and Chrome Debugger Protocol we can access the clipboard text from the Cypress test to verify the application has copied the expected text there. Find the full Clipboard recipe at https://github.com/cypress-io/cypress-example-recipes",
+    "publishedAt": "2021-05-26T20:21:53Z"
+  },
+  {
+    "videoId": "N_VNS8ysUQc",
+    "title": "Cypress Testing for HTML Emails Sent via SendGrid Service",
+    "description": "This video shows how to receive HTML emails sent via SendGrid (or any other 3rd party SMTP service) using a test email account from Ethereal.email. The received email is then loaded in the Cypress browser to validate and interact with it. Read the blog post https://www.cypress.io/blog/2021/05/24/full-testing-of-html-emails-using-ethereal-accounts/ for full details. The source code is available in https://github.com/bahmutov/cypress-ethereal-email-example repository",
+    "publishedAt": "2021-05-26T14:42:18Z"
+  },
+  {
+    "videoId": "SExmed1dCL4",
+    "title": "Access the clipboard from Cypress test using Electron browser",
+    "description": "In this code example (available in the https://github.com/cypress-io/cypress-example-recipes) we see how to copy and read text from the clipboard using Electron browser.\n\nWatch the next video https://www.youtube.com/watch?v=4eEc3x24D64 for giving Chrome browser permission to access the clipboard",
+    "publishedAt": "2021-05-26T13:14:51Z"
+  },
+  {
+    "videoId": "LxkrhUEE2Qk",
+    "title": "Multiple elements and should('be.visible') assertion",
+    "description": "In this example, I show how the assertion should('be.visible') passes in the case of multiple elements when only some of them are visible. I also show how to filter elements by visibility to get just the visible elements or just the invisible ones. The demo uses Cypress v7.4.0, find the full test at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2021-05-26T12:35:14Z"
+  },
+  {
+    "videoId": "kB2uyJ2W41I",
+    "title": "Burning test using cypress-grep",
+    "description": "In this video, I show how to run a test multiple times in a row (burning it) to figure out if it is flaky or not. I am using the https://github.com/bahmutov/cypress-grep plugin with \"burn\" parameter. By using this plugin we can run just a single test multiple times in a row without modifying the spec source file. Read the blog post https://glebbahmutov.com/blog/burning-tests/ for details.",
+    "publishedAt": "2021-05-18T12:24:52Z"
+  },
+  {
+    "videoId": "16WTH7XeIVw",
+    "title": "Testing HTML emails using Cypress",
+    "description": "In this example I explain how Cypress can be used to mock a local SMTP server and receive HTML emails sent by the local application. The full source code is at https://github.com/bahmutov/cypress-email-example and the corresponding blog post is at https://www.cypress.io/blog/2021/05/11/testing-html-emails-using-cypress/",
+    "publishedAt": "2021-05-13T18:54:31Z"
+  },
+  {
+    "videoId": "SFW7Ecj5TNE",
+    "title": "How I organize pull request workflows by running smoke tests first",
+    "description": "Using an example from the repository https://github.com/bahmutov/cypress-grep-example I show how I run smoke tests first (using https://github.com/bahmutov/cypress-grep plugin), before running all tests. Everything is recorded to the Cypress Dashboard, and I use Cypress GitHub Action to run everything.",
+    "publishedAt": "2021-05-12T21:26:09Z"
+  },
+  {
+    "videoId": "HS-Px-Sghd8",
+    "title": "Plugin cypress-grep introduction",
+    "description": "Introduction to the plugin https://github.com/bahmutov/cypress-grep that allows you to pick tests to run by part of the title or tags. Shows how to install the plugin and how to run tests by title or by tag. Also shows how to use the reference comment to include its TypeScript type definition for the test config \"tags\" field.",
+    "publishedAt": "2021-05-12T14:24:11Z"
+  },
+  {
+    "videoId": "Kkdkas9l3b0",
+    "title": "Introduction to the cy.intercept \"times\" option",
+    "description": "We will reply to the same network call with different stubs using cy.intercept \"times\" option. See the https://on.cypress.io/intercept API documentation page and find the full source code in the \"Intercept recipe\" in https://github.com/cypress-io/cypress-example-recipes",
+    "publishedAt": "2021-05-11T16:33:09Z"
+  },
+  {
+    "videoId": "Sp1NfcLPpwg",
+    "title": "cypress-grep: filter tests dynamically from DevTools console",
+    "description": "In this video, I show how to dynamically execute tagged tests or a particular test using the https://github.com/bahmutov/cypress-grep plugin. You can find the example repo at https://github.com/bahmutov/cypress-grep-example",
+    "publishedAt": "2021-04-30T20:17:23Z"
+  },
+  {
+    "videoId": "Cj1g_PWZJF8",
+    "title": "Answering the user question by coding a new recipe",
+    "description": "I show the entire process for coding an answer to a user question via https://github.com/bahmutov/cypress-examples. The recipe shows how to collect attributes from the multiple elements and confirm their values. This video is a good companion to the blog post https://glebbahmutov.com/blog/answer-cypress-question/",
+    "publishedAt": "2021-04-26T13:53:33Z"
+  },
+  {
+    "videoId": "RV7FoWu1w0c",
+    "title": "Cypress aliases and before and beforeEach hooks",
+    "description": "We will refactor the Cypress tests to visit the page just once using before hook. Then we will refactor the tests to access the same elements using an alias - but we will have to use the beforeEach hook to create the alias, as the aliases are reset before each test automatically. For more read the blog post https://glebbahmutov.com/blog/scrape-list-of-slides/",
+    "publishedAt": "2021-04-23T20:18:29Z"
+  },
+  {
+    "videoId": "AvsYI9kU0tA",
+    "title": "Cypress test statuses",
+    "description": "In this video I explain the four different statuses a finished Cypress test can have: passing, failing, pending, and skipped. The important thing to remember is that \"it.skip\" is the \"pending\" test. For more details, read the blog post https://glebbahmutov.com/blog/cypress-test-statuses/",
+    "publishedAt": "2021-04-22T17:09:54Z"
+  },
+  {
+    "videoId": "TZjphtLrRT4",
+    "title": "Cypress hover example",
+    "description": "In this example, we will look at testing DOM elements that are visible during mouse over and elements that are only visible during the true CSS hover state. For those events, we can use https://github.com/dmtrKovalenko/cypress-real-events#cyrealhover command. Find the full source code in https://github.com/bahmutov/cy-hover-example repo",
+    "publishedAt": "2021-04-13T14:11:33Z"
+  },
+  {
+    "videoId": "6CxZuolWlYM",
+    "title": "Confirming the text with non breaking space entity",
+    "description": "In this video I answer the question from https://github.com/cypress-io/cypress/issues/15863 by showing how to assert text that uses non-breaking space HTML entity. By searching the Cypress docs I find that cy.contains command handles non-breaking space, and if I want to use other assertions like \"should include.text\", I can use Unicode character \"\\u00a0\" where the non-breaking space is expected in the text.",
+    "publishedAt": "2021-04-09T14:58:17Z"
+  },
+  {
+    "videoId": "wkcot8eOcvs",
+    "title": "cy.stub: stub a method on every window object",
+    "description": "By using cy.on event listener we can stub the window.track on every window object created by the browser during the test. Even if the page reloads, or the browser navigates to another page, the stub will be attached.",
+    "publishedAt": "2021-04-01T14:58:15Z"
+  },
+  {
+    "videoId": "tkpz20haiCA",
+    "title": "cy.stub: stub window method that will be defined later",
+    "description": "By using Object.defineProperty we can prepare to stub window.track that will be set later by the application code. Then we can confirm it was called during the page load phase.",
+    "publishedAt": "2021-03-30T12:38:11Z"
+  },
+  {
+    "videoId": "eOEDCmqpMjE",
+    "title": "cy.stub: stub a method on the window object",
+    "description": "We will stub our \"analytics\" method window.track to confirm how it was called by our application. Find more information in the blog post https://glebbahmutov.com/blog/stub-window-open/ and in the workshop https://github.com/cypress-io/testing-workshop-cypress",
+    "publishedAt": "2021-03-29T21:07:31Z"
+  },
+  {
+    "videoId": "aeBclf9A92A",
+    "title": "cypress-recurse: testing the canvas with bar chart",
+    "description": "We are using the https://github.com/bahmutov/cypress-recurse to confirm the bar chart rendered on the canvas looks the same as the good image. This example comes from https://github.com/bahmutov/monalego",
+    "publishedAt": "2021-03-17T23:02:33Z"
+  },
+  {
+    "videoId": "6-xHHtAzNtk",
+    "title": "cypress-recurse: pagination example",
+    "description": "Using https://github.com/bahmutov/cypress-recurse we click the \"next page\" until it has class disabled, which means we are on the last page.",
+    "publishedAt": "2021-03-16T14:27:54Z"
+  },
+  {
+    "videoId": "CU8C6MRP_GU",
+    "title": "cypress-recurse: Wait for the API to respond",
+    "description": "Let's ping the API endpoint using cy.request until it responds with success, we can use https://github.com/bahmutov/cypress-recurse to do this. After the API responds we can continue with the rest test. Find the source code in the \"Wait for API\" recipe in https://github.com/cypress-io/cypress-example-recipes",
+    "publishedAt": "2021-03-15T22:04:53Z"
+  },
+  {
+    "videoId": "f2uXdCOkJb0",
+    "title": "NPM Quick Run",
+    "description": "In this video I am showing my utility https://github.com/bahmutov/npm-quick-run for running NPM scripts by prefix or word match. This utility makes running even complicated scripts a breeze. Find the full blog post at https://glebbahmutov.com/blog/organize-npm-scripts/",
+    "publishedAt": "2021-03-11T15:17:40Z"
+  },
+  {
+    "videoId": "6iDjbAXvLa0",
+    "title": "Start server and test",
+    "description": "I show the utility https://github.com/bahmutov/start-server-and-test to combine multiple scripts into a single command. Makes running the app and the tests a breeze. For the full blog post see https://glebbahmutov.com/blog/organize-npm-scripts/",
+    "publishedAt": "2021-03-11T15:14:59Z"
+  },
+  {
+    "videoId": "jJLMZ8k85OA",
+    "title": "NPM Script Names",
+    "description": "How I organize NPM script names in the package.json file in my projects. See the full discussion in https://glebbahmutov.com/blog/organize-npm-scripts/",
+    "publishedAt": "2021-03-11T15:08:21Z"
+  },
+  {
+    "videoId": "2EkOI-gO2VY",
+    "title": "Debugging RegExp Cypress test",
+    "description": "In this case I will refactor the original test that uses regular expression to assert an attribute's value. We will simplify the test to make the entire thing pretty small. \n\nShows https://on.cypress.io/fixture and https://on.cypress.io/assertions in action.",
+    "publishedAt": "2021-03-10T16:19:53Z"
+  },
+  {
+    "videoId": "g9ToLSD_lbQ",
+    "title": "Fast Cypress project scaffolding",
+    "description": "By using https://github.com/bahmutov/cly we can quickly scaffold new Cypress projects without Kitchensink spec files. We can also scaffold TypeScript and bare-bones projects.",
+    "publishedAt": "2021-03-09T16:03:40Z"
+  },
+  {
+    "videoId": "iP2tNhEbF8Y",
+    "title": "Testing the SELECT options text",
+    "description": "I will show how to confirm the options inside a SELECT element. Then we can look at comparing the arrays of strings. Find this example test at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2021-03-08T23:52:22Z"
+  },
+  {
+    "videoId": "7ZSwrhh6BLk",
+    "title": "Record to Cypress Dashboard from GitHub Actions",
+    "description": "We set up Cypress Dashboard recording from the project that uses GH Actions. We use https://github.com/cypress-io/github-action to make it simple. The recording helps us watch the video of the test run to see that the test fails due to the different image size of the saved PNG file.",
+    "publishedAt": "2021-03-06T21:53:08Z"
+  },
+  {
+    "videoId": "7mEcUOo5fCk",
+    "title": "Refactor clock control to for loop",
+    "description": "In this video we refactor the visual canvas test with clock control to keep all state local. After a while we have exactly the same code in 4 steps and can switch to using a normal JavaScript for loop. Find the code in https://github.com/bahmutov/monalego repo.",
+    "publishedAt": "2021-03-06T21:28:16Z"
+  },
+  {
+    "videoId": "QvXDaRNYPDY",
+    "title": "Pause canvas animation using cy.clock and cy.tick",
+    "description": "We visually compare our canvas at different times by freezing the clock using cy.clock command and advancing it via cy.tick. Find the full source code in the https://github.com/bahmutov/monalego repository",
+    "publishedAt": "2021-03-06T21:15:20Z"
+  },
+  {
+    "videoId": "xSK6fe5WD1g",
+    "title": "cypress-recurse: retries for visual canvas testing",
+    "description": "We will use cypress-recurse to download and compare a canvas to a previously saved good PNG image. This retries until the command times out or the images match. Read the full info at https://glebbahmutov.com/blog/canvas-testing/ and find the finished code at https://github.com/bahmutov/monalego",
+    "publishedAt": "2021-03-04T22:24:13Z"
+  },
+  {
+    "videoId": "Ty5ltRdgr5M",
+    "title": "cypress-recurse: use cypress-recurse to find the downloaded file",
+    "description": "In this video, we are using https://github.com/bahmutov/cypress-recurse to find the downloaded file in the \"File download\" recipe. The code is in https://github.com/cypress-io/cypress-example-recipes/pull/663",
+    "publishedAt": "2021-03-03T13:20:31Z"
+  },
+  {
+    "videoId": "V82p7qTowXg",
+    "title": "(7 of 7) Published cypress-recurse NPM package",
+    "description": "The utility function for calling Cypress commands recursively until the predicate passes has been published in its own NPM package. Find the source code in https://github.com/bahmutov/cypress-recurse This video walks through the package explaining it.",
+    "publishedAt": "2021-03-02T14:14:40Z"
+  },
+  {
+    "videoId": "g4qispkHH-o",
+    "title": "(6 of 7) Add JSDoc types to the options parameter",
+    "description": "We will use JSDoc comments to quickly give types to the parameters our \"recurse\" function expects. See https://glebbahmutov.com/blog/trying-typescript/#types-from-jsdoc for more on using JSDoc with ts-check directive.",
+    "publishedAt": "2021-02-28T23:37:57Z"
+  },
+  {
+    "videoId": "DeMRtTD5p7s",
+    "title": "(5 of 7) Convert recurse to use options object",
+    "description": "Adding more positional arguments to our recurse function quickly becomes very tedious. In this video, I convert the function to accept the options object as the last argument. Find the source at https://github.com/bahmutov/avoid-while-loops-in-cypress repo",
+    "publishedAt": "2021-02-28T21:28:56Z"
+  },
+  {
+    "videoId": "Cn8Ubhd49Gw",
+    "title": "(4 of 7) Recursion function with time limit",
+    "description": "We improve our recursive function for running Cypress commands by replacing the iteration limit with a time limit. This is similar to the way Cypress commands are retried up until the command's timeout limit. Find the source code at https://github.com/bahmutov/avoid-while-loops-in-cypress",
+    "publishedAt": "2021-02-27T21:09:55Z"
+  },
+  {
+    "videoId": "I1oNKD6NNjg",
+    "title": "(3 of 7) Reusable function for running Cypress commands with attempts limit",
+    "description": "We continue working on the reusable recursive function for running Cypress commands until the expected value is produced. In this video, we add a limit to how many times the recursive function can be called. Find the source code at https://github.com/bahmutov/avoid-while-loops-in-cypress",
+    "publishedAt": "2021-02-27T21:08:05Z"
+  },
+  {
+    "videoId": "Q_7-gRQLLMA",
+    "title": "(2 of 7) Reusable recursive function to running Cypress commands",
+    "description": "We are making a reusable function that calls itself recursively until Cypress commands produce the expected value. Find the full code in https://github.com/bahmutov/avoid-while-loops-in-cypress",
+    "publishedAt": "2021-02-27T21:04:28Z"
+  },
+  {
+    "videoId": "r8_hFwYAo5c",
+    "title": "(1 of 7) Call cy task until it returns an expected value",
+    "description": "We implement a test that recursively calls cy.task until it returns the expected number 7. The source code is in the repo https://github.com/bahmutov/avoid-while-loops-in-cypress",
+    "publishedAt": "2021-02-26T15:12:27Z"
+  },
+  {
+    "videoId": "2qxbSmSRZQQ",
+    "title": "Cypress viewport and window sizes",
+    "description": "I show how Cypress scales the application's iframe to fit inside the available browser window while preserving the aspect ratio of the viewport. See the full recipe to learn how to generate high-quality screenshots and video recordings in https://github.com/cypress-io/cypress-example-recipes#fundamentals",
+    "publishedAt": "2021-02-25T20:50:51Z"
+  },
+  {
+    "videoId": "62cDLO533OY",
+    "title": "A GitHub Actions workflow with separate install and test steps",
+    "description": "I am showing the https://github.com/bahmutov/cypress-gh-action-split-jobs workflow where we use two jobs. The first job installs the dependencies and builds the site. The second job downloads the built site and runs Cypress tests. Splitting the workflow like this allows us to build the site just once and potentially run multiple tests in parallel using Cypress GitHub Action.",
+    "publishedAt": "2021-02-24T19:55:11Z"
+  },
+  {
+    "videoId": "5Z8BaPNDfvA",
+    "title": "Avoid while loop in Cypress",
+    "description": "This example shows how to reload the page in test multiple times until the expected number 7 appears. The test teaches how to properly execute the asynchronous commands while avoiding a runaway test scenario. Find the code in the https://github.com/cypress-io/cypress-example-recipes repository.",
+    "publishedAt": "2021-02-22T23:05:26Z"
+  },
+  {
+    "videoId": "OiVFiLnmXEM",
+    "title": "Testing anchor element with ping attribute",
+    "description": "How to use the cy.intercept to confirm the \"A\" DOM element with \"ping=/track\" attribute really is making the POST request to the backend. The source code is in https://github.com/cypress-io/cypress-example-recipes#stubbing-and-spying under \"Stubbing and Spying\" recipe, see \"cy.intercept\" recipe.",
+    "publishedAt": "2021-02-21T22:44:12Z"
+  },
+  {
+    "videoId": "sq6XbXbUXtA",
+    "title": "How Cypress cy.intercept works",
+    "description": "Explanation video showing the steps in cy.intercept command and how the browser and the Cypress network proxy layer communicate with your test. Taken from the presentation https://slides.com/bahmutov/how-cy-intercept-works",
+    "publishedAt": "2021-02-20T20:05:18Z"
+  },
+  {
+    "videoId": "4TeSOj2Iy_Q",
+    "title": "Test External Site Using GitHub Actions",
+    "description": "Using workflow_dispatch event I can start GitHub Actions workflow by clicking a button in GitHub Repo UI. It is convenient for testing external sites, like my personal site that does not have its own tests.\n\nThe video shows using Cypress GitHub Action https://github.com/cypress-io/github-action to testing my personal site http://glebbahmutov.com/. Find the source code at https://github.com/bahmutov/test-personal-site",
+    "publishedAt": "2021-02-06T20:21:09Z"
+  },
+  {
+    "videoId": "Qfo5ZVOdJNA",
+    "title": "Showing GitHub Actions VSCode Plugin",
+    "description": "How to see GitHub Actions CI status right from your VSCode editor, thanks to cschleiden.vscode-github-actions plugin. Also shows how to debug a failing Cypress test due to a stray character by looking at the error snapshot at Cypress Dashboard.",
+    "publishedAt": "2021-02-03T20:14:30Z"
+  },
+  {
+    "videoId": "mnctGqswGM0",
+    "title": "Capture extra video for failed test",
+    "description": "This video shows how you can capture extra video at the end of a failed test",
+    "publishedAt": "2021-01-27T22:04:18Z"
+  },
+  {
+    "videoId": "jAiYePsxPl4",
+    "title": "Passing the environment variables to Cypress",
+    "description": "Using either --env or plugin file. The plugin file way is the most powerful way to pass the environment variables, plus it makes it simple to create objects out of passed values. Watch out for single quotes, as they may prevent shell interpolation.\n\nRelated documentation: https://on.cypress.io/environment-variables",
+    "publishedAt": "2021-01-27T15:05:41Z"
+  },
+  {
+    "videoId": "f5UaXuAc52c",
+    "title": "How to correctly use the baseUrl to visit a site in Cypress",
+    "description": "Use baseUrl to avoid page reloads. This is much better than the alternatives: hardcoding the URL or passing it via the environment variables.\n\nSee https://on.cypress.io/visit and https://on.cypress.io/configuration",
+    "publishedAt": "2021-01-22T18:26:06Z"
+  },
+  {
+    "videoId": "pXpVAQZ-Gi4",
+    "title": "Find DOM Elements From DevTools While Using Cypress",
+    "description": "If you do not trust cy.get, cy.find, or cy.contains commands, if you want to confirm they find the expected DOM elements, this video shows how to correctly query the document yourself.\n\n- IMPORTANT: switch the DevTools console to the application iframe\n- use document.querySelector, document.querySelectorAll, or special DevTools aliases $ and $$ to find elements\n- you can query even when the Cypress Time-Traveling Debugger shows command DOM snapshots",
+    "publishedAt": "2021-01-16T19:34:10Z"
+  },
+  {
+    "videoId": "VY9yVle8LRQ",
+    "title": "How to fail Cypress test if the application creates unhandled rejected promise",
+    "description": "In this video, I show how to install a window event listener that catches unhandled rejected promises created by the application. When Cypress catches the event it can fail the test. For more details see the recipe \"Handling errors\" in https://github.com/cypress-io/cypress-example-recipes#fundamentals",
+    "publishedAt": "2021-01-08T00:07:17Z"
+  },
+  {
+    "videoId": "DwVezYq4zPM",
+    "title": "Filtering app errors in Cypress tests",
+    "description": "This video shows how Cypress catches exceptions thrown from the application code, and how to ignore some of the errors. Then it shows how to register the error handler for all tests. For more, see the \"Handling errors\" recipe https://github.com/cypress-io/cypress-example-recipes#fundamentals",
+    "publishedAt": "2021-01-07T23:47:46Z"
+  },
+  {
+    "videoId": "BrZbNCrrlx8",
+    "title": "Cypress hosts configuration explanation",
+    "description": "You can specify the hostname to IP using Cypress' config object, similar to how you can use /private/etc/hosts to map domains before going to the DNS server. This video shows an example of mapping a non-existent domain www.demo-site.com to localhost and testing it.",
+    "publishedAt": "2021-01-02T21:40:19Z"
+  },
+  {
+    "videoId": "3uQpeyBlw3w",
+    "title": "Avoid using cy.writeFile inside cy.intercept command",
+    "description": "In this video I show how to avoid using Cypress command like cy.writeFile inside the network interceptor code. Find the written guide in https://glebbahmutov.com/blog/cypress-intercept-problems blog post",
+    "publishedAt": "2020-12-12T21:23:42Z"
+  },
+  {
+    "videoId": "nSmHxxwceDU",
+    "title": "Debug Cypress element visibility issues",
+    "description": "This video shows how to step through the Cypress.dom.isVisible function to investigate why Cypress thinks an element is invisible, even though it is clearly shown in the browser. \n\nSee https://on.cypress.io/dom#is-visible",
+    "publishedAt": "2020-12-03T17:13:39Z"
+  },
+  {
+    "videoId": "_wfKbYQlP_Y",
+    "title": "Cypress v6: Network control using cy.intercept introduction",
+    "description": "In this video, I will give a glimpse of cy.intercept command (see https://on.cypress.io/intercept) which is a much more powerful replacement for the deprecated cy.route command. Find the source code at https://github.com/bahmutov/cy-intercept-example",
+    "publishedAt": "2020-11-26T20:09:09Z"
+  },
+  {
+    "videoId": "hMAXX9k1q-Q",
+    "title": "Debugging A Failing Cypress Test Locally",
+    "description": "Using an example from https://github.com/cypress-io/cypress-example-todomvc app I will show how to debug a failing Cypress test using its built-in time-traveling debugger, cy.pause command, and the standard JavaScript debugger keyword. For more Cypress tips & tricks, read the blog post https://glebbahmutov.com/blog/cypress-tips-and-tricks/",
+    "publishedAt": "2020-10-28T23:10:11Z"
+  },
+  {
+    "videoId": "inLue14mxm0",
+    "title": "How to restore mocked clock",
+    "description": "Shows how to mock the application's clock using \"cy.clock\" and how to restore it to let the application run normally. See https://on.cypress.io/clock",
+    "publishedAt": "2020-06-23T16:05:02Z"
+  },
+  {
+    "videoId": "AcM4Uhp3yOw",
+    "title": "Refactor loading fixtures",
+    "description": "We will first move loading JSON fixtures into \"before\" hook. Then we will refactor the loading of fixtures by using \"import\" statement.",
+    "publishedAt": "2020-06-13T17:15:21Z"
+  },
+  {
+    "videoId": "yVvCYtsmkZU",
+    "title": "How to read code coverage report",
+    "description": "We will look at code coverage HTML report generated after Cypress test run, and I will explain the line counters, if/else branching and JSX coverage.",
+    "publishedAt": "2020-06-02T16:19:37Z"
+  },
+  {
+    "videoId": "AlltFcsIFvc",
+    "title": "Assert that the stub was called twice",
+    "description": "We will assert the component invoked the stub prop twice when clicked in several ways. See https://on.cypress.io/retry-ability for more examples of Cypress retrying assertions automatically",
+    "publishedAt": "2020-05-28T22:57:22Z"
+  },
+  {
+    "videoId": "6JMVh8V7DcI",
+    "title": "Open code editor at the right failed command from Cypress",
+    "description": "Cypress 4.6.0 uses source maps to correctly open your code editor right at the failed command.",
+    "publishedAt": "2020-05-20T21:42:03Z"
+  },
+  {
+    "videoId": "9Eq_gIshK0o",
+    "title": "Checking code coverage on pull request",
+    "description": "We will compare current code coverage against the coverage badge in the README using https://github.com/bahmutov/check-code-coverage#set-gh-status to make sure a pull request does not skip tests accidentally. The source code is in https://github.com/bahmutov/instrument-example",
+    "publishedAt": "2020-05-05T15:21:35Z"
+  },
+  {
+    "videoId": "AAl4HmJ3YuM",
+    "title": "Show code coverage in commit status check",
+    "description": "Shows how to use https://github.com/bahmutov/check-code-coverage#set-gh-status to show the current code coverage as a status check on GitHub",
+    "publishedAt": "2020-05-04T20:04:16Z"
+  },
+  {
+    "videoId": "bNVRxb-MKGo",
+    "title": "Adding code coverage badge to your project",
+    "description": "This video shows how to add and update code coverage badge to your README without using external service, just https://shields.io and https://github.com/bahmutov/check-code-coverage#update-badge",
+    "publishedAt": "2020-05-02T22:00:27Z"
+  },
+  {
+    "videoId": "dwU5gUG2-EM",
+    "title": "Check code coverage robustly using 3rd party tool",
+    "description": "NYC will happily pass coverage check with an empty JSON file ... which is not what you probably want. In this video, I will show https://github.com/bahmutov/check-code-coverage scripts that are stricter.",
+    "publishedAt": "2020-04-30T22:38:46Z"
+  },
+  {
+    "videoId": "3LuVZgd4Ib4",
+    "title": "Use Chromium Dev browser to run Cypress tests",
+    "description": "Shows how to download Chromium browser from https://on.cypress.io/chromium-downloads and run Cypress tests",
+    "publishedAt": "2020-04-28T21:01:53Z"
+  },
+  {
+    "videoId": "-YgitwmwFo0",
+    "title": "Linting Cypress code using ESLint and eslint-plugin-cypress",
+    "description": "Installing ESLint, linting React application and using https://github.com/cypress-io/eslint-plugin-cypress to add settings for Cypress specs to pass the linter",
+    "publishedAt": "2020-04-27T23:38:14Z"
+  },
+  {
+    "videoId": "DlceMpRpbAw",
+    "title": "Excluding code from code coverage reports",
+    "description": "In this video, we will exclude a file, a branch, and an entire function from the code coverage report produced by Cypress. See https://github.com/cypress-io/code-coverage#exclude-code",
+    "publishedAt": "2020-04-26T22:32:43Z"
+  },
+  {
+    "videoId": "y8StkffYra0",
+    "title": "Get code coverage reports from Cypress tests",
+    "description": "Report code coverage using https://github.com/cypress-io/code-coverage plugin for Cypress",
+    "publishedAt": "2020-04-25T20:57:26Z"
+  },
+  {
+    "videoId": "mYXXSvcmQ6Y",
+    "title": "Using start-server-and-test to start app, run tests and shut everything down",
+    "description": "I will use https://github.com/bahmutov/start-server-and-test to run the web application, to wait for localhost:3000 to respond, then to run end-to-end Cypress tests. When the tests are done, the start-server-and-test shuts down the application.",
+    "publishedAt": "2020-04-25T20:57:16Z"
+  },
+  {
+    "videoId": "edgeQZ8UpD0",
+    "title": "How to instrument react-scripts web application for code coverage",
+    "description": "I will show how to instrument source code to collect code coverage. This method requires 1 dependency and works with any web application that uses react-scripts. We will use https://github.com/cypress-io/instrument-cra",
+    "publishedAt": "2020-04-25T20:57:05Z"
+  }
+]

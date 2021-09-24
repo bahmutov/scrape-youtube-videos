@@ -1,4 +1,4 @@
-// const { google } = require('googleapis')
+const fs = require('fs')
 
 // list all YouTube videos from the given playlist
 // https://developers.google.com/youtube/v3/docs/playlistItems/list
@@ -52,4 +52,6 @@ async function listVideos() {
   return list
 }
 
-listVideos().then(console.log, console.error)
+listVideos().then((list) => {
+  fs.writeFileSync('videos.json', JSON.stringify(list, null, 2) + '\n')
+}, console.error)
