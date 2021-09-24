@@ -1,7 +1,7 @@
 {
   "name": "scrape-youtube-videos",
   "version": "1.0.0",
-  "description": "",
+  "description": "Scrape YouTube playlist into Algolia index",
   "main": "index.js",
   "private": true,
   "scripts": {
