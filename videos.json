@@ -1,5 +1,41 @@
 [
   {
+    "videoId": "Wk4l8p9JQNA",
+    "title": "Connect And Send Socket Messages From Cypress Test",
+    "description": "In this video, we connect to the Socket.io backend server from the Cypress test and send the \"make new room\" message. Then we check if the first connection from the application shows the created room and visit it. This proves that acting as another user from the test is possible. Find the full code in the repo https://github.com/bahmutov/chat.io",
+    "publishedAt": "2021-09-27T20:03:56Z"
+  },
+  {
+    "videoId": "EKq7RC_uNsA",
+    "title": "Use cy.request Command To Create A User And Log in",
+    "description": "We can avoid using the page user interface to register a new user and to log in an existing user. Instead, a much faster test can use cy.request command to mimic form submissions. It also sets and sends all necessary cookies, thus no need to call cy.visit. Find the full source code in the repo https://github.com/bahmutov/chat.io",
+    "publishedAt": "2021-09-27T19:44:31Z"
+  },
+  {
+    "videoId": "EXVwvJrUGJ8",
+    "title": "Dynamic Tests From Cypress.io Fixture File",
+    "description": "This video shows how you can import a JSON fixture file into the Cypress spec and create a separate test for each data item. This allows you to clearly separate the data from the test logic while creating multiple tests. For details, read the blog post https://glebbahmutov.com/blog/dynamic-tests-from-fixture/ and see the full source code in the repo https://github.com/bahmutov/todo-graphql-example",
+    "publishedAt": "2021-09-27T16:02:00Z"
+  },
+  {
+    "videoId": "tjK_FCYikzI",
+    "title": "Time Part Of A Cypress Test Or A Single Command",
+    "description": "By taking timestamps around part of a Cypress test, we can confirm that the application performs a certain action within a certain time limit. Find the full source code in the repo https://github.com/bahmutov/cypress-workshop-basics",
+    "publishedAt": "2021-09-27T14:15:06Z"
+  },
+  {
+    "videoId": "QiaphZibZsE",
+    "title": "Use Docker Compose To Run Application Locally And On GitHub Actions",
+    "description": "In this video, we are using docker-compose to run Redis and MongoDB containers locally. Our application then connects to those services using exposed ports and environment variables injected using as-a utility. We can run the same docker-compose command on GitHub Actions CI to run the services, and then start the application and run Cypress tests using cypress-io/github-action code.\n\n- as-a utility https://github.com/bahmutov/as-a\n- source code for the app https://github.com/bahmutov/chat.io",
+    "publishedAt": "2021-09-24T16:36:25Z"
+  },
+  {
+    "videoId": "h-pXOjgZG24",
+    "title": "Use MongoDB From The Plugin File Or Call Task From DevTools Console",
+    "description": "In this video, I show how to connect to the MongoDB instance from the Cypress plugin file using the application code. Once we wrote the task to clear the rooms, we can call this task before each test to start from nothing. I also show how to use the super low-level cy.now command to call a task yourself from the DevTools Console. This lets you explore the application and perform actions right from the browser running the Cypress tests. Find the full source code in https://github.com/bahmutov/chat.io",
+    "publishedAt": "2021-09-24T16:12:18Z"
+  },
+  {
     "videoId": "vsH2SESJuik",
     "title": "Wait For jQuery slideDown Animation To Finish",
     "description": "In this video, I show how to wait for the JavaScript animation to finish before continuing with the test. The element slides down, using the style attribute to change its position. We can check if the element is visible and has an empty style attribute using Cypress assertions, before the test continues. Find the full source code in the application https://github.com/bahmutov/chat.io",
