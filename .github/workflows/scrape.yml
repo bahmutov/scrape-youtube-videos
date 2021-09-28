@@ -26,6 +26,8 @@ jobs:
         run: |
           node ./get-videos
 
+          git status --porcelain videos.json
+
           function check() {
             if [[ -z "$(git status --porcelain videos.json)" ]];
             then
