@@ -1,11 +1,5 @@
 [
   {
-    "videoId": "EKq7RC_uNsA",
-    "title": "Use cy.request Command To Create A User And Log in",
-    "description": "We can avoid using the page user interface to register a new user and to log in an existing user. Instead, a much faster test can use cy.request command to mimic form submissions. It also sets and sends all necessary cookies, thus no need to call cy.visit. Find the full source code in the repo https://github.com/bahmutov/chat.io",
-    "publishedAt": "2021-09-27T19:44:31Z"
-  },
-  {
     "videoId": "EXVwvJrUGJ8",
     "title": "Dynamic Tests From Cypress.io Fixture File",
     "description": "This video shows how you can import a JSON fixture file into the Cypress spec and create a separate test for each data item. This allows you to clearly separate the data from the test logic while creating multiple tests. For details, read the blog post https://glebbahmutov.com/blog/dynamic-tests-from-fixture/ and see the full source code in the repo https://github.com/bahmutov/todo-graphql-example",

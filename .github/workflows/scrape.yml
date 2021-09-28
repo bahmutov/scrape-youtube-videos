@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - get-videos.js
+      - .github/workflows/scrape.yml
   schedule:
     # get the list of videos every night
     - cron: '0 4 * * *'
@@ -21,10 +22,34 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Grab videos 📺
+        id: grab
         run: |
           node ./get-videos
+
+          function check() {
+            if [[ -z "$(git status --porcelain videos.json)" ]];
+            then
+              echo "0"
+            else
+              echo "1"
+            fi
+          }
+
+          echo ::set-output name=videos::$(check)
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+
+      - name: Has changed videos?
+        if: steps.grab.outputs.videos == 1
+        run: echo "Have changed videos"
+
+      - name: Send to Algolia 🔍
+        if: steps.grab.outputs.videos == 1
+        run: node ./upload-to-algolia
+        env:
+          APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
+          INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME }}
+          ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
 
       - name: Commit any changed files 💾
         uses: stefanzweifel/git-auto-commit-action@v4

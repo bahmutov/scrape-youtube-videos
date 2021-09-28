@@ -1,4 +1,4 @@
-# scrape-youtube-videos
+# scrape-youtube-videos [![scrape](https://github.com/bahmutov/scrape-youtube-videos/actions/workflows/scrape.yml/badge.svg?branch=main)](https://github.com/bahmutov/scrape-youtube-videos/actions/workflows/scrape.yml)
 > Scrape YouTube playlist into Algolia index
 
 - [Google API Node client](https://github.com/googleapis/google-api-nodejs-client)
