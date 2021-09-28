@@ -8,6 +8,7 @@ if (!process.env.GOOGLE_API_KEY) {
   process.exit(1)
 }
 
+// the playlist id comes from the URL of the playlist
 const playlistId = 'PLP9o9QNnQuAYYRpJzDNWpeuOVTwxmIxcI'
 const g = require('@googleapis/youtube')
 const youtube = g.youtube({
