@@ -21,6 +21,8 @@ jobs:
       - name: Install dependencies 📦
         uses: bahmutov/npm-install@v1
 
+      # first, grab all videos from the YouTube playlist
+      # and save them into "videos.json" overwriting it
       - name: Grab videos 📺
         id: grab
         run: |
@@ -41,18 +43,23 @@ jobs:
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
 
+      # the step "grab" sets the GitHub Actions output "videos"
+      # that we can check to know if any of the videos have changed
       - name: Has changed videos?
         if: steps.grab.outputs.videos == 1
         run: echo "Have changed videos"
 
+      # if there are new / changed videos,
+      # recreate the entire Algolia index
       - name: Send to Algolia 🔍
         if: steps.grab.outputs.videos == 1
         run: node ./upload-to-algolia
         env:
           APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
-          INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME }}
+          INDEX_NAME: videos
           ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
 
+      # and commit the changed videos.json file to repo
       - name: Commit any changed files 💾
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
