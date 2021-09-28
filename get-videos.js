@@ -53,5 +53,6 @@ async function listVideos() {
 }
 
 listVideos().then((list) => {
+  // save the list to a file for later use
   fs.writeFileSync('videos.json', JSON.stringify(list, null, 2) + '\n')
 }, console.error)
