@@ -1,0 +1,34 @@
+name: scrape
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - get-videos.js
+  schedule:
+    # get the list of videos every night
+    - cron: '0 4 * * *'
+
+jobs:
+  scrape:
+    name: Scrape
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v2
+
+      - name: Install dependencies 📦
+        uses: bahmutov/npm-install@v1
+
+      - name: Grab videos 📺
+        run: |
+          node ./get-videos
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+
+      - name: Commit any changed files 💾
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Scraped videos
+          branch: main
+          file_pattern: videos.json
