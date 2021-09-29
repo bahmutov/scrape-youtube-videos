@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "1SOn8NbZF4o",
+    "title": "Use cy.session Command To Prepare Test Data But Only When Needed",
+    "description": "In this video, I show how to use the Cypress command cy.session to prepare the test data. Then we use the \"validate\" option to run Cypress commands to tell the cy.session if the test data needs to be recreated again. This makes the test both fast and convenient. If the validate function passes, the data is still valid and does not need to be re-created. If the validate function returns false, or fails an assertion, the cy.session recreates the data.\n\nFind the full source code in the repository https://github.com/bahmutov/chat.io",
+    "publishedAt": "2021-09-28T17:56:34Z"
+  },
+  {
     "videoId": "Wk4l8p9JQNA",
     "title": "Connect And Send Socket Messages From Cypress Test",
     "description": "In this video, we connect to the Socket.io backend server from the Cypress test and send the \"make new room\" message. Then we check if the first connection from the application shows the created room and visit it. This proves that acting as another user from the test is possible. Find the full code in the repo https://github.com/bahmutov/chat.io",
