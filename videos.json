@@ -1,5 +1,29 @@
 [
   {
+    "videoId": "SyDz6l_EFoc",
+    "title": "Invalidate cy.session From cypress-data-session",
+    "description": "In this video, I use a combination of cy.dataSession and cy.session and if the data needs to be recomputed, we invalidate all saved Cypress sessions to have the user account log in again with the recomputed user.\n\nSee the source in https://github.com/bahmutov/chat.io and the plugin code in https://github.com/bahmutov/cypress-data-session",
+    "publishedAt": "2021-09-29T19:25:09Z"
+  },
+  {
+    "videoId": "P-sb5OHSNsM",
+    "title": "Create User Using cypress-data-session Command",
+    "description": "We can use multiple cy.dataSession commands to conditionally create separate pieces of data. In this video, I use the command to create the user, if the user is invalid or missing. Find the full test code in https://github.com/bahmutov/chat.io and the plugin code in https://github.com/bahmutov/cypress-data-session",
+    "publishedAt": "2021-09-29T14:39:36Z"
+  },
+  {
+    "videoId": "VQtjDGCuRzI",
+    "title": "Use Data Alias Created Automatically By cypress-data-session",
+    "description": "You can access the cached data yielded by the setup function via an alias. This alias is created by cypress-data-session automatically. Find the full example code in https://github.com/bahmutov/chat.io and the plugin itself in https://github.com/bahmutov/cypress-data-session",
+    "publishedAt": "2021-09-29T14:20:47Z"
+  },
+  {
+    "videoId": "As5yqkoZOx8",
+    "title": "Introduction to cypress-data-session package",
+    "description": "This video shows the cypress-data-session package that abstracts setting up the test data. We need to provide the data setup function and the data validation methods, and this custom command cy.dataSession takes care of the rest. The setup runs only if the data is not there already, or if the validation function returns false. This speeds up the test a lot, since you no longer need to unnecessarily recreate the data from scratch.\n\nPlugin code: https://github.com/bahmutov/cypress-data-session\nExample spec: https://github.com/bahmutov/chat.io",
+    "publishedAt": "2021-09-29T14:07:50Z"
+  },
+  {
     "videoId": "1SOn8NbZF4o",
     "title": "Use cy.session Command To Prepare Test Data But Only When Needed",
     "description": "In this video, I show how to use the Cypress command cy.session to prepare the test data. Then we use the \"validate\" option to run Cypress commands to tell the cy.session if the test data needs to be recreated again. This makes the test both fast and convenient. If the validate function passes, the data is still valid and does not need to be re-created. If the validate function returns false, or fails an assertion, the cy.session recreates the data.\n\nFind the full source code in the repository https://github.com/bahmutov/chat.io",
