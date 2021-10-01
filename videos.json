@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "PTlcRBgFJaM",
+    "title": "Use cy.dataSession To Create A User And Log In",
+    "description": "In this example, I am using the plugin https://github.com/bahmutov/cypress-data-session to create a user if necessary, and then log in. The data session can store all sorts of data, including the user and the browser cookies, and I show in this video how the cy.dataSession can finish the login step after validating the stored user.\n\nFind the full source code in https://github.com/bahmutov/chat.io",
+    "publishedAt": "2021-09-30T18:15:31Z"
+  },
+  {
+    "videoId": "ws4TitQJ7fQ",
+    "title": "Share Data Across Specs Using cypress-data-session Plugin",
+    "description": "This video shows how to use the \"shareAcrossSpecs\" parameter to cache the computed data not just in the current browser spec, but in the Cypress plugin process. This storage is persistent across browser reloads and different specs. Thus a database item created in one spec can be reused from another spec, speeding up the tests.\n\nSee the source code in https://github.com/bahmutov/chat.io and the plugin in https://github.com/bahmutov/cypress-data-session",
+    "publishedAt": "2021-09-30T13:32:44Z"
+  },
+  {
     "videoId": "SyDz6l_EFoc",
     "title": "Invalidate cy.session From cypress-data-session",
     "description": "In this video, I use a combination of cy.dataSession and cy.session and if the data needs to be recomputed, we invalidate all saved Cypress sessions to have the user account log in again with the recomputed user.\n\nSee the source in https://github.com/bahmutov/chat.io and the plugin code in https://github.com/bahmutov/cypress-data-session",
