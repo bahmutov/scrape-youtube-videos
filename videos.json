@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "fy4qYGK690Q",
+    "title": "Nodemon And cypress-watch-and-reload Utilities",
+    "description": "In this video, I show how I typically set up file watch for my projects during the local development. Utility nodemon https://nodemon.io/ watches the server code and restarts my server on file changes. Cypress plugin cypress-watch-and-reload https://github.com/bahmutov/cypress-watch-and-reload watches the frontend source files and re-runs the Cypress tests on any changes (Cypress already re-runs the tests automatically on spec file changes).\n\nSee the project at https://github.com/bahmutov/chat.io",
+    "publishedAt": "2021-10-01T20:00:04Z"
+  },
+  {
     "videoId": "PTlcRBgFJaM",
     "title": "Use cy.dataSession To Create A User And Log In",
     "description": "In this example, I am using the plugin https://github.com/bahmutov/cypress-data-session to create a user if necessary, and then log in. The data session can store all sorts of data, including the user and the browser cookies, and I show in this video how the cy.dataSession can finish the login step after validating the stored user.\n\nFind the full source code in https://github.com/bahmutov/chat.io",
