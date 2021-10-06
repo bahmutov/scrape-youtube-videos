@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "0KTGc83wSoA",
+    "title": "Quickly Create A User And Log in Using Dependent Data Sessions",
+    "description": "Let's say you need to create a user and log in. Do you recreate the user before each test? No, you use cy.dataSession from the cypress-data-session plugin to only create the user if needed. How do you log in? You use another cy.dataSession to execute the commands, and cache the session cookie. And the final step: if the user data session is invalidated, and the user is recreated, then the cookie data session is automatically invalidated using the \"dependsOn\" parameter linking the second data session to the first one. See the full source code in https://github.com/bahmutov/chat.io",
+    "publishedAt": "2021-10-05T21:27:09Z"
+  },
+  {
+    "videoId": "HaX2VREEgYs",
+    "title": "Testing Custom WebComponent With Shadow DOM",
+    "description": "In this example, I show how Cypress can access the elements inside the Shadow DOM of a custom \"Tasty Toaster\" WebComponent. We will use cy.within command and cy.root command and custom timeouts.",
+    "publishedAt": "2021-10-05T15:54:33Z"
+  },
+  {
     "videoId": "fy4qYGK690Q",
     "title": "Nodemon And cypress-watch-and-reload Utilities",
     "description": "In this video, I show how I typically set up file watch for my projects during the local development. Utility nodemon https://nodemon.io/ watches the server code and restarts my server on file changes. Cypress plugin cypress-watch-and-reload https://github.com/bahmutov/cypress-watch-and-reload watches the frontend source files and re-runs the Cypress tests on any changes (Cypress already re-runs the tests automatically on spec file changes).\n\nSee the project at https://github.com/bahmutov/chat.io",
