@@ -1,5 +1,23 @@
 [
   {
+    "videoId": "G5CtE_LBIno",
+    "title": "Using Cyclope Visual Testing Plugin With realHover Command",
+    "description": "We can generate accurate and consistent application screenshots using the cyclope plugin (at https://github.com/bahmutov/cyclope), even if there is a hover state. The generated PNG images then can be used with any image-diffing service to check if the application data or styles have changed.",
+    "publishedAt": "2021-10-06T20:05:35Z"
+  },
+  {
+    "videoId": "7ipCvJQixI0",
+    "title": "Introduction To cypress-data-session Plugin",
+    "description": "Create the test data only when necessary in a TodoMVC GraphQL example application. Invalidate the data session from a test that changes the server data. See the full code in the repo https://github.com/bahmutov/todo-graphql-example and use the plugin https://github.com/bahmutov/cypress-data-session",
+    "publishedAt": "2021-10-06T17:53:19Z"
+  },
+  {
+    "videoId": "XIaA8k7TOA4",
+    "title": "Load Global Cypress Types In VSCode Using jsconfig.json File",
+    "description": "We can tell VSCode to load Cypress TypeScript definition and apply it to the global \"cy\" and \"Cypress\" objects. This lets the editor show intellisense warnings and type check our Cypress specs. To do this for all JavaScript spec files at once we can use jsconfig.json file (see https://code.visualstudio.com/docs/languages/jsconfig) in the cypress folder.",
+    "publishedAt": "2021-10-06T16:29:11Z"
+  },
+  {
     "videoId": "0KTGc83wSoA",
     "title": "Quickly Create A User And Log in Using Dependent Data Sessions",
     "description": "Let's say you need to create a user and log in. Do you recreate the user before each test? No, you use cy.dataSession from the cypress-data-session plugin to only create the user if needed. How do you log in? You use another cy.dataSession to execute the commands, and cache the session cookie. And the final step: if the user data session is invalidated, and the user is recreated, then the cookie data session is automatically invalidated using the \"dependsOn\" parameter linking the second data session to the first one. See the full source code in https://github.com/bahmutov/chat.io",
