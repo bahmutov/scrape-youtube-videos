@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "DnmnzemS_HA",
+    "title": "Refactor Common Command Repetition in Cypress Test",
+    "description": "In this test, we will refactor repeated Cypress commands into a \"forEach\" loop. Each iteration will get the elements and check if they are visible. For more, see the tests in https://github.com/bahmutov/cypress-workshop-basics",
+    "publishedAt": "2021-10-13T16:45:29Z"
+  },
+  {
     "videoId": "G5CtE_LBIno",
     "title": "Using Cyclope Visual Testing Plugin With realHover Command",
     "description": "We can generate accurate and consistent application screenshots using the cyclope plugin (at https://github.com/bahmutov/cyclope), even if there is a hover state. The generated PNG images then can be used with any image-diffing service to check if the application data or styles have changed.",
