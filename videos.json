@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "utPKRV_fL1E",
+    "title": "Using cypress-each To Create Separate Tests",
+    "description": "In this video, I refactor a test to create independent data-driven tests using cypress-each plugin. Find the plugin at https://github.com/bahmutov/cypress-each For more information read the blog post https://glebbahmutov.com/blog/dynamic-api-tests-using-cypress-each/",
+    "publishedAt": "2021-10-14T13:13:07Z"
+  },
+  {
     "videoId": "DnmnzemS_HA",
     "title": "Refactor Common Command Repetition in Cypress Test",
     "description": "In this test, we will refactor repeated Cypress commands into a \"forEach\" loop. Each iteration will get the elements and check if they are visible. For more, see the tests in https://github.com/bahmutov/cypress-workshop-basics",
