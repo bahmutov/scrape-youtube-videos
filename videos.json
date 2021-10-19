@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "adHjTf5j6uE",
+    "title": "Cypress-network-idle plugin",
+    "description": "This video introduces the cypress-network-idle plugin that can wait for the network activity to stop before continuing the test. Find the plugin at https://github.com/bahmutov/cypress-network-idle",
+    "publishedAt": "2021-10-18T20:13:29Z"
+  },
+  {
     "videoId": "utPKRV_fL1E",
     "title": "Using cypress-each To Create Separate Tests",
     "description": "In this video, I refactor a test to create independent data-driven tests using cypress-each plugin. Find the plugin at https://github.com/bahmutov/cypress-each For more information read the blog post https://glebbahmutov.com/blog/dynamic-api-tests-using-cypress-each/",
