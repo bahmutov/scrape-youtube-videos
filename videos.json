@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "E6P_rBt6caU",
+    "title": "Prepare Intercept And Wait Using cypress-network-idle Plugin",
+    "description": "In this video, I start listening to the network calls before the action that triggers them occurs. This gives the cypress-network-idle plugin an accurate view of the requests that are in flight or already finished. Find the plugin at https://github.com/bahmutov/cypress-network-idle",
+    "publishedAt": "2021-10-19T19:56:48Z"
+  },
+  {
     "videoId": "adHjTf5j6uE",
     "title": "Cypress-network-idle plugin",
     "description": "This video introduces the cypress-network-idle plugin that can wait for the network activity to stop before continuing the test. Find the plugin at https://github.com/bahmutov/cypress-network-idle",
