@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "918BqmTa-w4",
+    "title": "Testing The Infinite Scroll With Cypress",
+    "description": "In this video, I confirm the infinite scroll fetches the items as I scroll to the bottom of the page. Different tests confirm the loading element appears and disappears, the number of items gets incremented correctly, the backend API is called, and that the user can get back to the top of the page by clicking the \"Back to Top\" element. Find the source code at https://github.com/bahmutov/infinite-scroll-quotes",
+    "publishedAt": "2021-10-20T19:30:15Z"
+  },
+  {
     "videoId": "E6P_rBt6caU",
     "title": "Prepare Intercept And Wait Using cypress-network-idle Plugin",
     "description": "In this video, I start listening to the network calls before the action that triggers them occurs. This gives the cypress-network-idle plugin an accurate view of the requests that are in flight or already finished. Find the plugin at https://github.com/bahmutov/cypress-network-idle",
