@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "KHn7647xOz8",
+    "title": "Use cypress-recurse To Scroll The Page Until It Loads The Text We Are Looking For",
+    "description": "In this video, I use cypress-recurse function to keep scrolling the page until we find the word \"debug\". We yield that found quote and highlight it. The same technique can be used to find an element on the paginated sites, or when the content changes on reload. Find the plugin at https://github.com/bahmutov/cypress-recurse and the example test at",
+    "publishedAt": "2021-10-22T13:46:17Z"
+  },
+  {
     "videoId": "918BqmTa-w4",
     "title": "Testing The Infinite Scroll With Cypress",
     "description": "In this video, I confirm the infinite scroll fetches the items as I scroll to the bottom of the page. Different tests confirm the loading element appears and disappears, the number of items gets incremented correctly, the backend API is called, and that the user can get back to the top of the page by clicking the \"Back to Top\" element. Find the source code at https://github.com/bahmutov/infinite-scroll-quotes",
