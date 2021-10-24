@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "ujJVl5blk1g",
+    "title": "Use GraphQL Cypress.io Stub With The Times Parameter To Return A Different Fixture On Each Call",
+    "description": "In this video, I. respond to a question that asked how to efficiently intercept and mock GraphQL calls that all go through the same endpoint, but return a different fixture file on a different call. For example, return fixture A on the first call to operation Z, then return fixture B on the second call to the same operation Z, etc. Find the full source code in the repo https://github.com/bahmutov/todo-graphql-example",
+    "publishedAt": "2021-10-23T18:07:47Z"
+  },
+  {
     "videoId": "KHn7647xOz8",
     "title": "Use cypress-recurse To Scroll The Page Until It Loads The Text We Are Looking For",
     "description": "In this video, I use cypress-recurse function to keep scrolling the page until we find the word \"debug\". We yield that found quote and highlight it. The same technique can be used to find an element on the paginated sites, or when the content changes on reload. Find the plugin at https://github.com/bahmutov/cypress-recurse and the example test at",
