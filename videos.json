@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "NdeHg0u8Wro",
+    "title": "Stub window.prompt Method From Cypress",
+    "description": "Using cy.stub we can stub the call to the window.prompt method, and return a test value. Then the video shows how to confirm the application receives that test value and calls the window.alert correctly. Find the test code in the https://github.com/bahmutov/cypress-examples repo",
+    "publishedAt": "2021-10-25T13:40:31Z"
+  },
+  {
+    "videoId": "wnFLb04iJp8",
+    "title": "Stub window.alert From The Cypress Test",
+    "description": "This video explains how to stub the window.alert method calls made by the application. The Cypress test can then confirm the details of the call. Find the example source code in the repo https://github.com/bahmutov/cypress-examples",
+    "publishedAt": "2021-10-25T13:30:13Z"
+  },
+  {
     "videoId": "ujJVl5blk1g",
     "title": "Use GraphQL Cypress.io Stub With The Times Parameter To Return A Different Fixture On Each Call",
     "description": "In this video, I. respond to a question that asked how to efficiently intercept and mock GraphQL calls that all go through the same endpoint, but return a different fixture file on a different call. For example, return fixture A on the first call to operation Z, then return fixture B on the second call to the same operation Z, etc. Find the full source code in the repo https://github.com/bahmutov/todo-graphql-example",
