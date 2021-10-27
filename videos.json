@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "0SgRYcJACjM",
+    "title": "Interactive Cypress Skills Form",
+    "description": "This video shows the interactive Cypress skills form hosted at https://cypress.tips/skills You can use this form for self-evaluation or while interviewing a candidate for a job position that requires writing Cypress tests. You can even copy the filled information and paste it into your recruitment system or share it by email. For more, read the blog post https://glebbahmutov.com/blog/cypress-skills-ladder/",
+    "publishedAt": "2021-10-26T13:16:05Z"
+  },
+  {
     "videoId": "NdeHg0u8Wro",
     "title": "Stub window.prompt Method From Cypress",
     "description": "Using cy.stub we can stub the call to the window.prompt method, and return a test value. Then the video shows how to confirm the application receives that test value and calls the window.alert correctly. Find the test code in the https://github.com/bahmutov/cypress-examples repo",
