@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "jAU4dLRXVIA",
+    "title": "Create High Resolution Videos And Screenshots In Cypress Using This Plugin",
+    "description": "By using the https://github.com/bahmutov/cypress-high-resolution you can easily resize the browser window and generate super high resolution (like 4k) videos of your Cypress tests. As long as your machine is capable of it, the videos and screenshots can capture a lot of details.",
+    "publishedAt": "2021-10-29T14:12:11Z"
+  },
+  {
+    "videoId": "pHzroBFY5V0",
+    "title": "Add A Red Border Around Elements That Have data-cy Attribute",
+    "description": "By adding the red border around the elements that have data-cy attribute, we can highlight the elements that are selectable during Cypress.io test. To avoid modifying the production CSS resource, we intercept the css/style.css resource using cy.intercept command and append the additional style to the server's response. To avoid receiving 304 \"use cached resource\" from the server, we delete the caching headers on the request to the server. Find the source code in the repo https://github.com/bahmutov/todo-graphql-example",
+    "publishedAt": "2021-10-29T12:55:52Z"
+  },
+  {
     "videoId": "CtU43GzaicI",
     "title": "Run All Tests That Have No Tags Using cypress-grep Plugin",
     "description": "This video shows how to execute all tests that have no tags using cypress-grep plugin using \"grepUntagged=true\" option. I also show how to create a GitHub Actions job to run all untagged tests after parallel jobs running the specific tags. Find the plugin at https://github.com/cypress-io/cypress-grep and the shown source code at https://github.com/bahmutov/todo-graphql-example",
@@ -86,7 +98,7 @@
   {
     "videoId": "XIaA8k7TOA4",
     "title": "Load Global Cypress Types In VSCode Using jsconfig.json File",
-    "description": "We can tell VSCode to load Cypress TypeScript definition and apply it to the global \"cy\" and \"Cypress\" objects. This lets the editor show intellisense warnings and type check our Cypress specs. To do this for all JavaScript spec files at once we can use jsconfig.json file (see https://code.visualstudio.com/docs/languages/jsconfig) in the cypress folder.",
+    "description": "We can tell VSCode to load Cypress TypeScript definition and apply it to the global \"cy\" and \"Cypress\" objects. This lets the editor show intellisense warnings and type check our Cypress specs. To do this for all JavaScript spec files at once we can use jsconfig.json file (see https://code.visualstudio.com/docs/languages/jsconfig) in the cypress folder. Find the example source code in the repo https://github.com/bahmutov/todo-graphql-example",
     "publishedAt": "2021-10-06T16:29:11Z"
   },
   {
