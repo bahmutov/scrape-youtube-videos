@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "EIbSzT6QSxc",
+    "title": "Cypress-highlight Plugin Introduction",
+    "description": "This video shows https://github.com/bahmutov/cypress-highlight plugin that allows you to see which elements on the page have good data attributes for selecting elements during Cypress tests.",
+    "publishedAt": "2021-11-01T18:15:31Z"
+  },
+  {
     "videoId": "jAU4dLRXVIA",
     "title": "Create High Resolution Videos And Screenshots In Cypress Using This Plugin",
     "description": "By using the https://github.com/bahmutov/cypress-high-resolution you can easily resize the browser window and generate super high resolution (like 4k) videos of your Cypress tests. As long as your machine is capable of it, the videos and screenshots can capture a lot of details.",
