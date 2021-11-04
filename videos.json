@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "ccgBkageKB0",
+    "title": "Test The Loading Element With Cancel Feature",
+    "description": "In this video, I show how to test a page where the user can transition from state to state. The loading element that appears during the transition has an extra feature: if the user clicks on it, the transition is canceled. We confirm using the tests that the cancel works correctly. Find the source code in the repo https://github.com/bahmutov/emulate-navigation-allow-stopping-pure-css-native-js",
+    "publishedAt": "2021-11-03T15:08:52Z"
+  },
+  {
     "videoId": "EIbSzT6QSxc",
     "title": "Cypress-highlight Plugin Introduction",
     "description": "This video shows https://github.com/bahmutov/cypress-highlight plugin that allows you to see which elements on the page have good data attributes for selecting elements during Cypress tests.",
