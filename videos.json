@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "eBrUo8zDVXI",
+    "title": "Use Cypress Aliases Created With cy.as Command to Access The Page Elements",
+    "description": "This video shows how to abstract working with page elements by storing a reference to them using the cy.as command. Later we can access that element using the cy.get command and passing the alias name\n\n// creating an alias\ncy.contains('button[role=tab]', 'Page 1').as('page1')\n// using an element alias\ncy.get('@page1').should('have.attr', 'aria-selected', 'true')\n\nWe can refactor the aliases to be page objects, as shown in the video. Find the full source code in repo https://github.com/bahmutov/emulate-navigation-allow-stopping-pure-css-native-js",
+    "publishedAt": "2021-11-04T13:05:35Z"
+  },
+  {
+    "videoId": "7_gx2yp9oeE",
+    "title": "Make The Test Faster Using cy.clock And cy.tick Commands",
+    "description": "If the application uses a setTimeout or other time-related functions, you can speed it up by controlling the application's clock using the Cypress test commands cy.clock (to freeze the application's clock) and manually advance it instantly using cy.tick(ms) command. In our example test, we speed up the loading from 2 or 10 seconds to be almost instant. Find the example test in the repo https://github.com/bahmutov/emulate-navigation-allow-stopping-pure-css-native-js",
+    "publishedAt": "2021-11-04T13:02:15Z"
+  },
+  {
     "videoId": "ccgBkageKB0",
     "title": "Test The Loading Element With Cancel Feature",
     "description": "In this video, I show how to test a page where the user can transition from state to state. The loading element that appears during the transition has an extra feature: if the user clicks on it, the transition is canceled. We confirm using the tests that the cancel works correctly. Find the source code in the repo https://github.com/bahmutov/emulate-navigation-allow-stopping-pure-css-native-js",
