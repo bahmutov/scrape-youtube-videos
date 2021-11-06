@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "MSalZBsbsNQ",
+    "title": "Define A Window Property To Access A Cypress Aliased Element (Advanced)",
+    "description": "This video shows how to abstract accessing an element via cy.get(aliasName) by defining a window object property with a getter method. The test looks like it is using \"normal\" variables, but each access calls the \"cy.get\" command under the hood. \n\n// create an aliased element\ncy.contains('button[role=tab]', 'Page 1').as('page1')\n// magic!\n// use \"page1\" to operate on the element\npage1.should('have.attr', 'aria-selected', 'true')\n\nFind the code in the repo https://github.com/bahmutov/emulate-navigation-allow-stopping-pure-css-native-js",
+    "publishedAt": "2021-11-05T13:59:26Z"
+  },
+  {
+    "videoId": "UNSCLtoHfgk",
+    "title": "Search Part Of The List",
+    "description": "In this video, I show how to take the entire list with multiple items, find a particular item, and then return a part of the list. We can then search that part for something specific. I use Lodash commands to work with jQuery objects (_.findIndex, _.slice), and you can find the shown recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2021-11-05T13:40:08Z"
+  },
+  {
     "videoId": "eBrUo8zDVXI",
     "title": "Use Cypress Aliases Created With cy.as Command to Access The Page Elements",
     "description": "This video shows how to abstract working with page elements by storing a reference to them using the cy.as command. Later we can access that element using the cy.get command and passing the alias name\n\n// creating an alias\ncy.contains('button[role=tab]', 'Page 1').as('page1')\n// using an element alias\ncy.get('@page1').should('have.attr', 'aria-selected', 'true')\n\nWe can refactor the aliases to be page objects, as shown in the video. Find the full source code in repo https://github.com/bahmutov/emulate-navigation-allow-stopping-pure-css-native-js",
