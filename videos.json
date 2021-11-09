@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "BbxjeXmIUeo",
+    "title": "Confirm The Text On The Page Changes After A Click",
+    "description": "In this video, I explain how to confirm that a value on the page (like the text of a particular element) changes when the user clicks on the button. We know neither the original text nor the final text. We just confirm from the test that the value changes. Find the code at the https://glebbahmutov.com/cypress-examples site",
+    "publishedAt": "2021-11-08T18:32:57Z"
+  },
+  {
     "videoId": "MSalZBsbsNQ",
     "title": "Define A Window Property To Access A Cypress Aliased Element (Advanced)",
     "description": "This video shows how to abstract accessing an element via cy.get(aliasName) by defining a window object property with a getter method. The test looks like it is using \"normal\" variables, but each access calls the \"cy.get\" command under the hood. \n\n// create an aliased element\ncy.contains('button[role=tab]', 'Page 1').as('page1')\n// magic!\n// use \"page1\" to operate on the element\npage1.should('have.attr', 'aria-selected', 'true')\n\nFind the code in the repo https://github.com/bahmutov/emulate-navigation-allow-stopping-pure-css-native-js",
