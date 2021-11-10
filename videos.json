@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "4YMAERddHYA",
+    "title": "Debug cypress-grep Plugin",
+    "description": "This video teaches you how to debug cypress-grep not behaving as you expect it to behave.\n1: check the \"env\" object\n2: enable debug messages in the browser\n3: enable debug messages in the terminal\n\nFor more, see the debugging section in the README file https://github.com/cypress-io/cypress-grep",
+    "publishedAt": "2021-11-09T16:06:02Z"
+  },
+  {
     "videoId": "BbxjeXmIUeo",
     "title": "Confirm The Text On The Page Changes After A Click",
     "description": "In this video, I explain how to confirm that a value on the page (like the text of a particular element) changes when the user clicks on the button. We know neither the original text nor the final text. We just confirm from the test that the value changes. Find the code at the https://glebbahmutov.com/cypress-examples site",
