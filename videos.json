@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "qkofPocd7lY",
+    "title": "Test Each URL From Sitemap In Its Own Separate Cypress Test",
+    "description": "In the previous video \"Check Sitemap And Verify Every URL Using Cypress.io\" https://youtu.be/QIuAcJO1klg I have shown how to fetch sitemap.xml and verify each URL. In this video, I fetch the sitemap.xml and generate a separate test for each URL to be verified separately. Find the source code at https://github.com/bahmutov/vuepress-cypress-test-example and the cypress-each plugin at https://github.com/bahmutov/cypress-each",
+    "publishedAt": "2021-11-10T16:20:54Z"
+  },
+  {
+    "videoId": "QIuAcJO1klg",
+    "title": "Check Sitemap And Verify Every URL Using Cypress.io",
+    "description": "We can request the sitemap file, parse XML response, and then check if every listed URL is valid using Cypress test. Find the full source code in the repo https://github.com/bahmutov/vuepress-cypress-test-example. Watch the next part of this demo in the video \"Test Each URL From Sitemap In Its Own Separate Cypress Test\" at https://youtu.be/qkofPocd7lY",
+    "publishedAt": "2021-11-10T15:50:28Z"
+  },
+  {
     "videoId": "4YMAERddHYA",
     "title": "Debug cypress-grep Plugin",
     "description": "This video teaches you how to debug cypress-grep not behaving as you expect it to behave.\n1: check the \"env\" object\n2: enable debug messages in the browser\n3: enable debug messages in the terminal\n\nFor more, see the debugging section in the README file https://github.com/cypress-io/cypress-grep",
