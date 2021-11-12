@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "-4_Pg5eJD7g",
+    "title": "Cypress vs cy Difference Explanation",
+    "description": "In this video, I explain the different between the global objects \"cy\" and \"Cypress\". In short: \"cy\" sets and chains everything inside a test, while \"Cypress\" is a global static object that has properties and methods you can call at any point: inside a test, outside it, or even from the DevTools console. For more details, read the blog post tip: https://glebbahmutov.com/blog/cypress-tips-and-tricks/#difference-between-cy-and-cypress-globals",
+    "publishedAt": "2021-11-11T15:00:54Z"
+  },
+  {
     "videoId": "qkofPocd7lY",
     "title": "Test Each URL From Sitemap In Its Own Separate Cypress Test",
     "description": "In the previous video \"Check Sitemap And Verify Every URL Using Cypress.io\" https://youtu.be/QIuAcJO1klg I have shown how to fetch sitemap.xml and verify each URL. In this video, I fetch the sitemap.xml and generate a separate test for each URL to be verified separately. Find the source code at https://github.com/bahmutov/vuepress-cypress-test-example and the cypress-each plugin at https://github.com/bahmutov/cypress-each",
