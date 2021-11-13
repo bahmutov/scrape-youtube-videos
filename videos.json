@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "aYX7OVqp6AE",
+    "title": "Avoid Flake When Typing Into The Input Elements Using cypress-recurse",
+    "description": "In this video, an input element resets its value several times after the page loads, simulating an input element that re-renders at the start. The fast test runner does not know about the re-renders and keeps \"losing\" part of the input string when typing into the visible element. We can get around this problem by using cypress-recurse plugin - it can type, then check the result, and if the input's value is different from expected, the plugin clears it and tries again. Find the plugin and the example spec in the repo",
+    "publishedAt": "2021-11-12T21:04:58Z"
+  },
+  {
+    "videoId": "pz_orYM-7xM",
+    "title": "Request A Specific Comment Using Text From The Page",
+    "description": "If the page is showing an ID text, and you want to make a request to the backend API using that text, this video is for you. We grab the element's text, clean it up by removing all non-digit characters, convert the text into a number, then make a request to the backend API using the cy.request command. We then assert the properties of the response object. Find this recipe at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2021-11-12T15:42:49Z"
+  },
+  {
     "videoId": "-4_Pg5eJD7g",
     "title": "Cypress vs cy Difference Explanation",
     "description": "In this video, I explain the different between the global objects \"cy\" and \"Cypress\". In short: \"cy\" sets and chains everything inside a test, while \"Cypress\" is a global static object that has properties and methods you can call at any point: inside a test, outside it, or even from the DevTools console. For more details, read the blog post tip: https://glebbahmutov.com/blog/cypress-tips-and-tricks/#difference-between-cy-and-cypress-globals",
