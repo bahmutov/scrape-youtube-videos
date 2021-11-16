@@ -1,8 +1,20 @@
 [
   {
+    "videoId": "MLDsqBd_gVU",
+    "title": "Introduction To cy-spok Plugin For Writing Powerful Assertions For Objects",
+    "description": "This video shows how to use cy-spok https://github.com/bahmutov/cy-spok plugin (which is a wrapper around the https://github.com/thlorenz/spok assertion library) to write powerful assertions in Cypress tests. In a single shot you can confirm both the values inside an object, and other conditions, like a property should be a string, or a number larger than N, etc.\n\nWhenever the cy-spok assertion passes or fails, it outputs all relevant information to the Cypress Command Log, showing you precisely what the values were, and why the assertion might have failed. Check out a small usage example in https://github.com/bahmutov/vue-vuex-todomvc repo.",
+    "publishedAt": "2021-11-15T20:41:14Z"
+  },
+  {
+    "videoId": "-Jr9vLpa1Ak",
+    "title": "Disable The Input Element Until The Application Is Ready To Avoid Flake",
+    "description": "In my previous video \"Avoid Flake When Typing Into The Input Elements Using cypress-recurse\" https://youtu.be/aYX7OVqp6AE I have shown how to use the cypress-recurse plugin to re-type text into the input element if the application clears the field suddenly. This avoids the test flake, but the ultimate solution is to look at the application's code and figure out why it allows the user interaction before the application is ready. \n\nIn this video, I add the \"disabled\" attribute to the input element and remove it only after the application stops re-rendering and clearing the input. By removing the attribute, the application signals to the user and to the test runner, that it is ready to accept the user actions. Cypress commands like cy.clear and cy.type automatically wait for the input elements to be enabled before trying to clear them or to type characters.",
+    "publishedAt": "2021-11-15T14:48:41Z"
+  },
+  {
     "videoId": "aYX7OVqp6AE",
     "title": "Avoid Flake When Typing Into The Input Elements Using cypress-recurse",
-    "description": "In this video, an input element resets its value several times after the page loads, simulating an input element that re-renders at the start. The fast test runner does not know about the re-renders and keeps \"losing\" part of the input string when typing into the visible element. We can get around this problem by using cypress-recurse plugin - it can type, then check the result, and if the input's value is different from expected, the plugin clears it and tries again. Find the plugin and the example spec in the repo",
+    "description": "In this video, an input element resets its value several times after the page loads, simulating an input element that re-renders at the start. The fast test runner does not know about the re-renders and keeps \"losing\" part of the input string when typing into the visible element. We can get around this problem by using cypress-recurse plugin - it can type, then check the result, and if the input's value is different from expected, the plugin clears it and tries again. Find the plugin and the example spec in the repo https://github.com/bahmutov/cypress-recurse\n\nI have also recorded a second video showing how to solve the flake in this application example for good, see \"Disable The Input Element Until The Application Is Ready To Avoid Flake\" https://youtu.be/-Jr9vLpa1Ak",
     "publishedAt": "2021-11-12T21:04:58Z"
   },
   {
