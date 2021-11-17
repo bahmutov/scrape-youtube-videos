@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "4TLjsCmXZlM",
+    "title": "Add Cypress GitHub Integration To A Repo Step By Step",
+    "description": "In this video, I add Cypress GitHub Integration (https://on.cypress.io/github-integration) to connect Cypress Dashboard to GitHub Pull Requests and see the test results right in the PR comments and status checks. Find this project at https://github.com/bahmutov/cypress-examples and check out the pull requests there to see the Cypress comments.",
+    "publishedAt": "2021-11-16T16:09:07Z"
+  },
+  {
     "videoId": "MLDsqBd_gVU",
     "title": "Introduction To cy-spok Plugin For Writing Powerful Assertions For Objects",
     "description": "This video shows how to use cy-spok https://github.com/bahmutov/cy-spok plugin (which is a wrapper around the https://github.com/thlorenz/spok assertion library) to write powerful assertions in Cypress tests. In a single shot you can confirm both the values inside an object, and other conditions, like a property should be a string, or a number larger than N, etc.\n\nWhenever the cy-spok assertion passes or fails, it outputs all relevant information to the Cypress Command Log, showing you precisely what the values were, and why the assertion might have failed. Check out a small usage example in https://github.com/bahmutov/vue-vuex-todomvc repo.",
