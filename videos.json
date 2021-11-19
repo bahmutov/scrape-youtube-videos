@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "21MXha13qCU",
+    "title": "Confirm The Table Is Sorted By A Column",
+    "description": "In this video, I explain how to confirm that a table gets sorted by checking a column of dates. We need to write a single \"should(callback)\" function that extracts the inner text from each cell, then converts the strings into timestamps, and checks that the array is sorted. Find the full example at https://glebbahmutov.com/cypress-examples/recipes/sorted-list.html",
+    "publishedAt": "2021-11-18T14:20:02Z"
+  },
+  {
     "videoId": "4TLjsCmXZlM",
     "title": "Add Cypress GitHub Integration To A Repo Step By Step",
     "description": "In this video, I add Cypress GitHub Integration (https://on.cypress.io/github-integration) to connect Cypress Dashboard to GitHub Pull Requests and see the test results right in the PR comments and status checks. Find this project at https://github.com/bahmutov/cypress-examples and check out the pull requests there to see the Cypress comments.",
