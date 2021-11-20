@@ -1,5 +1,23 @@
 [
   {
+    "videoId": "Z5i60En_33A",
+    "title": "Call Window Method From Cypress Spec",
+    "description": "This short video explains calling application / window methods from Cypress specs - you have direct access to the application's \"window\" object by using the command cy.window. You can combine the command with assertions to get the method reference when it is ready, or use the cy.invoke command to call the method with automatic built-in checks. Find more documentation at https://on.cypress.io/window and at https://glebbahmutov.com/cypress-examples/commands/window.html\n\nTip: exposing the application methods via \"window\" object to the Cypress tests is very convenient and can super-charge your tests, take a look at https://www.cypress.io/blog/2019/01/03/stop-using-page-objects-and-start-using-app-actions/ blog post.",
+    "publishedAt": "2021-11-19T21:28:59Z"
+  },
+  {
+    "videoId": "Ke5Pf6IISn8",
+    "title": "Use cypress-recurse Plugin To Confirm The Table Gets Sorted Eventually",
+    "description": "We are using the cypress-recurse https://github.com/bahmutov/cypress-recurse plugin to retry the entire Cypress chain of commands until the table is sorted by a column.\n\nWatch the previous video \"Paginated Table Example\" https://youtu.be/y5ujNKkmgI8 for the introduction to this example",
+    "publishedAt": "2021-11-19T16:55:43Z"
+  },
+  {
+    "videoId": "y5ujNKkmgI8",
+    "title": "Cypress.io Testing a Paginated Table Example",
+    "description": "This video shows how to work with a paginated table, and how to verify the cells in a particular column are NOT sorted using chai-sorted plugin. Find the source code in the repo https://github.com/bahmutov/cypress-recurse Watch the next video \"Use cypress-recurse Plugin To Confirm The Table Gets Sorted Eventually\" https://youtu.be/Ke5Pf6IISn8\n\nTip: see the explanation behind map(parseInt) problem in the blog post https://glebbahmutov.com/blog/functional-js-interview-question/",
+    "publishedAt": "2021-11-19T16:36:11Z"
+  },
+  {
     "videoId": "21MXha13qCU",
     "title": "Confirm The Table Is Sorted By A Column",
     "description": "In this video, I explain how to confirm that a table gets sorted by checking a column of dates. We need to write a single \"should(callback)\" function that extracts the inner text from each cell, then converts the strings into timestamps, and checks that the array is sorted. Find the full example at https://glebbahmutov.com/cypress-examples/recipes/sorted-list.html",
