@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "WO3ujoEhVUc",
+    "title": "Random Data And Selective Testing Using Faker And Cypress-Each Plugin",
+    "description": "This video demonstrates the Faker utility https://github.com/Marak/Faker.js#readme for generating random but deterministic fake data for testing, and cypress-each https://github.com/bahmutov/cypress-each plugin for data-driven tests. It shows how to select just a subset of items to test. Find the source code at https://github.com/bahmutov/cypress-each-and-faker-example repo",
+    "publishedAt": "2021-11-22T20:32:07Z"
+  },
+  {
     "videoId": "Z5i60En_33A",
     "title": "Call Window Method From Cypress Spec",
     "description": "This short video explains calling application / window methods from Cypress specs - you have direct access to the application's \"window\" object by using the command cy.window. You can combine the command with assertions to get the method reference when it is ready, or use the cy.invoke command to call the method with automatic built-in checks. Find more documentation at https://on.cypress.io/window and at https://glebbahmutov.com/cypress-examples/commands/window.html\n\nTip: exposing the application methods via \"window\" object to the Cypress tests is very convenient and can super-charge your tests, take a look at https://www.cypress.io/blog/2019/01/03/stop-using-page-objects-and-start-using-app-actions/ blog post.",
