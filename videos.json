@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "vlLLi5N4h78",
+    "title": "Replace Text In The Loaded JSON Fixture",
+    "description": "In this video, I teach you how to load a JSON fixture file and replace parts of the text using cy.invoke command. We can also convert the JSON into a string or load the fixture into a Buffer object to take advantage of the \"null\" encoding available in Cypress v9. Find this example, and more Cypress training exercises in the repo https://github.com/bahmutov/cypress-workshop-basics",
+    "publishedAt": "2021-11-24T14:08:35Z"
+  },
+  {
     "videoId": "WO3ujoEhVUc",
     "title": "Random Data And Selective Testing Using Faker And Cypress-Each Plugin",
     "description": "This video demonstrates the Faker utility https://github.com/Marak/Faker.js#readme for generating random but deterministic fake data for testing, and cypress-each https://github.com/bahmutov/cypress-each plugin for data-driven tests. It shows how to select just a subset of items to test. Find the source code at https://github.com/bahmutov/cypress-each-and-faker-example repo",
