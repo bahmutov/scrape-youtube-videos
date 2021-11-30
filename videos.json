@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "h-2sZshFroc",
+    "title": "Private video",
+    "description": "This video is private.",
+    "publishedAt": "2021-11-29T17:44:05Z"
+  },
+  {
     "videoId": "vlLLi5N4h78",
     "title": "Replace Text In The Loaded JSON Fixture",
     "description": "In this video, I teach you how to load a JSON fixture file and replace parts of the text using cy.invoke command. We can also convert the JSON into a string or load the fixture into a Buffer object to take advantage of the \"null\" encoding available in Cypress v9. Find this example, and more Cypress training exercises in the repo https://github.com/bahmutov/cypress-workshop-basics",
