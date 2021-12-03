@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "skjPl8wvHEo",
+    "title": "Add Unit Tests To Verify chai-sorted Assertion Plugin",
+    "description": "In https://github.com/bahmutov/sorted-table-example I have used chai-sorted assertion plugin to check if an array is sorted. To make sure the chai-sorted behaves correctly, this video shows how I add a few unit tests to run in Cypress. This way we \"lock\" the behavior of the plugin and can safely upgrade it in the future.",
+    "publishedAt": "2021-12-02T14:11:02Z"
+  },
+  {
     "videoId": "h-2sZshFroc",
     "title": "Cypress Ramda",
     "description": "This video teaches you how to import Ramda library and set it as \"Cypress.R\" so that all its functions are available, similar to the already bundled Lodash library \"Cypress._\" property. Note: I love Ramda because its order of arguments is very convenient (the known arguments are placed first, and the dynamic data like the list of items is expected last, which works great with currying, see this video \"Hey Underscore, You're Doing It Wrong!\" https://www.youtube.com/watch?v=m3svKOdZijA). Read blog posts like https://glebbahmutov.com/blog/lodash-to-ramda-example/ and other blog posts tagged \"Ramda\" at https://glebbahmutov.com/blog/tags/ramda/. You can also flip through my functional presentation slides at https://slides.com/bahmutov/decks/functional",
