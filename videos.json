@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "9AF-lcvh1dk",
+    "title": "Fix The Dreaded Cypress Error \"Command Inside Of A Promise\"",
+    "description": "In this video, I explain the dreaded \"Cypress detected that you returned a promise in a test, but also invoked one or more cy commands inside of that promise\" error and how to avoid it. Cypress commands are chains that yield a value (called the subject) to the next command. By using a promise and Cypress commands you are confusing Cypress: which value should it yield - the value resolved by the promise or the value yielded by the new Cypress commands? Luckily, every situation like this can be rewritten to only use a promise in a step, or Cypress commands.",
+    "publishedAt": "2021-12-03T14:20:28Z"
+  },
+  {
     "videoId": "skjPl8wvHEo",
     "title": "Add Unit Tests To Verify chai-sorted Assertion Plugin",
     "description": "In https://github.com/bahmutov/sorted-table-example I have used chai-sorted assertion plugin to check if an array is sorted. To make sure the chai-sorted behaves correctly, this video shows how I add a few unit tests to run in Cypress. This way we \"lock\" the behavior of the plugin and can safely upgrade it in the future.",
