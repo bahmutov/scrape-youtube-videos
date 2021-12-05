@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "jlBNdJPscJk",
+    "title": "Debug Ramda Pipeline in Cypress Test",
+    "description": "In this video, I take a failing test that uses R.pipe method and shows how to debug its steps using R.tap method to see the data at each step. Then I fix the test and show a few more tricks. Find the full test in repo https://github.com/bahmutov/sorted-table-example",
+    "publishedAt": "2021-12-04T17:57:25Z"
+  },
+  {
     "videoId": "9AF-lcvh1dk",
     "title": "Fix The Dreaded Cypress Error \"Command Inside Of A Promise\"",
     "description": "In this video, I explain the dreaded \"Cypress detected that you returned a promise in a test, but also invoked one or more cy commands inside of that promise\" error and how to avoid it. Cypress commands are chains that yield a value (called the subject) to the next command. By using a promise and Cypress commands you are confusing Cypress: which value should it yield - the value resolved by the promise or the value yielded by the new Cypress commands? Luckily, every situation like this can be rewritten to only use a promise in a step, or Cypress commands.",
