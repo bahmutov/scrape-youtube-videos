@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "QHGhp9yG4uw",
+    "title": "Indeterminate Checkboxes",
+    "description": "This video teaches you about indeterminate checkboxes (check out this article https://css-tricks.com/indeterminate-checkboxes/) and how to test them using Cypress.io test runner. Find the full set of tests in https://github.com/bahmutov/indeterminate-checkboxes",
+    "publishedAt": "2021-12-07T13:34:20Z"
+  },
+  {
     "videoId": "jlBNdJPscJk",
     "title": "Debug Ramda Pipeline in Cypress Test",
     "description": "In this video, I take a failing test that uses R.pipe method and shows how to debug its steps using R.tap method to see the data at each step. Then I fix the test and show a few more tricks. Find the full test in repo https://github.com/bahmutov/sorted-table-example",
