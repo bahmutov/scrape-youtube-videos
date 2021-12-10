@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "PRpuE2DXRlQ",
+    "title": "Private video",
+    "description": "This video is private.",
+    "publishedAt": "2021-12-09T14:12:42Z"
+  },
+  {
     "videoId": "MzCACth7qLE",
     "title": "Slow Down And Wait For 3rd Party JavaScript To Load",
     "description": "In this video, I will show how to slow down a particular request to load 3rd party JavaScript to see how the application handles it. We also learn how to ensure the 3rd party JS has loaded by checking the object it creates on the \"window\" object. Finally, the test shows how to invoke a method on the 3rd party JavaScript object. Find the full source code in the repo https://github.com/bahmutov/cypress-3rd-party-script-example",
