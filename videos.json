@@ -1,8 +1,14 @@
 [
   {
+    "videoId": "84NQf-HVWWE",
+    "title": "Visibility Of Multiple Elements Explained",
+    "description": "This video explains how to check if multiple elements returned by a query command like cy.get are visible or not. We can filter all elements by visibility to avoid accidentally passing the assertion only with some elements visible. Find the full source code at https://glebbahmutov.com/cypress-examples/commands/assertions.html",
+    "publishedAt": "2021-12-10T13:20:24Z"
+  },
+  {
     "videoId": "PRpuE2DXRlQ",
-    "title": "Private video",
-    "description": "This video is private.",
+    "title": "Cypress Dashboard, Reusing GitHub Workflows, Flake Detection, And Test Retries",
+    "description": "This video has it all:\n- setting up Cypress Dashboard to record the test results\n- super simple GitHub workflow by reusing bahmutov/cypress-workflows standard.yml\n- enabling test retries in the project\n- flake detection on Cypress Dashboard\n- fixing the flaky test by enabling a longer command timeout\n\nFind the source code in https://github.com/bahmutov/cypress-3rd-party-script-example and reusable Cypress workflows in https://github.com/bahmutov/cypress-workflows",
     "publishedAt": "2021-12-09T14:12:42Z"
   },
   {
