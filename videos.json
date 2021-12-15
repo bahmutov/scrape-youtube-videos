@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "fBcoMmNBY5w",
+    "title": "Run Cypress On CircleCI From Your Terminal",
+    "description": "This video introduces the \"run-cy-on-ci\" utility https://github.com/bahmutov/run-cy-on-ci that lets you trigger Cypress test workflow on CircleCI using cypress-grep https://github.com/cypress-io/cypress-grep plugin to select one test or a group of tests. Using run-cy-on-ci you can run the tests multiple times, control the number of machines (parallel run if configured), run tests on specific branch, and pass additional parameters to the workflow. Find the example project at https://github.com/bahmutov/chat.io",
+    "publishedAt": "2021-12-14T16:41:07Z"
+  },
+  {
     "videoId": "84NQf-HVWWE",
     "title": "Visibility Of Multiple Elements Explained",
     "description": "This video explains how to check if multiple elements returned by a query command like cy.get are visible or not. We can filter all elements by visibility to avoid accidentally passing the assertion only with some elements visible. Find the full source code at https://glebbahmutov.com/cypress-examples/commands/assertions.html",
