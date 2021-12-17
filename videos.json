@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "VtIvGznpo_A",
+    "title": "Stop CSS Animation In A Component Test",
+    "description": "In this video, I use a Cypress component test (see https://on.cypress.io/component-testing) to mount a React App component. I do not like the spinning React logo, so I use the \"style\" option to load additional CSS and apply it to the Logo class, overwriting the animation property. Then I show how to verify that the animation CSS was truly applied (and I can see the logo frozen in the browser). Find the source code in the repo https://github.com/bahmutov/react-dark-mode",
+    "publishedAt": "2021-12-16T18:07:02Z"
+  },
+  {
     "videoId": "fBcoMmNBY5w",
     "title": "Run Cypress On CircleCI From Your Terminal",
     "description": "This video introduces the \"run-cy-on-ci\" utility https://github.com/bahmutov/run-cy-on-ci that lets you trigger Cypress test workflow on CircleCI using cypress-grep https://github.com/cypress-io/cypress-grep plugin to select one test or a group of tests. Using run-cy-on-ci you can run the tests multiple times, control the number of machines (parallel run if configured), run tests on specific branch, and pass additional parameters to the workflow. Find the example project at https://github.com/bahmutov/chat.io",
