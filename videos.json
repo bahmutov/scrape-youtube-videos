@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "kBYtqsK-8Aw",
+    "title": "Record A Test Using Cypress Studio",
+    "description": "In this video, I use the Cypress Studio https://on.cypress.io/studio to record parts of the test, and then manually add assertions to the saved test commands. Find the full spec code at https://github.com/bahmutov/todo-app-for-cyclope",
+    "publishedAt": "2021-12-23T16:56:39Z"
+  },
+  {
     "videoId": "VtIvGznpo_A",
     "title": "Stop CSS Animation In A Component Test",
     "description": "In this video, I use a Cypress component test (see https://on.cypress.io/component-testing) to mount a React App component. I do not like the spinning React logo, so I use the \"style\" option to load additional CSS and apply it to the Logo class, overwriting the animation property. Then I show how to verify that the animation CSS was truly applied (and I can see the logo frozen in the browser). Find the source code in the repo https://github.com/bahmutov/react-dark-mode",
