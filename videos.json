@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "Csjg1qktnU0",
+    "title": "Visit Two Domains In The Same Cypress Spec",
+    "description": "This video shows how to visit multiple domains in the same Cypress spec and pass values from one site to another by storing it in the plugin file process via cy.task command. See the issue https://github.com/cypress-io/cypress/issues/944",
+    "publishedAt": "2021-12-29T18:30:35Z"
+  },
+  {
     "videoId": "kBYtqsK-8Aw",
     "title": "Record A Test Using Cypress Studio",
     "description": "In this video, I use the Cypress Studio https://on.cypress.io/studio to record parts of the test, and then manually add assertions to the saved test commands. Find the full spec code at https://github.com/bahmutov/todo-app-for-cyclope",
