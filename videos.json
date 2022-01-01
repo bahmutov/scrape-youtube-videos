@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "0LLsdI0o9Iw",
+    "title": "Use Multiple Aliases To Avoid Pyramid of Doom Callbacks",
+    "description": "In this video, I save multiple elements under Cypress aliases using the cy.as  command. Then I use a single cy.then callback with a function to confirm the values follow a certain rule. Cypress aliases are set on the test context object as properties, thus each saved alias as(\"x\") can be read using this.x in the test. Find the source code at https://glebbahmutov.com/cypress-examples site.",
+    "publishedAt": "2021-12-31T19:54:33Z"
+  },
+  {
     "videoId": "Csjg1qktnU0",
     "title": "Visit Two Domains In The Same Cypress Spec",
     "description": "This video shows how to visit multiple domains in the same Cypress spec and pass values from one site to another by storing it in the plugin file process via cy.task command. See the issue https://github.com/cypress-io/cypress/issues/944",
