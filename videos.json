@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "FDNeiwKWdb4",
+    "title": "Crawl Local Pages Using Cypress",
+    "description": "In this video, I show how to write a recursive Cypress test crawling every local page. This test will detect invalid links and pages that throw errors on load. You can find the source code in the repo https://github.com/bahmutov/cypress-crawl-example Tip: if you want to parallelize the crawl and your site has sitemap.xml resource, you can follow the blog post https://glebbahmutov.com/blog/test-sitemap/ and generate multiple tests to hit each URL directly.",
+    "publishedAt": "2022-01-04T23:35:45Z"
+  },
+  {
     "videoId": "0LLsdI0o9Iw",
     "title": "Use Multiple Aliases To Avoid Pyramid of Doom Callbacks",
     "description": "In this video, I save multiple elements under Cypress aliases using the cy.as  command. Then I use a single cy.then callback with a function to confirm the values follow a certain rule. Cypress aliases are set on the test context object as properties, thus each saved alias as(\"x\") can be read using this.x in the test. Find the source code at https://glebbahmutov.com/cypress-examples site.",
