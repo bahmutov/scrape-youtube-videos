@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "0OfILKbqbsg",
+    "title": "Test 404 Page",
+    "description": "In this video, I show how to use cy.visit and cy.request commands to verify the server is returning a 404 page for invalid resource URLs. Find the full source code in https://github.com/bahmutov/cypress-crawl-example In summary, I did:\n\nconst url = '/does-not-exist'\ncy.request({ url, failOnStatusCode: false })\n  .its('status', { timeout: 0 })\n  .should('equal', 404)\ncy.visit(url, { failOnStatusCode: false })\ncy.contains('span', '404')",
+    "publishedAt": "2022-01-05T14:23:57Z"
+  },
+  {
     "videoId": "FDNeiwKWdb4",
     "title": "Crawl Local Pages Using Cypress",
     "description": "In this video, I show how to write a recursive Cypress test crawling every local page. This test will detect invalid links and pages that throw errors on load. You can find the source code in the repo https://github.com/bahmutov/cypress-crawl-example Tip: if you want to parallelize the crawl and your site has sitemap.xml resource, you can follow the blog post https://glebbahmutov.com/blog/test-sitemap/ and generate multiple tests to hit each URL directly.",
