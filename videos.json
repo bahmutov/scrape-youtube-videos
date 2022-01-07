@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "f_H7EH0n9tE",
+    "title": "Fix The Cypress Error \"You are mixing async and sync code\"",
+    "description": "In this video, I show the root reason for the Cypress error \"async and sync code\" - it happens when you have both a Cypress command and a return statement inside cy.then callback. For example, the following test code inside a Cypress test will fail with an error:\n\n.then(function () {\n  cy.wrap('Anna')\n   return 'Joe'\n})\n\nCypress is not sure which value do you want to yield from the .then callback: \"Anna\" or \"Joe\". The same error happens even if you use something like cy.log\n\nthen(function () {\n  cy.log('returning Joe')\n   return 'Joe'\n})\n\nThe solution is to never use both Cy commands and a return statement inside the same .then callback. For example, if you want to log a value, attach its own callback \n\nthen(function () {\n  cy.log('returning Joe').then(function () {\n     return 'Joe'\n  })\n})\n\nAlternative solution: print in a separate .then\n\n.then(function () {\n  cy.log('returning Joe')\n})\n.then(function () {\n   return 'Joe'\n})\n\nAlternative solution: Cypress yields the value from its last command. Instead of \"return\" use cy.wrap command\n\nthen(function () {\n  cy.log('returning Joe')\n   cy.wrap('Joe')\n})\nSee the solutions in my https://glebbahmutov.com/cypress-examples/ under \"Yield value\" recipe",
+    "publishedAt": "2022-01-06T17:30:55Z"
+  },
+  {
+    "videoId": "h7taQNvj0Cs",
+    "title": "Crawl Pages With Resource Check",
+    "description": "In this video, I show how to improve crawling local pages using Cypress to avoid visiting the same resource if there are different links to it. For example, both /tos.html and /tos href attributes lead to the same page /tos We detect the true resource URL using cy.request and looking at the redirects it returns. By finding /tos.html redirects we get that the actual link is /tos \n\nFind the previous video \"Crawl Pages\" at https://www.youtube.com/watch?v=FDNeiwKWdb4 and the full source code at https://github.com/bahmutov/cypress-crawl-example",
+    "publishedAt": "2022-01-06T16:34:50Z"
+  },
+  {
     "videoId": "0OfILKbqbsg",
     "title": "Test 404 Page",
     "description": "In this video, I show how to use cy.visit and cy.request commands to verify the server is returning a 404 page for invalid resource URLs. Find the full source code in https://github.com/bahmutov/cypress-crawl-example In summary, I did:\n\nconst url = '/does-not-exist'\ncy.request({ url, failOnStatusCode: false })\n  .its('status', { timeout: 0 })\n  .should('equal', 404)\ncy.visit(url, { failOnStatusCode: false })\ncy.contains('span', '404')",
@@ -8,7 +20,7 @@
   {
     "videoId": "FDNeiwKWdb4",
     "title": "Crawl Local Pages Using Cypress",
-    "description": "In this video, I show how to write a recursive Cypress test crawling every local page. This test will detect invalid links and pages that throw errors on load. You can find the source code in the repo https://github.com/bahmutov/cypress-crawl-example Tip: if you want to parallelize the crawl and your site has sitemap.xml resource, you can follow the blog post https://glebbahmutov.com/blog/test-sitemap/ and generate multiple tests to hit each URL directly.",
+    "description": "In this video, I show how to write a recursive Cypress test crawling every local page. This test will detect invalid links and pages that throw errors on load. You can find the source code in the repo https://github.com/bahmutov/cypress-crawl-example Tip: if you want to parallelize the crawl and your site has sitemap.xml resource, you can follow the blog post https://glebbahmutov.com/blog/test-sitemap/ and generate multiple tests to hit each URL directly.\n\nNote: in the video \"Crawl Pages With Resource Check\" https://youtu.be/h7taQNvj0Cs I show how to improve the crawl to avoid duplicate visits via different links that ultimately lead to the same resource.",
     "publishedAt": "2022-01-04T23:35:45Z"
   },
   {
