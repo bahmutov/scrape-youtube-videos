@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "UfRhlRxy1AE",
+    "title": "Collect Headings And Subheadings Using cy.each Command",
+    "description": "Sometimes you want to get sections of the page, and for each section collect some information putting it all into a single object. This video shows how to do this using cy.each command. At the end of the collection, we save the entire JSON object using cy.writeFile command.\n\nYou can find this recipe in the repo https://github.com/bahmutov/cypress-examples and hosted online at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2022-01-09T18:21:40Z"
+  },
+  {
     "videoId": "f_H7EH0n9tE",
     "title": "Fix The Cypress Error \"You are mixing async and sync code\"",
     "description": "In this video, I show the root reason for the Cypress error \"async and sync code\" - it happens when you have both a Cypress command and a return statement inside cy.then callback. For example, the following test code inside a Cypress test will fail with an error:\n\n.then(function () {\n  cy.wrap('Anna')\n   return 'Joe'\n})\n\nCypress is not sure which value do you want to yield from the .then callback: \"Anna\" or \"Joe\". The same error happens even if you use something like cy.log\n\nthen(function () {\n  cy.log('returning Joe')\n   return 'Joe'\n})\n\nThe solution is to never use both Cy commands and a return statement inside the same .then callback. For example, if you want to log a value, attach its own callback \n\nthen(function () {\n  cy.log('returning Joe').then(function () {\n     return 'Joe'\n  })\n})\n\nAlternative solution: print in a separate .then\n\n.then(function () {\n  cy.log('returning Joe')\n})\n.then(function () {\n   return 'Joe'\n})\n\nAlternative solution: Cypress yields the value from its last command. Instead of \"return\" use cy.wrap command\n\nthen(function () {\n  cy.log('returning Joe')\n   cy.wrap('Joe')\n})\nSee the solutions in my https://glebbahmutov.com/cypress-examples/ under \"Yield value\" recipe",
