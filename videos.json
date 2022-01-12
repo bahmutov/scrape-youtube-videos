@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "IDJFPREpy6o",
+    "title": "Refactor Tests To Use Built-in Cypress Commands",
+    "description": "In this video, I take the repo https://github.com/robcaldecott/cypress-vite mentioned in the tweet https://twitter.com/robertcaldecott/status/1480848740621688832 and refactor it to use the built-in cy.contains and cy.intercept commands to check the page and stub the network requests. Bonus: we can also merge short tests into one meaningful test. The final tests are\n\ndescribe(\"app\", function () {\n  it(\"renders the heading\", function () {\n    cy.intercept('/api/names', ['Bob', 'Alice']).as('names')\n    cy.visit(\"/\").its('appReady').should('be.true');\n    cy.log('**renders in the loading state**')\n    cy.contains('[aria-label=loading]', /loading/i)\n    cy.contains('[aria-label=loading]', /loading/i).should('not.exist')\n    cy.log('**renders heading**')\n    cy.contains('h1', /cypress demo/i)\n    cy.wait('@names')\n    cy.contains('Bob')\n    cy.contains('Alice')\n  });\n\n  it(\"handles errors\", function () {\n    cy.intercept('/api/names', {forceNetworkError: true})\n    cy.visit(\"/\").its('appReady').should('be.true');\n    cy.contains(/error fetching names/i)\n  });\n});",
+    "publishedAt": "2022-01-11T19:32:10Z"
+  },
+  {
     "videoId": "UfRhlRxy1AE",
     "title": "Collect Headings And Subheadings Using cy.each Command",
     "description": "Sometimes you want to get sections of the page, and for each section collect some information putting it all into a single object. This video shows how to do this using cy.each command. At the end of the collection, we save the entire JSON object using cy.writeFile command.\n\nYou can find this recipe in the repo https://github.com/bahmutov/cypress-examples and hosted online at https://glebbahmutov.com/cypress-examples/",
