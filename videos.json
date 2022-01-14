@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "0Bp_FXToQpg",
+    "title": "Setup GitHub Actions To Run Cypress Component Tests",
+    "description": "In this video, I set up GitHub Actions CI file (using https://github.com/cypress-io/github-action of course) to run Cypress component tests on every push commit. We will need to use a custom command to execute \"yarn cypress run-ct\" command on CI\n\n# Install NPM dependencies, cache them correctly\n# and run all Cypress tests\n- name: Cypress run\n  uses: cypress-io/github-action@v2\n  with:\n    # to run component tests we need to use \"cypress run-ct\"\n    command: yarn cypress run-ct\n\nFind the source code and the workflow file in the repo https://github.com/bahmutov/react-dark-mode",
+    "publishedAt": "2022-01-13T16:34:15Z"
+  },
+  {
+    "videoId": "VPznmFpa1Jc",
+    "title": "Use Cypress Element Alias To Avoid The Element Detached From DOM Error",
+    "description": "In this example, I show how to store the result of the long chain of Cypress commands in an alias. \n\ncy.get('#chain-example')\n  .find('#items')\n  .find('li')\n  .should('have.length', 2)\n  .first()\n  .as('fruit')\n\nWe can now get the element and add assertions to it\n\ncy.get('@fruit').should('have.text', 'Grapes')\n\nIf the element becomes detached from the page DOM (because the application has re-rendered that part of the page), the Cypress Test Runner re-queries the commands in the chain that leads to the alias, refreshing the elements from the page.\n\nFind this recipe in my examples at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-01-13T16:29:42Z"
+  },
+  {
     "videoId": "VdyZonBAeLw",
     "title": "Using Cypress Component Testing To Really Test A React Dark Mode Component",
     "description": "This video shows Cypress component testing (https://on.cypress.io/component-testing) in action. We are testing a React Dark Mode component, my code is in the repo https://github.com/bahmutov/react-dark-mode I have set up the settings using an example from https://github.com/cypress-io/cypress-component-testing-examples\n\nWe confirm the component is working, is storing and loading the theme from the localStorage and uses the Media Match method to determine the initial value.",
