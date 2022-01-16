@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "D0uH_pmcBvg",
+    "title": "cy.contains With Text Transform UpperCase Example",
+    "description": "Whenever you want to find a text on the page that is all uppercase, watch out! The text in the page might be \"normal\", and it is the CSS text transform that makes the rendered text all caps. This video shows how to inspect the element, how to confirm the data attribute returns a single element, and how to look up the cy.contains documentation page at https://on.cypress.io/contains",
+    "publishedAt": "2022-01-15T21:22:34Z"
+  },
+  {
     "videoId": "MdSfViZaBnw",
     "title": "Write Unit Tests In Cypress With Mocking Node FS.readFileSync Method",
     "description": "If you have a lot of end-to-end Cypress tests and want to quickly add a few unit tests, you do not have to bring a second test runner. You can use Cypress to write and run unit tests, and even mock Node modules like fs.readFileSync if needed. Find the full source code for this example in repo https://github.com/bahmutov/cypress-testrail-simple\n\nExample source code that uses fs.readFileSync\n\nconst fs = require('fs')\nfunction findCasesInSpec(spec, readFile = fs.readFileSync) {\n  ...\n}\nmodule.exports = { findCasesInSpec }\n\nExample unit test that passes our stub to replace fs.readFileSync\n\nimport { findCasesInSpec } from '../../src/find-cases'\n\nit('finds test case ids', function () {\n  const source = `\n    it('C101', ...)\n  `\n  const readFile = cy.stub().returns(source)\n  const ids = findCasesInSpec('spec1.js', readFile)\n  expect(ids).to.deep.equal([101])\n  expect(readFile).to.be.calledWith('spec1.js', 'utf8')\n})",
