@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "NnriKHmj5T8",
+    "title": "How To Report A Cypress Bug",
+    "description": "In this video, I find a bug in cy.next command and report it to the Cypress team by opening https://github.com/cypress-io/cypress/issues/19724 with a reproducible example in the forked repo https://github.com/cypress-io/cypress-test-tiny",
+    "publishedAt": "2022-01-16T16:12:27Z"
+  },
+  {
     "videoId": "D0uH_pmcBvg",
     "title": "cy.contains With Text Transform UpperCase Example",
     "description": "Whenever you want to find a text on the page that is all uppercase, watch out! The text in the page might be \"normal\", and it is the CSS text transform that makes the rendered text all caps. This video shows how to inspect the element, how to confirm the data attribute returns a single element, and how to look up the cy.contains documentation page at https://on.cypress.io/contains",
