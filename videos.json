@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "pzFzOKEV-eo",
+    "title": "Solve Wordle Game Using Cypress",
+    "description": "In this video, we will \"solve\" World game using Cypress. We will need to cross the Shadow DOM boundary to query elements, trigger the \"keydown\" events to send the letters to the window object, and look up the solution by reading it from the application state object stored in the local storage. Find the full source code in the repo https://github.com/bahmutov/cypress-wordle",
+    "publishedAt": "2022-01-17T20:05:01Z"
+  },
+  {
     "videoId": "NnriKHmj5T8",
     "title": "How To Report A Cypress Bug",
     "description": "In this video, I find a bug in cy.next command and report it to the Cypress team by opening https://github.com/cypress-io/cypress/issues/19724 with a reproducible example in the forked repo https://github.com/cypress-io/cypress-test-tiny",
