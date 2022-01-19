@@ -1,8 +1,14 @@
 [
   {
+    "videoId": "zQGLR6qXtq0",
+    "title": "Solve Wordle Game For Real Using Cypress",
+    "description": "In this video, I show the real solution to Worlde game using Cypress Test Runner. We will use cy.intercept to grab the list of 5-letter words, enter a random word, collect the letter status, then filter the world list and try again. As the list becomes shorter and shorter, we are closer to the solution, until we (hopefully) reach it. Find the full source code in the repo https://github.com/bahmutov/cypress-wordle",
+    "publishedAt": "2022-01-18T14:15:45Z"
+  },
+  {
     "videoId": "pzFzOKEV-eo",
     "title": "Solve Wordle Game Using Cypress",
-    "description": "In this video, we will \"solve\" World game using Cypress. We will need to cross the Shadow DOM boundary to query elements, trigger the \"keydown\" events to send the letters to the window object, and look up the solution by reading it from the application state object stored in the local storage. Find the full source code in the repo https://github.com/bahmutov/cypress-wordle",
+    "description": "In this video, we will \"solve\" World game using Cypress. We will need to cross the Shadow DOM boundary to query elements, trigger the \"keydown\" events to send the letters to the window object, and look up the solution by reading it from the application state object stored in the local storage. Find the full source code in the repo https://github.com/bahmutov/cypress-wordle\n\nUpdate: I recorded 2nd video where I solve the Wordle game using Cypress for real https://www.youtube.com/watch?v=zQGLR6qXtq0",
     "publishedAt": "2022-01-17T20:05:01Z"
   },
   {
