@@ -1,5 +1,29 @@
 [
   {
+    "videoId": "UZwE1KTz-98",
+    "title": "Private video",
+    "description": "This video is private.",
+    "publishedAt": "2022-01-19T19:29:10Z"
+  },
+  {
+    "videoId": "fJmNyMnBvbs",
+    "title": "Private video",
+    "description": "This video is private.",
+    "publishedAt": "2022-01-19T14:52:57Z"
+  },
+  {
+    "videoId": "SeRLrdtr3Vs",
+    "title": "Solve Wordle In Hard Mode",
+    "description": "This video shows the optimizations I made to cypress-wordle to solve the game in Hard mode by really picking the next word carefully, and by filtering the words based on the results. I also show the unit tests I have written for picking the next word. Find the full code in https://github.com/bahmutov/cypress-wordle\n\nNote: my own head video freezes midway through the video, ughh, the computer is having problems, need to restart it.",
+    "publishedAt": "2022-01-19T14:31:40Z"
+  },
+  {
+    "videoId": "ZmcOFr2UzZU",
+    "title": "Play Wordle From Any Date Using cy.clock",
+    "description": "This video shows how to set the Date using the cy.clock command which forces the Wordle to play the word from that day. Find the full code in the repo https://github.com/bahmutov/cypress-wordle",
+    "publishedAt": "2022-01-19T14:25:51Z"
+  },
+  {
     "videoId": "zQGLR6qXtq0",
     "title": "Solve Wordle Game For Real Using Cypress",
     "description": "In this video, I show the real solution to Worlde game using Cypress Test Runner. We will use cy.intercept to grab the list of 5-letter words, enter a random word, collect the letter status, then filter the world list and try again. As the list becomes shorter and shorter, we are closer to the solution, until we (hopefully) reach it. Find the full source code in the repo https://github.com/bahmutov/cypress-wordle",
