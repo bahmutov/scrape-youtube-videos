@@ -1,14 +1,14 @@
 [
   {
     "videoId": "UZwE1KTz-98",
-    "title": "Private video",
-    "description": "This video is private.",
+    "title": "Use cypress-data-session To Store The Word List",
+    "description": "In this video, I show how to download and extract the word list from a JavaScript Wordle bundle just once, and then keep it cached in memory using the plugin https://github.com/bahmutov/cypress-data-session. By caching using the plugin, we keep our code small, simple, and can even store the data in the plugins process, where it is available to other specs. Find the full source code in the repo https://github.com/bahmutov/cypress-wordle",
     "publishedAt": "2022-01-19T19:29:10Z"
   },
   {
     "videoId": "fJmNyMnBvbs",
-    "title": "Private video",
-    "description": "This video is private.",
+    "title": "Run Wordle E2E Tests On GitHub Actions Using A Workflow",
+    "description": "In this video, I add CI to the cypress-wordle repo. I use GitHub Actions via my reusable workflow \"standard\", see https://github.com/bahmutov/cypress-workflows The entire CI config file is tiny\n\nname: ci\non: [push]\njobs:\n  test:\n    # use the reusable workflow to check out the code, install dependencies\n    # and run the Cypress tests\n    # https://github.com/bahmutov/cypress-workflows\n    uses: bahmutov/cypress-workflows/.github/workflows/standard.yml@v1\n\nFind the full source code in the repo https://github.com/bahmutov/cypress-wordle",
     "publishedAt": "2022-01-19T14:52:57Z"
   },
   {
