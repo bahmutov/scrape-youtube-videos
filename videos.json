@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "NOwNg-Nhv4o",
+    "title": "Generate A Daily Wordle Hint Email With Screenshot",
+    "description": "In this video, I show how to hide all letters from the solved Wordle puzzle, and only reveal one letter as a hint to the solution. Then we take a screenshot of the game board and email ourselves that image. We set up a daily CI workflow to generate the hint email at 5 o'clock in the morning. Find the full code in the repo https://github.com/bahmutov/cypress-wordle",
+    "publishedAt": "2022-01-21T14:37:50Z"
+  },
+  {
     "videoId": "UZwE1KTz-98",
     "title": "Use cypress-data-session To Store The Word List",
     "description": "In this video, I show how to download and extract the word list from a JavaScript Wordle bundle just once, and then keep it cached in memory using the plugin https://github.com/bahmutov/cypress-data-session. By caching using the plugin, we keep our code small, simple, and can even store the data in the plugins process, where it is available to other specs. Find the full source code in the repo https://github.com/bahmutov/cypress-wordle",
