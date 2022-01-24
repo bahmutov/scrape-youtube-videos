@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "LiYJtUbe7gc",
+    "title": "Confirm Network Intercept Fields Using Cypress Fluent Chain of Commands",
+    "description": "In this video, I fix an example code snippet that tries to validate the intercepted network request. I explain why the console.log prints an unexpected value, how to assert multiple properties from a complex object, how to write fluent Cypress chains of commands and assertions. For full information, read the blog post https://glebbahmutov.com/blog/network-requests-with-cypress/ and find the source code in the repo https://github.com/bahmutov/cypress-workshop-basics",
+    "publishedAt": "2022-01-23T23:14:14Z"
+  },
+  {
     "videoId": "NOwNg-Nhv4o",
     "title": "Generate A Daily Wordle Hint Email With Screenshot",
     "description": "In this video, I show how to hide all letters from the solved Wordle puzzle, and only reveal one letter as a hint to the solution. Then we take a screenshot of the game board and email ourselves that image. We set up a daily CI workflow to generate the hint email at 5 o'clock in the morning. Find the full code in the repo https://github.com/bahmutov/cypress-wordle",
