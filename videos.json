@@ -1,5 +1,23 @@
 [
   {
+    "videoId": "EWh_NMJS8uU",
+    "title": "Private video",
+    "description": "This video is private.",
+    "publishedAt": "2022-01-24T21:11:40Z"
+  },
+  {
+    "videoId": "vwIpCbMskYI",
+    "title": "Private video",
+    "description": "This video is private.",
+    "publishedAt": "2022-01-24T20:34:44Z"
+  },
+  {
+    "videoId": "1e1xU1_H0cg",
+    "title": "Private video",
+    "description": "This video is private.",
+    "publishedAt": "2022-01-24T13:43:00Z"
+  },
+  {
     "videoId": "LiYJtUbe7gc",
     "title": "Confirm Network Intercept Fields Using Cypress Fluent Chain of Commands",
     "description": "In this video, I fix an example code snippet that tries to validate the intercepted network request. I explain why the console.log prints an unexpected value, how to assert multiple properties from a complex object, how to write fluent Cypress chains of commands and assertions. For full information, read the blog post https://glebbahmutov.com/blog/network-requests-with-cypress/ and find the source code in the repo https://github.com/bahmutov/cypress-workshop-basics",
