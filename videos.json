@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "R4Ji8lrFrec",
+    "title": "Private video",
+    "description": "This video is private.",
+    "publishedAt": "2022-01-25T17:57:01Z"
+  },
+  {
     "videoId": "EWh_NMJS8uU",
     "title": "Private video",
     "description": "This video is private.",
@@ -7,14 +13,14 @@
   },
   {
     "videoId": "vwIpCbMskYI",
-    "title": "Private video",
-    "description": "This video is private.",
+    "title": "Solve The Test Hanging On CI By Printing Messages To The Terminal",
+    "description": "Using cy.task we can print the test progress into the terminal where it will be visible while the test runs into an infinite loop. \n\non('task', {\n  print(message) {\n    console.log(message)\n    return null\n  }\n})\n\nThe from the test we can do the following to see where the test \"gets stuck\" on CI:\ncy.task('print', `trying ${word}`)\n\nFind the full source code in https://github.com/bahmutov/cypress-wordle",
     "publishedAt": "2022-01-24T20:34:44Z"
   },
   {
     "videoId": "1e1xU1_H0cg",
-    "title": "Private video",
-    "description": "This video is private.",
+    "title": "Use Your Own Start Word",
+    "description": "In this video, we create a new spec that reads the start word from the Cypress.env('startWord') call. This let's the user provide their own start word, and we even create a new GitHub workflow to enter the word when launching the start spec. To see the results, I set up Cypress Dashboard recording and save the screenshot of the solved game there. Find the full source code in the repo https://github.com/bahmutov/cypress-wordle",
     "publishedAt": "2022-01-24T13:43:00Z"
   },
   {
