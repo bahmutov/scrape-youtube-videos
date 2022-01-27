@@ -1,11 +1,5 @@
 [
   {
-    "videoId": "4MOfRd6I3UY",
-    "title": "Solving Various Wordle Apps Using The Same Algorithm And Different Page Objects",
-    "description": "This video explains the solve function that interacts with the page via page objects. It allows us to use the same code to solve 3 different Wordle implementations, even if the structures of the page are different from each other.\n\nSolved games:\n- the original https://www.powerlanguage.co.uk/wordle/\n- a greener wordle https://agreenerworldle.org/\n- Vue implementation https://vue-wordle.netlify.app/\n\nFind the full source code in the repo https://github.com/bahmutov/cypress-wordle",
-    "publishedAt": "2022-01-26T16:59:38Z"
-  },
-  {
     "videoId": "R4Ji8lrFrec",
     "title": "Use Page Objects To Interact With Wordle",
     "description": "We can move standard \"close the initial popup\" commands into their own file, creating Page objects. Then each spec just calls static methods on the page objects without repeating the same selectors and commands. Find the full source code in https://github.com/bahmutov/cypress-wordle",
