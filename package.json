@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "@googleapis/youtube": "^2.0.0",
-    "algoliasearch": "^4.10.5"
+    "algoliasearch": "^4.10.5",
+    "debug": "^4.3.3"
   },
   "devDependencies": {
     "prettier": "^2.4.1"
