@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "4MOfRd6I3UY",
+    "title": "Private video",
+    "description": "This video is private.",
+    "publishedAt": "2022-01-26T16:59:38Z"
+  },
+  {
     "videoId": "R4Ji8lrFrec",
     "title": "Private video",
     "description": "This video is private.",
@@ -7,8 +13,8 @@
   },
   {
     "videoId": "EWh_NMJS8uU",
-    "title": "Private video",
-    "description": "This video is private.",
+    "title": "Setup Parallel CI to Run Wordle Specs Faster",
+    "description": "In this video I use my parallel GitHub Actions workflow to take advantage of Cypress Dashboard and run the Wordle specs in parallel.\n\nuses: bahmutov/cypress-workflows/.github/workflows/parallel.yml@v1\nwith:\n  n: 5\n  group: 'All tests'\nsecrets:\n  recordKey: ${{ secrets.CYPRESS_RECORD_KEY }}\n\nSee this reusable workflow in https://github.com/bahmutov/cypress-workflows\n\nBy running the specs across 5 machines we shorten the test time from 5 minutes to 1 minute. Find the full source code in https://github.com/bahmutov/cypress-wordle repo",
     "publishedAt": "2022-01-24T21:11:40Z"
   },
   {
