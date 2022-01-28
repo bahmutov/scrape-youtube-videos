@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "y8PalMNf5N4",
+    "title": "Debug cy.contains or Cypress.env problem",
+    "description": "In this video, the command \"cy.contains(Cypress.env(...))\" throws an error. Is it a cy.contains or a Cypress.env problem? I show how to solve this problem step by step. Some tips from the video:\n\n- always check the value you get from the Cypress.env object before using it\n- you can see the values in the Cypress.env object right from the DevTools console\n- you can overwrite the current values in the Cypress.env object by calling Cypress.env(key, value) from the DevTools console\n- you can see the entire config object with all resolves settings and the \"env\" object by looking at the Cypress \"Settings\" tab",
+    "publishedAt": "2022-01-27T17:31:26Z"
+  },
+  {
     "videoId": "4MOfRd6I3UY",
     "title": "Solving Various Wordle Apps Using The Same Algorithm And Different Page Objects",
     "description": "This video explains the solve function that interacts with the page via page objects. It allows us to use the same code to solve 3 different Wordle implementations, even if the structures of the page are different from each other.\n\nSolved games:\n- the original https://www.powerlanguage.co.uk/wordle/\n- a greener wordle https://agreenerworldle.org/\n- Vue implementation https://vue-wordle.netlify.app/\n\nFind the full source code in the repo https://github.com/bahmutov/cypress-wordle",
