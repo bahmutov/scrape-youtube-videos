@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "DxlqDA7tIOw",
+    "title": "Check The Prices Table Rows",
+    "description": "In this short example video, I show how I would check a table with prices and quantities to confirm the table has the correct total. We can find the cells, then use cy.spread to get each cell as its own element, extract the text and convert it to numbers. \n\nLet's confirm the second row has the correct total.\n\ncy.get('#sales tbody tr')\n  .eq(1)\n  // get the row cells\n  .find('td')\n  // spread the table cells into individual DOM elements\n  .spread(function (nameEl, priceEl, quantityEl, totalEl) {\n    const name = nameEl.innerText\n    const price = parseFloat(priceEl.innerText.replace('$', ''))\n    const quantity = parseInt(quantityEl.innerText)\n    const total = parseFloat(totalEl.innerText.replace('$', ''))\n    expect(price * quantity, `total for ${name}`).to.equal(total)\n  })\n\nFind the full recipe in the repo https://github.com/bahmutov/cypress-examples",
+    "publishedAt": "2022-01-28T16:48:33Z"
+  },
+  {
     "videoId": "y8PalMNf5N4",
     "title": "Debug cy.contains or Cypress.env problem",
     "description": "In this video, the command \"cy.contains(Cypress.env(...))\" throws an error. Is it a cy.contains or a Cypress.env problem? I show how to solve this problem step by step. Some tips from the video:\n\n- always check the value you get from the Cypress.env object before using it\n- you can see the values in the Cypress.env object right from the DevTools console\n- you can overwrite the current values in the Cypress.env object by calling Cypress.env(key, value) from the DevTools console\n- you can see the entire config object with all resolves settings and the \"env\" object by looking at the Cypress \"Settings\" tab",
