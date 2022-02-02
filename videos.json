@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "X1yCcfIDPQk",
+    "title": "Fix Circular Object Problem In Cypress",
+    "description": "This short video shows how to solve the \"trying to serialize an object with circular references\" problem while trying to send an object from the spec to the plugins process. We bring a 3rd party dependency \"flatted\" that can handle objects with circular references and accurately recreate them.\n\nThe spec file\nconst { stringify } = require('flatted')\n\nit('prints object to the terminal', function () {\n  const o = {\n    name: 'Mike',\n    children: [\n      {\n        name: 'Joe',\n      },\n    ],\n  }\n  o.children[0].parent = o\n  cy.task('print', stringify(o))\n})\n\nThe plugin file\nconst { parse } = require('flatted')\nmodule.exports = function (on, config) {\n  on('task', {\n    print(x) {\n      console.log('%o', parse(x))\n      return null\n    },\n  })\n}",
+    "publishedAt": "2022-02-01T18:48:38Z"
+  },
+  {
     "videoId": "DxlqDA7tIOw",
     "title": "Check The Prices Table Rows",
     "description": "In this short example video, I show how I would check a table with prices and quantities to confirm the table has the correct total. We can find the cells, then use cy.spread to get each cell as its own element, extract the text and convert it to numbers. \n\nLet's confirm the second row has the correct total.\n\ncy.get('#sales tbody tr')\n  .eq(1)\n  // get the row cells\n  .find('td')\n  // spread the table cells into individual DOM elements\n  .spread(function (nameEl, priceEl, quantityEl, totalEl) {\n    const name = nameEl.innerText\n    const price = parseFloat(priceEl.innerText.replace('$', ''))\n    const quantity = parseInt(quantityEl.innerText)\n    const total = parseFloat(totalEl.innerText.replace('$', ''))\n    expect(price * quantity, `total for ${name}`).to.equal(total)\n  })\n\nFind the full recipe in the repo https://github.com/bahmutov/cypress-examples",
