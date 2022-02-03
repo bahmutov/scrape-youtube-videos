@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "7tzstwfuA6g",
+    "title": "A Little Taste Of React App Actions",
+    "description": "This video shows a React application running. From Cypress End-to-End tests we visit the site, get a DOM element, and then get to the React component. We can confirm the state of the component, its props, and even spy the calls to the \"setStste\" method - all from an end-to-end test, in the production React build without any modifications to the application. Find this particular source code in the repo https://github.com/bahmutov/react-counter\n\nPart of the example test\n\ncy.get('.Example')\n  .getComponent()\n  .its('state')\n  .should('deep.equal', { count: 2 })\ncy.get('.Example')\n  .getComponent()\n  .its('props')\n  .should('have.property', 'initialCount', 0)\n\nPart of the test showing spying on the \"setState\" call\n\ncy.get('.Example')\n  .getComponent()\n  .then(function (comp) {\n    cy.spy(comp, 'setState').as('setState')\n  })\ncy.contains('.Example button', 'Double me').click()\ncy.get('@setState').should('have.been.calledOnceWith', { count: 4 })",
+    "publishedAt": "2022-02-02T22:32:23Z"
+  },
+  {
     "videoId": "X1yCcfIDPQk",
     "title": "Fix Circular Object Problem In Cypress",
     "description": "This short video shows how to solve the \"trying to serialize an object with circular references\" problem while trying to send an object from the spec to the plugins process. We bring a 3rd party dependency \"flatted\" that can handle objects with circular references and accurately recreate them.\n\nThe spec file\nconst { stringify } = require('flatted')\n\nit('prints object to the terminal', function () {\n  const o = {\n    name: 'Mike',\n    children: [\n      {\n        name: 'Joe',\n      },\n    ],\n  }\n  o.children[0].parent = o\n  cy.task('print', stringify(o))\n})\n\nThe plugin file\nconst { parse } = require('flatted')\nmodule.exports = function (on, config) {\n  on('task', {\n    print(x) {\n      console.log('%o', parse(x))\n      return null\n    },\n  })\n}",
