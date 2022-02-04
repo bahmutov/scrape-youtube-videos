@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "tXqX2SQurMc",
+    "title": "Stay Logged In During Tests By Preserving A Cookie",
+    "description": "This video shows how to avoid logging the user in every test by using the Cypress.Cookies API\n\n// log in just once\nbefore(function () {\n  loginUser(username, password)\n})\n// preserve the session cookie before each test\nbeforeEach(function () {\n  Cypress.Cookies.preserveOnce('connect.sid')\n})\nFind the full source code in the repo https://github.com/bahmutov/chat.io\nAlternative: use cypress-data-session plugin to control the cookie explicitly https://github.com/bahmutov/cypress-data-session",
+    "publishedAt": "2022-02-03T18:50:34Z"
+  },
+  {
+    "videoId": "xIIF5joixaU",
+    "title": "Run Cypress Tests Against URL Set In The Pull Request",
+    "description": "In this video, I show how my Cypress tests can run the tagged tests against a preview URL listed in the pull request template text. If I want to run the tests against a different preview deploy, I just edit the baseUrl in the PR and run the tests. \n\nFind the full source code in https://github.com/bahmutov/todomvc-tests-circleci which is using https://github.com/bahmutov/grep-tests-from-pull-requests to process the pull request text and set the Cypress settings. For more, read the blog post \"How to Keep Cypress Tests in Another Repo While Using CircleCI\" https://glebbahmutov.com/blog/how-to-keep-cypress-tests-in-another-repo-with-circleci/",
+    "publishedAt": "2022-02-03T15:28:08Z"
+  },
+  {
     "videoId": "7tzstwfuA6g",
     "title": "A Little Taste Of React App Actions",
     "description": "This video shows a React application running. From Cypress End-to-End tests we visit the site, get a DOM element, and then get to the React component. We can confirm the state of the component, its props, and even spy the calls to the \"setStste\" method - all from an end-to-end test, in the production React build without any modifications to the application. Find this particular source code in the repo https://github.com/bahmutov/react-counter\n\nPart of the example test\n\ncy.get('.Example')\n  .getComponent()\n  .its('state')\n  .should('deep.equal', { count: 2 })\ncy.get('.Example')\n  .getComponent()\n  .its('props')\n  .should('have.property', 'initialCount', 0)\n\nPart of the test showing spying on the \"setState\" call\n\ncy.get('.Example')\n  .getComponent()\n  .then(function (comp) {\n    cy.spy(comp, 'setState').as('setState')\n  })\ncy.contains('.Example button', 'Double me').click()\ncy.get('@setState').should('have.been.calledOnceWith', { count: 4 })",
