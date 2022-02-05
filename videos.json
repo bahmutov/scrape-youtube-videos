@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "yk_ptq20Mic",
+    "title": "Extract And Test The Day Number",
+    "description": "In this video, we use \"should(match, regular expression)\" assertion to confirm that there is a number of days in the element. Then we parse the extracted string, convert the text to an integer and check if it is between 1 and 31 values. Find the full source code in the examples repo https://github.com/bahmutov/cypress-examples",
+    "publishedAt": "2022-02-04T17:28:19Z"
+  },
+  {
+    "videoId": "g_7LZXuEIMA",
+    "title": "How To Call The Spy Function",
+    "description": "This video shows how to call the spy function (if you must call it directly) while preserving the original \"this\" reference. Preserving the original \"this\" is needed if the method you are calling is using \"this\" inside of it.\n\nHere is our object\n\nconst testRunner = {\n  name: 'Cypress',\n  getName() {\n    return this.name\n  },\n}\n\nLet's create the spy and call it but make sure it has \"this\" pointing at the testRunner object instance\n\nexpect(\n  getNameSpy.call(testRunner),\n  'call the spy directly',\n).to.equal('Cypress')\n\nNote: calling the spy seems wrong to me. I would prefer to call the original method testRunner.getName()\n\nFind this and many other examples at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-02-04T16:57:15Z"
+  },
+  {
     "videoId": "tXqX2SQurMc",
     "title": "Stay Logged In During Tests By Preserving A Cookie",
     "description": "This video shows how to avoid logging the user in every test by using the Cypress.Cookies API\n\n// log in just once\nbefore(function () {\n  loginUser(username, password)\n})\n// preserve the session cookie before each test\nbeforeEach(function () {\n  Cypress.Cookies.preserveOnce('connect.sid')\n})\nFind the full source code in the repo https://github.com/bahmutov/chat.io\nAlternative: use cypress-data-session plugin to control the cookie explicitly https://github.com/bahmutov/cypress-data-session",
