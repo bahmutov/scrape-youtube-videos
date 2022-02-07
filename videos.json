@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "lRo8z2uVJEQ",
+    "title": "What Are App Actions?",
+    "description": "App actions are a way for Cypress end-to-end tests to reach into your application to validate its state or invoke methods, bypassing the user interface. They do not replace the normal tests - you still want to test the page of course, but not every test needs to perform the actions unrelated to its primary testing goal through the page interface. This particular video shows how to split a long test that fills several pages of the user registration form into separate tests. Each test finishes in the known state, and the next test can start from that state without re-filling the previous pages. Find the full source code in the repo https://github.com/bahmutov/cypress-example-forms and the approach described in the blog post \"Split a very long Cypress test into shorter ones using App Actions\" https://www.cypress.io/blog/2019/10/29/split-a-very-long-cypress-test-into-shorter-ones-using-app-actions/",
+    "publishedAt": "2022-02-06T16:24:26Z"
+  },
+  {
     "videoId": "yk_ptq20Mic",
     "title": "Extract And Test The Day Number",
     "description": "In this video, we use \"should(match, regular expression)\" assertion to confirm that there is a number of days in the element. Then we parse the extracted string, convert the text to an integer and check if it is between 1 and 31 values. Find the full source code in the examples repo https://github.com/bahmutov/cypress-examples",
