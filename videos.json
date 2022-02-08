@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "b2SDRH2_faE",
+    "title": "Solve Phrasle Using Cypress",
+    "description": "In this video, I test the Phrasle.com game using Cypress test runner. I pull the answer to the daily Phrasle from the Remix context object, then enter the letters into the game, and then check that it was solved.\n\ncy.visit('/')\n  .its('__remixContext.routeData.routes/index.answer')\n  .then(function (answer) {\n    const letters = answer\n      .split('')\n      .filter(function (c) { return c.match(/[a-z]/) })\n    letters.forEach(function (letter) {\n      cy.contains('.Key', letter).click()\n    })\n  })\ncy.contains('.stat-todaysGame-info', 'PERFECT').should(\n  'be.visible',\n)\n\nFind the source code in https://github.com/bahmutov/cypress-react-app-actions/pull/1 For more, see my other videos about solving the Wordle game using Cypress and check out repo https://github.com/bahmutov/cypress-wordle",
+    "publishedAt": "2022-02-07T16:34:50Z"
+  },
+  {
+    "videoId": "d6zggQySjQM",
+    "title": "Intro To Cypress React App Actions",
+    "description": "This video shows how to check the React component's internal state and set it from the Cypress end-to-end test using the plugin cypress-react-app-actions. From the DOM element, get the component and check its state\n\nimport 'cypress-react-app-actions'\ncy.get('form')\n  .getComponent()\n  .its('state')\n  .should('deep.equal', startOfSecondPageState)\n\nOr set it to some object to immediately get the application into the required state\n\ncy.get('form')\n  .getComponent()\n  .invoke('setState', startOfSecondPageState)\n\nBoth development and production React builds should work. Find the full source code in the repo https://github.com/bahmutov/cypress-example-forms, the plugin at https://github.com/bahmutov/cypress-react-app-actions and read the blog post \"Control React Applications From Cypress Tests\" https://glebbahmutov.com/blog/react-app-actions/",
+    "publishedAt": "2022-02-06T16:29:10Z"
+  },
+  {
     "videoId": "lRo8z2uVJEQ",
     "title": "What Are App Actions?",
     "description": "App actions are a way for Cypress end-to-end tests to reach into your application to validate its state or invoke methods, bypassing the user interface. They do not replace the normal tests - you still want to test the page of course, but not every test needs to perform the actions unrelated to its primary testing goal through the page interface. This particular video shows how to split a long test that fills several pages of the user registration form into separate tests. Each test finishes in the known state, and the next test can start from that state without re-filling the previous pages. Find the full source code in the repo https://github.com/bahmutov/cypress-example-forms and the approach described in the blog post \"Split a very long Cypress test into shorter ones using App Actions\" https://www.cypress.io/blog/2019/10/29/split-a-very-long-cypress-test-into-shorter-ones-using-app-actions/",
