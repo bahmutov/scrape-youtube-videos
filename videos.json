@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "J49ujGfe-fs",
+    "title": "Decode The Phrasle Answer And Updated Vowel Logic",
+    "description": "In the previous video \"Solve Phrasle Using Cypress\" https://www.youtube.com/watch?v=b2SDRH2_faE I have shown how to solve the game Phrasle by looking up the answer in the application state object. The author of the game has obfuscated the answer and has added vowel check popups. In this video, I show how to decode the answer and play the updated game using Cypress. Find the solution in the repo https://github.com/bahmutov/cypress-react-app-actions.",
+    "publishedAt": "2022-02-08T14:43:32Z"
+  },
+  {
     "videoId": "b2SDRH2_faE",
     "title": "Solve Phrasle Using Cypress",
     "description": "In this video, I test the Phrasle.com game using Cypress test runner. I pull the answer to the daily Phrasle from the Remix context object, then enter the letters into the game, and then check that it was solved.\n\ncy.visit('/')\n  .its('__remixContext.routeData.routes/index.answer')\n  .then(function (answer) {\n    const letters = answer\n      .split('')\n      .filter(function (c) { return c.match(/[a-z]/) })\n    letters.forEach(function (letter) {\n      cy.contains('.Key', letter).click()\n    })\n  })\ncy.contains('.stat-todaysGame-info', 'PERFECT').should(\n  'be.visible',\n)\n\nFind the source code in https://github.com/bahmutov/cypress-react-app-actions/pull/1 For more, see my other videos about solving the Wordle game using Cypress and check out repo https://github.com/bahmutov/cypress-wordle",
