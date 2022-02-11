@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "in0ZXw1JtJQ",
+    "title": "Return Cypress Chain",
+    "description": "If you refactor the test code, remember to return the Cypress command chain from the utility functions. This lets you attach more commands and assertions to the returned object, and lets Cypress schedule the command execution correctly. In this video, I show how to write a utility function to wrap cy.request and handle a 404 response from the server. Find the full recipe at https://github.com/bahmutov/cypress-examples/blob/master/docs/recipes/request-not-found.md\n\nThe finished code\n\nfunction getTodo(id) {\n  const serverUrl = 'https://jsonplaceholder.cypress.io'\n  return cy\n    .request({\n      url: `${serverUrl}/todos/${id}`,\n      failOnStatusCode: false,\n    })\n    .then(function (response) {\n      if (response.status === 404) {\n        return 'Todo not found'\n      } else {\n        return response.body\n      }\n    })\n  // if the Todo is not found, return an error\n}\ngetTodo(10000001).should('equal', 'Todo not found')",
+    "publishedAt": "2022-02-10T15:58:37Z"
+  },
+  {
+    "videoId": "Ck5MutpVOQo",
+    "title": "Handle 404 Status Code In cy.request Command",
+    "description": "This video shows how cy.request can handle the error server response, like 404 \"Resource not found\". \n\nFind this example and more at https://glebbahmutov.com/cypress-examples/commands/network-requests.html",
+    "publishedAt": "2022-02-10T15:39:55Z"
+  },
+  {
     "videoId": "J49ujGfe-fs",
     "title": "Decode The Phrasle Answer And Updated Vowel Logic",
     "description": "In the previous video \"Solve Phrasle Using Cypress\" https://www.youtube.com/watch?v=b2SDRH2_faE I have shown how to solve the game Phrasle by looking up the answer in the application state object. The author of the game has obfuscated the answer and has added vowel check popups. In this video, I show how to decode the answer and play the updated game using Cypress. Find the solution in the repo https://github.com/bahmutov/cypress-react-app-actions.",
