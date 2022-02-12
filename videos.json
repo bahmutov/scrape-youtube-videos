@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "2Q6L6bzqQRY",
+    "title": "Freeze The Page Using cy.clock Command",
+    "description": "In this video, to catch the quickly disappearing toast element, I use cy.clock command that freezes all setTimeout / clock related window functions inside the application. With the DOM frozen, I can inspect the elements and find the toast element. Then I can write the correct cy.get command to confirm the message I expect to see after solving the Wordle game on the first attempt. Find the source code in https://github.com/bahmutov/cypress-wordle",
+    "publishedAt": "2022-02-11T13:21:30Z"
+  },
+  {
+    "videoId": "xFkIQmXiK5g",
+    "title": "Use blockHosts Config To Avoid Loading 3rd Party Scripts From Tests",
+    "description": "In this video, I update the spec file after Wordle has moved to NYTimes site. We need to change the baseUrl and update the local storage key in order to make the spec work again. I also add blockHosts to prevent 3rd party ads from loading during the tests. Find the updated code in https://github.com/bahmutov/cypress-wordle repository.",
+    "publishedAt": "2022-02-11T12:54:28Z"
+  },
+  {
     "videoId": "in0ZXw1JtJQ",
     "title": "Return Cypress Chain",
     "description": "If you refactor the test code, remember to return the Cypress command chain from the utility functions. This lets you attach more commands and assertions to the returned object, and lets Cypress schedule the command execution correctly. In this video, I show how to write a utility function to wrap cy.request and handle a 404 response from the server. Find the full recipe at https://github.com/bahmutov/cypress-examples/blob/master/docs/recipes/request-not-found.md\n\nThe finished code\n\nfunction getTodo(id) {\n  const serverUrl = 'https://jsonplaceholder.cypress.io'\n  return cy\n    .request({\n      url: `${serverUrl}/todos/${id}`,\n      failOnStatusCode: false,\n    })\n    .then(function (response) {\n      if (response.status === 404) {\n        return 'Todo not found'\n      } else {\n        return response.body\n      }\n    })\n  // if the Todo is not found, return an error\n}\ngetTodo(10000001).should('equal', 'Todo not found')",
