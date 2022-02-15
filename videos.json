@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "QzWAyCTvBY8",
+    "title": "Test-Driven Development Using Cypress Unit Tests",
+    "description": "In this video, I write unit tests for a simple function and run these tests using Cypress test runner. I also show how to use cy.wrap and cy.invoke methods to experiment with the code, while seeing the intermediate steps using Cypress time-traveling debugger.  The final spec file:\n\nimport { reverse } from '../../src/reverse'\n\nit('reverses a string', function () {\n  expect(reverse('hello')).to.equal('olleh')\n  expect(reverse()).to.equal('')\n  expect(reverse(42)).to.equal('')\n})\n\nit('wraps a string', function () {\n  cy.wrap('hello')\n    .invoke('split', '')\n    .invoke('reverse')\n    .invoke('join', '')\n    .should('equal', 'olleh')\n})\n\nFor more examples, read my Cypress blog posts https://glebbahmutov.com/blog/tags/cypress/",
+    "publishedAt": "2022-02-14T17:33:34Z"
+  },
+  {
+    "videoId": "ufmdrL28z-4",
+    "title": "How To Silence cy.task and cy.invoke Command Logging",
+    "description": "We can pass {log: false} to silence Cypress commands and prevent them from printing to the Command Log. Normally, this option goes after the command's arguments. But for cy.task and cy.invoke the order is different:\n\n// silence the cy.get command\ncy.get('...selector', {log: false})\n// silence the cy.task \n// the Cypress options is 3rd argument always\ncy.task('..name', null, {log: false})\n// silence the cy.invoke command\n// the Cypress options is 1st argument\ncy.wrap('hello')\n  .invoke({log: false}, 'split', '')\n\nBonus: to print something to the terminal we can create a little utility task\n// from the plugins file\non('task', {\n  print(x) {\n    console.log(x)\n    return null\n  }\n})\nWhenever we want to print something from the browser test, call the task with cy.task('print', 'my message')",
+    "publishedAt": "2022-02-14T17:32:50Z"
+  },
+  {
     "videoId": "2Q6L6bzqQRY",
     "title": "Freeze The Page Using cy.clock Command",
     "description": "In this video, to catch the quickly disappearing toast element, I use cy.clock command that freezes all setTimeout / clock related window functions inside the application. With the DOM frozen, I can inspect the elements and find the toast element. Then I can write the correct cy.get command to confirm the message I expect to see after solving the Wordle game on the first attempt. Find the source code in https://github.com/bahmutov/cypress-wordle",
