@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "2NpHXkZN1SY",
+    "title": "jQuery :has and :contains Selectors in Cypress Tests",
+    "description": "Cypress uses jQuery to select DOM elements, thus it can use advanced and powerful selectors like :has and :contains to find elements. For example, we can find all LI elements that have an element with class \"label\" and text \"New\" inside of them:\n\ncy.get('li:has(.label:contains(\"New\"))')\n\nThis example comes from https://glebbahmutov.com/cypress-examples site",
+    "publishedAt": "2022-02-16T20:47:37Z"
+  },
+  {
     "videoId": "QzWAyCTvBY8",
     "title": "Test-Driven Development Using Cypress Unit Tests",
     "description": "In this video, I write unit tests for a simple function and run these tests using Cypress test runner. I also show how to use cy.wrap and cy.invoke methods to experiment with the code, while seeing the intermediate steps using Cypress time-traveling debugger.  The final spec file:\n\nimport { reverse } from '../../src/reverse'\n\nit('reverses a string', function () {\n  expect(reverse('hello')).to.equal('olleh')\n  expect(reverse()).to.equal('')\n  expect(reverse(42)).to.equal('')\n})\n\nit('wraps a string', function () {\n  cy.wrap('hello')\n    .invoke('split', '')\n    .invoke('reverse')\n    .invoke('join', '')\n    .should('equal', 'olleh')\n})\n\nFor more examples, read my Cypress blog posts https://glebbahmutov.com/blog/tags/cypress/",
