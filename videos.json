@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "0iXISW0owWM",
+    "title": "Labels For Checkboxes",
+    "description": "In this video, I get all the checked checkboxes from the page. For each checked checkbox, I find the label and store its text in an array. Then I confirm the labels list to the expected values. This is a good each of complex querying of the page that you might need to do in order to collect the data to be asserted.\n\nconst labels = []\ncy.get('input[type=checkbox]')\n  .should('have.length', 4)\n  .filter(':checked')\n  .each(function ($checkbox) {\n    const id = $checkbox.attr('id')\n    cy.get(`label[for=\"${id}\"]`)\n      .invoke('text')\n      .then(function (s) {\n        labels.push(s)\n      })\n  })\ncy.wrap(labels).should('deep.equal', [\n  'I ❤️ apples',\n  'I ❤️ grapes',\n])\n\nFind the full recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-02-17T15:03:33Z"
+  },
+  {
+    "videoId": "liFRu0Fu-Gs",
+    "title": "Querying SVG From A Cypress Test",
+    "description": "SVG elements are normal DOM elements in the browser, thus Cypress commands can query and check them. In this example, I show how to query an SVG element, check its attributes, and even change the \"fill\" attribute to make the element red. Find the full example at https://glebbahmutov.com/cypress-examples\n\n// get the SVG element, just like any DOM element\ncy.get('svg')\n  .should('have.attr', 'width', '90')\n  .and('have.attr', 'height', '90')\n  .find('path')\n  .first()\n  .invoke('attr', 'fill', 'red')",
+    "publishedAt": "2022-02-17T14:29:18Z"
+  },
+  {
     "videoId": "2NpHXkZN1SY",
     "title": "jQuery :has and :contains Selectors in Cypress Tests",
     "description": "Cypress uses jQuery to select DOM elements, thus it can use advanced and powerful selectors like :has and :contains to find elements. For example, we can find all LI elements that have an element with class \"label\" and text \"New\" inside of them:\n\ncy.get('li:has(.label:contains(\"New\"))')\n\nThis example comes from https://glebbahmutov.com/cypress-examples site",
