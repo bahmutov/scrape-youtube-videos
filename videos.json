@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "o6hRLV6a9Hc",
+    "title": "Check Input Element Trimming Spaces From The Entered Values",
+    "description": "A simple Cypress test can confirm our application trims the leading and trailing spaces. \n\ncy.get('#name').type('   Joe  ')\ncy.get('#name').should('have.value', 'Joe')\n\nFor this and many more test examples, check out https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-02-21T20:11:52Z"
+  },
+  {
+    "videoId": "_b6Mf8xI5bA",
+    "title": "Find Elements With Specific Child Elements Using Cypress jQuery :has Selector",
+    "description": "Let's find the LI elements but only the ones that have a child element with class \"label\" or class \"warning\". You can use cy.get and jQuery selector \":has\" to do it:\n\ncy.get('li:has(.label, .warning)').should('have.length', 3)\n\nThis example comes from https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2022-02-21T17:09:13Z"
+  },
+  {
     "videoId": "uzAbSwAlX7Q",
     "title": "Write E2E Tests Using Cypress And Run Them On GitHub Actions",
     "description": "Can you clone someone's web application, write end-to-end tests, and then execute them on CI, all in 10 minutes of total time? This video teaches you how to do this using my favorite tools:\n- Cypress test runner https://www.cypress.io/\n- GitHub Actions using my reusable workflow https://github.com/bahmutov/cypress-workflows\nTip: I even set up Prettier and explain how to use the start-server-and-test utility to work with the app and the tests locally.\nFind the full app and its tests in the https://github.com/bahmutov/todo-react-redux repo",
