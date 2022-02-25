@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "gd7Zx93VxOo",
+    "title": "Wait For The Page And Elements To Fully Render Before Interacting To Avoid Detached From DOM Error",
+    "description": "This video shows how I wait for the page to fully load by observing the new elements that appear during the tests, and the Ajax calls the application is making. My goal is to only work with the page after it has finished loading and re-rendering (otherwise I might get a dreaded \"Element detached from DOM\" Cypress error). In this case, when testing a Shopware site, the charts were loaded at the start, and the menu items were getting their labels from the server using an Ajax call. If the test does not \"wait\" for the labels, it might try to click the menu item. If the Ajax call returns and the application re-renders the menu item element, Cypress might fail to click the menu properly. Here is my more robust test:\n\n// make sure the application has finished loading its charts\ncy.get('.sw-chart').should('have.length.gte', 2)\ncy.get('.sw-admin-menu__item--sw-order').click()\n// the menu item will request the label \"Overview\" from the server\n// let's wait for that menu to appear before clicking the menu item\ncy.contains('.navigation-list-item__sw-order-index', 'Overview').click()\n// verify we end up on the right page after the menu click\ncy.location('hash').should('include', '/sw/order/index')\n\nFor more information, see video https://youtu.be/CMOjrKoBBwc",
+    "publishedAt": "2022-02-24T17:50:25Z"
+  },
+  {
     "videoId": "o6hRLV6a9Hc",
     "title": "Check Input Element Trimming Spaces From The Entered Values",
     "description": "A simple Cypress test can confirm our application trims the leading and trailing spaces. \n\ncy.get('#name').type('   Joe  ')\ncy.get('#name').should('have.value', 'Joe')\n\nFor this and many more test examples, check out https://glebbahmutov.com/cypress-examples",
