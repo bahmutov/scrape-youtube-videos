@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "K5x2oXWsWqI",
+    "title": "Cypress Command Chain Plugin Introduction",
+    "description": "Cypress queues every command into a single chain of commands to be executed. This sometimes confuses people new to Cypress; what commands are in the queue? What are their arguments? Why does cy.log print an undefined value? In this video, I introduce the https://github.com/bahmutov/cypress-command-chain - a tiny module that adds to the Cypress Command Log the \"Command Queue\" list. It shows all queued up commands with their arguments, making it clear which test commands have finished, and which ones are still about to run. \n\nTake a look at my presentation https://slides.com/bahmutov/reactive-conf for more information about Cypress command queue and how it is different from the other test runners.",
+    "publishedAt": "2022-02-26T19:38:30Z"
+  },
+  {
     "videoId": "4jx7YQ48gQc",
     "title": "Do Not Use cy Commands Inside A Should Callback Function",
     "description": "The following test is incorrect: it uses cy.contains command inside a callback function passes to the \"should(cb)\". It will time out\n\nfunction checkFruit(fruit) {\n  cy.contains('#fruit', fruit)\n}\ncy.wait('@fruit')\n  .its('response.body.fruit')\n  .should(checkFruit)\n\nThe \"should(cb)\" will run potentially multiple times, retrying the given value. Each time it tries to schedule the cy.contains command, leading to unpredictable chain of commands. The right way is to first assert the value (if necessary) and then call the \"checkFruit\" function just once using cy.then instead of cy.should\n\ncy.wait('@fruit')\n  .its('response.body.fruit')\n  .should('be.a', 'string')\n  .then(checkFruit)\n\nFor more, read the blog post \"Cypress Should Callback\" https://glebbahmutov.com/blog/cypress-should-callback/",
