@@ -1,8 +1,20 @@
 [
   {
+    "videoId": "R79ai463xIM",
+    "title": "Check If An Image Loads",
+    "description": "You can verify that an image on the page truly loads by checking its property \"naturalWidth\". If the image does not load, that property stays at zero. If the image loads in the browser correctly, then this property will have a value from the image (number of columns). Find this example and many more recipes at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-02-28T21:08:29Z"
+  },
+  {
+    "videoId": "HXe5tdaTfMM",
+    "title": "A Quick Cypress Unit Test For Universal JavaScript Code",
+    "description": "If you are writing end-to-end Cypress tests, you can quickly unit test any JavaScript code that can run in the browser. In this video, I am testing a function parsing a line of text by creating a few unit tests to be executed in the browser.\n\nFind this example code in https://github.com/bahmutov/grep-tests-from-pull-requests repo and read the blog post https://glebbahmutov.com/blog/universal-code-test/",
+    "publishedAt": "2022-02-28T18:55:34Z"
+  },
+  {
     "videoId": "K5x2oXWsWqI",
     "title": "Cypress Command Chain Plugin Introduction",
-    "description": "Cypress queues every command into a single chain of commands to be executed. This sometimes confuses people new to Cypress; what commands are in the queue? What are their arguments? Why does cy.log print an undefined value? In this video, I introduce the https://github.com/bahmutov/cypress-command-chain - a tiny module that adds to the Cypress Command Log the \"Command Queue\" list. It shows all queued up commands with their arguments, making it clear which test commands have finished, and which ones are still about to run. \n\nTake a look at my presentation https://slides.com/bahmutov/reactive-conf for more information about Cypress command queue and how it is different from the other test runners.",
+    "description": "Cypress queues every command into a single chain of commands to be executed. This sometimes confuses people new to Cypress; what commands are in the queue? What are their arguments? Why does cy.log print an undefined value? In this video, I introduce the https://github.com/bahmutov/cypress-command-chain - a tiny module that adds to the Cypress Command Log the \"Command Queue\" list. It shows all queued-up commands with their arguments, making it clear which test commands have finished, and which ones are still about to run. \n\nThe approach has been described in the blog post https://glebbahmutov.com/blog/visualize-cypress-command-queue/\n\nTake a look at my presentation https://slides.com/bahmutov/reactive-conf for more information about Cypress command queue and how it is different from the other test runners.",
     "publishedAt": "2022-02-26T19:38:30Z"
   },
   {
