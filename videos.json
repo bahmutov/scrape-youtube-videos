@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "wAjhXohhYjc",
+    "title": "Fight The Element Detached From DOM Error Using jQuery Click",
+    "description": "Sometimes all standard ways to fight the test flake and the \"Element detached from DOM\" error are not solving the problem. In this case, the application removes the button while the test is trying to click on it, causing an error. To solve this, we can use jQuery \"click()\" method instead of cy.click() command. The jQuery method does not have the checks built into the Cypress command (is the button actionable, visible, etc), thus it clicks and the attached handler executes.\n\ncy.get('#jquery-click #a-button')\n  .wait(1000)\n  .then(function ($button) {\n    $button.click()\n  })\n\nFind this example and others at http://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2022-03-01T13:33:54Z"
+  },
+  {
     "videoId": "R79ai463xIM",
     "title": "Check If An Image Loads",
     "description": "You can verify that an image on the page truly loads by checking its property \"naturalWidth\". If the image does not load, that property stays at zero. If the image loads in the browser correctly, then this property will have a value from the image (number of columns). Find this example and many more recipes at https://glebbahmutov.com/cypress-examples",
