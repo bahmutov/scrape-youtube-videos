@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "BuSBVc3d99Y",
+    "title": "Increase Chai Truncate Threshold To Show More Information",
+    "description": "In this tip, I show how to fully show arrays when comparing them in Cypress. Since Cypress uses Chai assertions under the hood, you can apply a setting to increase the error message truncate limit, and longer arrays will be shown without shortening them into \"[ Array ]\" strings\n\nchai.config.truncateThreshold = 200\nconst fruits = ['Apples', 'Oranges', 'Pears', 'Kiwi']\ncy.wrap(fruits).should('deep.equal', [\n  'Oranges',\n  'Grapefruits',\n  'Plums',\n  'Grapes',\n])\n\nThanks to https://www.linkedin.com/posts/gurudatt-s-a-5b892224_cypress-cypressio-testautomation-activity-6903244451108519936-4klR for this tip\n\nFind this example at http://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2022-03-02T16:33:21Z"
+  },
+  {
     "videoId": "wAjhXohhYjc",
     "title": "Fight The Element Detached From DOM Error Using jQuery Click",
     "description": "Sometimes all standard ways to fight the test flake and the \"Element detached from DOM\" error are not solving the problem. In this case, the application removes the button while the test is trying to click on it, causing an error. To solve this, we can use jQuery \"click()\" method instead of cy.click() command. The jQuery method does not have the checks built into the Cypress command (is the button actionable, visible, etc), thus it clicks and the attached handler executes.\n\ncy.get('#jquery-click #a-button')\n  .wait(1000)\n  .then(function ($button) {\n    $button.click()\n  })\n\nFind this example and others at http://glebbahmutov.com/cypress-examples/",
