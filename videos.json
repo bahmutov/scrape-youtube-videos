@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "o9zsDXl97L8",
+    "title": "Detect Duplicate Attributes Using Lodash Functions And Should Callback",
+    "description": "Imagine we have several elements, and each has a data attribute. Can we confirm there are no duplicate data attributes in the list? Yes, using a \"should(callback)\" function that uses the convenient Lodash functions to extract and process the attributes.\n\nconst { map, countBy, pickBy } = Cypress._\ncy.get('li').should(function ($li) {\n  const ids = map($li, function ($el) {\n    return $el.getAttribute('data-product-id')\n  })\n  const counts = countBy(ids)\n  const duplicates = pickBy(counts, n is larger than 1)\n  expect(duplicates).to.be.empty\n})\n\nFind this recipe and more examples at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2022-03-04T18:57:36Z"
+  },
+  {
     "videoId": "51WPx7gvbAU",
     "title": "Confirm Total Sum Using Data Attributes And Automatic Waiting",
     "description": "In this example (taken from https://glebbahmutov.com/cypress-examples/) I how to sum up multiple data attributes, and then correctly print the value to the Command Log. We then wait for another element to have its data attribute set (we use built-in Cypress retries) and confirm the sum of item prices is equal to the total computed by the application.",
