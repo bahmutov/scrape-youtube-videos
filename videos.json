@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "_vqOtLIGI9o",
+    "title": "Iterate Through Pages And Count Rows Using Recursion",
+    "description": "In this example, I have to iterate through pages until the \"Next\" button is disabled. On every page, I grab the number of visible table rows, adding them all up. After we get to the last page and the \"Next\" button is disabled, we wrap the total rows count and use an alias to save the final value. Later, we will get the value using the alias and confirm it is equal to the expected number. Find the source code and more examples like this one at https://github.com/bahmutov/cypress-recurse",
+    "publishedAt": "2022-03-07T13:40:30Z"
+  },
+  {
     "videoId": "o9zsDXl97L8",
     "title": "Detect Duplicate Attributes Using Lodash Functions And Should Callback",
     "description": "Imagine we have several elements, and each has a data attribute. Can we confirm there are no duplicate data attributes in the list? Yes, using a \"should(callback)\" function that uses the convenient Lodash functions to extract and process the attributes.\n\nconst { map, countBy, pickBy } = Cypress._\ncy.get('li').should(function ($li) {\n  const ids = map($li, function ($el) {\n    return $el.getAttribute('data-product-id')\n  })\n  const counts = countBy(ids)\n  const duplicates = pickBy(counts, n is larger than 1)\n  expect(duplicates).to.be.empty\n})\n\nFind this recipe and more examples at https://glebbahmutov.com/cypress-examples/",
