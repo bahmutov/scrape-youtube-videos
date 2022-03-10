@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "8Gvwsch1bao",
+    "title": "Implement A Test That Finds A Particular Slide In A Carousel",
+    "description": "This test shows how to check if an element is visible, and if not, click on the \"Next\" button in the carousel. The test keeps clicking and checking until the desired slide becomes visible. Then the test clicks on the slide and checks the destination URL\n\nThe full test is below\n\nit('finds the right slide', function () {\n  cy.visit('/')\n  cy.contains('section', '20+ Courses video library FREE ACCESS')\n    .should('be.visible')\n    .scrollIntoView()\n    .next()\n    .within(function () {\n      function getNextSlide() {\n        cy.contains('.swiper-slide', 'with 7 live projects').then(\n          function (el) {\n            if (Cypress.dom.isVisible(el)) {\n              cy.log('Found it!')\n              cy.wrap(el).contains('Get Started').click()\n            } else {\n              cy.wait(1000)\n              cy.get('.swiper-button-next').click().then(getNextSlide)\n            }\n          },\n        )\n      }\n      getNextSlide()\n    })\n  cy.url().should(\n    'equal',\n    'https://www.selenium-tutorial.com/p/automation-architect-in-selenium-7-live-projects',\n  )\n})\n\nFor more, see https://glebbahmutov.com/cypress-examples/ and subscribe to https://cypresstips.substack.com/",
+    "publishedAt": "2022-03-09T17:28:19Z"
+  },
+  {
     "videoId": "_vqOtLIGI9o",
     "title": "Iterate Through Pages And Count Rows Using Recursion",
     "description": "In this example, I have to iterate through pages until the \"Next\" button is disabled. On every page, I grab the number of visible table rows, adding them all up. After we get to the last page and the \"Next\" button is disabled, we wrap the total rows count and use an alias to save the final value. Later, we will get the value using the alias and confirm it is equal to the expected number. Find the source code and more examples like this one at https://github.com/bahmutov/cypress-recurse",
