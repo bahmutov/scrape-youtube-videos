@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "G-4HbUuUqIM",
+    "title": "Use cypress-recurse To Click The Back Button Until It No Longer Exists",
+    "description": "In this example, I show how to grab the Back button, and click on it. We repeat the same commands until we get to the very first page where the button no longer exists. We will use https://github.com/bahmutov/cypress-recurse plugin to iterate without any boilerplate code",
+    "publishedAt": "2022-03-11T14:34:56Z"
+  },
+  {
+    "videoId": "8rtBk9MBjXA",
+    "title": "Use cypress-recurse To Ping The Site Before Visiting It",
+    "description": "In this video, I show 3 ways of checking if the server is responding before loading it using the cy.visit command. \n\n- write your own recurse function that uses \"fetch('/')\" to check if the server is responding\n- overwrite the cy.visit command to check the site first by pinging it\n- use cypress-recurse plugin to remove the boilerplate code of recursively calling the pinging function\n\nFind the full source code in the branch \"recursive\" of the repo https://github.com/bahmutov/live-example/tree/recursive/cypress/integration\n\nFind the cypress-recurse plugin at https://github.com/bahmutov/cypress-recurse",
+    "publishedAt": "2022-03-11T13:38:17Z"
+  },
+  {
     "videoId": "8Gvwsch1bao",
     "title": "Implement A Test That Finds A Particular Slide In A Carousel",
     "description": "This test shows how to check if an element is visible, and if not, click on the \"Next\" button in the carousel. The test keeps clicking and checking until the desired slide becomes visible. Then the test clicks on the slide and checks the destination URL\n\nThe full test is below\n\nit('finds the right slide', function () {\n  cy.visit('/')\n  cy.contains('section', '20+ Courses video library FREE ACCESS')\n    .should('be.visible')\n    .scrollIntoView()\n    .next()\n    .within(function () {\n      function getNextSlide() {\n        cy.contains('.swiper-slide', 'with 7 live projects').then(\n          function (el) {\n            if (Cypress.dom.isVisible(el)) {\n              cy.log('Found it!')\n              cy.wrap(el).contains('Get Started').click()\n            } else {\n              cy.wait(1000)\n              cy.get('.swiper-button-next').click().then(getNextSlide)\n            }\n          },\n        )\n      }\n      getNextSlide()\n    })\n  cy.url().should(\n    'equal',\n    'https://www.selenium-tutorial.com/p/automation-architect-in-selenium-7-live-projects',\n  )\n})\n\nFor more, see https://glebbahmutov.com/cypress-examples/ and subscribe to https://cypresstips.substack.com/",
