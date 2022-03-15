@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "h8NfDFsgdW4",
+    "title": "Randomly Pick Two Checkboxes Out Of Four And Click On Them",
+    "description": "This example starts with four clear checkboxes, picks random two, and then clicks on them. Then it verifies that two checkboxes are checked. \n\ncy.get('#checkboxes input[type=checkbox]')\n  .should('be.visible')\n  .and('have.length', 4)\n  .then(function ($items) {\n    return Cypress._.sampleSize($items.toArray(), 2)\n  })\n  .should('have.length', 2)\n  .click({ multiple: true })\ncy.get('#checkboxes input[type=checkbox]:checked').should(\n  'have.length',\n  2,\n)\n\nFind this example and more at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2022-03-14T16:05:02Z"
+  },
+  {
     "videoId": "G-4HbUuUqIM",
     "title": "Use cypress-recurse To Click The Back Button Until It No Longer Exists",
     "description": "In this example, I show how to grab the Back button, and click on it. We repeat the same commands until we get to the very first page where the button no longer exists. We will use https://github.com/bahmutov/cypress-recurse plugin to iterate without any boilerplate code",
