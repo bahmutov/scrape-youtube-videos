@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "FTjWAeCWpHQ",
+    "title": "Using Should Match Assertion Against Elements Or Text",
+    "description": "If you use Cypress \".should('match', ...)\" assertion, its behavior depends on what the current subject is. If the current subject is a jQuery object, then the match assertion uses the jQuery https://api.jquery.com/is/ method to check if the element matches the given text selector. If the current subject is a string, the match assertion checks if that string matches the given regular expression. This video shows both variants in action.\n\n// check if the element matches the complex jQuery selector\ncy.get('#one').should(\n  'match',\n  '#one.btn-large.btn:contains(\"First\")',\n)\n// checks if the text of the element matches the regular expression\ncy.get('#fruit')\n  .invoke('text')\n  .should('match', /(orange|apple)/i)\n\nFind this and many other examples at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2022-03-15T12:29:58Z"
+  },
+  {
     "videoId": "h8NfDFsgdW4",
     "title": "Randomly Pick Two Checkboxes Out Of Four And Click On Them",
     "description": "This example starts with four clear checkboxes, picks random two, and then clicks on them. Then it verifies that two checkboxes are checked. \n\ncy.get('#checkboxes input[type=checkbox]')\n  .should('be.visible')\n  .and('have.length', 4)\n  .then(function ($items) {\n    return Cypress._.sampleSize($items.toArray(), 2)\n  })\n  .should('have.length', 2)\n  .click({ multiple: true })\ncy.get('#checkboxes input[type=checkbox]:checked').should(\n  'have.length',\n  2,\n)\n\nFind this example and more at https://glebbahmutov.com/cypress-examples/",
