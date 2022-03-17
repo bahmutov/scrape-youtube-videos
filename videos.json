@@ -1,5 +1,41 @@
 [
   {
+    "videoId": "8LcTNeILQtQ",
+    "title": "Overwrite The cy.each Command",
+    "description": "In this video, I overwrite the standard cy.each command. Instead we will use the \"each\" function from cypress-recurse plugin to allow us to iterate until the predicate function returns true\n\n// https://github.com/bahmutov/cypress-recurse\nimport { each } from 'cypress-recurse'\n\nCypress.Commands.overwrite(\n  'each',\n  function (originalFn, items, itemCallback, stopPredicate) {\n    return each(itemCallback, stopPredicate)(items)\n  },\n)\n\nFind the full test in https://github.com/bahmutov/better-cypress-each-example and read the blog post https://glebbahmutov.com/blog/better-cy-each/",
+    "publishedAt": "2022-03-15T21:36:41Z"
+  },
+  {
+    "videoId": "a-LErnTG1lU",
+    "title": "Use each Function From cypress-recurse Plugin To Iterate And Stop",
+    "description": "This video shows how to use \"each\" function from the https://github.com/bahmutov/cypress-recurse plugin to iterate over the elements and stop when we see the number 7. It is simpler than using the standard cy.each command.\n\n// https://github.com/bahmutov/cypress-recurse\nimport { each } from 'cypress-recurse'\n\nit('stops when it sees 7 using each from cypress-recurse', function () {\n  cy.visit('index.html')\n\n  cy.get('tbody button').then(\n    each(\n      function ($button) {\n        return cy\n          .wrap($button)\n          .click()\n          .parent()\n          .parent()\n          .contains('td', /\\d/)\n          .invoke('text')\n          .then(Number)\n      },\n      function (n) {\n        return n === 7\n      }\n    ),\n  )\n})\n\nFind this test in https://github.com/bahmutov/better-cypress-each-example repository and read the blog post https://glebbahmutov.com/blog/better-cy-each/",
+    "publishedAt": "2022-03-15T17:23:59Z"
+  },
+  {
+    "videoId": "DyPr8Dq9D58",
+    "title": "Cy.each Yields The Original Subject",
+    "description": "The cy.each command https://on.cypress.io/each yields the original subject unchanged, even if you stop the iteration early, or return different values.\n\nconst fruits = ['apples', 'bananas', 'oranges', 'pears']\ncy.wrap(fruits)\n  .each(function (fruit, k) {\n    console.log(k, fruit)\n    if (k === 2) {\n      return false\n    }\n    cy.log('fruit', fruit)\n  })\n  // cy.each yields the original subject\n  // even if you stop the iteration early\n  .should('equal', fruits)\n\nFind this example at https://github.com/bahmutov/better-cypress-each-example and read the blog post https://glebbahmutov.com/blog/better-cy-each/",
+    "publishedAt": "2022-03-15T15:30:28Z"
+  },
+  {
+    "videoId": "G4xs9_cAm2c",
+    "title": "Stop cy.each Iteration When Using Cypress Commands Inside The Callback Function",
+    "description": "If the cy.each callback uses Cypress commands and we want to stop the iteration based on the output of those commands, we need to use cy.then + a local closure variable to stop queueing up Cypress commands. The final solution from https://github.com/bahmutov/better-cypress-each-example is this:\n\ncy.visit('index.html')\nlet shouldStop = false\ncy.get('tbody button').each(function ($button, k) {\n  cy.then(function () {\n    if (shouldStop) {\n      return\n    }\n    console.log('button', k)\n    cy.wrap($button)\n      .click()\n      .parent()\n      .parent()\n      .contains('td', /\\d/)\n      .invoke('text')\n      .then(Number)\n      .then(function (n) {\n        if (n === 7) {\n          shouldStop = true\n        }\n      })\n  })\n})\n\nTip: to visualize the Cypress command chain this video uses https://github.com/bahmutov/cypress-command-chain plugin and read the blog post https://glebbahmutov.com/blog/better-cy-each/",
+    "publishedAt": "2022-03-15T14:53:19Z"
+  },
+  {
+    "videoId": "lhb5Lt9RwE4",
+    "title": "How To Stop cy.each Iterations For Simple Cases",
+    "description": "If the cy.each callback is synchronous, it can return \"false\" value to stop the iteration.\n\nit('cy.each stops iteration when returning false', function () {\n  const fruits = ['apples', 'bananas', 'oranges', 'pears']\n  cy.wrap(fruits).each(function (fruit, k) {\n    console.log(k, fruit)\n    if (k === 2) {\n      return false\n    }\n    cy.log('fruit', fruit)\n  })\n})\n// prints \"apples\" and \"bananas\"\n\nFind this example at https://github.com/bahmutov/better-cypress-each-example and read the blog post https://glebbahmutov.com/blog/better-cy-each/",
+    "publishedAt": "2022-03-15T14:50:07Z"
+  },
+  {
+    "videoId": "M0RxEeJaq_E",
+    "title": "Iterate Over Table Rows And Click A Button In Each Row Using cy.each Command",
+    "description": "This video introduces the cy.each command and shows how to iterate over multiple elements, and perform Cypress commands for each element. Find the full source code in https://github.com/bahmutov/better-cypress-each-example (spec01.js and spec02.js)\n\nit('clicks every button', function () {\n  cy.visit('index.html')\n  cy.get('tbody button').each(function ($button) {\n    cy.wrap($button)\n      .click()\n      .parent()\n      .parent()\n      .contains('td', /\\d/)\n      .invoke('text')\n      .then(cy.log)\n  })\n})\n\nRead the blog post https://glebbahmutov.com/blog/better-cy-each/",
+    "publishedAt": "2022-03-15T13:27:09Z"
+  },
+  {
     "videoId": "FTjWAeCWpHQ",
     "title": "Using Should Match Assertion Against Elements Or Text",
     "description": "If you use Cypress \".should('match', ...)\" assertion, its behavior depends on what the current subject is. If the current subject is a jQuery object, then the match assertion uses the jQuery https://api.jquery.com/is/ method to check if the element matches the given text selector. If the current subject is a string, the match assertion checks if that string matches the given regular expression. This video shows both variants in action.\n\n// check if the element matches the complex jQuery selector\ncy.get('#one').should(\n  'match',\n  '#one.btn-large.btn:contains(\"First\")',\n)\n// checks if the text of the element matches the regular expression\ncy.get('#fruit')\n  .invoke('text')\n  .should('match', /(orange|apple)/i)\n\nFind this and many other examples at https://glebbahmutov.com/cypress-examples/",
