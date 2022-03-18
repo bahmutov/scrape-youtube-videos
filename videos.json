@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "rMviL8RiGEk",
+    "title": "Check The List Of Zip Codes",
+    "description": "This video shows an application that \"validates\" a list of zip codes. The application takes the zip code one by one and returns a status if the application delivers to that zip area. Our test needs to check a list of zip codes, and to fill two lists: supported and unsupported zip codes, and then verify the two lists.\n\nWe iterate over the data, entering the zip code one by one, then waiting for the application to give us an answer. We store the zip codes and then compare the results with the computed lists. This fun little exercise comes from the recipes in https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-03-17T13:50:06Z"
+  },
+  {
     "videoId": "8LcTNeILQtQ",
     "title": "Overwrite The cy.each Command",
     "description": "In this video, I overwrite the standard cy.each command. Instead we will use the \"each\" function from cypress-recurse plugin to allow us to iterate until the predicate function returns true\n\n// https://github.com/bahmutov/cypress-recurse\nimport { each } from 'cypress-recurse'\n\nCypress.Commands.overwrite(\n  'each',\n  function (originalFn, items, itemCallback, stopPredicate) {\n    return each(itemCallback, stopPredicate)(items)\n  },\n)\n\nFind the full test in https://github.com/bahmutov/better-cypress-each-example and read the blog post https://glebbahmutov.com/blog/better-cy-each/",
