@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "M43XVZrZRtU",
+    "title": "Confirm The Total Sum Shown Under The Table Of Prices",
+    "description": "In this example, we are going to do a lot of text parsing to get the prices and the totals and confirm the displayed total is correct. Find the full example in the recipes at https://glebbahmutov.com/cypress-examples\n\nWe need to grab the prices from the 4 column of the table, sum the up, then confirm the value show under the table is correct\n\ncy.get('table#sales tbody td:nth-child(4)')\n  .then(function ($cells) {\n    const totals = $cells\n      .toArray()\n      .map(function (el) {\n        return el.innerText\n      })\n      .map(function (s) {\n        return s.replace('$', '')\n      })\n      .map(parseFloat)\n    const sum = Cypress._.sum(totals)\n    cy.log(`Total should be ${sum}`)\n    cy.contains('#total', '$' + sum)\n  })\n\nRelated video: \"Check The Prices Table Rows\" https://youtu.be/DxlqDA7tIOw",
+    "publishedAt": "2022-03-18T16:37:04Z"
+  },
+  {
     "videoId": "rMviL8RiGEk",
     "title": "Check The List Of Zip Codes",
     "description": "This video shows an application that \"validates\" a list of zip codes. The application takes the zip code one by one and returns a status if the application delivers to that zip area. Our test needs to check a list of zip codes, and to fill two lists: supported and unsupported zip codes, and then verify the two lists.\n\nWe iterate over the data, entering the zip code one by one, then waiting for the application to give us an answer. We store the zip codes and then compare the results with the computed lists. This fun little exercise comes from the recipes in https://glebbahmutov.com/cypress-examples",
