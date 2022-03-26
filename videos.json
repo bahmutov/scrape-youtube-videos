@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "KHJkRp_rRYg",
+    "title": "cypress-recurse: Reload The Page Until We See 7 Plus Check The Numbers Before That",
+    "description": "This is an introduction to the \"reduce\" feature of cypress-recurse plugin https://github.com/bahmutov/cypress-recurse In this example, we reload the page until we see the number 7. We want to check if any of the previous numbers randomly shown are NOT 7 after we stop. We can accumulate all values we see while iterating using Cypress commands. Then we can grab the reduced value with all the numbers and run assertions against it. \n\nrecurse(\n  function () {\n    return cy.get('#result').invoke('text').then(parseInt)\n  },\n  function (n) {\n    return n === 7\n  },\n  {\n    limit: 60,\n    delay: 1000, // sleep for 1 second before reloading the page\n    timeout: 60_000, // try up to one minute\n    log: false,\n    reduceFrom: [],\n    reduce(numbers, n) {\n      numbers.push(n)\n    },\n    post () {\n      cy.reload()\n    },\n    yield: 'reduced',\n  },\n).then(function (numbers) {\n  expect(numbers).to.not.include(7)\n})",
+    "publishedAt": "2022-03-25T11:39:01Z"
+  },
+  {
     "videoId": "u2JUQY2TE3A",
     "title": "cypress-recurse: Click On The Button Until It Becomes Disabled",
     "description": "Another https://github.com/bahmutov/cypress-recurse example: in a paginated table we need to go to the last page. We know we reached the last page when the \"Next\" button gets the attribute \"disabled\" We can check if an element has this attribute by using the jQuery attr() method call.\n\nrecurse(\n  function () { \n    return cy.get('[value=next]') \n  },\n  function ($button) {\n    return $button.attr('disabled') === 'disabled'\n  },\n  {\n    log: false,\n    limit: 10,\n    timeout: 20_000,\n    delay: 500,\n    post() {\n      cy.get('[value=next]').click()\n    },\n  },\n)\n\nSee the pagination-spec.js",
