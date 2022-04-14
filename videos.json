@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "AO9iPIg9yKk",
+    "title": "Use cy.filter For Complex Element Filtering",
+    "description": "If you need to select elements on the page using some kind of complex logic, like \"find all elements with class X or having the text Y\", then the cy.filter is your solution. It allows one to use a predicate callback function that gets each DOM element and can return \"true\" or \"false\" to select it. In this example from https://glebbahmutov.com/cypress-examples we filter elements by class and by text. Let's find all list items with the text \"cat\" or class \"pet\".\n\ncy.get('#animals li')\n  .should('have.length', 5)\n  .filter(function (k, el) {\n    return (\n      el.classList.contains('pet') ||\n      el.innerText.includes('cat')\n    )\n  })\n  .should('have.length', 4)",
+    "publishedAt": "2022-04-13T14:38:04Z"
+  },
+  {
     "videoId": "WUQpyB-oquE",
     "title": "Select Elements By Computed Style",
     "description": "How do you select elements by the run-time color? For example, how do you select anchor links that are red? An element can be red because a class was applied, or an inline style, or it could be made red using JavaScript. To help you, the cy.filter https://on.cypress.io/filter command allows using a callback function that can grab the computed style of an element and return true if the current runtime color of an element is red.\n\ncy.get('a').filter(function (k, el) {\n  const color = window.getComputedStyle(el).color\n  return color === 'rgb(255, 0, 0)'\n})\n\nFind this example among the recipes at https://glebbahmutov.com/cypress-examples",
