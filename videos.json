@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "yE20OuYTcGo",
+    "title": "Compare Numbers Using closeTo Assertion",
+    "description": "If you have an imprecise number to check, the assertion \"closeTo(expected, precision)\" is your friend. In this video, I show how to use it to confirm the font size of an element to be 16 pixels +/- 1 pixel.\n\ncy.get('#font-size-example')\n  .invoke('css', 'fontSize')\n  .then(cy.log)\n  // the font size returned is in pixels, like \"16px\"\n  .should('match', /^\\d+px$/)\n  .invoke('replace', 'px', '')\n  .then(Number)\n  .should('be.closeTo', 16, 1)\n\nFind these examples and more at https://glebbahmutov.com/cypress-examples/commands/assertions.html",
+    "publishedAt": "2022-04-20T21:10:49Z"
+  },
+  {
     "videoId": "XLgwQsSa9PM",
     "title": "Check Visible Elements In The Current Viewport",
     "description": "This video shows how to wait for the loading elements in the current viewport to go away. We will use the current window and the element's bounding rectangle to check if the element is invisible. \n\nFind the source code in the repo https://github.com/bahmutov/loading-elements and read the blog post https://glebbahmutov.com/blog/visible-in-the-viewport/",
