@@ -36,6 +36,12 @@
     "publishedAt": "2022-03-25T11:39:01Z"
   },
   {
+    "videoId": "jClbSvJhzI4",
+    "title": "Deleted video",
+    "description": "This video is unavailable.",
+    "publishedAt": "2022-03-24T20:49:54Z"
+  },
+  {
     "videoId": "u2JUQY2TE3A",
     "title": "cypress-recurse: Click On The Button Until It Becomes Disabled",
     "description": "Another https://github.com/bahmutov/cypress-recurse example: in a paginated table we need to go to the last page. We know we reached the last page when the \"Next\" button gets the attribute \"disabled\" We can check if an element has this attribute by using the jQuery attr() method call.\n\nrecurse(\n  function () { \n    return cy.get('[value=next]') \n  },\n  function ($button) {\n    return $button.attr('disabled') === 'disabled'\n  },\n  {\n    log: false,\n    limit: 10,\n    timeout: 20_000,\n    delay: 500,\n    post() {\n      cy.get('[value=next]').click()\n    },\n  },\n)\n\nSee the pagination-spec.js",
