@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "2LdVcnYAE7Q",
+    "title": "The cy.its Command Examples With Retries And Without",
+    "description": "The cy.its command will retry checking the given property or path in the subject until it times out or the property exists. This video shows when you should use the \"timeout: 0\" option to disable the retries - when the subject can never change. For example, the subject yielded by the cy.request command will never change, thus we can disable the retries using the \"timeout: 0\" option to fail the test faster.\n\nThe test code (find the full source code at https://glebbahmutov.com/cypress-examples)\n\n// the following chain of commands checks the \"window\" object\n// again and again until the application sets the property \"appCustomField\"\n// The value of the property is yielded to the assertion\ncy.window().its('appCustomField').should('equal', 42)\n// tip: alternative solution using a single assertion\n// (which cannot have nested paths compared to the cy.its command)\ncy.window().should(\n  'have.property',\n  'appCustomField',\n  42,\n  'property added',\n)\n\n// We can avoid unnecessary retries when getting the property\n// using the \"timeout: 0\" option\ncy.request('https://jsonplaceholder.cypress.io/users/1')\n  .its('body', { timeout: 0 })\n  .should('include.keys', 'id', 'name', 'email')",
+    "publishedAt": "2022-04-25T17:48:55Z"
+  },
+  {
+    "videoId": "RyHSIk7nzD0",
+    "title": "Find Text Item Without Flake Using cy.contains Command",
+    "description": "This example comes from https://glebbahmutov.com/cypress-examples recipes. Imagine you need to find an item on the page with the given text. You can do it in several ways. This video shows a robust way, that retries the search. Even if the list is dynamic, the test will succeed because the cy.contains(selector, text) command retries finding the element. If you need to find several items, call cy.contains several times. Here is the final test code, and it could not be simpler.\n\nconst items = ['three', 'four', 'one']\nitems.forEach(function (item) {\n  cy.contains('#list li', item)\n})",
+    "publishedAt": "2022-04-25T13:35:56Z"
+  },
+  {
     "videoId": "yE20OuYTcGo",
     "title": "Compare Numbers Using closeTo Assertion",
     "description": "If you have an imprecise number to check, the assertion \"closeTo(expected, precision)\" is your friend. In this video, I show how to use it to confirm the font size of an element to be 16 pixels +/- 1 pixel.\n\ncy.get('#font-size-example')\n  .invoke('css', 'fontSize')\n  .then(cy.log)\n  // the font size returned is in pixels, like \"16px\"\n  .should('match', /^\\d+px$/)\n  .invoke('replace', 'px', '')\n  .then(Number)\n  .should('be.closeTo', 16, 1)\n\nFind these examples and more at https://glebbahmutov.com/cypress-examples/commands/assertions.html",
@@ -34,12 +46,6 @@
     "title": "cypress-recurse: Reload The Page Until We See 7 Plus Check The Numbers Before That",
     "description": "This is an introduction to the \"reduce\" feature of cypress-recurse plugin https://github.com/bahmutov/cypress-recurse In this example, we reload the page until we see the number 7. We want to check if any of the previous numbers randomly shown are NOT 7 after we stop. We can accumulate all values we see while iterating using Cypress commands. Then we can grab the reduced value with all the numbers and run assertions against it. \n\nrecurse(\n  function () {\n    return cy.get('#result').invoke('text').then(parseInt)\n  },\n  function (n) {\n    return n === 7\n  },\n  {\n    limit: 60,\n    delay: 1000, // sleep for 1 second before reloading the page\n    timeout: 60_000, // try up to one minute\n    log: false,\n    reduceFrom: [],\n    reduce(numbers, n) {\n      numbers.push(n)\n    },\n    post () {\n      cy.reload()\n    },\n    yield: 'reduced',\n  },\n).then(function (numbers) {\n  expect(numbers).to.not.include(7)\n})",
     "publishedAt": "2022-03-25T11:39:01Z"
-  },
-  {
-    "videoId": "jClbSvJhzI4",
-    "title": "Deleted video",
-    "description": "This video is unavailable.",
-    "publishedAt": "2022-03-24T20:49:54Z"
   },
   {
     "videoId": "u2JUQY2TE3A",
