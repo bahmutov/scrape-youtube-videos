@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "512p4E4fQAc",
+    "title": "Hide The Entered Email In The Form",
+    "description": "And confirm the form submission works by checking the intercepted network call. This test comes from https://glebbahmutov.com/cypress-examples and shows a few tricks for working with forms in Cypress:\n- using cy.within to limit the commands to the elements inside a form\n- changing the \"type\" attribute of the input element to hide the email\n- attaching dummy \"click\" event handlers from the test\n- stubbing the form submission and confirming the sent form fields\n\nFor more, check out the blog post \"Keep passwords secret in E2E tests\" https://glebbahmutov.com/blog/keep-passwords-secret-in-e2e-tests",
+    "publishedAt": "2022-04-27T15:34:39Z"
+  },
+  {
     "videoId": "2LdVcnYAE7Q",
     "title": "The cy.its Command Examples With Retries And Without",
     "description": "The cy.its command will retry checking the given property or path in the subject until it times out or the property exists. This video shows when you should use the \"timeout: 0\" option to disable the retries - when the subject can never change. For example, the subject yielded by the cy.request command will never change, thus we can disable the retries using the \"timeout: 0\" option to fail the test faster.\n\nThe test code (find the full source code at https://glebbahmutov.com/cypress-examples)\n\n// the following chain of commands checks the \"window\" object\n// again and again until the application sets the property \"appCustomField\"\n// The value of the property is yielded to the assertion\ncy.window().its('appCustomField').should('equal', 42)\n// tip: alternative solution using a single assertion\n// (which cannot have nested paths compared to the cy.its command)\ncy.window().should(\n  'have.property',\n  'appCustomField',\n  42,\n  'property added',\n)\n\n// We can avoid unnecessary retries when getting the property\n// using the \"timeout: 0\" option\ncy.request('https://jsonplaceholder.cypress.io/users/1')\n  .its('body', { timeout: 0 })\n  .should('include.keys', 'id', 'name', 'email')",
