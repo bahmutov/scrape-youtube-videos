@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "IRsPdCHyBSk",
+    "title": "Find Input Elements With The Given Value Using cy.filter Command",
+    "description": "How do you find all input elements with the current value X? Not the declared attribute \"value=X\", but the current runtime value X? This video shows my trick: get all possible input elements, then filter them using cy.filter(callback) to inspect the current \"element.value\" property. \n\ncy.get('#inputs input')\n  .filter(function (k, el) {\n    return el.value === 'fox'\n  })\n  .should('have.length', 2)\n\nFind this recipe and many others at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-04-28T12:18:22Z"
+  },
+  {
     "videoId": "512p4E4fQAc",
     "title": "Hide The Entered Email In The Form",
     "description": "And confirm the form submission works by checking the intercepted network call. This test comes from https://glebbahmutov.com/cypress-examples and shows a few tricks for working with forms in Cypress:\n- using cy.within to limit the commands to the elements inside a form\n- changing the \"type\" attribute of the input element to hide the email\n- attaching dummy \"click\" event handlers from the test\n- stubbing the form submission and confirming the sent form fields\n\nFor more, check out the blog post \"Keep passwords secret in E2E tests\" https://glebbahmutov.com/blog/keep-passwords-secret-in-e2e-tests",
