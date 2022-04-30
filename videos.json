@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "Gxoo6uZMo9I",
+    "title": "Filter Input Elements By Value Using cypress-should-really Plugin",
+    "description": "This video teaches you how to find the input elements with the given value using https://github.com/bahmutov/cypress-should-really plugin. It builds up a \"should(callback)\" using small individual utility functions to modify and filter the data.\n\nimport { really, map, its, filter, isEqual } from \"cypress-should-really\"\n\ncy.get('#inputs input').should(\n  // [jqueryElement]\n  really(\n    map(its('value')), // [string]\n    filter(isEqual('fox')),\n    'have.length',\n    2,\n  ),\n)\n\nFor more, see the blog post https://glebbahmutov.com/blog/fp-cy-helpers/",
+    "publishedAt": "2022-04-29T12:49:55Z"
+  },
+  {
     "videoId": "IRsPdCHyBSk",
     "title": "Find Input Elements With The Given Value Using cy.filter Command",
     "description": "How do you find all input elements with the current value X? Not the declared attribute \"value=X\", but the current runtime value X? This video shows my trick: get all possible input elements, then filter them using cy.filter(callback) to inspect the current \"element.value\" property. \n\ncy.get('#inputs input')\n  .filter(function (k, el) {\n    return el.value === 'fox'\n  })\n  .should('have.length', 2)\n\nFind this recipe and many others at https://glebbahmutov.com/cypress-examples",
