@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "deNl1q1el0E",
+    "title": "Query Elements With Retry-Ability To Avoid Flake",
+    "description": "This example rewrites a flaky test to be less flaky. Instead of\n\ncy.get('#cart input') // query command\n  .eq(2) // query command\n  .clear() // action command\n  .type('20') // action command\n\nWe do the following\n\nconst selector = '#cart input:nth(2)'\ncy.get(selector) // query command\n  .clear() // action command\ncy.get(selector).should('have.value', '')\ncy.get(selector).type('20') // action command\ncy.get(selector).should('have.value', '20')\n\nThe new test follows the principles:\n- re-query the element from the page after big changes (like clearing it)\n- use a single complex selector like \"#cart input:nth(2)\" instead of separating \"cy.get(...).eq(...)\" commands\n- alternates commands and assertions to check if the application has finished processing the previous command\n\nFind this recipe at my https://glebbahmutov.com/cypress-examples/ and read the Cypress retry-ability guide at http://on.cypress.io/retry-ability",
+    "publishedAt": "2022-05-02T13:12:59Z"
+  },
+  {
     "videoId": "Gxoo6uZMo9I",
     "title": "Filter Input Elements By Value Using cypress-should-really Plugin",
     "description": "This video teaches you how to find the input elements with the given value using https://github.com/bahmutov/cypress-should-really plugin. It builds up a \"should(callback)\" using small individual utility functions to modify and filter the data.\n\nimport { really, map, its, filter, isEqual } from \"cypress-should-really\"\n\ncy.get('#inputs input').should(\n  // [jqueryElement]\n  really(\n    map(its('value')), // [string]\n    filter(isEqual('fox')),\n    'have.length',\n    2,\n  ),\n)\n\nFor more, see the blog post https://glebbahmutov.com/blog/fp-cy-helpers/",
