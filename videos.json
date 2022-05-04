@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "sUHs2zLFjIM",
+    "title": "Log In Using Words",
+    "description": "This example comes from the blog post https://glebbahmutov.com/blog/login-words/ We collect the words shown on the page in the first part of the test. Then the application shows input elements for some words and we need to enter the correct word from the saved list.\n\nCollecting the shown words into an array:\nconst words = []\ncy.get('#show-words .words li')\n  .each(function ($li) {\n    words.push($li.text())\n  })\n\nPrinting the list of words (remember, you can use the information from the page only inside the cy.then callback)\nconst words = []\n// collect the words\n.then(function () {\n  cy.log(JSON.stringify(words))\n})\n\nType the words into the input element at that position\ncy.get('#login .words li').each(function ($li, k) {\n  const $input = $li.find('input')\n  if ($input.length) {\n    cy.wrap($input).type(words[k])\n  }\n})",
+    "publishedAt": "2022-05-03T15:48:11Z"
+  },
+  {
     "videoId": "deNl1q1el0E",
     "title": "Query Elements With Retry-Ability To Avoid Flake",
     "description": "This example rewrites a flaky test to be less flaky. Instead of\n\ncy.get('#cart input') // query command\n  .eq(2) // query command\n  .clear() // action command\n  .type('20') // action command\n\nWe do the following\n\nconst selector = '#cart input:nth(2)'\ncy.get(selector) // query command\n  .clear() // action command\ncy.get(selector).should('have.value', '')\ncy.get(selector).type('20') // action command\ncy.get(selector).should('have.value', '20')\n\nThe new test follows the principles:\n- re-query the element from the page after big changes (like clearing it)\n- use a single complex selector like \"#cart input:nth(2)\" instead of separating \"cy.get(...).eq(...)\" commands\n- alternates commands and assertions to check if the application has finished processing the previous command\n\nFind this recipe at my https://glebbahmutov.com/cypress-examples/ and read the Cypress retry-ability guide at http://on.cypress.io/retry-ability",
