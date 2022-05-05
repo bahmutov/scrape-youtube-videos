@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "jdXeKtrwJ8A",
+    "title": "A Quick Should Have Text Example With Multiline Text",
+    "description": "In this short example, I show an example where cy.contains fails to match the text of the element due to newlines and multiple whitespace characters. Instead, we should (pun intended) use the Chai assertion should \"have.text\".\n\nFind the full recipe and many more short examples of Cypress commands at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2022-05-04T19:35:54Z"
+  },
+  {
     "videoId": "sUHs2zLFjIM",
     "title": "Log In Using Words",
     "description": "This example comes from the blog post https://glebbahmutov.com/blog/login-words/ We collect the words shown on the page in the first part of the test. Then the application shows input elements for some words and we need to enter the correct word from the saved list.\n\nCollecting the shown words into an array:\nconst words = []\ncy.get('#show-words .words li')\n  .each(function ($li) {\n    words.push($li.text())\n  })\n\nPrinting the list of words (remember, you can use the information from the page only inside the cy.then callback)\nconst words = []\n// collect the words\n.then(function () {\n  cy.log(JSON.stringify(words))\n})\n\nType the words into the input element at that position\ncy.get('#login .words li').each(function ($li, k) {\n  const $input = $li.find('input')\n  if ($input.length) {\n    cy.wrap($input).type(words[k])\n  }\n})",
