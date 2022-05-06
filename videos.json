@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "XMJP07Ft1nA",
+    "title": "Instant Application Login Via External Domain Using cy.session And cy.origin Commands",
+    "description": "The most awaited Cypress feature is here in Cypress v9.6.0 - visiting multiple domains in the same test. This short video shows how I log in via 3rd party auth provider using the new cy.origin command. \n\nThe test goes one step beyond that - it uses cy.session command to instantly restore the session, including the 3rd party cookies. Thus every login after the 1st one skips visiting the external domain 🤯\n\nbeforeEach(function () {\n  cy.session('login', function () {\n    // start the login\n\n    cy.origin('2nd domain', function () {\n      // log in via UI\n    })\n\n    // back to the local courses page\n    cy.location('pathname').should('equal', '/courses')\n  })\n})\n\nit('logs in', function () {\n  cy.visit('/courses')\n  // we are logged in!\n})",
+    "publishedAt": "2022-05-05T17:47:54Z"
+  },
+  {
     "videoId": "jdXeKtrwJ8A",
     "title": "A Quick Should Have Text Example With Multiline Text",
     "description": "In this short example, I show an example where cy.contains fails to match the text of the element due to newlines and multiple whitespace characters. Instead, we should (pun intended) use the Chai assertion should \"have.text\".\n\nFind the full recipe and many more short examples of Cypress commands at https://glebbahmutov.com/cypress-examples/",
