@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "0sY1tp0aVNM",
+    "title": "Get Multiple Values From The Page Via Aliases And Test Context Properties",
+    "description": "What if you need to get the current values or text of multiple page elements? Do you get a pyramid of doom? No, it can be done very simply in several ways (see the recipe \"Get multiple fields\" from https://glebbahmutov.com/cypress-examples/ for all my solutions), but the simplest in my mind is to use Cypress cy.as aliases and extract the values from the test context object\n\nfunction getFormValues() {\n  cy.get('#fname').invoke('val').as('fname')\n  cy.get('#lname').invoke('val').as('lname')\n  return cy.then(function () {\n    return {\n      fname: this.fname,\n      lname: this.lname,\n    }\n  })\n}\n\ngetFormValues().should('deep.equal', {\n  fname: 'Joe',\n  lname: 'Smith',\n})\n\nFor more, see https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2022-05-13T14:37:20Z"
+  },
+  {
     "videoId": "5VJOpg09w2k",
     "title": "Correctly Using instanceof Assertion In Cypress Test",
     "description": "Cypress tests run in its own iframe with its own \"window\" object. It is a separate iframe and a different \"window\" object from the application; the application runs in its own iframe. Thus grabbing an element from the application and using \"instanceof HTMLDivElement\" will fail - it compares the element created using one window's HTMLDivElement with a different HTMLDivElement function.\n\ncy.get('#name').should(function ($el) {\n  // 🚨 INCORRECT, WILL FAIL, JUST A DEMO\n  expect($el[0], 'is element').to.be.instanceof(HTMLDivElement)\n})\n\nThis video explains the Cypress iframe setup, and how to solve the above test case: you need to use the \"app window.HTMLDivElement\" and you can grab the \"app window\" reference using the cy.window command\n\ncy.window().then(function (win) {\n  cy.get('#name').should(function ($el) {\n    // ✅ a DOM element retrieved from the application's window\n    // is an instance of that window's HTMLDivElement\n    expect($el[0], 'is element').to.be.instanceof(\n      win.HTMLDivElement,\n    )\n  })\n})\n\nSee the full instanceof recipe at https://glebbahmutov.com/cypress-examples",
