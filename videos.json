@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "iXpIh6e5nA4",
+    "title": "Cypress QRCode Example",
+    "description": "This video teaches you how to use the \"@nuintun/qrcode\" NPM module to decode a Cypress PNG fixture file and confirm the text encoded in it. We load the fixture as base64 string, create an image \"src\" string and then pass to the qrcode module. It returns a promise that Cypress test waits for. The resolved value has data and other properties. We grab the \"data\" property and confirm the text inside. That is the text encoded in the QR image\n\nFind the full source code in the repo https://github.com/bahmutov/qrcode-example",
+    "publishedAt": "2022-05-16T12:36:07Z"
+  },
+  {
+    "videoId": "wJ3VyGEDHA0",
+    "title": "Pass Data From One Spec To Another",
+    "description": "Here is how you can pass data from one spec to another (caution: this approach makes the test execution dependent on the order of specs, which is an anti-pattern). You send it from the spec to the plugins file, where it is stored while the browser closes one spec and opens another.\n\nTip: for a better approach, use my https://github.com/bahmutov/cypress-data-session plugin",
+    "publishedAt": "2022-05-15T15:18:51Z"
+  },
+  {
     "videoId": "0sY1tp0aVNM",
     "title": "Get Multiple Values From The Page Via Aliases And Test Context Properties",
     "description": "What if you need to get the current values or text of multiple page elements? Do you get a pyramid of doom? No, it can be done very simply in several ways (see the recipe \"Get multiple fields\" from https://glebbahmutov.com/cypress-examples/ for all my solutions), but the simplest in my mind is to use Cypress cy.as aliases and extract the values from the test context object\n\nfunction getFormValues() {\n  cy.get('#fname').invoke('val').as('fname')\n  cy.get('#lname').invoke('val').as('lname')\n  return cy.then(function () {\n    return {\n      fname: this.fname,\n      lname: this.lname,\n    }\n  })\n}\n\ngetFormValues().should('deep.equal', {\n  fname: 'Joe',\n  lname: 'Smith',\n})\n\nFor more, see https://glebbahmutov.com/cypress-examples/",
