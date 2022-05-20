@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "OiL9zvd9xjc",
+    "title": "Bonus Lesson 21: intercept and confirm navigator.sendBeacon calls",
+    "description": "This is a bonus lesson from my \"Cypress Network Testing Exercises\" course https://cypress.tips/courses which shows spying on the application making \"navigator.sendBeacon\" calls to send small analytics events to the server. We confirm that the browser is sending plain text, converting it to a JSON object, and confirming it has the property \"fruit\". We then ensure that fruit is shown on the loaded page.\n\ncy.intercept('POST', '/got-fruit').as('beacon')\ncy.visit('/')\ncy.wait('@beacon')\n  .its('request.body')\n  .should('be.a', 'string')\n  .then(JSON.parse)\n  .should('have.property', 'fruit')\n  .then(function (fruit) {\n    cy.contains('#fruit', fruit)\n  })\n\nSee the \"navigator.sendBeacon\" docs at https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon and find an example application to test at https://github.com/bahmutov/fastify-example",
+    "publishedAt": "2022-05-19T13:09:47Z"
+  },
+  {
     "videoId": "iXpIh6e5nA4",
     "title": "Cypress QRCode Example",
     "description": "This video teaches you how to use the \"@nuintun/qrcode\" NPM module to decode a Cypress PNG fixture file and confirm the text encoded in it. We load the fixture as base64 string, create an image \"src\" string and then pass to the qrcode module. It returns a promise that Cypress test waits for. The resolved value has data and other properties. We grab the \"data\" property and confirm the text inside. That is the text encoded in the QR image\n\nFind the full source code in the repo https://github.com/bahmutov/qrcode-example",
