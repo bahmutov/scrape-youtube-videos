@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "PvfCOn1lq9Y",
+    "title": "Text File Download Example",
+    "description": "A small Cypress example showing how to download and verify a text file. We also delete the \"cypress/downloads\" folder before each test using the plugins file code. See the code in the repo https://github.com/bahmutov/cypress-file-download-example and more Cypress file download examples in the recipe \"File Download\" in the repo https://github.com/cypress-io/cypress-example-recipes",
+    "publishedAt": "2022-05-20T17:30:43Z"
+  },
+  {
     "videoId": "OiL9zvd9xjc",
     "title": "Bonus Lesson 21: intercept and confirm navigator.sendBeacon calls",
     "description": "This is a bonus lesson from my \"Cypress Network Testing Exercises\" course https://cypress.tips/courses which shows spying on the application making \"navigator.sendBeacon\" calls to send small analytics events to the server. We confirm that the browser is sending plain text, converting it to a JSON object, and confirming it has the property \"fruit\". We then ensure that fruit is shown on the loaded page.\n\ncy.intercept('POST', '/got-fruit').as('beacon')\ncy.visit('/')\ncy.wait('@beacon')\n  .its('request.body')\n  .should('be.a', 'string')\n  .then(JSON.parse)\n  .should('have.property', 'fruit')\n  .then(function (fruit) {\n    cy.contains('#fruit', fruit)\n  })\n\nSee the \"navigator.sendBeacon\" docs at https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon and find an example application to test at https://github.com/bahmutov/fastify-example",
