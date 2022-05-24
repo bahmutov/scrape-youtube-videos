@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "yMiJj8qRx1s",
+    "title": "Get And Confirm Element's Own Text Without Children Elements",
+    "description": "This video explains how to get an element from the page, and then extract the element's own text (without the text of its children's elements) before confirming it. Find the full recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-05-22T18:39:11Z"
+  },
+  {
     "videoId": "PvfCOn1lq9Y",
     "title": "Text File Download Example",
     "description": "A small Cypress example showing how to download and verify a text file. We also delete the \"cypress/downloads\" folder before each test using the plugins file code. See the code in the repo https://github.com/bahmutov/cypress-file-download-example and more Cypress file download examples in the recipe \"File Download\" in the repo https://github.com/cypress-io/cypress-example-recipes",
