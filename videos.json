@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "r-fMXwHblKM",
+    "title": "Select A Duplicate Option Using Its Index",
+    "description": "If your \"select\" element has options with duplicate values, cy.select refuses to select them - because it is not sure which item you want. Luckily, we can still select an item by index. This video shows how to find the index by the value attribute and then cy.select(index) from a Cypress test. Find the full recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-05-31T18:40:32Z"
+  },
+  {
+    "videoId": "wRLODxdWyuw",
+    "title": "Click Each Item Test Refactoring",
+    "description": "In this example, we start with a test that is imperative and keeps track of the number of clicks by using a local variable. The test also uses jQuery methods to trigger click events. We refactor this test to:\n- work correctly as a human user (who cannot click on the disabled button)\n- click multiple buttons one after another without using cy.each + cy.click commands\n- be declarative and not use local variables\n\nFind the full example and lots more Cypress test examples at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-05-31T13:32:17Z"
+  },
+  {
     "videoId": "MU08Air76bI",
     "title": "Find Duplicate Text Kiwi And Confirm The Rest Of Elements Are Unique",
     "description": "What if the list of elements has one duplicate value and the rest of the elements have unique text? We can confirm it using \"cy.get\" (but not the \"cy.contains\") command with \":contains\" selector. We can also invert the selection using \":not(:contains)\" combination.\n\ncy.get('li:contains(Kiwi)').should('have.length', 2)\ncy.get('li:not(:contains(Kiwi))')\n  .should('have.length', 4)\n  .then(function ($el) { return Cypress._.map($el, 'innerText') })\n  .then(function (values) {\n    const distinct = Cypress._.uniq(values)\n    expect(distinct).to.have.length(values.length)\n  })\n\nFind this and many more Cypress examples and recipes at https://glebbahmutov.com/cypress-examples",
