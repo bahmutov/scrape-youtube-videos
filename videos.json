@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "E4Thn8FAcWI",
+    "title": "Test The HTML Dialog Element Using Cypress",
+    "description": "All modern browsers support the HTML Dialog element (see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog). In this video, I show a Cypress test that works with such dialog - it is a normal HTML markup after all. Find the full test and more Dialog test examples at https://glebbahmutov.com/cypress-examples\n\nThe test:\n\ncy.get('dialog')\n  .should('be.visible')\n  .and('have.attr', 'open', 'open')\n  .contains('button', 'OK')\n  .click()\ncy.get('dialog')\n  .should('not.be.visible')\n  .and('not.have.attr', 'open')\ncy.get('dialog').invoke('attr', 'open', 'open')",
+    "publishedAt": "2022-06-01T13:05:44Z"
+  },
+  {
     "videoId": "r-fMXwHblKM",
     "title": "Select A Duplicate Option Using Its Index",
     "description": "If your \"select\" element has options with duplicate values, cy.select refuses to select them - because it is not sure which item you want. Luckily, we can still select an item by index. This video shows how to find the index by the value attribute and then cy.select(index) from a Cypress test. Find the full recipe at https://glebbahmutov.com/cypress-examples",
