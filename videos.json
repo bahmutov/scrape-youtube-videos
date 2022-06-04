@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "rFhTejdPGAM",
+    "title": "Stub cy.request Command Using cy.stub And Use cypress-recurse Example",
+    "description": "In this video, we will use the https://github.com/bahmutov/cypress-recurse plugin to call the server using cy.request command until it responds with an object \"status: COMPLETE\". We simulate the server by stubbing the cy.request command using cy.stub command to return incomplete responses at first, and on the 3rd call to return the completed response. Find more cy.stub and cy.spy examples at https://glebbahmutov.com/cypress-examples/commands/spies-stubs-clocks.html",
+    "publishedAt": "2022-06-03T12:58:29Z"
+  },
+  {
     "videoId": "E4Thn8FAcWI",
     "title": "Test The HTML Dialog Element Using Cypress",
     "description": "All modern browsers support the HTML Dialog element (see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog). In this video, I show a Cypress test that works with such dialog - it is a normal HTML markup after all. Find the full test and more Dialog test examples at https://glebbahmutov.com/cypress-examples\n\nThe test:\n\ncy.get('dialog')\n  .should('be.visible')\n  .and('have.attr', 'open', 'open')\n  .contains('button', 'OK')\n  .click()\ncy.get('dialog')\n  .should('not.be.visible')\n  .and('not.have.attr', 'open')\ncy.get('dialog').invoke('attr', 'open', 'open')",
