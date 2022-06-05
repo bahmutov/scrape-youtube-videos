@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "z56rRoh0z_c",
+    "title": "How To Run All Specs In Cypress v10",
+    "description": "This video shows my workaround for running all or some specs in Cypress v10 (where the \"Run all\" button has been removed). Read more about this solution in the blog post https://glebbahmutov.com/blog/run-all-specs-cypress-v10/",
+    "publishedAt": "2022-06-04T18:46:52Z"
+  },
+  {
     "videoId": "rFhTejdPGAM",
     "title": "Stub cy.request Command Using cy.stub And Use cypress-recurse Example",
     "description": "In this video, we will use the https://github.com/bahmutov/cypress-recurse plugin to call the server using cy.request command until it responds with an object \"status: COMPLETE\". We simulate the server by stubbing the cy.request command using cy.stub command to return incomplete responses at first, and on the 3rd call to return the completed response. Find more cy.stub and cy.spy examples at https://glebbahmutov.com/cypress-examples/commands/spies-stubs-clocks.html",
