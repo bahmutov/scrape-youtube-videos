@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "8HaNYv5KUxE",
+    "title": "Use Cypress Have.Attr Assertion",
+    "description": "The Cypress assertion \"have.attr\" behaves slightly differently from the other assertions. It changes the subject from the DOM element to the value of the attribute. This video shows how useful it could be - you can chain the assertions to check if the attribute is present, then chain assertions to check something about its value.\n\n// check the presence of an attribute\ncy.get('#my-link').should('have.attr', 'id')\n// check the attribute and its exact value\ncy.get('#my-link').should('have.attr', 'id', 'my-link')\n// check the presence of an attribute and\n// then validate the length of its value\n// the anchor title should be at least 5 characters\ncy.get('#my-link')\n  .should('have.attr', 'title')\n  .its('length')\n  .should('be.greaterThan', 5)\n\nFor more examples, see https://glebbahmutov.com/cypress-examples/commands/assertions.html",
+    "publishedAt": "2022-06-07T22:32:18Z"
+  },
+  {
     "videoId": "z56rRoh0z_c",
     "title": "How To Run All Specs In Cypress v10",
     "description": "This video shows my workaround for running all or some specs in Cypress v10 (where the \"Run all\" button has been removed). Read more about this solution in the blog post https://glebbahmutov.com/blog/run-all-specs-cypress-v10/",
