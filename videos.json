@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "butlgoP4SzI",
+    "title": "Automatically Skip all.cy.js Utility Spec When Using cypress run In Cypress v10",
+    "description": "If we create a spec to import and run all other specs in Cypress v10 (see video https://www.youtube.com/watch?v=z56rRoh0z_c) then we need to control skipping that spec using the environment variable CI=1 This video shows a better way\n\n1. Better: control the flag using a Cypress env parameter \"--env CI=1\" to skip it\n2. Best: check if we are inside the \"cypress run\" mode and skip the all.cy.js file\n\nThe final cypress.config.js is as follows:\n\nconst { defineConfig } = require('cypress')\n\n// cypress run\n// isInteractive: true,\n// isTextTerminal: true,\n// cypress open\n// isInteractive: true,\n// isTextTerminal: false,\n\nmodule.exports = defineConfig({\n  projectId: '1qsjjk',\n  e2e: {\n    baseUrl: 'http://localhost:3000',\n    setupNodeEvents(on, config) {\n      // implement node event listeners here\n      if (config.isTextTerminal) {\n        return {\n          excludeSpecPattern: ['cypress/e2e/all.cy.js'],\n        }\n      }\n    },\n  },\n\n  component: {\n    viewportHeight: 1000,\n    viewportWidth: 1000,\n    devServer: {\n      framework: 'create-react-app',\n      bundler: 'webpack',\n    },\n  },\n})",
+    "publishedAt": "2022-06-10T19:21:15Z"
+  },
+  {
+    "videoId": "ovNH_UJK62s",
+    "title": "Check Part Of The URL Using Chained Commands",
+    "description": "In this video, I explain how to get just a part of the URL, split it into parts, and check the last part using a chain of commands. The final solution is simply:\ncy.location('pathname')\n  .should('include', '/item/')\n  // subject is a string \"...\"\n  .invoke('split', '/')\n  // subject is string[]\n  .should('not.be.empty')\n  // we can use Lodash _.last\n  // to yield the last element\n  .then(Cypress._.last)\n  // subject is a string\n  .should('equal', '470')\nFind more examples like this at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-06-10T15:12:01Z"
+  },
+  {
     "videoId": "8HaNYv5KUxE",
     "title": "Use Cypress Have.Attr Assertion",
     "description": "The Cypress assertion \"have.attr\" behaves slightly differently from the other assertions. It changes the subject from the DOM element to the value of the attribute. This video shows how useful it could be - you can chain the assertions to check if the attribute is present, then chain assertions to check something about its value.\n\n// check the presence of an attribute\ncy.get('#my-link').should('have.attr', 'id')\n// check the attribute and its exact value\ncy.get('#my-link').should('have.attr', 'id', 'my-link')\n// check the presence of an attribute and\n// then validate the length of its value\n// the anchor title should be at least 5 characters\ncy.get('#my-link')\n  .should('have.attr', 'title')\n  .its('length')\n  .should('be.greaterThan', 5)\n\nFor more examples, see https://glebbahmutov.com/cypress-examples/commands/assertions.html",
@@ -8,7 +20,7 @@
   {
     "videoId": "z56rRoh0z_c",
     "title": "How To Run All Specs In Cypress v10",
-    "description": "This video shows my workaround for running all or some specs in Cypress v10 (where the \"Run all\" button has been removed). Read more about this solution in the blog post https://glebbahmutov.com/blog/run-all-specs-cypress-v10/",
+    "description": "This video shows my workaround for running all or some specs in Cypress v10 (where the \"Run all\" button has been removed). Read more about this solution in the blog post https://glebbahmutov.com/blog/run-all-specs-cypress-v10/\n\nUpdate: I have improved this solution to automatically ignore the \"app.cy.js\" spec file when using the \"cypress run\" command, watch the video https://www.youtube.com/watch?v=butlgoP4SzI",
     "publishedAt": "2022-06-04T18:46:52Z"
   },
   {
