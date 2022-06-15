@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "wGeoWxBq3P4",
+    "title": "Compare Two Scores",
+    "description": "If we need to compare two numbers on the page, we need to grab each element, get its text, then convert the text to a number, and then we can compare them. Tip: any time you get something from the application, you need to use cy.then(callback) to actually have the value. For more examples, see https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-06-14T11:48:29Z"
+  },
+  {
     "videoId": "butlgoP4SzI",
     "title": "Automatically Skip all.cy.js Utility Spec When Using cypress run In Cypress v10",
     "description": "If we create a spec to import and run all other specs in Cypress v10 (see video https://www.youtube.com/watch?v=z56rRoh0z_c) then we need to control skipping that spec using the environment variable CI=1 This video shows a better way\n\n1. Better: control the flag using a Cypress env parameter \"--env CI=1\" to skip it\n2. Best: check if we are inside the \"cypress run\" mode and skip the all.cy.js file\n\nThe final cypress.config.js is as follows:\n\nconst { defineConfig } = require('cypress')\n\n// cypress run\n// isInteractive: true,\n// isTextTerminal: true,\n// cypress open\n// isInteractive: true,\n// isTextTerminal: false,\n\nmodule.exports = defineConfig({\n  projectId: '1qsjjk',\n  e2e: {\n    baseUrl: 'http://localhost:3000',\n    setupNodeEvents(on, config) {\n      // implement node event listeners here\n      if (config.isTextTerminal) {\n        return {\n          excludeSpecPattern: ['cypress/e2e/all.cy.js'],\n        }\n      }\n    },\n  },\n\n  component: {\n    viewportHeight: 1000,\n    viewportWidth: 1000,\n    devServer: {\n      framework: 'create-react-app',\n      bundler: 'webpack',\n    },\n  },\n})\n\nFor more details, read the blog post https://glebbahmutov.com/blog/run-all-specs-cypress-v10/",
