@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "HAJXZ8Pr50E",
+    "title": "Set Multiple Input Fields Inside A Form At Once",
+    "description": "Here is a nifty trick: get from the document a form elements object and set multiple input values at once.\n\ncy.document()\n  .its('forms.personal-info.elements')\n  .then(function (elements) {\n    elements['first-name'].value = 'Joe'\n    elements['last-name'].value = 'Smith'\n    elements.city.value = 'Boston'\n  })\n\nFor more, see the \"Form recipes\" at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-06-15T15:05:59Z"
+  },
+  {
+    "videoId": "4nxrivWXYnM",
+    "title": "Stub The Window Confirm Popups",
+    "description": "This video teaches how to stub the \"confirm(...)\" popups to accept or cancel them from a Cypress test. We will use cy.stub command to reliably return true or false to the application code. Find this recipe and many more at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-06-15T11:57:11Z"
+  },
+  {
     "videoId": "wGeoWxBq3P4",
     "title": "Compare Two Scores",
     "description": "If we need to compare two numbers on the page, we need to grab each element, get its text, then convert the text to a number, and then we can compare them. Tip: any time you get something from the application, you need to use cy.then(callback) to actually have the value. For more examples, see https://glebbahmutov.com/cypress-examples",
