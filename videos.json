@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "zPLr_YHZckU",
+    "title": "Stub Window Open Method And Confirm The Call Arguments",
+    "description": "We can prevent a second browser window from opening by stubbing the \"window.open\" method using the cy.stub command. Then we can click the button, which causes the application to call the \"window.open\" method. Now the method does not open a second browser window, but it does record the arguments of the call. We can then confirm the stub was called with exact arguments, or with Sinon matches\n\ncy.window().then(function (win) {\n  cy.stub(win, 'open').as('open')\n})\ncy.contains('button', 'Show help').click()\n// confirm the call arguments\ncy.get('@open').should('have.been.calledWith', '/help', '_blank')\n\nFind this example at https://glebbahmutov.com/cypress-examples/commands/spies-stubs-clocks.html and my blog post for dealing with the second browser window at https://glebbahmutov.com/blog/cypress-second-tab/",
+    "publishedAt": "2022-06-17T11:53:04Z"
+  },
+  {
     "videoId": "HkXx79JE2nU",
     "title": "Use Stronger Assertions",
     "description": "You should also strive to write the strongest assertion possible in your Cypress tests. For example, when checking a phone number, it is not enough to confirm it is a string and length. You probably want to check its format, or even assert the exact expected value\n\n// the weakest assertion\ncy.get('.phone')\n  .invoke('text')\n  .should('be.a', 'string')\n  .and('have.length', 14)\n// a much stronger assertion\nconst phoneFormat = /^\\(\\d{3}\\) \\d{3}-\\d{4}$/\ncy.contains('.phone', phoneFormat)\n// the strongest is to confirm the exact value\ncy.get('.phone').should('have.text', '(123) 456-7890')\n\nYou can find more assertions at https://glebbahmutov.com/cypress-examples/commands/assertions.html",
