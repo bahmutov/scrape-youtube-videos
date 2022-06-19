@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "tUWZTHfUkNA",
+    "title": "Select An Option By Partial Text Match",
+    "description": "We can select an option by its partial text match (or a regular expression) using the cy.get + cy.contains command combination. From the found option, we can get its index among the siblings and then pass it to the cy.select command.\n\ncy.get('select option')\n  .contains('melon')\n  .invoke('index')\n  .then(function (index) {\n    cy.get('select').select(index)\n  })\n// confirm the selected value\ncy.get('select').should('have.value', '718')\n\nFind this recipe and many more examples at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-06-17T11:58:17Z"
+  },
+  {
     "videoId": "zPLr_YHZckU",
     "title": "Stub Window Open Method And Confirm The Call Arguments",
     "description": "We can prevent a second browser window from opening by stubbing the \"window.open\" method using the cy.stub command. Then we can click the button, which causes the application to call the \"window.open\" method. Now the method does not open a second browser window, but it does record the arguments of the call. We can then confirm the stub was called with exact arguments, or with Sinon matches\n\ncy.window().then(function (win) {\n  cy.stub(win, 'open').as('open')\n})\ncy.contains('button', 'Show help').click()\n// confirm the call arguments\ncy.get('@open').should('have.been.calledWith', '/help', '_blank')\n\nFind this example at https://glebbahmutov.com/cypress-examples/commands/spies-stubs-clocks.html and my blog post for dealing with the second browser window at https://glebbahmutov.com/blog/cypress-second-tab/",
