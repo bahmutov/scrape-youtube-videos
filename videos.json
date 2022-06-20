@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "CHpIu0HucKw",
+    "title": "Click A Random Element",
+    "description": "Imagine we have a list of items and want to pick an item randomly and click on it. We can first get a non-empty list of elements, get its length, then randomly pick a number between 0 and N - 1 (including). Then we can use the Cypress cy.eq(randomIndex) command https://on.cypress.io/eq to pick one element from the list.\n\ncy.get('li.an-item')\n  .should('have.length.greaterThan', 0)\n  .its('length')\n  .then(function (n) {\n      return Cypress._.random(0, n - 1)\n  })\n  .then(function (k) {\n    cy.get('li.an-item')\n      .eq(k)\n      .click()\n      .should('have.class', 'clicked')\n  })\n\nSee this recipe and many others at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-06-18T16:14:05Z"
+  },
+  {
     "videoId": "tUWZTHfUkNA",
     "title": "Select An Option By Partial Text Match",
     "description": "We can select an option by its partial text match (or a regular expression) using the cy.get + cy.contains command combination. From the found option, we can get its index among the siblings and then pass it to the cy.select command.\n\ncy.get('select option')\n  .contains('melon')\n  .invoke('index')\n  .then(function (index) {\n    cy.get('select').select(index)\n  })\n// confirm the selected value\ncy.get('select').should('have.value', '718')\n\nFind this recipe and many more examples at https://glebbahmutov.com/cypress-examples",
