@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "Ij3g0W_oxPE",
+    "title": "Check CSS Text Decoration Property",
+    "description": "We can use Chai-jQuery assertion \"have.css\" to verify a style property in the Cypress test. For example, let's check the text-decoration property. We get the element, check if it has a CSS property and then check that it includes the word \"underline\"\n\ncy.get('#contains-example')\n  .should('include.text', 'Some text')\n  .and('have.css', 'text-decoration')\n  .then(cy.log)\n  .should('include', 'underline')\n\nNote: the assertion \"have.css\" is yielding the value of the property. Unlike 99% of Chai and Chai-jQuery assertions, it changes the subject of the Cypress command chain.\n\nFor more examples, see https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-06-21T18:22:09Z"
+  },
+  {
     "videoId": "CHpIu0HucKw",
     "title": "Click A Random Element",
     "description": "Imagine we have a list of items and want to pick an item randomly and click on it. We can first get a non-empty list of elements, get its length, then randomly pick a number between 0 and N - 1 (including). Then we can use the Cypress cy.eq(randomIndex) command https://on.cypress.io/eq to pick one element from the list.\n\ncy.get('li.an-item')\n  .should('have.length.greaterThan', 0)\n  .its('length')\n  .then(function (n) {\n      return Cypress._.random(0, n - 1)\n  })\n  .then(function (k) {\n    cy.get('li.an-item')\n      .eq(k)\n      .click()\n      .should('have.class', 'clicked')\n  })\n\nSee this recipe and many others at https://glebbahmutov.com/cypress-examples",
