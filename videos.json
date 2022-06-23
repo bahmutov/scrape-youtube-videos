@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "MGl7IAwLTlo",
+    "title": "Keep It Simple (When Writing Cypress Assertions)",
+    "description": "You do not need to overcomplicate the tests. If you have a static value, just use the Chai \"expect\" function to write your assertions; no need to wrap the value, use an alias, get the value by an alias, or use the \"should(assertion)\" syntax. Here is a little example\n\n// ⚠️ COMPLICATED WAY\ncy.wrap('CYPRESSIO').as('text')\ncy.get('@text').should('match', /cypress/i)\n// of course, the above is possible, but wrapping\n// a value, adding an alias, then getting it back\n// just to check if the value matches a regular expression\n// ✅ RECOMMENDED\nexpect('CYPRESSIO').to.match(/cypressio/i)\n\nFor more examples, see https://glebbahmutov.com/cypress-examples/commands/assertions.html",
+    "publishedAt": "2022-06-22T19:35:06Z"
+  },
+  {
     "videoId": "Ij3g0W_oxPE",
     "title": "Check CSS Text Decoration Property",
     "description": "We can use Chai-jQuery assertion \"have.css\" to verify a style property in the Cypress test. For example, let's check the text-decoration property. We get the element, check if it has a CSS property and then check that it includes the word \"underline\"\n\ncy.get('#contains-example')\n  .should('include.text', 'Some text')\n  .and('have.css', 'text-decoration')\n  .then(cy.log)\n  .should('include', 'underline')\n\nNote: the assertion \"have.css\" is yielding the value of the property. Unlike 99% of Chai and Chai-jQuery assertions, it changes the subject of the Cypress command chain.\n\nFor more examples, see https://glebbahmutov.com/cypress-examples",
@@ -1544,7 +1550,7 @@
   {
     "videoId": "16WTH7XeIVw",
     "title": "Testing HTML emails using Cypress",
-    "description": "In this example I explain how Cypress can be used to mock a local SMTP server and receive HTML emails sent by the local application. The full source code is at https://github.com/bahmutov/cypress-email-example and the corresponding blog post is at https://www.cypress.io/blog/2021/05/11/testing-html-emails-using-cypress/",
+    "description": "In this example, I explain how Cypress can be used to mock a local SMTP server and receive HTML emails sent by the local application. The full source code is at https://github.com/bahmutov/cypress-email-example and the corresponding blog post is at https://www.cypress.io/blog/2021/05/11/testing-html-emails-using-cypress/ For the full presentation, see the slides https://slides.com/bahmutov/email-testing",
     "publishedAt": "2021-05-13T18:54:31Z"
   },
   {
