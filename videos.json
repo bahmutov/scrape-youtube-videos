@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "s2_467yUF2Y",
+    "title": "Use cypress-recurse To Open Accordion Panels Until It Finds A Button To Click",
+    "description": "This video shows how we can click on the accordion panels until we find one with a button. Then we click that button and assert the application calls the \"window.alert\" method. We are using the https://github.com/bahmutov/cypress-recurse plugin",
+    "publishedAt": "2022-06-23T14:58:04Z"
+  },
+  {
+    "videoId": "U6oqiu12rfg",
+    "title": "Find And Click An Accordion With A Button",
+    "description": "You can use the \"cy.get\" or other Cypress querying commands with the jQuery/CSS selector \":has\" to find elements that contain other elements. For example, in the test below we first find the panel with a button inside of it. We then open the panel, and can click the button. We also confirm the button was clicked by stubbing the \"window.alert\" method. Find this recipe and many more Cypress command examples at https://glebbahmutov.com/cypress-examples\n\ncy.get('.panel:has(button)')\n  .prev()\n  .should('have.class', 'accordion')\n  .click()\ncy.window().then(function (win) {\n  cy.stub(win, 'alert').as('alert')\n})\ncy.contains('button', \"I'm here\").should('be.visible').click()\ncy.get('@alert').should('have.been.calledOnce')",
+    "publishedAt": "2022-06-23T14:08:49Z"
+  },
+  {
     "videoId": "MGl7IAwLTlo",
     "title": "Keep It Simple (When Writing Cypress Assertions)",
     "description": "You do not need to overcomplicate the tests. If you have a static value, just use the Chai \"expect\" function to write your assertions; no need to wrap the value, use an alias, get the value by an alias, or use the \"should(assertion)\" syntax. Here is a little example\n\n// ⚠️ COMPLICATED WAY\ncy.wrap('CYPRESSIO').as('text')\ncy.get('@text').should('match', /cypress/i)\n// of course, the above is possible, but wrapping\n// a value, adding an alias, then getting it back\n// just to check if the value matches a regular expression\n// ✅ RECOMMENDED\nexpect('CYPRESSIO').to.match(/cypressio/i)\n\nFor more examples, see https://glebbahmutov.com/cypress-examples/commands/assertions.html",
