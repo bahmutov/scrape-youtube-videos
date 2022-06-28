@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "X8iIoTxu_8k",
+    "title": "Good Cypress Test Syntax",
+    "description": "This video shows an example of good testing practices where the test confirms the values on the page, rather than computes them from the data shown by the page. The final tests control the data in the application and simply confirm the page works. The tests are short and elegant\n\n// these tests are written to show better testing practices\n// 1: do not trust the data from the page\n// 2: do not compute the result, know what to expect\n// 3: control the page by typing our values\nit('checks the page', function () {\n  cy.visit('public/index.html')\n  cy.get('[name=a]').should('have.value', '2')\n  cy.get('[name=b]').should('have.value', '3')\n  cy.contains('#result', '5')\n})\n\nit('handles empty inputs', function () {\n  cy.visit('public/index.html')\n  cy.get('[name=a]').clear()\n  cy.get('[name=b]').clear()\n  cy.contains('#result', 'empty')\n})\n\nit('adds the given numbers', function () {\n  cy.visit('public/index.html')\n  cy.get('[name=a]').clear().type(10)\n  cy.get('[name=b]').clear().type(30)\n  cy.contains('#result', '40')\n})\n\nFind the full source code in the repo https://github.com/bahmutov/cypress-multiple-aliases",
+    "publishedAt": "2022-06-27T14:09:31Z"
+  },
+  {
     "videoId": "s2_467yUF2Y",
     "title": "Use cypress-recurse To Open Accordion Panels Until It Finds A Button To Click",
     "description": "This video shows how we can click on the accordion panels until we find one with a button. Then we click that button and assert the application calls the \"window.alert\" method. We are using the https://github.com/bahmutov/cypress-recurse plugin",
