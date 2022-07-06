@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "MRelgoMg230",
+    "title": "Access The Response Text Yielded By The Plugin cypress-response",
+    "description": "If you use cypress-recurse plugin to ping the page before visiting it, you might need to access the text or json from the fetch's response object. This video shows how to do it. In summary:\n\nrecurse(\n  // use fetch\n  // yield { respones }\n)\n// the \"recurse\" yields whatever\n// the first function yields, in our case\n// it is the { response } object. Let's grab its text\n.its('response')\n.invoke('text')\n.then(console.log)\n\nFind the full source code at https://github.com/bahmutov/live-example/tree/recursive/cypress/integration",
+    "publishedAt": "2022-07-05T13:21:53Z"
+  },
+  {
     "videoId": "phV3n5aKW5o",
     "title": "Use Sinon resetHistory Method To Avoid The Test Confusion",
     "description": "In this video, I am answering a question asked by someone taking my https://cypress.tips/courses/network-testing course. The user asked why two assertions might pass at the end of the same test:\n\ncy.visit('/')\ncy.get('@fruit').should('have.been.calledOnce')\n...\n// confirm the spy was executed = there was a network call\ncy.get('@fruit').should('have.been.calledOnce')\n// the above line can also pass if we check if the spy was called twice\ncy.get('@fruit').should('have.been.calledTwice')\n\nRemember: the sinon spy/stub keeps the count of calls. If it was already at count 1 (as it was in this test right after the visit), then the assertion \"calledOnce\" passes really quickly without waiting for the app to make another call. The assertion \"calledTwice\" really retries until the app makes the second call.\n\nTo improve the test, we should reset the spy's history to make sure it is called once _after_ the initial delay.\n\ncy.visit('/')\ncy.get('@fruit')\n  .should('have.been.calledOnce')\n  .invoke('resetHistory')\n// a minute passes\ncy.tick(60_000)\n// app calls the spy again\ncy.get('@fruit').should('have.been.calledOnce')\n\nFor more, see my \"Stubs, spies, and clock\" example page https://glebbahmutov.com/cypress-examples/commands/spies-stubs-clocks.html and the blog post \"Sinon Edge Cases\" https://glebbahmutov.com/blog/sinon-edge/",
