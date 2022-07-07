@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "T5Aqa1KjIqQ",
+    "title": "Get Text From A List Of Elements",
+    "description": "Imagine you have several elements, and you want to extract the text from each element. You can grab the elements using the cy.get command. That gives you a jQuery object. You can iterate over it by converting it to a plain array using Cypress.$.makeArray, or by using a Lodash method Cypress._.map. Once you extract the strings, you can compare the array of strings to the expected list.\n\nfunction getTexts ($el) {\n  return Cypress._.map($el, 'innerText')\n}\ncy.get('.matching')\n  .should('have.length', 3)\n  .then(getTexts)\n  .should('deep.equal', ['first', 'third', 'fourth'])\n\nFind this recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-07-06T16:43:57Z"
+  },
+  {
     "videoId": "MRelgoMg230",
     "title": "Access The Response Text Yielded By The Plugin cypress-response",
     "description": "If you use cypress-recurse plugin to ping the page before visiting it, you might need to access the text or json from the fetch's response object. This video shows how to do it. In summary:\n\nrecurse(\n  // use fetch\n  // yield { respones }\n)\n// the \"recurse\" yields whatever\n// the first function yields, in our case\n// it is the { response } object. Let's grab its text\n.its('response')\n.invoke('text')\n.then(console.log)\n\nFind the full source code at https://github.com/bahmutov/live-example/tree/recursive/cypress/integration",
