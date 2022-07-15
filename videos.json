@@ -25,7 +25,7 @@
   },
   {
     "videoId": "MRelgoMg230",
-    "title": "Access The Response Text Yielded By The Plugin cypress-response",
+    "title": "Access The Response Text Yielded By The Plugin cypress-recurse",
     "description": "If you use cypress-recurse plugin to ping the page before visiting it, you might need to access the text or json from the fetch's response object. This video shows how to do it. In summary:\n\nrecurse(\n  // use fetch\n  // yield { respones }\n)\n// the \"recurse\" yields whatever\n// the first function yields, in our case\n// it is the { response } object. Let's grab its text\n.its('response')\n.invoke('text')\n.then(console.log)\n\nFind the full source code at https://github.com/bahmutov/live-example/tree/recursive/cypress/integration",
     "publishedAt": "2022-07-05T13:21:53Z"
   },
