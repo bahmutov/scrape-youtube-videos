@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "lxx-_nAkQo8",
+    "title": "Slow Down Cypress Tests",
+    "description": "This video shows how to slow down a Cypress test by adding a delay to every Cypress command in the test using the cypress-slow-down plugin. For more details see https://github.com/bahmutov/cypress-slow-down and the \"Cypress Plugins\" course at https://cypress.tips/courses/cypress-plugins",
+    "publishedAt": "2022-07-26T23:29:20Z"
+  },
+  {
     "videoId": "zR6o_tdJKDk",
     "title": "Cypress Stub For Geolocation getCurrentPosition Method Using Sinon.js",
     "description": "In this video, I show the Sinon.js method \"callsArgWith\" that is useful for stubbing methods that should call a callback function passed as an argument. In our test, we want to confirm the application is showing an error when the browser cannot get the geographic location.\n\nconst error = new Error('Test geo error')\ncy.window().then(function (win) {\n  cy.stub(win.navigator.geolocation, 'getCurrentPosition')\n    .callsArgWith(1, error)\n    .as('geoStub')\n})\ncy.get('#locate').click()\n// confirm the application behaves as it should\ncy.contains('#message', error.message)\ncy.get('@geoStub').should('have.been.calledOnce')\n\nFind this recipe and many more Sinon.js examples at https://glebbahmutov.com/cypress-examples",
