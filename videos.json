@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "54311sOqeLg",
+    "title": "Work With Cypress JSON Fixtures Using TypeScript",
+    "description": "This video shows how to give a type to the JSON data loaded using the cy.fixture command. For the explanation, read the blog post \"Convert Cypress Specs from JavaScript to TypeScript\n\" https://glebbahmutov.com/blog/cypress-js-to-ts/",
+    "publishedAt": "2022-07-29T17:54:07Z"
+  },
+  {
     "videoId": "lxx-_nAkQo8",
     "title": "Slow Down Cypress Tests",
     "description": "This video shows how to slow down a Cypress test by adding a delay to every Cypress command in the test using the cypress-slow-down plugin. For more details see https://github.com/bahmutov/cypress-slow-down and the \"Cypress Plugins\" course at https://cypress.tips/courses/cypress-plugins",
