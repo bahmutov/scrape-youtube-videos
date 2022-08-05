@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "KE4A1Iupo60",
+    "title": "Fail The Test If The App Calls console.log With The Word Error",
+    "description": "In this video, the application might call console.log with an argument that contains the word \"error\". We want to fail the test in this case. I will show two ways of writing this test:\n- spy on the console.log and then inspect each call at the end of the test\n- stub the console.log, inspect the arguments, and immediately fail the test if the word \"error\" is found\nSee the full source code in a recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-08-04T12:46:00Z"
+  },
+  {
     "videoId": "CRTRIaTX3hc",
     "title": "Find Multiple Elements By The Partial Text Match",
     "description": "We can find multiple elements on the page with the given text using the jQuery :contains(text) selector. \n\n// cy.contains returns the first match for \"Apple\"\ncy.contains('Apple').should('have.text', 'Apples')\n// use jQuery :contains selector to find all elements\n// by the partial text match\ncy.get('li:contains(Apple)')\n  .should('have.length', 2)\n  // grab the second match\n  .eq(1)\n  .should('have.text', 'Apple pies')\n\nFind the full example at https://glebbahmutov.com/cypress-examples",
