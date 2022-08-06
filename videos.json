@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "yTQf6vlWiHA",
+    "title": "Check If Two Elements Have The Same Attribute Value",
+    "description": "Let's confirm the fact that the two elements have equal \"data-name\" attributes. We don't know the expected value of the attribute, unfortunately, just that both elements have the same non-empty string value.\n\ncy.get('#el1')\n  .invoke('attr', 'data-name')\n  .should('be.a', 'string')\n  .and('be.not.empty')\n  .then(function (s) {\n    cy.get('#el2').should('have.attr', 'data-name', s)\n  })\n\nTip: a better test would know the expected attribute value\ncy.get('#el1').should('have.attr', 'data-name', 'Venus')\ncy.get('#el2').should('have.attr', 'data-name', 'Venus')\n\nFind this recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-08-05T12:46:59Z"
+  },
+  {
     "videoId": "KE4A1Iupo60",
     "title": "Fail The Test If The App Calls console.log With The Word Error",
     "description": "In this video, the application might call console.log with an argument that contains the word \"error\". We want to fail the test in this case. I will show two ways of writing this test:\n- spy on the console.log and then inspect each call at the end of the test\n- stub the console.log, inspect the arguments, and immediately fail the test if the word \"error\" is found\nSee the full source code in a recipe at https://glebbahmutov.com/cypress-examples",
