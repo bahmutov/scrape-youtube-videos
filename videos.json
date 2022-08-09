@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "zOLM8fodASY",
+    "title": "Confirm The Table Columns Order",
+    "description": "Imagine we have a table with multiple columns. We don't need to check every column, but we want to confirm that there are three columns \"Users\", \"Items\", and \"Projects\" in that order. We can extract all column heading cells, grab the text from each one, then filter out all columns we are NOT interested in. The remaining 3 columns string array must be in the expected order.\n\nconst getTexts = function ($el) {\n  return Cypress._.map($el, 'innerText')\n}\n// the list of columns we are looking for\nconst target = ['Users', 'Items', 'Projects']\ncy.get('table thead th')\n  .then(getTexts)\n  // filter the array\n  // confirm each column title we need is present\n  // and they are in the expected order\n  .should('deep.equal', target)\n\nFind the full recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-08-08T13:58:56Z"
+  },
+  {
     "videoId": "yTQf6vlWiHA",
     "title": "Check If Two Elements Have The Same Attribute Value",
     "description": "Let's confirm the fact that the two elements have equal \"data-name\" attributes. We don't know the expected value of the attribute, unfortunately, just that both elements have the same non-empty string value.\n\ncy.get('#el1')\n  .invoke('attr', 'data-name')\n  .should('be.a', 'string')\n  .and('be.not.empty')\n  .then(function (s) {\n    cy.get('#el2').should('have.attr', 'data-name', s)\n  })\n\nTip: a better test would know the expected attribute value\ncy.get('#el1').should('have.attr', 'data-name', 'Venus')\ncy.get('#el2').should('have.attr', 'data-name', 'Venus')\n\nFind this recipe at https://glebbahmutov.com/cypress-examples",
