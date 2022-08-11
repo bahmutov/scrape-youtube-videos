@@ -1,5 +1,23 @@
 [
   {
+    "videoId": "lj6cIjbPmh8",
+    "title": "Compare Element Attribute Value",
+    "description": "We can check that both elements either have the same attribute or do not have it.\n\ncy.get('#member')\n  .invoke('attr', 'active')\n  .then(Boolean)\n  .then(cy.log)\n  .then(function (isActive) {\n    if (isActive) {\n      cy.get('#info').should('have.attr', 'active')\n    } else {\n      cy.get('#info').should('not.have.attr', 'active')\n    }\n  })\nFind the full recipe and many more at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-08-10T18:53:10Z"
+  },
+  {
+    "videoId": "88sIuUz6Jh0",
+    "title": "Input Text Value Matches A Regular Expression",
+    "description": "Imagine you have an input element with \"value\" property. You want to confirm the value of the property or if it matches the given regular expression\n\n// it looks best if we know the exact value to check\ncy.get('#user-ssn').should('have.value', '123-45-6789')\ncy.get('#user-ssn')\n  // you can invoke jQuery \"val\" method\n  // or use the \"have.prop\" assertion\n  .should('have.prop', 'value')\n  // yields the string value\n  .should('match', /^\\d\\d\\d-\\d\\d-\\d\\d\\d\\d$/)\n  // alternate regular expression\n  .and('match', /^\\d{3}-\\d{2}-\\d{4}$/)\n\nFind this recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-08-10T13:24:50Z"
+  },
+  {
+    "videoId": "ro3RPgNGw4g",
+    "title": "Filter Elements Using jQuery Pseudo-Classes",
+    "description": "How do you pick one element from the list of elements returned by the cy.get command? How do you pick several? In this video, I will use jQuery pseudo-classes like :odd, :even, :eq(index), :gt(index), :lt(index) to pick multiple elements\n\n// using the cy.eq command to pick one element\ncy.get('li').eq(2).should('have.text', 'Pears')\n// using jQuery :odd pseudo-class\ncy.get('li')\n  .filter(':odd')\n  .should('have.length', 2)\n// using jQuery odd() method\ncy.get('li')\n  .invoke('odd')\n  .should('have.length', 2)\n// using jQuery :even pseudo-class\ncy.get('li')\n  .filter(':even')\n  .should('have.length', 2)\n// select the 2nd and the 3rd elements\n// using jQuery :eq(index) pseudo-class\ncy.get('li')\n  .filter(':eq(1), :eq(2)')\n  .should('have.length', 2)\n// select the elements after the first two\n// using jQuery :gt(index) pseudo-class\ncy.get('li')\n  .filter(':gt(1)')\n  .should('have.length', 2)\n// select the middle two elements out of 4\n// using a combination of :gt() and :lt()\ncy.get('li')\n  .filter(':gt(0)')\n  .should('have.length', 3)\n  .filter(':lt(2)')\n  .should('have.length', 2)\n\nFind the full recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-08-10T13:11:34Z"
+  },
+  {
     "videoId": "zOLM8fodASY",
     "title": "Confirm The Table Columns Order",
     "description": "Imagine we have a table with multiple columns. We don't need to check every column, but we want to confirm that there are three columns \"Users\", \"Items\", and \"Projects\" in that order. We can extract all column heading cells, grab the text from each one, then filter out all columns we are NOT interested in. The remaining 3 columns string array must be in the expected order.\n\nconst getTexts = function ($el) {\n  return Cypress._.map($el, 'innerText')\n}\n// the list of columns we are looking for\nconst target = ['Users', 'Items', 'Projects']\ncy.get('table thead th')\n  .then(getTexts)\n  // filter the array\n  // confirm each column title we need is present\n  // and they are in the expected order\n  .should('deep.equal', target)\n\nFind the full recipe at https://glebbahmutov.com/cypress-examples",
