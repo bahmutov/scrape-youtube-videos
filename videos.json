@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "ag8dClTP-kw",
+    "title": "Find row by the exact table cell text",
+    "description": "Imagine that in this table we want to find the row with the second cell having the exact text \"b\". This video shows how to do this in two different ways:\n- cy.contains + cy.parent\n- cy.get + cy.filter\n\n// select that cell in the second column with the exact test \"b\"\n// using the cy.contains command\ncy.contains('table tbody td:nth-child(2)', /^b$/)\n  .parent('tr')\n  .should('have.attr', 'data-k', '2')\n// Alternative: use a custom cy.filter callback\ncy.get('table tbody tr')\n  .filter(function (k, tr) {\n    return tr.children[1].innerText === 'b'\n  })\n  .should('have.attr', 'data-k', '2')\n\nFind this and more recipes at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-08-12T12:55:14Z"
+  },
+  {
     "videoId": "lj6cIjbPmh8",
     "title": "Compare Element Attribute Value",
     "description": "We can check that both elements either have the same attribute or do not have it.\n\ncy.get('#member')\n  .invoke('attr', 'active')\n  .then(Boolean)\n  .then(cy.log)\n  .then(function (isActive) {\n    if (isActive) {\n      cy.get('#info').should('have.attr', 'active')\n    } else {\n      cy.get('#info').should('not.have.attr', 'active')\n    }\n  })\nFind the full recipe and many more at https://glebbahmutov.com/cypress-examples",
