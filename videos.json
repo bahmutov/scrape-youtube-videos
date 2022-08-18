@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "nsl0JGBdQos",
+    "title": "How To Submit A Cypress Bug",
+    "description": "In this video, I show a Cypress bug introduced in v10.5.0 that has changed the return value from the `cy.log`  command, breaking its inside `cy.then(cy.log)` chains. I will create a reproducible example that you can find online at https://github.com/bahmutov/cypress-test-tiny/tree/cy-log-bug and submit it to the Cypress team as a new bug issue https://github.com/cypress-io/cypress/issues/23400",
+    "publishedAt": "2022-08-17T14:04:55Z"
+  },
+  {
     "videoId": "ag8dClTP-kw",
     "title": "Find row by the exact table cell text",
     "description": "Imagine that in this table we want to find the row with the second cell having the exact text \"b\". This video shows how to do this in two different ways:\n- cy.contains + cy.parent\n- cy.get + cy.filter\n\n// select that cell in the second column with the exact test \"b\"\n// using the cy.contains command\ncy.contains('table tbody td:nth-child(2)', /^b$/)\n  .parent('tr')\n  .should('have.attr', 'data-k', '2')\n// Alternative: use a custom cy.filter callback\ncy.get('table tbody tr')\n  .filter(function (k, tr) {\n    return tr.children[1].innerText === 'b'\n  })\n  .should('have.attr', 'data-k', '2')\n\nFind this and more recipes at https://glebbahmutov.com/cypress-examples",
