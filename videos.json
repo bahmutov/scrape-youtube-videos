@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "Yyy6plSk5W0",
+    "title": "Select DOM Elements With An Attribute Present Or Absent",
+    "description": "This example comes from https://glebbahmutov.com/cypress-examples and it shows how to pick all elements with a given attribute present or absent.\n\n// find all LI elements that have\n// the \"data-priority\" attribute\ncy.get('li[data-priority]').should('have.length', 3)\n// find all LI elements that do not have\n// the \"data-priority\" attribute\ncy.get('li')\n  .not('[data-priority]')\n  .should('have.length', 1)\n  .and('have.text', 'Three')\n\nTip: check out jQuery selectors you can use in Cypress https://api.jquery.com/category/selectors/",
+    "publishedAt": "2022-08-19T13:10:02Z"
+  },
+  {
     "videoId": "nsl0JGBdQos",
     "title": "How To Submit A Cypress Bug",
     "description": "In this video, I show a Cypress bug introduced in v10.5.0 that has changed the return value from the `cy.log`  command, breaking its inside `cy.then(cy.log)` chains. I will create a reproducible example that you can find online at https://github.com/bahmutov/cypress-test-tiny/tree/cy-log-bug and submit it to the Cypress team as a new bug issue https://github.com/cypress-io/cypress/issues/23400",
