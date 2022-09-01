@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "TVwU0OvrVUA",
+    "title": "Introduction To Using cypress-if Plugin to Write Conditional Cypress Commands",
+    "description": "Let's click a checkbox only if it NOT checked\n\nimport \"cypress-if\"\ncy.get('.mybox')\n  .if('not.checked').click()\n\nUsing the plugin \"cypress-if\" https://github.com/bahmutov/cypress-if you can execute Cypress command chains only if a given condition passes or fails. For example, let's delete Todo items if there are any\n\ncy.get('li.todo .destroy', { timeout: 0 })\n  .if()\n  .click({ force: true, multiple: true })\n  .else()\n  .log('**nothing to clean up**');\n\nFor more examples, see the plugin's repo and the blog posts at https://glebbahmutov.com/blog/ I will probably show more use cases for this plugin as part of my \"Cypress Plugins\" course https://cypress.tips/courses/cypress-plugins",
+    "publishedAt": "2022-08-31T17:47:45Z"
+  },
+  {
     "videoId": "YQGGtz00JA8",
     "title": "Check The Enabled Checkboxes",
     "description": "It is easy to select only the enabled checkboxes and check them, even if there are multiple elements to check\n\n// use the jQuery :checkbox + :enabled selectors\n// and the cy.check command\ncy.get(':checkbox:enabled').check()\n\nFor more examples like this, see https://glebbahmutov.com/cypress-examples",
