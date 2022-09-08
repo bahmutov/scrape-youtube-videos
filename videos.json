@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "b8aoVh6IdCg",
+    "title": "How To Preserve Cookie Once In Cypress v10",
+    "description": "Instead of the deprecated command \"Cypress.Cookies.preserveOnce\" in Cypress v10 you can use my plugin https://github.com/bahmutov/cypress-v10-preserve-cookie that implements an equivalent command to automatically preserve/restore a cookie with the given name.\n\nimport 'cypress-v10-preserve-cookie'\n\nInstead of Cypress.Cookies.preserveOnce('connect.sid') use cy.preserveCookieOnce('connect.sid') from the plugin\n\nIf you need more features, like validating the cookie, see the plugin https://github.com/bahmutov/cypress-data-session",
+    "publishedAt": "2022-09-07T19:31:30Z"
+  },
+  {
+    "videoId": "RTzJu44yAc8",
+    "title": "Confirm Cypress Command Execution Order Using Sinon.js Spies",
+    "description": "This test comes from cypress-if plugin https://github.com/bahmutov/cypress-if We are confirming that the ELSE branch of the \".if()...else()...finally()\" command chain was executed, the IF branch was not executed, and that the ELSE commands were called before the FINALLY commands.\n\ncy.wrap(1)\n  // .if() comes from the cypress-if plugin\n  // https://github.com/bahmutov/cypress-if\n  .if('equals', 2)\n  .log('if branch')\n  .then(cy.spy().as('if'))\n  .else()\n  .log('else branch')\n  .then(cy.spy().as('else'))\n  .finally()\n  .log('finally')\n  .then(cy.spy().as('finally'))\ncy.get('@else').should('have.been.calledOnce')\ncy.get('@finally').should('have.been.calledOnce')\ncy.get('@if').should('not.be.called')\ncy.log('**else was called before finally**')\ncy.get('@finally').then(function (fin) {\n  cy.get('@else').should('have.been.calledBefore', fin)\n})",
+    "publishedAt": "2022-09-06T16:38:51Z"
+  },
+  {
     "videoId": "1PffgLBGHWs",
     "title": "Check If An Array Of Strings Includes Another Array",
     "description": "How do you check if one array of strings is a subset of another array of strings? You can use Chai assertion \"include\" to check each value one by one:\n\nlist.forEach(function (country) {\n  expect(countries).to.include(country)\n})\n\nIn Cypress, you can also use the Lodash _.difference method (Lodash is bundled with Cypress) to compute the difference array. If there are no extra values, that difference should be empty\n\nconst difference = Cypress._.difference(list, countries)\nexpect(difference, 'extra countries').to.be.empty\n\nFind this recipe and many more Cypress test examples at https://glebbahmutov.com/cypress-examples",
