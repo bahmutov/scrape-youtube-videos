@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "8UhoGJEe4NY",
+    "title": "Get The Index Of An Element Using jQuery Method",
+    "description": "In this video, we find an element, and then confirm its index among its siblings by invoking the jQuery method index()\n\ncy.get('#carousel li.active')\n  // call jQuery index() method\n  // to yield the index of the active LI item\n  .invoke('index')\n  .should('equal', 2)\n  // if you want to work with the index,\n  // yield it to the next command\n  .then(function (index) {\n    cy.log(`index is **${index}**`)\n  })\n\nFind this example and many more at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-09-14T17:28:37Z"
+  },
+  {
     "videoId": "3RyqCv_TlE8",
     "title": "Catch Accidental Async Callbacks In Cypress Tests",
     "description": "Cypress has a problem - it does not play nicely with \"async\" tests because they break the command chain. The test like this one would pass, even if the command inside of it fails:\n\nit('async callback', async function () {\n  cy.contains(await getBar())\n})\n\nI think Cypress should catch the async test callbacks, but for now, I wrote a plugin https://github.com/bahmutov/cypress-catch-async-tests that does that for you. Just import it in your spec or support file and it will immediately break the test if you accidentally left the \"async\" keyword in the test.",
