@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "oFUuI2jTWjk",
+    "title": "Escape The Selector",
+    "description": "Sometimes an element can have characters in its ID or attribute or class names that have special meaning, like how do you select an element with a colon in its ID? id=\"person:age\"\n\nYou need to scape the \":\" character using double backslashes\n\ncy.get('#person\\\\:age').should('have.text', '42')\n\nYou can even use the jQuery method (remember, jQuery is bundled with Cypress) to escape the text for selector:\n\ncy.get('#' + Cypress.$.escapeSelector('person:age'))\n\nFind this recipe and many more at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-09-15T17:13:04Z"
+  },
+  {
     "videoId": "8UhoGJEe4NY",
     "title": "Get The Index Of An Element Using jQuery Method",
     "description": "In this video, we find an element, and then confirm its index among its siblings by invoking the jQuery method index()\n\ncy.get('#carousel li.active')\n  // call jQuery index() method\n  // to yield the index of the active LI item\n  .invoke('index')\n  .should('equal', 2)\n  // if you want to work with the index,\n  // yield it to the next command\n  .then(function (index) {\n    cy.log(`index is **${index}**`)\n  })\n\nFind this example and many more at https://glebbahmutov.com/cypress-examples",
