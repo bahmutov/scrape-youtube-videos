@@ -1490,7 +1490,7 @@
   {
     "videoId": "w5vZspiCiuQ",
     "title": "Test And Play Video From Cypress",
-    "description": "From a Cypress test, we can find the video element, check its properties, invoke play, and wait for the video to finish playing. See the full code in https://github.com/bahmutov/video-example\n\nit('plays video', function () {\n  cy.visit('index.html')\n  // https://html.spec.whatwg.org/multipage/media.html#playing-the-media-resource\n  cy.get('video')\n    .should('have.prop', 'paused', true)\n    .and('have.prop', 'ended', false)\n    .then(function ($video) {\n      $video[0].play()\n    })\n  cy.get('video', { timeout: 10000 }).should('have.prop', 'ended', true)\n})",
+    "description": "From a Cypress test, we can find the video element, check its properties, invoke play, and wait for the video to finish playing. See the full code in https://github.com/bahmutov/video-example\n\nit('plays video', function () {\n  cy.visit('index.html')\n  // https://html.spec.whatwg.org/multipage/media.html#playing-the-media-resource\n  cy.get('video')\n    .should('have.prop', 'paused', true)\n    .and('have.prop', 'ended', false)\n    .then(function ($video) {\n      $video[0].play()\n    })\n  cy.get('video', { timeout: 10000 }).should('have.prop', 'ended', true)\n})\n\nFor more information, read the blog post https://glebbahmutov.com/blog/test-video-play/",
     "publishedAt": "2021-08-13T17:18:11Z"
   },
   {
