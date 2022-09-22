@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "pA2C0q1mgnA",
+    "title": "Run Cypress Specs In The Order You Want",
+    "description": "This video shows how to run the Cypress E2E specs in the order you want. Find the repo at https://github.com/bahmutov/cypress-spec-order-example\n\nsetupNodeEvents(on, config) {\n  config.specPattern = [\n    'cypress/e2e/spec2.cy.js',\n    'cypress/e2e/spec3.cy.js',\n    'cypress/e2e/spec1.cy.js',\n  ]\n  // IMPORTANT: need to return the changed config\n  // so Cypress knows about your changes\n  return config\n},",
+    "publishedAt": "2022-09-21T14:00:39Z"
+  },
+  {
     "videoId": "oFUuI2jTWjk",
     "title": "Escape The Selector",
     "description": "Sometimes an element can have characters in its ID or attribute or class names that have special meaning, like how do you select an element with a colon in its ID? id=\"person:age\"\n\nYou need to scape the \":\" character using double backslashes\n\ncy.get('#person\\\\:age').should('have.text', '42')\n\nYou can even use the jQuery method (remember, jQuery is bundled with Cypress) to escape the text for selector:\n\ncy.get('#' + Cypress.$.escapeSelector('person:age'))\n\nFind this recipe and many more at https://glebbahmutov.com/cypress-examples",
