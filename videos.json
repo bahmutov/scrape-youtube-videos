@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "iQFBKIjAwIM",
+    "title": "Css And jQuery Selectors In Cypress",
+    "description": "Cypress uses jQuery to select elements, thus you can use both CSS and jQuery selectors. These examples come from https://glebbahmutov.com/cypress-examples recipes and show how to select elements using ids, class names, attributes, and visibility\n\n// select element by ID\ncy.get('#person').should('have.text', 'Joe')\n// cy.contains also lets you specify a selector\ncy.contains('#person', 'Joe')\n\n// Select elements with both classes\ncy.get('.person.student').should('have.text', 'Mary')\n\n// Select elements by combination of classes and attributes\ncy.get('.person[data-group=\"a1\"]')\n  .should('have.text', 'Ann')\n  .and('have.class', 'student')\n\n// Select elements by hierarchy\ncy.get('[data-group=\"b2\"] .student')\n  .should('have.length', 2)\n  // let's find all junior students\n  // using https://on.cypress.io/filter\n  .filter('[data-rank=\"junior\"]')\n  .should('have.text', 'Ann')\n\n// Select visible or hidden elements using jQuery\n// select using hierarchy of classes\ncy.get('.university .student').should('have.length', 3)\n// select only the visible student elements\ncy.get('.university .student:visible').should('have.length', 2)\n// select only the hidden elements\ncy.get('.university .student:hidden')\n  .should('have.length', 1)\n  .and('have.text', 'Joe')\n  .and('have.css', 'display', 'none')",
+    "publishedAt": "2022-09-23T13:18:11Z"
+  },
+  {
     "videoId": "pA2C0q1mgnA",
     "title": "Run Cypress Specs In The Order You Want",
     "description": "This video shows how to run the Cypress E2E specs in the order you want. Find the repo at https://github.com/bahmutov/cypress-spec-order-example\n\nsetupNodeEvents(on, config) {\n  config.specPattern = [\n    'cypress/e2e/spec2.cy.js',\n    'cypress/e2e/spec3.cy.js',\n    'cypress/e2e/spec1.cy.js',\n  ]\n  // IMPORTANT: need to return the changed config\n  // so Cypress knows about your changes\n  return config\n},",
