@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "5B5uYL3Voy0",
+    "title": "Close A Modal Popup That Takes Over The Top Browser Window",
+    "description": "In this example test, the lightbox widget pops up and escapes from the application's iframe to take over the entire browser window, covering both the Cypress Command Log and the application. Cypress commands like \"cy.get\" cannot even find the elements outside the app's iframe, so how can we close this popup?\n\nWe can find the close button DOM element and make Cypress click on it, even if it is outside the application's own iframe:\n\ncy.wrap(\n  window.top.document.querySelector('[aria-label=\"Close Modal\"]'),\n).click({ force: true })\n\nThen we continue with the rest of the test",
+    "publishedAt": "2022-10-05T14:40:45Z"
+  },
+  {
     "videoId": "y6fi8hZxcdM",
     "title": "Extract A Part Of The Current Url Using A Regular Expression",
     "description": "We can grab a part of the URL using a named capture group, then save the value using an alias. Later we can get the value using \"this.alias\" or \"cy.get(alias)\" commands.\n\nImagine we are trying to confirm the application URL \"/sell/item10001/confirmation\"\n\n// yields a string\ncy.location('pathname')\n  .should('match', /\\/sell\\/item\\d+\\/confirmation/)\n  .invoke('match', /\\/sell\\/item(? id \\d+)\\/confirmation/)\n  .its('groups.id', { timeout: 0 })\n  .should('be.a', 'string')\n  .as('itemId')\ncy.log('printing the id').then(function () {\n  cy.log(`item id is: ${this.itemId}`)\n})\ncy.get('@itemId').then(Number).should('be.within', 1_000, 20_000)\n\nFind the full example at https://glebbahmutov.com/cypress-examples",
