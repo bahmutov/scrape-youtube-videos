@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "WjkAVcsZQbM",
+    "title": "Fluent Cypress Command Chains",
+    "description": "In this example, I refactor a long should(callback) function into a series of cy.then + cy.invoke commands to transform the current subject either by applying callback functions or invoking the methods on the current subject. Find the full example code at https://glebbahmutov.com/cypress-examples/commands/location.html\n\n// the full URL includes several search terms\ncy.visit(\n  'https://example.cypress.io/commands/location?search=value&id=1234',\n)\ncy.location('search')\n  .should('include', 'search=')\n  .then(function (s) { return new URLSearchParams(s) })\n  .invoke('entries')\n  .then(Array.from)\n  .then(Cypress._.fromPairs)\n  .then(function (o) {\n    Cypress._.updateWith(o, 'id', Number)\n  })\n  .then(console.log)\n  .should('deep.equal', {\n    search: 'value',\n    id: 1234,\n  })\n\nTip: for more on the fluent style of programming, read my functional programming blog posts https://glebbahmutov.com/blog/tags/functional/",
+    "publishedAt": "2022-10-07T19:56:34Z"
+  },
+  {
     "videoId": "5B5uYL3Voy0",
     "title": "Close A Modal Popup That Takes Over The Top Browser Window",
     "description": "In this example test, the lightbox widget pops up and escapes from the application's iframe to take over the entire browser window, covering both the Cypress Command Log and the application. Cypress commands like \"cy.get\" cannot even find the elements outside the app's iframe, so how can we close this popup?\n\nWe can find the close button DOM element and make Cypress click on it, even if it is outside the application's own iframe:\n\ncy.wrap(\n  window.top.document.querySelector('[aria-label=\"Close Modal\"]'),\n).click({ force: true })\n\nThen we continue with the rest of the test",
