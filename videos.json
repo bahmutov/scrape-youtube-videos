@@ -656,7 +656,7 @@
   {
     "videoId": "liFRu0Fu-Gs",
     "title": "Querying SVG From A Cypress Test",
-    "description": "SVG elements are normal DOM elements in the browser, thus Cypress commands can query and check them. In this example, I show how to query an SVG element, check its attributes, and even change the \"fill\" attribute to make the element red. Find the full example at https://glebbahmutov.com/cypress-examples\n\n// get the SVG element, just like any DOM element\ncy.get('svg')\n  .should('have.attr', 'width', '90')\n  .and('have.attr', 'height', '90')\n  .find('path')\n  .first()\n  .invoke('attr', 'fill', 'red')",
+    "description": "SVG elements are normal DOM elements in the browser, thus Cypress commands can query and check them. In this example, I show how to query an SVG element, check its attributes, and even change the \"fill\" attribute to make the element red. Find the full example at https://glebbahmutov.com/cypress-examples\n\n// get the SVG element, just like any DOM element\ncy.get('svg')\n  .should('have.attr', 'width', '90')\n  .and('have.attr', 'height', '90')\n  // yields the original element\n  .find('path')\n  .first()\n  .invoke('attr', 'fill', 'red')\n\nNote: the assertions \"have.attr\" with name and value arguments yield the original element.",
     "publishedAt": "2022-02-17T14:29:18Z"
   },
   {
