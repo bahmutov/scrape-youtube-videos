@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "IhGHb7PV3XY",
+    "title": "Remove The Found Element",
+    "description": "You can remove the element found using cy.get command by calling the jQuery method \"remove\" using cy.invoke command.\n\ncy.get('.picked').invoke('remove')\n\nAll Cypress querying commands yield jQuery objects. You can invoke other jQuery methods, like \"text\" before trimming it.\n\ncy.get('#make')\n  .invoke('text')\n  .invoke('trim')\n  .should('equal', 'Honda Civic')\n\nFind this recipe and many other Cypress examples at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-10-17T14:08:23Z"
+  },
+  {
     "videoId": "7zeouZjZWDY",
     "title": "Solve The Detached Button Click Error",
     "description": "In this video, I explain why the test fails with \"element detached error\" when the test tries to click on the button without waiting for the application to finish updating in response to the previous test commands.\n\n// ANTI-PATTERN, DO NOT DO THIS\ncy.type(...)\ncy.get('button').contains('Save').click()\n// SAFE COMMANDS\n// wait for the app to re-render in response to the cy.type\ncy.type(...)\ncy.contains('button', 'Save')\n  .should('be.enabled')\n  .click()\n\nThe test should wait for the application to finish processing the \"cy.type\" command. The test should also strive to use a single querying command like \"cy.contains\" instead of splitting querying DOM elements into a chain of \"cy.get\" + \"cy.contains\" commands. For more, read the Cypress Retry-ability guide at https://on.cypress.io/retry-ability",
