@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "vxDjcT63mJI",
+    "title": "Cypress DevExtreme Example",
+    "description": "Read the blog post https://glebbahmutov.com/blog/cypress-devextreme-example/.\nWe can query elements using the name, role, aria labels, and text which comes in handy when we don't control the HTML markup. In this video, I show a form created using DevExtreme JS widgets. We will confirm the input field value, and then change it using a popup list. Find the complete source code in the repo https://github.com/bahmutov/cypress-devextreme-example Tip: for more Cypress querying command examples, see https://glebbahmutov.com/cypress-examples/commands/querying.html page",
+    "publishedAt": "2022-10-26T14:05:42Z"
+  },
+  {
     "videoId": "JzJhVEnt22s",
     "title": "Stub window.print Method",
     "description": "To avoid opening the System Print dialog, we can stub the \"window.print\" method before the application calls it. For example, if the application calls \"print\" on button click, we can stub the \"window.print\" method before clicking.\n\ncy.window().then(function (w) {\n  cy.stub(w, 'print').as('print')\n})\ncy.get('#print').click()\ncy.get('@print').should('be.calledOnce')\n\nAs always, we should confirm that our method stub was really used. Find this recipe and many more stubbing and spying recipes at https://glebbahmutov.com/cypress-examples",
