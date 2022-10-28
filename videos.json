@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "PZ2OsLBts1E",
+    "title": "Test Formatted Phone Number Input",
+    "description": "Read the blog post https://glebbahmutov.com/blog/text-input/ In this video, I explain how a rich input phone number web widget can be tested using Cypress. We validate the hidden input with the raw phone number, and the textbox that shows the formatted phone number.\n\ncy.visit('app/index.html')\n// starts with a 10 digit number\ncy.get('input[name=Mobile]')\n  .should('have.prop', 'value')\n  .should('match', /^\\d{10}$/)\ncy.get('input[name=Mobile]')\n  .parent()\n  .find('input[role=textbox]')\n  .clear()\n  .type('1234567890')\n  .blur()\ncy.get('input[name=Mobile]')\n  .should('have.prop', 'value', '1234567890')\n  .parent()\n  .find('input[role=textbox]')\n  // the text box has formatted phone number\n  .should('have.value', '+1 (123) 456-7890')\n\nFind the full source code at https://github.com/bahmutov/cypress-devextreme-example",
+    "publishedAt": "2022-10-27T12:25:40Z"
+  },
+  {
     "videoId": "vxDjcT63mJI",
     "title": "Cypress DevExtreme Example",
     "description": "Read the blog post https://glebbahmutov.com/blog/cypress-devextreme-example/.\nWe can query elements using the name, role, aria labels, and text which comes in handy when we don't control the HTML markup. In this video, I show a form created using DevExtreme JS widgets. We will confirm the input field value, and then change it using a popup list. Find the complete source code in the repo https://github.com/bahmutov/cypress-devextreme-example Tip: for more Cypress querying command examples, see https://glebbahmutov.com/cypress-examples/commands/querying.html page",
