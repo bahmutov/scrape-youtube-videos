@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "6PzXHCUD1Yc",
+    "title": "Confirm The Page Shows A Number Before Converting And Saving As An Alias",
+    "description": "Imagine a page loading a score and updating the element's text. At first, it shows the text \"loading...\" and then sets the text to something like \"60\". How do we save the number as a Cypress alias if it is delayed? By checking the element's text against a regular expression before converting it to a number!\n\ncy.get('.score')\n  .first()\n  .invoke('text')\n  .should('match', /^\\d+$/)\n  .then(parseInt)\n  .as('scoreA')\n\nFind this recipe and many more examples at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-11-07T16:22:08Z"
+  },
+  {
+    "videoId": "0kl1GjchqQc",
+    "title": "Flatten Cypress Pyramid Of Callbacks Using Aliases",
+    "description": "When we extract data from the page in Cypress we can get the value in a cy.then callback function. If we need to extract and compare two pieces of data, then the two cy.then callbacks are nested, leading to a \"pyramid of doom\" of callbacks. In this video, I explain how to flatten the pyramid using Cypress aliases.\n\nHere is the final test: it extracts two scores from the page and confirms the first score is lower than the second one.\n\n// get the first score\ncy.get('.score')\n  .first()\n  .invoke('text')\n  .then(parseInt)\n  .as('scoreA')\n// get the second score\ncy.get('.score').eq(1).invoke('text').then(parseInt).as('scoreB')\ncy.then(function () {\n  expect(this.scoreA, 'compare scores').to.be.below(this.scoreB)\n})\n\nFor more examples like this, see https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-11-06T18:09:33Z"
+  },
+  {
     "videoId": "PZ2OsLBts1E",
     "title": "Test Formatted Phone Number Input",
     "description": "Read the blog post https://glebbahmutov.com/blog/text-input/ In this video, I explain how a rich input phone number web widget can be tested using Cypress. We validate the hidden input with the raw phone number, and the textbox that shows the formatted phone number.\n\ncy.visit('app/index.html')\n// starts with a 10 digit number\ncy.get('input[name=Mobile]')\n  .should('have.prop', 'value')\n  .should('match', /^\\d{10}$/)\ncy.get('input[name=Mobile]')\n  .parent()\n  .find('input[role=textbox]')\n  .clear()\n  .type('1234567890')\n  .blur()\ncy.get('input[name=Mobile]')\n  .should('have.prop', 'value', '1234567890')\n  .parent()\n  .find('input[role=textbox]')\n  // the text box has formatted phone number\n  .should('have.value', '+1 (123) 456-7890')\n\nFind the full source code at https://github.com/bahmutov/cypress-devextreme-example",
