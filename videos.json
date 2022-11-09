@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "tk8baP3AaH0",
+    "title": "Use A Single Get Command With Should Callback To Detect The Loaded Numerical Scores",
+    "description": "The final example from the series of videos exploring how to check the page that loads the scores shows two short solutions.\n\nThe first one retries finding a number on the page, and then grabs the elements, spreads them into arguments to cy.then callback and asserts them\n\ncy.contains('.score', /^\\d+$/)\ncy.get('.score').spread(function (first, second) {\n  expect(parseInt(first.innerText)).to.be.below(\n    parseInt(second.innerText),\n  )\n})\n\nFinally, the second solution is the shortest one. It uses a should(callback) function that forces the test to retry fetching the numbers from the page until they truly become integers.\n\ncy.get('.score').should(function ($scores) {\n  const [first, second] = $scores\n  expect(parseInt(first.innerText)).to.be.below(\n    parseInt(second.innerText),\n  )\n})\n\nFind these solutions at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-11-08T16:27:40Z"
+  },
+  {
+    "videoId": "luY5KmvTLRg",
+    "title": "Check The Page Has Finished Updating Before Getting The Values",
+    "description": "Sometimes a chain of Cypress commands can give you a stale reference to an element. If the app overwrites the entire portion, that element reference will no longer be updated, so the test will never \"see\" the value it is looking for. In this video, I explain a better approach: check using a single command with retry-ability the page, and once it has finished updating for sure, then use chains of Cypress commands to extract the values.\n\nOur final test looks like this:\ncy.contains('.score', /^\\d+$/)\n\ncy.get('.score')\n  .first()\n  .invoke('text')\n  .then(parseInt)\n  .as('scoreA')\ncy.get('.score').eq(1).invoke('text').then(parseInt).as('scoreB')\ncy.then(function () {\n  expect(this.scoreA, 'compare scores').to.be.below(this.scoreB)\n})\nYou can find it under the recipes at https://glebbahmutov.com/cypress-examples and you can read the Retry-ability guide at https://on.cypress.io/retry-ability",
+    "publishedAt": "2022-11-07T20:57:03Z"
+  },
+  {
     "videoId": "6PzXHCUD1Yc",
     "title": "Confirm The Page Shows A Number Before Converting And Saving As An Alias",
     "description": "Imagine a page loading a score and updating the element's text. At first, it shows the text \"loading...\" and then sets the text to something like \"60\". How do we save the number as a Cypress alias if it is delayed? By checking the element's text against a regular expression before converting it to a number!\n\ncy.get('.score')\n  .first()\n  .invoke('text')\n  .should('match', /^\\d+$/)\n  .then(parseInt)\n  .as('scoreA')\n\nFind this recipe and many more examples at https://glebbahmutov.com/cypress-examples",
