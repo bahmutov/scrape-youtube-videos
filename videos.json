@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "ljOudeJ7XaA",
+    "title": "Overwrite The cy.should Command To Automatically Look Up Aliased Values",
+    "description": "We can overwrite the existing Cypress commands, and even the \"cy.should\" assertion command. In this video I show a useful trick such overwrite allows: to automatically look up aliased values to avoid pyramid of Doom of callbacks when looking up values from the page. The final code becomes very simple:\n\ncy.get('.score')\n  .first()\n  .invoke('text')\n  .then(parseInt)\n  .as('scoreA')\ncy.get('.score')\n  .eq(1)\n  .invoke('text')\n  .then(parseInt)\n  .should('be.above', '@scoreA')\n\nFind this recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-11-09T17:36:24Z"
+  },
+  {
     "videoId": "tk8baP3AaH0",
     "title": "Use A Single Get Command With Should Callback To Detect The Loaded Numerical Scores",
     "description": "The final example from the series of videos exploring how to check the page that loads the scores shows two short solutions.\n\nThe first one retries finding a number on the page, and then grabs the elements, spreads them into arguments to cy.then callback and asserts them\n\ncy.contains('.score', /^\\d+$/)\ncy.get('.score').spread(function (first, second) {\n  expect(parseInt(first.innerText)).to.be.below(\n    parseInt(second.innerText),\n  )\n})\n\nFinally, the second solution is the shortest one. It uses a should(callback) function that forces the test to retry fetching the numbers from the page until they truly become integers.\n\ncy.get('.score').should(function ($scores) {\n  const [first, second] = $scores\n  expect(parseInt(first.innerText)).to.be.below(\n    parseInt(second.innerText),\n  )\n})\n\nFind these solutions at https://glebbahmutov.com/cypress-examples",
