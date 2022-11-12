@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "jBVeLoD8A-g",
+    "title": "Find The DOM Element With The Max Number Using Lodash _.maxBy",
+    "description": "You can use bundled Lodash library to iterate over jQuery object. In this video, I show how to extract a number from each element and find the element with the max number. We can then return that max DOM element and chain more Cypress commands and assertions. Find this recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-11-11T19:44:46Z"
+  },
+  {
     "videoId": "ljOudeJ7XaA",
     "title": "Overwrite The cy.should Command To Automatically Look Up Aliased Values",
     "description": "We can overwrite the existing Cypress commands, and even the \"cy.should\" assertion command. In this video I show a useful trick such overwrite allows: to automatically look up aliased values to avoid pyramid of Doom of callbacks when looking up values from the page. The final code becomes very simple:\n\ncy.get('.score')\n  .first()\n  .invoke('text')\n  .then(parseInt)\n  .as('scoreA')\ncy.get('.score')\n  .eq(1)\n  .invoke('text')\n  .then(parseInt)\n  .should('be.above', '@scoreA')\n\nFind this recipe at https://glebbahmutov.com/cypress-examples",
