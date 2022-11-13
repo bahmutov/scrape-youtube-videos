@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "1iOU9ZPd0pg",
+    "title": "How To Unit Test Find And Parse The Price Function That Needs A jQuery Object",
+    "description": "If you need to unit test a function that expects a jQuery object as its argument, you can quickly create such objects using Cypress.$ jQuery library. See the full source code at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-11-11T20:00:21Z"
+  },
+  {
     "videoId": "jBVeLoD8A-g",
     "title": "Find The DOM Element With The Max Number Using Lodash _.maxBy",
     "description": "You can use bundled Lodash library to iterate over jQuery object. In this video, I show how to extract a number from each element and find the element with the max number. We can then return that max DOM element and chain more Cypress commands and assertions. Find this recipe at https://glebbahmutov.com/cypress-examples",
