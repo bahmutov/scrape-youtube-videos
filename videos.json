@@ -1,5 +1,23 @@
 [
   {
+    "videoId": "pzHEXjjfLvE",
+    "title": "Subscribe To The Message Events From The Test",
+    "description": "Sometimes we don't want to stub / spy the calls \"window.postMessage\", mostly because we might not have the access to the method. Instead we might subscribe to the message events directly. In this example (from https://github.com/bahmutov/cypress-post-message repo), we subscribe to the events sent by the child iframe window to its parent window and we use a single stub instance created using cy.stub() command to only keep track of the original arguments\n\nconst postMessage = cy.stub().as('postMessage')\ncy.visit('parent.html', {\n  onBeforeLoad(win) {\n    win.addEventListener('message', function (e) {\n      postMessage(e.data)\n    })\n  },\n})\n\ncy.get('@postMessage')\n  .should('have.been.calledTwice')\n  .and('have.been.calledWithExactly', 'one')\n  .and('have.been.calledWithExactly', 'two')\n\nFind more Cypress spies and stubs examples at https://glebbahmutov.com/cypress-examples/commands/spies-stubs-clocks.html",
+    "publishedAt": "2022-11-15T22:36:01Z"
+  },
+  {
+    "videoId": "l-1Ti4CbXxM",
+    "title": "Spy On The Window PostMessage Calls",
+    "description": "When visiting the page, we can start spying on the window.postMessage method. The application code calls this method, and we can then confirm those expected calls were made.\n\ncy.visit('index.html', {\n  onBeforeLoad(win) {\n    cy.spy(win, 'postMessage').as('postMessage')\n  },\n})\ncy.get('@postMessage')\n  .should('have.been.calledTwice')\n  .and('have.been.calledWithExactly', 'one')\n  .and('have.been.calledWithExactly', 'two')\n\nFind this code in the repo https://github.com/bahmutov/cypress-post-message",
+    "publishedAt": "2022-11-15T22:16:33Z"
+  },
+  {
+    "videoId": "0d3SKQ-9WJI",
+    "title": "Confirm The Index Of The Element With The Given Text",
+    "description": "If we find an element by text using cy.contains command, we can confirm the found element's index among its siblings by invoking the jQuery \"index\" method https://api.jquery.com/index/. It yields the number, starting with zero. This makes checking the order of elements really easy.\n\n// \"Pears\" is the third element in the list of fruits\n// Let's confirm it\ncy.contains('#fruits li', 'Pear')\n  .invoke('index')\n  .should('equal', 2)\n\nFind this recipe among many examples at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-11-15T15:57:03Z"
+  },
+  {
     "videoId": "1iOU9ZPd0pg",
     "title": "How To Unit Test Find And Parse The Price Function That Needs A jQuery Object",
     "description": "If you need to unit test a function that expects a jQuery object as its argument, you can quickly create such objects using Cypress.$ jQuery library. See the full source code at https://glebbahmutov.com/cypress-examples",
