@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "zSxJMbmknJA",
+    "title": "Concatenate The Found Text Using Cypress Aliases",
+    "description": "In this video, I show how to extract multiple text fragments from the page and save them under aliases. Then we can get all the aliased values while avoiding a pyramid of callbacks.\n\ncy.get('#noun').invoke('text').as('noun')\ncy.get('#verb').invoke('text').as('verb')\ncy.get('#adjective').invoke('text').as('adjective')\ncy.then(function () {\n  const s = `${this.noun} ${this.verb} ${this.adjective}`\n  expect(s, 'concatenated string').to.equal(\n    'a brown fox jumped slow',\n  )\n})\n\nFind this recipe at my site https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-11-17T18:56:20Z"
+  },
+  {
     "videoId": "pzHEXjjfLvE",
     "title": "Subscribe To The Message Events From The Test",
     "description": "Sometimes we don't want to stub / spy the calls \"window.postMessage\", mostly because we might not have the access to the method. Instead we might subscribe to the message events directly. In this example (from https://github.com/bahmutov/cypress-post-message repo), we subscribe to the events sent by the child iframe window to its parent window and we use a single stub instance created using cy.stub() command to only keep track of the original arguments\n\nconst postMessage = cy.stub().as('postMessage')\ncy.visit('parent.html', {\n  onBeforeLoad(win) {\n    win.addEventListener('message', function (e) {\n      postMessage(e.data)\n    })\n  },\n})\n\ncy.get('@postMessage')\n  .should('have.been.calledTwice')\n  .and('have.been.calledWithExactly', 'one')\n  .and('have.been.calledWithExactly', 'two')\n\nRead the blog post \"Spy On window.postMessage Calls\" https://glebbahmutov.com/blog/spy-on-postmessage/\n\nFind more Cypress spies and stubs examples at https://glebbahmutov.com/cypress-examples/commands/spies-stubs-clocks.html",
