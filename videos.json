@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "3rgTQ4QZ0zc",
+    "title": "Run All Specs Button Is Back In Cypress v11.2.0",
+    "description": "The \"Run All Specs\" button was removed in Cypress v10, but now it is back! See how it works in this short video. See the full changelog at https://on.cypress.io/changelog#11-2-0 and my previous workarounds at https://glebbahmutov.com/blog/run-all-specs-cypress-v10/",
+    "publishedAt": "2022-11-22T20:31:04Z"
+  },
+  {
     "videoId": "zSxJMbmknJA",
     "title": "Concatenate The Found Text Using Cypress Aliases",
     "description": "In this video, I show how to extract multiple text fragments from the page and save them under aliases. Then we can get all the aliased values while avoiding a pyramid of callbacks.\n\ncy.get('#noun').invoke('text').as('noun')\ncy.get('#verb').invoke('text').as('verb')\ncy.get('#adjective').invoke('text').as('adjective')\ncy.then(function () {\n  const s = `${this.noun} ${this.verb} ${this.adjective}`\n  expect(s, 'concatenated string').to.equal(\n    'a brown fox jumped slow',\n  )\n})\n\nFind this recipe at my site https://glebbahmutov.com/cypress-examples",
