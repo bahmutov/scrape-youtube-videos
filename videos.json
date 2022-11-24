@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "3c1nU-ULxnA",
+    "title": "Testing Kendo UI Table And Country Select Dropdown",
+    "description": "In this video, I select a country from a dropdown made using the Kendo UI library. The test is flake-free since we follow the Cypress retry-ability guide https://on.cypress.io/retry-ability (for example, by using a cy.contains command with a single selector, rather than splitting the Cypress querying commands)\n\nFind the source code in the repo https://github.com/bahmutov/cypress-kendo-dropdown and my lessons on stubbing / spying JSONP API calls in the course https://cypress.tips/courses/network-testing",
+    "publishedAt": "2022-11-23T14:30:22Z"
+  },
+  {
     "videoId": "3rgTQ4QZ0zc",
     "title": "Run All Specs Button Is Back In Cypress v11.2.0",
     "description": "The \"Run All Specs\" button was removed in Cypress v10, but now it is back! See how it works in this short video. See the full changelog at https://on.cypress.io/changelog#11-2-0 and my previous workarounds at https://glebbahmutov.com/blog/run-all-specs-cypress-v10/",
