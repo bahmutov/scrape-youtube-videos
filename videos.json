@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "dxGhIvFNm4I",
+    "title": "Inject Entire Objects Into Cypress Tests Using as-a Utility",
+    "description": "You can inject an entire JSON object of sensitive data into Cypress tests without hard-coding it into files or committing to the source control. My utility as-a https://github.com/bahmutov/as-a works by injecting environment variables. If an environment variable name starts with \"CYPRESS_\" string, then those values are automatically parsed and added to the Cypress \"env\" object. The tests can retrieve those values using Cypress.env(name) command, as described in https://on.cypress.io/environment-variables Find the source code for this video in the repo https://github.com/bahmutov/cypress-as-a-example",
+    "publishedAt": "2022-11-26T17:02:44Z"
+  },
+  {
     "videoId": "3c1nU-ULxnA",
     "title": "Testing Kendo UI Table And Country Select Dropdown",
     "description": "In this video, I select a country from a dropdown made using the Kendo UI library. The test is flake-free since we follow the Cypress retry-ability guide https://on.cypress.io/retry-ability (for example, by using a cy.contains command with a single selector, rather than splitting the Cypress querying commands)\n\nFind the source code in the repo https://github.com/bahmutov/cypress-kendo-dropdown and my lessons on stubbing / spying JSONP API calls in the course https://cypress.tips/courses/network-testing",
