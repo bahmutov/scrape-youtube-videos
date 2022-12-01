@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "_7A7ESfPPDM",
+    "title": "Find The Table Row Using The Exact Cell Text",
+    "description": "How can we find a table row with a cell that has the exact text content from the given variable like:\nconst name = \"apple\"\nWe can find the cell first by constructing a regular expression and using the cy.contains command\ncy.contains('td', new RegExp('^' + name + '$'))\nThen we can find the row and confirm it is the right row. Find this recipe and lots more Cypress examples at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-11-30T14:26:43Z"
+  },
+  {
     "videoId": "PLSUQ7nGbs4",
     "title": "Cypress Advent Calendar 2022 Announcement",
     "description": "Read the full announcement at https://cypresstips.substack.com/p/cypress-advent-calendar-2022-is-coming and subscribe.\n\nI have two courses that go into advanced Cypress topics: Network Exercises and Cypress Plugins. During December, I will unlock a new lesson from one of the courses but only for 24 hours. Every morning at 9 AM Eastern Timezone one lesson will become public, giving you an entire day to read, practice, and watch my solution to the exercises. Then the next day, the lesson will go back behind a paywall.\n\nSee the courses at https://cypress.tips/courses/cypress-plugins - there are a couple of free lessons there to give you a taste of what the courses are like.",
