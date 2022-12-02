@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "DWrC1YvjKvU",
+    "title": "Remove Elements Before Checking The Page",
+    "description": "If there are elements on the page that make checking the page difficult, invoke the jQuery method \"remove\" to get rid of them!\n\ncy.get('#fruits li .price .old-price').invoke('remove')\n\nFind this example at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-12-01T12:45:41Z"
+  },
+  {
+    "videoId": "Xymm3phZQRk",
+    "title": "Input With Type Number Checking valueAsNumber Prop Example",
+    "description": "For input elements with type=number the browser creates a property \"valueAsNumber\" that has the current input value converted into a number. You can check it from your Cypress tests:\n\ncy.get('#age')\n  .should('have.value', '22')\n  .and('have.prop', 'valueAsNumber', 22)\ncy.get('#glass').should('have.prop', 'valueAsNumber', 0.5)\n\nFind this example at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-12-01T12:33:33Z"
+  },
+  {
     "videoId": "_7A7ESfPPDM",
     "title": "Find The Table Row Using The Exact Cell Text",
     "description": "How can we find a table row with a cell that has the exact text content from the given variable like:\nconst name = \"apple\"\nWe can find the cell first by constructing a regular expression and using the cy.contains command\ncy.contains('td', new RegExp('^' + name + '$'))\nThen we can find the row and confirm it is the right row. Find this recipe and lots more Cypress examples at https://glebbahmutov.com/cypress-examples",
