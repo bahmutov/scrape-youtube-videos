@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "_neipNSNcms",
+    "title": "Enter The Balance Value Into The Input Field",
+    "description": "Let's say we want to look up the available balance in the table, parse the value, then enter it into the input field. The full test code is available at https://glebbahmutov.com/cypress-examples We can chain the commands to find the row, then find the cell, then parse the text into a number.\n\n// find the row that includes the balance text\n// and then find a child TD cell with \"$\"\ncy.contains('tr', 'Available balance')\n  .contains('td', '$') // yields jQuery object\n  .invoke('text') // yields its text\n  .invoke('replace', '$', '') // removes \"$\" character\n  .then(parseFloat) // yields a number\n  // confirm the balance is reasonable\n  .should('be.within', 1, 10_000)\n  .then(function (balance) {\n    // now we can type this balance into the input field\n    cy.get('#transfer').type(balance)\n  })\n\nTip: a much better test would know exactly the balance shown on the page, without looking it up:\n\ncy.contains('tr', 'Available balance').contains('td', '$800')\ncy.get('#transfer').clear().type(800)",
+    "publishedAt": "2022-12-04T17:33:31Z"
+  },
+  {
     "videoId": "3ASVKBgYAYc",
     "title": "Measure The Elapsed Time In Your Cypress Tests",
     "description": "This is cypress-time-marks plugin introduction for quickly measuring how long different parts of the test take, and even failing the current test if the time limit has been exceeded.\n\ncy.timeMark('start').wait(100).timeSince(\n  'start', // mark name\n  'waiting', // message\n  50, // time limit (ms)\n  true, // throw an error if above the time limit\n)\n\nFind the plugin at https://github.com/bahmutov/cypress-time-marks",
