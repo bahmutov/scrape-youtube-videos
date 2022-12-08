@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "ZZWB_4LEOrE",
+    "title": "Check The Test Status Inside The After Each Hook",
+    "description": "You can check the test's status (passed, failed) inside the \"afterEach\" hook and run commands depending on the state. The test will still remain failed, but you can execute Cypress commands. Here is how to get its status: use the function callback syntax and access the \"\" property\n\nafterEach(function () {\n  if (this.currentTest.state === 'failed') { ... }\n})\n\nRead more about Cypress statuses in my blog post https://glebbahmutov.com/blog/cypress-test-statuses/ and see the current test state in my Cypress tips blog post https://glebbahmutov.com/blog/cypress-tips-and-tricks/#get-test-status",
+    "publishedAt": "2022-12-07T18:23:24Z"
+  },
+  {
+    "videoId": "4HpEECek2OE",
+    "title": "Cypress v12 Querying Commands Introduction",
+    "description": "Cypress v12 introduced retrying the entire chain of querying commands (the commands that don't change the state of the application), which lets us write simple and easy-to-understand commands. For example, to write a test that confirms the text in the items, even if the items change:\n\nCypress.Commands.addQuery('map', ...)\ncy.visit('cypress/index.html')\ncy.get('.matching')\n  .map('innerText')\n  .should('deep.equal', ['first', 'third', 'fourth'])\n\nIf the initial list returned by \"cy.get\" changes, the new elements will be picked up and used by \"cy.map\" and then \"cy.should\"\n\nFind this code at https://github.com/bahmutov/cypress-map\n\nFor more, see Cypress query command documentation",
+    "publishedAt": "2022-12-07T14:06:04Z"
+  },
+  {
     "videoId": "_neipNSNcms",
     "title": "Enter The Balance Value Into The Input Field",
     "description": "Let's say we want to look up the available balance in the table, parse the value, then enter it into the input field. The full test code is available at https://glebbahmutov.com/cypress-examples We can chain the commands to find the row, then find the cell, then parse the text into a number.\n\n// find the row that includes the balance text\n// and then find a child TD cell with \"$\"\ncy.contains('tr', 'Available balance')\n  .contains('td', '$') // yields jQuery object\n  .invoke('text') // yields its text\n  .invoke('replace', '$', '') // removes \"$\" character\n  .then(parseFloat) // yields a number\n  // confirm the balance is reasonable\n  .should('be.within', 1, 10_000)\n  .then(function (balance) {\n    // now we can type this balance into the input field\n    cy.get('#transfer').type(balance)\n  })\n\nTip: a much better test would know exactly the balance shown on the page, without looking it up:\n\ncy.contains('tr', 'Available balance').contains('td', '$800')\ncy.get('#transfer').clear().type(800)",
