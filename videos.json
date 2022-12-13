@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "wZlT3zu7jfI",
+    "title": "Pick A Random 10-Digit Number Without A Leading Zero",
+    "description": "Our goal is to pick a random 10-digit number to validate the input field. The number cannot have a leading zero. We can use `Math.random` to get a random number between 0 and 1. Then we chop off the first two characters `0.` and limit the length to 9 characters. This allows us to prefix the number with `1` to guarantee the number does not have a leading zero.\n\nconst random = '1' + Math.random().toString().substr(2, 9)\ncy.get('input#number').type(random)\n\nFind this recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-12-12T18:23:21Z"
+  },
+  {
     "videoId": "ZZWB_4LEOrE",
     "title": "Check The Test Status Inside The After Each Hook",
     "description": "You can check the test's status (passed, failed) inside the \"afterEach\" hook and run commands depending on the state. The test will still remain failed, but you can execute Cypress commands. Here is how to get its status: use the function callback syntax and access the \"\" property\n\nafterEach(function () {\n  if (this.currentTest.state === 'failed') { ... }\n})\n\nRead more about Cypress statuses in my blog post https://glebbahmutov.com/blog/cypress-test-statuses/ and see the current test state in my Cypress tips blog post https://glebbahmutov.com/blog/cypress-tips-and-tricks/#get-test-status",
