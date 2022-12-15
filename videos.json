@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "KSlJYjIn_AM",
+    "title": "Check If Element Text Is One Of The Possible Strings",
+    "description": "In this video, I show 3 different ways of confirming that the element's text is one of the possible strings. I used a single should callback, a regular expression, and a chain of Cypress v12 query commands. Find this code in https://github.com/bahmutov/cypress-map repo and read the blog post \"Cypress V12 Is A Big Deal\" https://glebbahmutov.com/blog/cypress-v12/",
+    "publishedAt": "2022-12-14T16:03:09Z"
+  },
+  {
     "videoId": "wZlT3zu7jfI",
     "title": "Pick A Random 10-Digit Number Without A Leading Zero",
     "description": "Our goal is to pick a random 10-digit number to validate the input field. The number cannot have a leading zero. We can use `Math.random` to get a random number between 0 and 1. Then we chop off the first two characters `0.` and limit the length to 9 characters. This allows us to prefix the number with `1` to guarantee the number does not have a leading zero.\n\nconst random = '1' + Math.random().toString().substr(2, 9)\ncy.get('input#number').type(random)\n\nFind this recipe at https://glebbahmutov.com/cypress-examples",
