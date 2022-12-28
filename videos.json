@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "lA_2SARDS2s",
+    "title": "Parse Cypress Version String And Confirm The Major Version",
+    "description": "Sometimes you need to confirm the Cypress version used to run the specs. For example, my plugin cypress-map only works with Cypress v12 or later. This short video explains how to parse the Cypress.version string\n\nconsole.log(Cypress.version)\nconst [major, minor, patch] = Cypress.version\n  .split('.')\n  .map(Number)\nconsole.log({ major, minor, patch })\nexpect(major, 'v9 requires').to.be.gte(9)\n\nFind this example at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2022-12-27T17:53:41Z"
+  },
+  {
     "videoId": "2cwq9iQR54Y",
     "title": "Writing A Shopping Cart Test Example",
     "description": "Solving a user problem with confirming the number of items in the shopping cart. The full test picks some options and verifies that 5 items can be added to the cart and the menu bar is showing \"Shopping cart (5)\" text.\n\ncy.visit('/build-your-own-computer')\ncy.contains('#topcartlink', 'Shopping cart (0)')\ncy.get('select#product_attribute_2').select(3)\ncy.get('input#product_attribute_3_6').check()\ncy.get('[aria-label=\"Enter a quantity\"]').clear().type(5)\ncy.contains('button', 'Add to cart').click()\ncy.contains('#topcartlink', 'Shopping cart (5)')\n\nFor more examples like this, see https://glebbahmutov.com/cypress-examples",
