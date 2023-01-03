@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "x3jN-yf3VGU",
+    "title": "Check The Impressum Link That Opens In A New Tab",
+    "description": "This short video shows how to click the right \"Impressum\" link on a German site. We force the link to open in the current tab, and then validate the pathname of the new page.\ncy.contains('#SgCookieOptin a', 'Impressum', {matchCase: false})\n  .should('have.attr', 'target', '_blank')\n  .invoke('attr', 'target', '_self')\n  .click()\ncy.location('pathname').should('equal', '/impressum')",
+    "publishedAt": "2023-01-02T18:59:21Z"
+  },
+  {
+    "videoId": "pmuPVl7mdKI",
+    "title": "Eco Index Audit Cypress Plugin",
+    "description": "This video shows the plugin eco-index-audit https://github.com/EmmanuelDemey/eco-index-audit and how you can check any URL to be well-coded from the ecological viewpoint (don't be wasteful!) I explain how to correctly check the property \"ecoIndex\" yielded by the plugin's task\nconst threshold = 50\ncy.task(\"checkEcoIndex\", url)\n  .its('ecoIndex', {timeout: 0})\n  .should('be.above', threshold)",
+    "publishedAt": "2023-01-02T17:52:02Z"
+  },
+  {
     "videoId": "lA_2SARDS2s",
     "title": "Parse Cypress Version String And Confirm The Major Version",
     "description": "Sometimes you need to confirm the Cypress version used to run the specs. For example, my plugin cypress-map only works with Cypress v12 or later. This short video explains how to parse the Cypress.version string\n\nconsole.log(Cypress.version)\nconst [major, minor, patch] = Cypress.version\n  .split('.')\n  .map(Number)\nconsole.log({ major, minor, patch })\nexpect(major, 'v9 requires').to.be.gte(9)\n\nFind this example at https://glebbahmutov.com/cypress-examples",
