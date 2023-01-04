@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "M_AZdsf_bQw",
+    "title": "Copyright Year Cypress Test",
+    "description": "Let's make sure our copyright footer is never out of date, and the test automatically computes the year to look for. This example comes from https://glebbahmutov.com/cypress-examples\nconst year = new Date().getFullYear()\ncy.contains('#copyright', `${year} Gleb`, { timeout: 0 })",
+    "publishedAt": "2023-01-03T16:09:09Z"
+  },
+  {
     "videoId": "x3jN-yf3VGU",
     "title": "Check The Impressum Link That Opens In A New Tab",
     "description": "This short video shows how to click the right \"Impressum\" link on a German site. We force the link to open in the current tab, and then validate the pathname of the new page.\ncy.contains('#SgCookieOptin a', 'Impressum', {matchCase: false})\n  .should('have.attr', 'target', '_blank')\n  .invoke('attr', 'target', '_self')\n  .click()\ncy.location('pathname').should('equal', '/impressum')",
