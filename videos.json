@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "-IEFhheipzs",
+    "title": "Check The Element Contains A Number That Ends With Two Decimals",
+    "description": "Let's confirm the element has text that ends with two decimal numbers. This example comes from https://glebbahmutov.com/cypress-examples\ncy.contains('#amount', /\\.\\d\\d?$/)",
+    "publishedAt": "2023-01-04T14:54:20Z"
+  },
+  {
     "videoId": "M_AZdsf_bQw",
     "title": "Copyright Year Cypress Test",
     "description": "Let's make sure our copyright footer is never out of date, and the test automatically computes the year to look for. This example comes from https://glebbahmutov.com/cypress-examples\nconst year = new Date().getFullYear()\ncy.contains('#copyright', `${year} Gleb`, { timeout: 0 })",
