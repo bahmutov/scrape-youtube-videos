@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "Re4bNOBqes8",
+    "title": "Check If A Spy Was Called With The Right Object",
+    "description": "If we are spying or stubbing an application method, then we should be able to confirm if it was called correctly with expected arguments. Checking a call with primitive arguments is simple:\ncy.get('@log').should('be.calledWith', 'Hello', 'world')\nChecking a call where an argument was an object depends on what you know about the object: do you know the precise values of every property? Or some properties? Or just types of properties? Here are two ways of checking an object if you know its entire contents:\n// yield the object to the next assertion\ncy.get('@log')\n  .should('be.calledWith', 'User %o', Cypress.sinon.match.object)\n  .its('firstCall.args.1')\n  .should('deep.equal', { id: 123, name: 'Joe' })\n// use Sinon's built-in object by value match\ncy.get('@log').should('be.calledWith', 'User %o', {\n  id: 123,\n  name: 'Joe',\n})\nAnd here are ways to confirm the call argument if you know only some of its properties:\ncy.get('@log')\n  .should('be.calledWith', 'User %o', Cypress.sinon.match.object)\n  .its('firstCall.args.1')\n  // imagine we do not know all object fields\n  .should('deep.include', { name: 'Joe' })\ncy.get('@log').should('be.calledWith', 'User %o', {\n  id: Cypress.sinon.match.number,\n  name: 'Joe',\n})\nFor more spies and stubs examples, see https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-01-06T16:10:20Z"
+  },
+  {
     "videoId": "-IEFhheipzs",
     "title": "Check The Element Contains A Number That Ends With Two Decimals",
     "description": "Let's confirm the element has text that ends with two decimal numbers. This example comes from https://glebbahmutov.com/cypress-examples\ncy.contains('#amount', /\\.\\d\\d?$/)",
