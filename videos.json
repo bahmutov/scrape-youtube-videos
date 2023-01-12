@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "IEkRyElQ6VE",
+    "title": "Testing Using Cypress And GitHub Actions: From Zero To Hero",
+    "description": "This video creates a new project and adds a few default Cypress tests. Then it creates a repository on GitHub and runs the Cypress tests using Cypress GitHub Action. I then show how to debug a failed test using test artifacts stored on GitHub after each test run. Find the full source code at https://github.com/bahmutov/cypress-gha-example and for more answers, use https://cypress.tips/search",
+    "publishedAt": "2023-01-11T20:43:16Z"
+  },
+  {
     "videoId": "Z0OUl4l5YvU",
     "title": "jQuery Form Serialize Array Method",
     "description": "You can invoke the jQuery method \"serializeArray\" when working with a form element in Cypress. You can quickly validate all input values at once\ncy.get('form')\n  .invoke('serializeArray')\n  .should('deep.equal', [\n    {\n      name: 'a',\n      value: '1',\n    },\n   ....\n  ])\nSee https://api.jquery.com/serializeArray/ and this recipe at https://glebbahmutov.com/cypress-examples",
