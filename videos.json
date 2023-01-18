@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "GYW4vIehd6Y",
+    "title": "A Cypress Example With Disabled Button And Has Text jQuery Selectors",
+    "description": "I start this video example by noting that these two code snippets are equivalent:\ncy.get('div').find('button').should('not.be.disabled').click()\ncy.get('div').find('button').click()\nThe command cy.click() already checks if the button is visible, not disabled, etc.\n\nSecond, the video shows how to use jQuery \":has\" and \":contains\" selectors to find a button by the label's text in a single query:\ncy.get('div:has( label:contains(\"My button\") ) button').click()\nFind these code examples and 500+ other Cypress examples at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-01-17T17:05:25Z"
+  },
+  {
     "videoId": "IEkRyElQ6VE",
     "title": "Testing Using Cypress And GitHub Actions: From Zero To Hero",
     "description": "This video creates a new project and adds a few default Cypress tests. Then it creates a repository on GitHub and runs the Cypress tests using Cypress GitHub Action. I then show how to debug a failed test using test artifacts stored on GitHub after each test run. Find the full source code at https://github.com/bahmutov/cypress-gha-example and for more answers, use https://cypress.tips/search",
