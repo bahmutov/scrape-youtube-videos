@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "UOLQlNmuhY0",
+    "title": "Confirm Table Column",
+    "description": "In this video, I show how to confirm the entire column of values in a table. First, we confirm the heading text using cy.contains. Then we get all cells in a column from the body of the table, convert the elements to numbers, and confirm the list of numbers. The video shows both \"plain\" Cypress test and a better approach using https://github.com/bahmutov/cypress-map plugin",
+    "publishedAt": "2023-01-19T19:13:52Z"
+  },
+  {
+    "videoId": "Abv7m9H_15Y",
+    "title": "SVG Loader Example",
+    "description": "This quick video shows testing an SVG loader that is removed after a couple of seconds. Find the full recipe at https://glebbahmutov.com/cypress-examples\ncy.get('.loader svg').should('be.visible')\ncy.get('.loader svg').should('not.exist')\ncy.contains('.loader', 'Loaded')",
+    "publishedAt": "2023-01-19T17:45:06Z"
+  },
+  {
     "videoId": "9WByK1QvGs4",
     "title": "Multiple :has Selector Clauses",
     "description": "This video shows how to find DIV elements with LABEL and/or BUTTON elements inside. Find the full example at https://glebbahmutov.com/cypress-examples\n// find all DIV elements with a LABEL element inside\ncy.get('div:has(label)')\n// find all DIV elements with a LABEL and a BUTTON inside\ncy.get('div:has(label):has(button)')\n// find all DIV elements with a LABEL or a BUTTON inside\ncy.get('div:has(label, button)')",
