@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "WsVdN0Z5k7E",
+    "title": "Intercept Two API Calls Using Regular Expressions Exercise",
+    "description": "This is a video from the free lesson \"Bonus 72: Intercept API calls using regular expressions\" at https://cypress.tips/courses/network-testing/lessons/bonus72, part of the \"Cypress Network Testing Exercises\" course https://cypress.tips/courses/network-testing. We need to complete a test that intercepts 2 different API calls and checks how the page behaves. The problem: the URLs are overlapping:\n\"/find-item/:name\" and \"/find-item/:name/price\"\nMy solution is to use a regular expression that enforces the match at the end of the string using the \"$\" flag.\nNote: you can practice these exercises yourself using the repos https://github.com/bahmutov/fastify-example and https://github.com/bahmutov/fastify-example-tests",
+    "publishedAt": "2023-01-20T20:00:22Z"
+  },
+  {
     "videoId": "UOLQlNmuhY0",
     "title": "Confirm Table Column",
     "description": "In this video, I show how to confirm the entire column of values in a table. First, we confirm the heading text using cy.contains. Then we get all cells in a column from the body of the table, convert the elements to numbers, and confirm the list of numbers. The video shows both \"plain\" Cypress test and a better approach using https://github.com/bahmutov/cypress-map plugin",
