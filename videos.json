@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "vgP8X9ybc3E",
+    "title": "Wait For SVG Animate Transform End Event",
+    "description": "From a Cypress test you can subscribe to the \"end\" event that \"animateTransform\" element emits. Then you can wait for the spy function to be called, and the rest of the test continues.\ncy.get('.loader svg')\n  .should('be.visible')\n  .find('animateTransform')\n  .invoke('on', 'endEvent', cy.spy().as('animate'))\n// wait for the animation to finish\ncy.get('@animate').should('have.been.called')\nFind this recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-01-21T19:59:55Z"
+  },
+  {
     "videoId": "WsVdN0Z5k7E",
     "title": "Intercept Two API Calls Using Regular Expressions Exercise",
     "description": "This is a video from the free lesson \"Bonus 72: Intercept API calls using regular expressions\" at https://cypress.tips/courses/network-testing/lessons/bonus72, part of the \"Cypress Network Testing Exercises\" course https://cypress.tips/courses/network-testing. We need to complete a test that intercepts 2 different API calls and checks how the page behaves. The problem: the URLs are overlapping:\n\"/find-item/:name\" and \"/find-item/:name/price\"\nMy solution is to use a regular expression that enforces the match at the end of the string using the \"$\" flag.\nNote: you can practice these exercises yourself using the repos https://github.com/bahmutov/fastify-example and https://github.com/bahmutov/fastify-example-tests",
