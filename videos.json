@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "l28bRsZckB8",
+    "title": "Test window.open Example",
+    "description": "Another example where we look at https://demoqa.com/browser-windows test page, find that it calls \"window.open\" when you click on a button, and test this page to confirm the parameters of that click using Cypress. For more, read https://glebbahmutov.com/blog/cypress-second-tab/ blog post",
+    "publishedAt": "2023-01-24T20:53:45Z"
+  },
+  {
     "videoId": "vgP8X9ybc3E",
     "title": "Wait For SVG Animate Transform End Event",
     "description": "From a Cypress test you can subscribe to the \"end\" event that \"animateTransform\" element emits. Then you can wait for the spy function to be called, and the rest of the test continues.\ncy.get('.loader svg')\n  .should('be.visible')\n  .find('animateTransform')\n  .invoke('on', 'endEvent', cy.spy().as('animate'))\n// wait for the animation to finish\ncy.get('@animate').should('have.been.called')\nFind this recipe at https://glebbahmutov.com/cypress-examples",
