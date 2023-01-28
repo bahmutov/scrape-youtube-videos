@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "MQMRIjXwep8",
+    "title": "Test Mailto HREF Anchor Links",
+    "description": "In this video, I parse the \"mailto:recipient...\" HREF links to confirm the parameters of the email to be sent are correct. Find the full code at https://glebbahmutov.com/cypress-examples\n\n// 🚨 DOES NOT WORK, THE TEST WILL HANG\ncy.get('a#send')\n// we can click, but it does nothing\ncy.get('a#send')\n  .invoke('on', 'click', function (e) {\n    console.log('stop the default browser behavior')\n    e.preventDefault()\n  })\n  .click()\n// confirm the HREF attribute is correct by parsing it\ncy.get('a#send')\n  .should('have.attr', 'href')\n  // yields the value of the \"href\" attribute\n  .should('match', /^mailto:/)\n  // parse the URL into recipient, subject, body fields\n  .then(parseMailto)\n  .should('deep.equal', {\n    recipient: 'nowhere@mozilla.org',\n    subject: 'The subject of the email',\n    body: 'The body of the email',\n  })",
+    "publishedAt": "2023-01-27T20:31:08Z"
+  },
+  {
     "videoId": "l28bRsZckB8",
     "title": "Test window.open Example",
     "description": "Another example where we look at https://demoqa.com/browser-windows test page, find that it calls \"window.open\" when you click on a button, and test this page to confirm the parameters of that click using Cypress. For more, read https://glebbahmutov.com/blog/cypress-second-tab/ blog post",
