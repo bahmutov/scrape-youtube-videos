@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "JBlliSOWrtI",
+    "title": "Cypress cy.as Alias Types: Query vs Static",
+    "description": "Cypress v12 introduced the queries - chains of commands that can be retried. This changed how the aliases are evaluated - they are _re-evaluated_ when you use cy.get(\"alias name\"). To get the old alias behavior, where the saved value stays unchanged, use \"{ type: static }\" option\n\n// dynamic alias that will be re-evaluated\ncy.get('#click').invoke('text').invoke('trim').as('caption')\ncy.get('@caption').should('equal', 'Profile')\n// static alias that will stay the same forever\ncy.get('#click')\n  .invoke('text')\n  .invoke('trim')\n  .as('caption', { type: 'static' })\n// but the aliased value remains the same\ncy.get('@caption').should('equal', 'Loading...')\n\nSee this example at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2023-01-30T16:18:06Z"
+  },
+  {
     "videoId": "MQMRIjXwep8",
     "title": "Test Mailto HREF Anchor Links",
     "description": "In this video, I parse the \"mailto:recipient...\" HREF links to confirm the parameters of the email to be sent are correct. Find the full code at https://glebbahmutov.com/cypress-examples\n\n// 🚨 DOES NOT WORK, THE TEST WILL HANG\ncy.get('a#send')\n// we can click, but it does nothing\ncy.get('a#send')\n  .invoke('on', 'click', function (e) {\n    console.log('stop the default browser behavior')\n    e.preventDefault()\n  })\n  .click()\n// confirm the HREF attribute is correct by parsing it\ncy.get('a#send')\n  .should('have.attr', 'href')\n  // yields the value of the \"href\" attribute\n  .should('match', /^mailto:/)\n  // parse the URL into recipient, subject, body fields\n  .then(parseMailto)\n  .should('deep.equal', {\n    recipient: 'nowhere@mozilla.org',\n    subject: 'The subject of the email',\n    body: 'The body of the email',\n  })",
