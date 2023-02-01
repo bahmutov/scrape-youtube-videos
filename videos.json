@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "drlt4lOC0O4",
+    "title": "Cypress v12.5.0 Debug Tab",
+    "description": "This video shows the new Debug tab in Cypress v12.5.0 that shows the tests failed on CI via Cypress Cloud information. There is now a button to run the tests that failed on CI in your local Test Runner (so it runs the tests by spec and test title). See full info in Cypress docs, but quick note: if you want to run the tests that failed _locally_, you can use my cy-grep plugin as described in https://glebbahmutov.com/blog/run-failed-tests/",
+    "publishedAt": "2023-01-31T22:39:28Z"
+  },
+  {
     "videoId": "JBlliSOWrtI",
     "title": "Cypress cy.as Alias Types: Query vs Static",
     "description": "Cypress v12 introduced the queries - chains of commands that can be retried. This changed how the aliases are evaluated - they are _re-evaluated_ when you use cy.get(\"alias name\"). To get the old alias behavior, where the saved value stays unchanged, use \"{ type: static }\" option\n\n// dynamic alias that will be re-evaluated\ncy.get('#click').invoke('text').invoke('trim').as('caption')\ncy.get('@caption').should('equal', 'Profile')\n// static alias that will stay the same forever\ncy.get('#click')\n  .invoke('text')\n  .invoke('trim')\n  .as('caption', { type: 'static' })\n// but the aliased value remains the same\ncy.get('@caption').should('equal', 'Loading...')\n\nSee this example at https://glebbahmutov.com/cypress-examples/",
