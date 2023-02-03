@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "TcBQsKvS2l0",
+    "title": "Delete Cypress Videos For Passing Specs",
+    "description": "This video shows how to delete videos of the passing specs during \"cypress run\" execution. If we want to save space and upload bandwidth, we probably want to only keep the videos and screenshots of the failing specs. You can use \"after:spec\" event to register your own logic to remove the videos. Find the source code and discussion shown in the video in my blog post https://glebbahmutov.com/blog/cypress-v10-tips/",
+    "publishedAt": "2023-02-01T15:50:39Z"
+  },
+  {
     "videoId": "drlt4lOC0O4",
     "title": "Cypress v12.5.0 Debug Tab",
     "description": "This video shows the new Debug tab in Cypress v12.5.0 that shows the tests failed on CI via Cypress Cloud information. There is now a button to run the tests that failed on CI in your local Test Runner (so it runs the tests by spec and test title). See full info in Cypress docs, but quick note: if you want to run the tests that failed _locally_, you can use my cy-grep plugin as described in https://glebbahmutov.com/blog/run-failed-tests/",
