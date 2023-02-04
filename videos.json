@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "eVe4ySgW0qw",
+    "title": "Use cypress-map Queries To Validate A Row In A Table",
+    "description": "Using https://github.com/bahmutov/cypress-map queries we can convert a row from HTML table into an object, update its properties, and compare it to the expected values. Tip: use https://github.com/bahmutov/cy-spok to confirm the object values.\n\nconst props = ['name', 'age', 'date']\nit('confirms the a row', function () {\n  cy.contains('table tbody tr', 'Dave')\n    .find('td')\n    .map('innerText')\n    .print()\n    .partial(Cypress._.zipObject, props)\n    .print()\n    .update('age', Number)\n    .should(\n      spok({\n        name: 'Dave',\n        age: spok.range(10, 19),\n        date: spok.test(/^\\d\\d\\d\\d-\\d\\d-\\d\\d$/),\n      }),\n    )\n})",
+    "publishedAt": "2023-02-03T15:09:38Z"
+  },
+  {
     "videoId": "TcBQsKvS2l0",
     "title": "Delete Cypress Videos For Passing Specs",
     "description": "This video shows how to delete videos of the passing specs during \"cypress run\" execution. If we want to save space and upload bandwidth, we probably want to only keep the videos and screenshots of the failing specs. You can use \"after:spec\" event to register your own logic to remove the videos. Find the source code and discussion shown in the video in my blog post https://glebbahmutov.com/blog/cypress-v10-tips/",
