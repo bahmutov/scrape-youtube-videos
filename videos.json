@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "l6_OXPiqkxQ",
+    "title": "Confirm Text In Multiple Page Elements Using cy-spok",
+    "description": "This video shows how to grab multiple elements from the page, extract its text, and then confirm them all at once using cy-spok assertion. Bonus: you can use cy-spok predicates and exact values. See https://github.com/bahmutov/cy-spok for more examples\n// confirm the title and the filters text\ncy.get('h1, .filters a')\n  .map('innerText')\n  .should(\n    spok([\n      'todos',\n      'All',\n      spok.string,\n      spok.test(/completed/i),\n    ]),\n  )",
+    "publishedAt": "2023-02-06T18:39:35Z"
+  },
+  {
     "videoId": "eVe4ySgW0qw",
     "title": "Use cypress-map Queries To Validate A Row In A Table",
     "description": "Using https://github.com/bahmutov/cypress-map queries we can convert a row from HTML table into an object, update its properties, and compare it to the expected values. Tip: use https://github.com/bahmutov/cy-spok to confirm the object values.\n\nconst props = ['name', 'age', 'date']\nit('confirms the a row', function () {\n  cy.contains('table tbody tr', 'Dave')\n    .find('td')\n    .map('innerText')\n    .print()\n    .partial(Cypress._.zipObject, props)\n    .print()\n    .update('age', Number)\n    .should(\n      spok({\n        name: 'Dave',\n        age: spok.range(10, 19),\n        date: spok.test(/^\\d\\d\\d\\d-\\d\\d-\\d\\d$/),\n      }),\n    )\n})",
