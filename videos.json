@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "v4EwXbtb6Fo",
+    "title": "Complex Find Table Rows Example",
+    "description": "Can you find table rows where cells in the given row have a certain attribute? In this video, I show two different solutions (the 2nd one is my fav, it uses https://github.com/bahmutov/cypress-map). Find the full recipe at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2023-02-07T16:37:09Z"
+  },
+  {
     "videoId": "l6_OXPiqkxQ",
     "title": "Confirm Text In Multiple Page Elements Using cy-spok",
     "description": "This video shows how to grab multiple elements from the page, extract its text, and then confirm them all at once using cy-spok assertion. Bonus: you can use cy-spok predicates and exact values. See https://github.com/bahmutov/cy-spok for more examples\n// confirm the title and the filters text\ncy.get('h1, .filters a')\n  .map('innerText')\n  .should(\n    spok([\n      'todos',\n      'All',\n      spok.string,\n      spok.test(/completed/i),\n    ]),\n  )",
