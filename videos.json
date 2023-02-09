@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "puCZGCeUb5k",
+    "title": "How To Check Visibility Of Many Elements",
+    "description": "When you use Cypress built-in assertion \"should be visible\" with multiple elements, it passes even if just one element is visible, and the rest are not. In this video, I show how to compute the visibility of every element and confirm with retries that they are indeed visible. I am using https://github.com/bahmutov/cypress-map and https://www.chaijs.com/plugins/chai-each/ in the final solution\nrequire('cypress-map')\nchai.use(require('chai-each'))\ncy.get('#items li')\n  .map(Cypress.dom.isVisible)\n  .should('each.equal', true)\nFind this recipe at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2023-02-08T15:59:02Z"
+  },
+  {
     "videoId": "v4EwXbtb6Fo",
     "title": "Complex Find Table Rows Example",
     "description": "Can you find table rows where cells in the given row have a certain attribute? In this video, I show two different solutions (the 2nd one is my fav, it uses https://github.com/bahmutov/cypress-map). Find the full recipe at https://glebbahmutov.com/cypress-examples/",
