@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "G2GXHg4Ck00",
+    "title": "Testing React Input With Type Range By Dispatching Events",
+    "description": "In this video, I refactor a spec file that tries to control an input type=range element wrapped in a React component. To properly trigger the \"input\" event, I have to construct the event object. Since we have a lot of test command duplication, the last part of the video shows how to create a custom Cypress command \"setRange\". The final spec file:\nCypress.Commands.add(\n  'setRange',\n  { prevSubject: 'element' },\n  function (subject, value) {\n    subject.val(value)\n    subject[0].dispatchEvent(new Event('input', { bubbles: true }))\n    Cypress.log({\n      name: 'setRange',\n      message: value,\n    })\n  },\n)\n\ndescribe('test on the functioning of the estimator', function () {\n  beforeEach(function () {\n    cy.visit('/preventivatore')\n    cy.getByData('test').should('be.visible')\n  })\n\n  it('test on slide position preventivatore', function () {\n    cy.getByData('test').setRange(30)\n    cy.getByData('slide30').should('exist')\n    cy.getByData('test').setRange(50)\n\n    cy.getByData('slide50').should('exist')\n    cy.getByData('test').setRange(70)\n\n    cy.getByData('slide70').should('exist')\n    cy.getByData('test').setRange(90)\n\n    cy.getByData('slide90').should('exist')\n  })\n})",
+    "publishedAt": "2023-02-13T22:41:15Z"
+  },
+  {
     "videoId": "puCZGCeUb5k",
     "title": "How To Check Visibility Of Many Elements",
     "description": "When you use Cypress built-in assertion \"should be visible\" with multiple elements, it passes even if just one element is visible, and the rest are not. In this video, I show how to compute the visibility of every element and confirm with retries that they are indeed visible. I am using https://github.com/bahmutov/cypress-map and https://www.chaijs.com/plugins/chai-each/ in the final solution\nrequire('cypress-map')\nchai.use(require('chai-each'))\ncy.get('#items li')\n  .map(Cypress.dom.isVisible)\n  .should('each.equal', true)\nFind this recipe at https://glebbahmutov.com/cypress-examples/",
