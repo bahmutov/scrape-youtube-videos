@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "eB9RqBmnN4I",
+    "title": "Instant AWS Cognito Login Using cypress-data-session",
+    "description": "This video shows how after AWS programmatic login which sets multiple localStorage keys, we can preserve and restore the localStorage object to instantly log in at the start of the next test. Uses https://github.com/bahmutov/cypress-data-session plugin to cache, validate, and restore the localStorage object. The original code was in https://github.com/muratkeremozcan/appsyncmasterclass-frontend",
+    "publishedAt": "2023-02-16T18:15:45Z"
+  },
+  {
+    "videoId": "IrWZvaFraTQ",
+    "title": "Trigger React Slider OnChange Event",
+    "description": "This video shows how to correctly trigger input of type range onChange events from Cypress tests. It also shows how to use \"blockHosts\" list to block all 3rd party scripts from loading on the page under test (like ads). The essential code to trigger onChange correctly in React apps is:\n\nconst valueSetter = Object.getOwnPropertyDescriptor(\n  window.HTMLInputElement.prototype,\n  'value',\n).set\n\ncy.get('#sliderContainer input[type=range]')\n  .should('have.value', 25)\n  .then(function ($slider) {\n    valueSetter.call($slider[0], 84)\n  })\n  .trigger('change')",
+    "publishedAt": "2023-02-16T16:27:20Z"
+  },
+  {
     "videoId": "G2GXHg4Ck00",
     "title": "Testing React Input With Type Range By Dispatching Events",
     "description": "In this video, I refactor a spec file that tries to control an input type=range element wrapped in a React component. To properly trigger the \"input\" event, I have to construct the event object. Since we have a lot of test command duplication, the last part of the video shows how to create a custom Cypress command \"setRange\". The final spec file:\nCypress.Commands.add(\n  'setRange',\n  { prevSubject: 'element' },\n  function (subject, value) {\n    subject.val(value)\n    subject[0].dispatchEvent(new Event('input', { bubbles: true }))\n    Cypress.log({\n      name: 'setRange',\n      message: value,\n    })\n  },\n)\n\ndescribe('test on the functioning of the estimator', function () {\n  beforeEach(function () {\n    cy.visit('/preventivatore')\n    cy.getByData('test').should('be.visible')\n  })\n\n  it('test on slide position preventivatore', function () {\n    cy.getByData('test').setRange(30)\n    cy.getByData('slide30').should('exist')\n    cy.getByData('test').setRange(50)\n\n    cy.getByData('slide50').should('exist')\n    cy.getByData('test').setRange(70)\n\n    cy.getByData('slide70').should('exist')\n    cy.getByData('test').setRange(90)\n\n    cy.getByData('slide90').should('exist')\n  })\n})",
