@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "edrZDaopi3U",
+    "title": "Find The Cells In The First Column Of The Second Table",
+    "description": "This video explains the difference between cy.get and cy.find commands and shows how to find the table cells in the first column of the second table. Find the full recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-02-27T13:43:53Z"
+  },
+  {
     "videoId": "eB9RqBmnN4I",
     "title": "Instant AWS Cognito Login Using cypress-data-session",
     "description": "This video shows how after AWS programmatic login which sets multiple localStorage keys, we can preserve and restore the localStorage object to instantly log in at the start of the next test. Uses https://github.com/bahmutov/cypress-data-session plugin to cache, validate, and restore the localStorage object. The original code was in https://github.com/muratkeremozcan/appsyncmasterclass-frontend",
