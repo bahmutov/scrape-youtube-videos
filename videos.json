@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "HVfHr8sC0jo",
+    "title": "Adjacent Sibling CSS Selector Combinator",
+    "description": "Imagine we need to find all TD elements that follow TH elements. We can use the \"Adjacent sibling combinator\" CSS selector \"+\" to do so.\nFind this example at https://glebbahmutov.com/cypress-examples\ncy.get('table tbody tr th+td')",
+    "publishedAt": "2023-02-27T16:24:21Z"
+  },
+  {
     "videoId": "edrZDaopi3U",
     "title": "Find The Cells In The First Column Of The Second Table",
     "description": "This video explains the difference between cy.get and cy.find commands and shows how to find the table cells in the first column of the second table. Find the full recipe at https://glebbahmutov.com/cypress-examples",
