@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "OmVzv6pJN6I",
+    "title": "Map Input Elements Values",
+    "description": "This recipe comes from https://glebbahmutov.com/cypress-examples and shows how we can get all \"input\" DOM elements, grab from each element the current value, and confirm the list of values using a single \"deep.equal\" assertion. Tip: use should(callback) or cypress-map queries to write retry-able code that works even if the form changes its values asynchronously. The source code at https://github.com/bahmutov/cypress-examples",
+    "publishedAt": "2023-03-02T16:30:32Z"
+  },
+  {
     "videoId": "HVfHr8sC0jo",
     "title": "Adjacent Sibling CSS Selector Combinator",
     "description": "Imagine we need to find all TD elements that follow TH elements. We can use the \"Adjacent sibling combinator\" CSS selector \"+\" to do so.\nFind this example at https://glebbahmutov.com/cypress-examples\ncy.get('table tbody tr th+td')",
