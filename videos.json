@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "MWY8gYdvyho",
+    "title": "Element Becomes Visible And Then Loads Text",
+    "description": "Imagine an element hidden in the DOM that becomes visible after 2 seconds, then loads the expected text after slightly longer than 2 seconds. You might write a single \"cy.get\" command with both assertions\ncy.get('#loader')\n  .should('be.visible')\n  .and('have.text', 'Username is Joe')\nUnfortunately, this might fail, since both assertions must pass with the same element. The first assertion might pass, but the second one might time out. There are two solutions to this: increase the command timeout is the first one\ncy.get('#loader', { timeout: 5_000 })\n  .should('be.visible')\n  .and('have.text', 'Username is Joe')\nThe alternative solution is to split the assertions and \"restart the clock\" by adding another \"cy.get\" command\ncy.get('#loader').should('be.visible')\ncy.get('#loader').should('have.text', 'Username is Joe')\nFind this recipe and many more at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-03-06T14:01:09Z"
+  },
+  {
     "videoId": "OmVzv6pJN6I",
     "title": "Map Input Elements Values",
     "description": "This recipe comes from https://glebbahmutov.com/cypress-examples and shows how we can get all \"input\" DOM elements, grab from each element the current value, and confirm the list of values using a single \"deep.equal\" assertion. Tip: use should(callback) or cypress-map queries to write retry-able code that works even if the form changes its values asynchronously. The source code at https://github.com/bahmutov/cypress-examples",
