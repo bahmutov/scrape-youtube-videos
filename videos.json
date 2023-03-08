@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "wouotQxvhA4",
+    "title": "Enabled Elements",
+    "description": "This video shows how find all enabled or disabled elements using jQuery \":enabled\" and \":disabled\" selectors. I also show how to map \"is enabled\" for a collection of DOM elements using plain Cypress code and cypress-map queries. Find the source code at https://glebbahmutov.com/cypress-examples/recipes/enabled-elements.html and cypress-map plugin at https://github.com/bahmutov/cypress-map",
+    "publishedAt": "2023-03-07T16:50:35Z"
+  },
+  {
     "videoId": "MWY8gYdvyho",
     "title": "Element Becomes Visible And Then Loads Text",
     "description": "Imagine an element hidden in the DOM that becomes visible after 2 seconds, then loads the expected text after slightly longer than 2 seconds. You might write a single \"cy.get\" command with both assertions\ncy.get('#loader')\n  .should('be.visible')\n  .and('have.text', 'Username is Joe')\nUnfortunately, this might fail, since both assertions must pass with the same element. The first assertion might pass, but the second one might time out. There are two solutions to this: increase the command timeout is the first one\ncy.get('#loader', { timeout: 5_000 })\n  .should('be.visible')\n  .and('have.text', 'Username is Joe')\nThe alternative solution is to split the assertions and \"restart the clock\" by adding another \"cy.get\" command\ncy.get('#loader').should('be.visible')\ncy.get('#loader').should('have.text', 'Username is Joe')\nFind this recipe and many more at https://glebbahmutov.com/cypress-examples",
