@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "sGL3K7frN_A",
+    "title": "New Cypress.io Course Announcement: Testing The Swag Store",
+    "description": "I am happy to announce the launching of my new Cypress.io beginners course \"Testing The Swag Store\" available at https://cypress.tips/courses. The course is a hands-on collection of lessons where you will try to implement a test starting with provided code and instructions. Each lesson has my solution and a video showing writing the solution. There are currently 18 lessons and new lessons are added daily. Some lessons are free allowing you to check out the course before subscribing.",
+    "publishedAt": "2023-03-09T22:36:15Z"
+  },
+  {
     "videoId": "wouotQxvhA4",
     "title": "Enabled Elements",
     "description": "This video shows how find all enabled or disabled elements using jQuery \":enabled\" and \":disabled\" selectors. I also show how to map \"is enabled\" for a collection of DOM elements using plain Cypress code and cypress-map queries. Find the source code at https://glebbahmutov.com/cypress-examples/recipes/enabled-elements.html and cypress-map plugin at https://github.com/bahmutov/cypress-map",
