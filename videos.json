@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "CvFZDStvUMQ",
+    "title": "Check Text And Then Close The 2nd Child Window From Cypress Test",
+    "description": "This video shows how Cypress can interact with a child window opened by the application. We confirm the child window has the expected text and then close the child window. Find the source code in repo https://github.com/bahmutov/second-window",
+    "publishedAt": "2023-03-13T19:55:12Z"
+  },
+  {
+    "videoId": "NO6Joky4hHE",
+    "title": "Clear Input Element Flake",
+    "description": "This video shows how the test can avoid a race condition trying to clear / type into an input field before the application sets the initial value on load. Find the full recipe at https://glebbahmutov.com/cypress-examples and below is the solution code\n// wait for the app to finish setting the initial value\n// which is different from the static attribute\ncy.get('#answer')\n  .should('have.attr', 'value')\n  .then(function (staticValue) {\n    cy.get('#answer')\n      .invoke('val')\n      .should('not.equal', staticValue)\n  })\n// now we can clear the input field safely\ncy.get('#answer').clear().type(42).should('have.value', 42)",
+    "publishedAt": "2023-03-13T18:14:37Z"
+  },
+  {
     "videoId": "sGL3K7frN_A",
     "title": "New Cypress.io Course Announcement: Testing The Swag Store",
     "description": "I am happy to announce the launching of my new Cypress.io beginners course \"Testing The Swag Store\" available at https://cypress.tips/courses. The course is a hands-on collection of lessons where you will try to implement a test starting with provided code and instructions. Each lesson has my solution and a video showing writing the solution. There are currently 18 lessons and new lessons are added daily. Some lessons are free allowing you to check out the course before subscribing.",
@@ -104,7 +116,7 @@
   {
     "videoId": "l28bRsZckB8",
     "title": "Test window.open Example",
-    "description": "Another example where we look at https://demoqa.com/browser-windows test page, find that it calls \"window.open\" when you click on a button, and test this page to confirm the parameters of that click using Cypress. For more, read https://glebbahmutov.com/blog/cypress-second-tab/ blog post",
+    "description": "Another example where we look at https://demoqa.com/browser-windows test page, find that it calls \"window.open\" when you click on a button, and test this page to confirm the parameters of that click using Cypress. Find the source code in the repo https://github.com/bahmutov/second-window For more, read https://glebbahmutov.com/blog/cypress-second-tab/ blog post.",
     "publishedAt": "2023-01-24T20:53:45Z"
   },
   {
