@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "Pxw7smb1Vyw",
+    "title": "Learn :has and :contains CSS Selectors",
+    "description": "Let's pick an LI element that has a badge element with specific text inside. We can achieve this by combining CSS selectors \":has\" and \":contains\" as this video explains. \ncy.get('li:has( .badge:contains(\"out of stock\") )')\nFind this recipe at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2023-03-16T13:48:09Z"
+  },
+  {
     "videoId": "4JTfJlehfiU",
     "title": "Fun With Cypress Query Commands And Asynchronous Functions",
     "description": "Typically, Cypress queries operate on a subject that is data: DOM elements, network call responses, and strings. But we can put anything into the subject, for example, we could put a function into the subject. We can even call the function, again and again, using Cypress built-in retries via cy.invoke command:\ncy.wrap(getRandomN) // subject is function \"getRandomN\"\n  .invoke('call') // subject is a number\n  .should('equal', 7)\nNow this is cool, but breaks if the function is asynchronous, since it returns a Promise, and cy.invoke _waits_ for the promise, but does not yield the resolved value (I know!) In this video, I show a little hack to put the resolved value back into the query chain and use it. I have a little query command cy.nsync that does that, and using it you can fetch something from the network until you get the expected response: all using built-in retries:\ncy.wrap(fetch)\n  .invoke('call', null, 'http://localhost:4200/random-digit')\n  .nsync()\n  .invoke('json')\n  .nsync()\n  .its('n')\n  .should('equal', 7)\nFind this example at https://glebbahmutov.com/cypress-examples/recipes/retry-ability.html Tip: in real projects, you should use https://github.com/bahmutov/cypress-recurse to retry Cypress commands until a condition passes",
