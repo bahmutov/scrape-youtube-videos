@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "je3EtXY807M",
+    "title": "Three Ways Of Checking If Element Becomes Visible",
+    "description": "This video shows cy.get command in combination with \"is visible\" assertion written in 3 different way in Cypress. Bonus: I also show how cy.click command has the visibility check with retries already built-in. \nFirst way (preferred): \ncy.get('#a-button').should('be.visible')\nSecond: \ncy.get('#a-button').should(function ($el) {\n  // note that the Command Log does not show much information\n  // for thrown errors while it retries\n  if (!Cypress.dom.isVisible($el)) {\n    throw new Error('Element is hidden')\n  }\n})\nThird:\ncy.get('#a-button').should('satisfy', Cypress.dom.isVisible)\nFind this example at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-03-18T23:21:55Z"
+  },
+  {
     "videoId": "Pxw7smb1Vyw",
     "title": "Learn :has and :contains CSS Selectors",
     "description": "Let's pick an LI element that has a badge element with specific text inside. We can achieve this by combining CSS selectors \":has\" and \":contains\" as this video explains. \ncy.get('li:has( .badge:contains(\"out of stock\") )')\nFind this recipe at https://glebbahmutov.com/cypress-examples/",
