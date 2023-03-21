@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "TbpGqsmUiBk",
+    "title": "Get And Set Multiple Elements Attributes",
+    "description": "This video shows how to get the same HTML attribute from multiple elements in Cypress tests:\n- jQuery \"attr\" method returns the value of the attribute from the first element only\n- you can invoke the DOM getAttribute method on each DOM element to get the values (use my cypress-map plugin)\n- to set the same attribute value, use jQuery attr(name, value) call or attr(name, callback)\nFind this recipe at https://glebbahmutov.com/cypress-examples/ site",
+    "publishedAt": "2023-03-19T21:12:35Z"
+  },
+  {
     "videoId": "je3EtXY807M",
     "title": "Three Ways Of Checking If Element Becomes Visible",
     "description": "This video shows cy.get command in combination with \"is visible\" assertion written in 3 different way in Cypress. Bonus: I also show how cy.click command has the visibility check with retries already built-in. \nFirst way (preferred): \ncy.get('#a-button').should('be.visible')\nSecond: \ncy.get('#a-button').should(function ($el) {\n  // note that the Command Log does not show much information\n  // for thrown errors while it retries\n  if (!Cypress.dom.isVisible($el)) {\n    throw new Error('Element is hidden')\n  }\n})\nThird:\ncy.get('#a-button').should('satisfy', Cypress.dom.isVisible)\nFind this example at https://glebbahmutov.com/cypress-examples",
