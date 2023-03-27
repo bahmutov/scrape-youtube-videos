@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "xQ5HRmzxEkQ",
+    "title": "Minimatch Unit Tests Inside Cypress",
+    "description": "You can invoke and call functions in Cypress to write unit tests and show the arguments and results in the Cypress Command Log. For example, to confirm how Cypress.minimatch works\ncy.wrap(Cypress, { log: false })\n  .invoke('minimatch', '/path/to/file.js', 'to/*.js')\n  .should('be.false')\ncy.wrap(Cypress, { log: false })\n  .invoke('minimatch', '/path/to/file.js', '**/to/*.js')\n  .should('be.true')\nYou can invoke a function without an object\ncy.wrap(Cypress.minimatch, { log: false })\n  .invokeOnce(\n    'call',\n    // the first argument is the \"this\" object value\n    // which we do not use anyway\n    null,\n    '/path/to/file.js',\n    '/path/**/*.{js,ts}',\n  )\n  .should('be.true')\nFind this example at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-03-26T15:19:36Z"
+  },
+  {
     "videoId": "TbpGqsmUiBk",
     "title": "Get And Set Multiple Elements Attributes",
     "description": "This video shows how to get the same HTML attribute from multiple elements in Cypress tests:\n- jQuery \"attr\" method returns the value of the attribute from the first element only\n- you can invoke the DOM getAttribute method on each DOM element to get the values (use my cypress-map plugin)\n- to set the same attribute value, use jQuery attr(name, value) call or attr(name, callback)\nFind this recipe at https://glebbahmutov.com/cypress-examples/ site",
