@@ -1,5 +1,17 @@
 [
   {
+    "videoId": "KRhpi2whppA",
+    "title": "Negative Assertions",
+    "description": "This video shows what to watch out for when writing negative Cypress assertions like \"cy.get(...).should('not.exist')\". Find this recipe at https://glebbahmutov.com/cypress-examples/ and read the blog posts https://glebbahmutov.com/blog/negative-assertions/ and https://glebbahmutov.com/blog/negative-assertions-and-missing-states/",
+    "publishedAt": "2023-03-28T17:15:20Z"
+  },
+  {
+    "videoId": "A54BmxosAzI",
+    "title": "Check CSS Color Using jQuery-Chai Assertion \"have.css\"",
+    "description": "You can check the declared CSS style property using the assertion \"have.css\" that is bundled with Cypress (the assertion comes from jQuery-Chai assertion plugin). For example, to check if the element turns red after some time: \ncy.get('selector').should('have.css', 'color', 'rgb(255, 0, 0)')\nFind this recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-03-28T16:53:39Z"
+  },
+  {
     "videoId": "xQ5HRmzxEkQ",
     "title": "Minimatch Unit Tests Inside Cypress",
     "description": "You can invoke and call functions in Cypress to write unit tests and show the arguments and results in the Cypress Command Log. For example, to confirm how Cypress.minimatch works\ncy.wrap(Cypress, { log: false })\n  .invoke('minimatch', '/path/to/file.js', 'to/*.js')\n  .should('be.false')\ncy.wrap(Cypress, { log: false })\n  .invoke('minimatch', '/path/to/file.js', '**/to/*.js')\n  .should('be.true')\nYou can invoke a function without an object\ncy.wrap(Cypress.minimatch, { log: false })\n  .invokeOnce(\n    'call',\n    // the first argument is the \"this\" object value\n    // which we do not use anyway\n    null,\n    '/path/to/file.js',\n    '/path/**/*.{js,ts}',\n  )\n  .should('be.true')\nFind this example at https://glebbahmutov.com/cypress-examples",
