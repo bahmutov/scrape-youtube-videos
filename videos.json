@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "X0uiViQoAO0",
+    "title": "Select Invalid Option",
+    "description": "This video shows how we can reach the error handling code by modifying the page before selecting an invalid option from a SELECT HTML element. Find this recipe at http://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2023-03-30T17:59:33Z"
+  },
+  {
     "videoId": "KRhpi2whppA",
     "title": "Negative Assertions",
     "description": "This video shows what to watch out for when writing negative Cypress assertions like \"cy.get(...).should('not.exist')\". Find this recipe at https://glebbahmutov.com/cypress-examples/ and read the blog posts https://glebbahmutov.com/blog/negative-assertions/ and https://glebbahmutov.com/blog/negative-assertions-and-missing-states/",
