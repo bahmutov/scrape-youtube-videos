@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "kkI2smDVlqo",
+    "title": "Test Microsoft FAST Design Library Select Web Component",
+    "description": "This video shows a quick end-to-end test for a Select component from the Microsoft Web UI design library called FAST. The example component is available at https://explore.fast.design/components/fast-select and the full source code for this video can be found at https://github.com/bahmutov/cypress-fast-example",
+    "publishedAt": "2023-04-05T18:00:19Z"
+  },
+  {
     "videoId": "X0uiViQoAO0",
     "title": "Select Invalid Option",
     "description": "This video shows how we can reach the error handling code by modifying the page before selecting an invalid option from a SELECT HTML element. Find this recipe at http://glebbahmutov.com/cypress-examples/",
