@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "l1XIn0TopQg",
+    "title": "Cypress Hook And Aliases Example",
+    "description": "This video refactors getting numerical inputs and confirming the correct sum is shown on the page. The final solution uses \"beforeEach\" hook and aliases to make the tests as readable as possible. Find the code at https://github.com/bahmutov/cypress-multiple-aliases\nbeforeEach(function () {\n  cy.visit('public/index.html')\n  cy.get('[name=a]')\n    .should('have.prop', 'valueAsNumber')\n    .as('a')\n    // log the number to the Command Log\n    .should('be.finite')\n  cy.get('[name=b]')\n    .should('have.prop', 'valueAsNumber')\n    .as('b')\n    .should('be.finite')\n})\n\nit('has values set', function () {\n  cy.contains('#result', this.a + this.b)\n})",
+    "publishedAt": "2023-04-12T17:26:54Z"
+  },
+  {
     "videoId": "t8BSY2czges",
     "title": "Confirm All HTML data- Attributes At Once By Using The dataset Property",
     "description": "If you have multiple \"data-...\" attributes on your HTML element, you can grab them all using the \"dataset\" property. This property has all camel-cased string values. If you want to confirm the entire set, you first convert it into a plain object and then use \"deep.equal\" assertion\ncy.get('article#electric-cars')\n  .should('have.prop', 'dataset')\n  .then(JSON.stringify)\n  .then(JSON.parse)\n  .should('deep.include', {\n    columns: '3',\n    indexNumber: '12314',\n  })\nThis recipe is at http://glebbahmutov.com/cypress-examples/",
