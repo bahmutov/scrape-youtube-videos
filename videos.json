@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "ODkNYjf1hbs",
+    "title": "Lesser Known Chai Assertions Like Satisfy A Predicate",
+    "description": "There are lots of built-in Chai assertions that are almost unknown. This video shows one such example \"should satisfy a predicate\" assertion. For example, if we want to confirm the number of elements is even, we could write\nfunction isEven(num) {\n  return num % 2 === 0\n}\ncy.get('#people li')\n  .its('length')\n  .should('satisfy', isEven, 'number of people should be even')\nThis example comes from my site https://glebbahmutov.com/cypress-examples/recipes/lesser-known-chai-assertions.html",
+    "publishedAt": "2023-04-17T21:28:31Z"
+  },
+  {
     "videoId": "l1XIn0TopQg",
     "title": "Cypress Hook And Aliases Example",
     "description": "This video refactors getting numerical inputs and confirming the correct sum is shown on the page. The final solution uses \"beforeEach\" hook and aliases to make the tests as readable as possible. Find the code at https://github.com/bahmutov/cypress-multiple-aliases\nbeforeEach(function () {\n  cy.visit('public/index.html')\n  cy.get('[name=a]')\n    .should('have.prop', 'valueAsNumber')\n    .as('a')\n    // log the number to the Command Log\n    .should('be.finite')\n  cy.get('[name=b]')\n    .should('have.prop', 'valueAsNumber')\n    .as('b')\n    .should('be.finite')\n})\n\nit('has values set', function () {\n  cy.contains('#result', this.a + this.b)\n})",
