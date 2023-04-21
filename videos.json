@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "bwMFsmWM4fM",
+    "title": "Empty And Non-empty Elements On The Page",
+    "description": "We can find all empty elements on the page or its parts using \":empty\" CSS selector. Empty elements have no children elements and no text inside. We can also find all non-empty elements by combining \":not(:empty)\" selectors. Here is an example from https://glebbahmutov.com/cypress-examples recipe:\n\n// find all elements using wildcard selector\ncy.get('*').should('have.length', 7)\n// find all empty elements and confirm their node names\ncy.get(':empty').should('have.length', 2)\n  // cy.map comes from https://github.com/bahmutov/cypress-map\n  .map('nodeName')\n .should('deep.equal', [...])\n// find all non-empty elements\ncy.get(':not(:empty)').should('have.length', 5)",
+    "publishedAt": "2023-04-20T14:37:20Z"
+  },
+  {
     "videoId": "ODkNYjf1hbs",
     "title": "Lesser Known Chai Assertions Like Satisfy A Predicate",
     "description": "There are lots of built-in Chai assertions that are almost unknown. This video shows one such example \"should satisfy a predicate\" assertion. For example, if we want to confirm the number of elements is even, we could write\nfunction isEven(num) {\n  return num % 2 === 0\n}\ncy.get('#people li')\n  .its('length')\n  .should('satisfy', isEven, 'number of people should be even')\nThis example comes from my site https://glebbahmutov.com/cypress-examples/recipes/lesser-known-chai-assertions.html",
