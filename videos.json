@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "I-Wh-3HTwZY",
+    "title": "Cypress TodoMVC Questions Answered",
+    "description": "In this video, I answer 4 questions asked about testing TodoMVC application\n- the Todo item selector\n- asserting the number shown\n- confirm text from multiple items\n- confirming the text\nSee the full source code in the blog post https://glebbahmutov.com/blog/cypress-todomvc-questions/\nFor more, see examples in https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2023-04-24T20:14:48Z"
+  },
+  {
     "videoId": "bwMFsmWM4fM",
     "title": "Empty And Non-empty Elements On The Page",
     "description": "We can find all empty elements on the page or its parts using \":empty\" CSS selector. Empty elements have no children elements and no text inside. We can also find all non-empty elements by combining \":not(:empty)\" selectors. Here is an example from https://glebbahmutov.com/cypress-examples recipe:\n\n// find all elements using wildcard selector\ncy.get('*').should('have.length', 7)\n// find all empty elements and confirm their node names\ncy.get(':empty').should('have.length', 2)\n  // cy.map comes from https://github.com/bahmutov/cypress-map\n  .map('nodeName')\n .should('deep.equal', [...])\n// find all non-empty elements\ncy.get(':not(:empty)').should('have.length', 5)",
