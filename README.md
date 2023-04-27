@@ -1,4 +1,4 @@
-# scrape-youtube-videos [![scrape](https://github.com/bahmutov/scrape-youtube-videos/actions/workflows/scrape.yml/badge.svg?branch=main)](https://github.com/bahmutov/scrape-youtube-videos/actions/workflows/scrape.yml)
+# scrape-youtube-videos [![scrape](https://github.com/bahmutov/scrape-youtube-videos/actions/workflows/scrape.yml/badge.svg?branch=main)](https://github.com/bahmutov/scrape-youtube-videos/actions/workflows/scrape.yml) [![main](https://github.com/bahmutov/scrape-youtube-videos/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/bahmutov/scrape-youtube-videos/actions/workflows/main.yml)
 
 > Scrape YouTube playlist into Algolia index
 

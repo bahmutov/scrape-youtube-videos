@@ -11,12 +11,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      # https://github.com/cypress-io/github-action
+      # https://github.com/bahmutov/npm-install
       - name: Install dependencies
-        uses: cypress-io/github-action@v5
-        with:
-          # just perform install
-          runTests: false
+        uses: bahmutov/npm-install@v1
 
       # https://github.com/cycjimmy/semantic-release-action
       - name: Semantic Release
