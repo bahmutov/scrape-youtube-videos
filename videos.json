@@ -1,5 +1,11 @@
 [
   {
+    "videoId": "n-cHJ6tNOKk",
+    "title": "Compute And Compare SHA-256 From HTML",
+    "description": "In this video, I show how to use the browser's built-in crypto module to compute SHA-256 hash code from the element's HTML text. We can even make it into a reusable child command. Find the full source code in the SHA recipe at http://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2023-04-26T17:27:58Z"
+  },
+  {
     "videoId": "I-Wh-3HTwZY",
     "title": "Cypress TodoMVC Questions Answered",
     "description": "In this video, I answer 4 questions asked about testing TodoMVC application\n- the Todo item selector\n- asserting the number shown\n- confirm text from multiple items\n- confirming the text\nSee the full source code in the blog post https://glebbahmutov.com/blog/cypress-todomvc-questions/\nFor more, see examples in https://glebbahmutov.com/cypress-examples/",
