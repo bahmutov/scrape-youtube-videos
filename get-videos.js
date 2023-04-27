@@ -52,19 +52,25 @@ async function listVideos() {
   }
 
   console.log('total have %d video(s)', videos.length)
-  const list = videos.filter(isPublicVideo).map((video, k) => {
-    if (k < 3) {
-      debug('video %d', k)
-      debug('%o', video)
-    }
+  const list = videos
+    .filter(isPublicVideo)
+    // slice just for testing and debugging
+    // .slice(0, 2)
+    .map((video, k) => {
+      if (k < 3) {
+        debug('video %d', k)
+        debug('%o', video)
+      }
 
-    return {
-      videoId: video.snippet.resourceId.videoId,
-      title: video.snippet.title,
-      description: video.snippet.description,
-      publishedAt: video.snippet.publishedAt,
-    }
-  })
+      const videoId = video.snippet.resourceId.videoId
+      return {
+        videoId,
+        title: video.snippet.title,
+        description: video.snippet.description,
+        publishedAt: video.snippet.publishedAt,
+        url: `https://youtu.be/${videoId}`,
+      }
+    })
 
   return list
 }
