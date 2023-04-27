@@ -26,7 +26,7 @@ jobs:
       - name: Grab videos 📺
         id: grab
         run: |
-          node ./get-videos
+          node ./bin/get-videos
 
           git status --porcelain videos.json
 

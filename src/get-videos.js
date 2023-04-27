@@ -75,10 +75,16 @@ async function listVideos() {
   return list
 }
 
-listVideos().then((list) => {
-  console.log('filtered list with %d video(s)', list.length)
-  // save the list to a file for later use
-  const filename = 'videos.json'
-  fs.writeFileSync(filename, JSON.stringify(list, null, 2) + '\n')
-  console.log('saved file %s', filename)
-}, console.error)
+function getPlaylistVideos(filename) {
+  return listVideos().then((list) => {
+    console.log('filtered list with %d video(s)', list.length)
+    if (filename) {
+      // save the list to a file for later use
+      fs.writeFileSync(filename, JSON.stringify(list, null, 2) + '\n')
+      console.log('saved file %s', filename)
+    }
+    return list
+  }, console.error)
+}
+
+module.exports = { getPlaylistVideos }

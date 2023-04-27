@@ -6,7 +6,7 @@
 
 ```shell
 # get the list of YouTube videos from my playlist
-$ as-a . node ./get-videos
+$ as-a . node ./bin/get-videos
 # saves the videos into "videos.json" file
 # make and upload records to Algolia
 $ as-a . node ./upload-to-algolia.js
