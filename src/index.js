@@ -1,3 +1,3 @@
-const { getPlaylistVideos } = require('./get-videos')
+const { getPlaylistVideos, cypressTipsPlaylistUrl } = require('./get-videos')
 
-module.exports = { getPlaylistVideos }
+module.exports = { getPlaylistVideos, cypressTipsPlaylistUrl }

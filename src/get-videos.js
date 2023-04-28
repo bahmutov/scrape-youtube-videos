@@ -13,6 +13,9 @@ if (!process.env.GOOGLE_API_KEY) {
 const playlistId = 'PLP9o9QNnQuAYYRpJzDNWpeuOVTwxmIxcI'
 debug('scraping playlist %s', playlistId)
 
+const cypressTipsPlaylistUrl =
+  'https://www.youtube.com/playlist?list=' + playlistId
+
 const g = require('@googleapis/youtube')
 const youtube = g.youtube({
   version: 'v3',
@@ -87,4 +90,4 @@ function getPlaylistVideos(filename) {
   }, console.error)
 }
 
-module.exports = { getPlaylistVideos }
+module.exports = { getPlaylistVideos, cypressTipsPlaylistUrl }
