@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "NIM068CdnbU",
+    "title": "Find The Table Row With The Given Text And Print Its Index",
+    "description": "Let's write a short test that finds a table row with text. If the text is not there, the test fails. If the text is present, we get the index of the row by invoking the jQuery \"index\" method and using cy.log or cy.print to print it to the Command Log.\ncy.contains('tr', 'Charles')\n  .invoke('index')\n  // cypress-map\n  .print('Found row %d')\nFind this example at http://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2023-05-08T11:55:26Z",
+    "url": "https://youtu.be/NIM068CdnbU"
+  },
+  {
     "videoId": "V24_8oGXwy8",
     "title": "Use cy.wrap Command To Wrap Promises In Your Cypress Tests",
     "description": "You can use cy.wrap command to make Cypress test wait for the promise to. resolve: cy.wrap(Promise.resolve(42)).should('equal', 42) You can even wait for multiple promises by wrapping the \"Promise.all([p1, p2, ...])\" array. The resolved values become the subject of the Cypress command chain. See the full recipe at http://glebbahmutov.com/cypress-examples/ and read the blog post \"The Zen Of Cypress Data Setup\" https://glebbahmutov.com/blog/setup-cypress-data/",
