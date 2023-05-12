@@ -1,5 +1,19 @@
 [
   {
+    "videoId": "Ym3t8FXQxis",
+    "title": "Use The Current Cypress Test Title",
+    "description": "In Cypress you can get the current test title or the full title with its parent suite names included using the \"Cypress.currentTest\" object. For example, you can normalize the name to use as the data in the test itself:\n// normalize the full test title to remove characters\n// and maybe make it into a single string like \"foo-bar-baz-...\"\nconst title = Cypress._.kebabCase(\n  Cypress._.deburr(Cypress.currentTest.titlePath.join(' '))\n)\nThis example comes from https://github.com/bahmutov/cypress-workshop-basics",
+    "publishedAt": "2023-05-11T17:50:16Z",
+    "url": "https://youtu.be/Ym3t8FXQxis"
+  },
+  {
+    "videoId": "2rn3fsR8xp0",
+    "title": "Cypress Asynchronous Unit Tests Using Sinon.js And Chai",
+    "description": "This video shows how to code an asynchronous unit test that runs in the browser. While the test does not use Cypress commands, it uses Sinon.js and Chai libraries bundled with Cypress. Find the full code at https://github.com/bahmutov/cypress-recurse Tip: you can use the \"retry\" function from cypress-recurse to retry functions in the browser or Node code. Please read the blog post https://glebbahmutov.com/blog/cypress-twilio/ to see the \"retry\" function in the real-world example.\n\nconst fn = getTo(3, 500)\nconst log = Cypress.sinon.stub()\n\n// call fn until it returns value 3?\nconst result = await retry(fn, function (n) { return n === 3 }, {\n  log,\n  limit: 5,\n})\nexpect(result, 'result').to.equal(3)\nexpect(log, 'log spy').to.be.calledThrice\nexpect(log.firstCall.args).to.deep.equal([\n  {\n    attempt: 1,\n    limit: 5,\n    value: 1,\n    successful: false,\n  },\n])\nexpect(log.secondCall.args).to.deep.equal([\n  {\n    attempt: 2,\n    limit: 5,\n    value: 2,\n    successful: false,\n  },\n])\nexpect(log.thirdCall.args).to.deep.equal([\n  {\n    attempt: 3,\n    limit: 5,\n    value: 3,\n    successful: true,\n  },\n])",
+    "publishedAt": "2023-05-11T14:24:06Z",
+    "url": "https://youtu.be/2rn3fsR8xp0"
+  },
+  {
     "videoId": "NIM068CdnbU",
     "title": "Find The Table Row With The Given Text And Print Its Index",
     "description": "Let's write a short test that finds a table row with text. If the text is not there, the test fails. If the text is present, we get the index of the row by invoking the jQuery \"index\" method and using cy.log or cy.print to print it to the Command Log.\ncy.contains('tr', 'Charles')\n  .invoke('index')\n  // cypress-map\n  .print('Found row %d')\nFind this example at http://glebbahmutov.com/cypress-examples/",
