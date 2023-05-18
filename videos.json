@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "B_oOHtuUJwc",
+    "title": "Go To The Previous Page While Possible Using cypress-recurse",
+    "description": "This video shows the answer to https://github.com/bahmutov/cypress-recurse/issues/174 I show how to visit the page, navigate using \"Next\" links, then go back to the very first page using cypress-recurse commands. We click \"Prev\" links until the link is not found. Find the initial and solved code in the repo https://github.com/bahmutov/test-prev-button",
+    "publishedAt": "2023-05-17T14:37:22Z",
+    "url": "https://youtu.be/B_oOHtuUJwc"
+  },
+  {
     "videoId": "Ym3t8FXQxis",
     "title": "Use The Current Cypress Test Title",
     "description": "In Cypress you can get the current test title or the full title with its parent suite names included using the \"Cypress.currentTest\" object. For example, you can normalize the name to use as the data in the test itself:\n// normalize the full test title to remove characters\n// and maybe make it into a single string like \"foo-bar-baz-...\"\nconst title = Cypress._.kebabCase(\n  Cypress._.deburr(Cypress.currentTest.titlePath.join(' '))\n)\nThis example comes from https://github.com/bahmutov/cypress-workshop-basics",
