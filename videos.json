@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "xvvL3GRjXCY",
+    "title": "Pick A Random Menu Link",
+    "description": "This video shows how to pick a random menu navigation link and click on it and check if we are navigating to the page. \ncy.contains('main', 'Index page')\n// cy.sample comes from cypress-map plugin\ncy.get('nav a').sample().click()\ncy.location('pathname').should(\n  'match',\n  /\\/menu\\/[a-d]\\/index\\.html/,\n)\nIf you cannot use cypress-map plugin, you can still pick a random element using the following code:\ncy.get('nav a')\n  .then(function ($a) {\n      return Cypress._.sample($a.toArray())\n   })\n  .click()\nFind this code in https://github.com/bahmutov/cypress-recurse repo. Find more exercises in my Cypress Plugins course https://cypress.tips/courses/cypress-plugins",
+    "publishedAt": "2023-05-18T16:01:24Z",
+    "url": "https://youtu.be/xvvL3GRjXCY"
+  },
+  {
     "videoId": "B_oOHtuUJwc",
     "title": "Go To The Previous Page While Possible Using cypress-recurse",
     "description": "This video shows the answer to https://github.com/bahmutov/cypress-recurse/issues/174 I show how to visit the page, navigate using \"Next\" links, then go back to the very first page using cypress-recurse commands. We click \"Prev\" links until the link is not found. Find the initial and solved code in the repo https://github.com/bahmutov/test-prev-button",
