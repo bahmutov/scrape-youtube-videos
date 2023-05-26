@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "xvImOlCSul4",
+    "title": "Confirm The Same Text In A Couple Of Elements",
+    "description": "You can confirm two elements on the page have the same text:\ncy.get('h2#one')\n  .invoke('text')\n  .then(function (text) {\n    cy.contains('#subject', text)\n  })\nRemember: any time you get something from the page, you must use the value inside \"cy.then(callback)\" function\nIf you have more than two elements, it works the same way. For example, let's pick a random SELECT option and then confirm the text is shown in two places:\ncy.get('#fruit option')\n  .should('have.length.greaterThan', 2)\n  .mapInvoke('getAttribute', 'value')\n  .print()\n  .sample()\n  .print('picked %o')\n  .then(function (name) {\n    cy.get('#fruit').select(name)\n    cy.contains('#selected-fruit', name)\n    cy.contains('#name', name)\n  })\nNote: commands cy.mapInvoke, cy.print, cy.sample come from https://github.com/bahmutov/cypress-map plugin. \nFind this recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-05-25T14:43:15Z",
+    "url": "https://youtu.be/xvImOlCSul4"
+  },
+  {
     "videoId": "xvvL3GRjXCY",
     "title": "Pick A Random Menu Link",
     "description": "This video shows how to pick a random menu navigation link and click on it and check if we are navigating to the page. \ncy.contains('main', 'Index page')\n// cy.sample comes from cypress-map plugin\ncy.get('nav a').sample().click()\ncy.location('pathname').should(\n  'match',\n  /\\/menu\\/[a-d]\\/index\\.html/,\n)\nIf you cannot use cypress-map plugin, you can still pick a random element using the following code:\ncy.get('nav a')\n  .then(function ($a) {\n      return Cypress._.sample($a.toArray())\n   })\n  .click()\nFind this code in https://github.com/bahmutov/cypress-recurse repo. Find more exercises in my Cypress Plugins course https://cypress.tips/courses/cypress-plugins (see the lesson \"Lesson i8: Randomly pick a menu\")",
