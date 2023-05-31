@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "hLHYacIUO9I",
+    "title": "Built-in Existence Assertion",
+    "description": "Cypress querying commands like cy.get, cy.find, cy.contains have a built-in existence assertion. The following commands are equivalent:\ncy.get('selector').should('exist')\n// same as\ncy.get('selector')\nIf you are not sure if the element is there or not, you can disable the built-in existence assertion by providing your own \"should(callback)\" \n\ncy.get('#parentz').should(function ($el) {\n  if ($el && $el.length) {\n    expect($el.text()).to.equal('Hello')\n  }\n})\n\nFind this example at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-05-30T14:07:42Z",
+    "url": "https://youtu.be/hLHYacIUO9I"
+  },
+  {
     "videoId": "6iQZhtXSag8",
     "title": "Simplify Sum Of Numbers Example To Avoid Callback Pyramid Of Doom",
     "description": "This example shows using custom query commands and aliases to simplify a pyramid of cy.then callbacks. The final solution is short and sweet and can be found at https://glebbahmutov.com/cypress-examples\nCypress.Commands.addQuery('lastNumber', function () {\n  const regex = /\\d+$/g\n  return function ($el) {\n    return parseInt($el.text().match(regex).pop())\n  }\n})\n// last digits of the string\ncy.get('#counts').lastNumber().as('all')\n\n// show drafts\ncy.get('input#draft').check()\ncy.get('#counts').lastNumber().as('draft')\n\n// show published\ncy.get('input#published').check()\ncy.get('#counts')\n  .lastNumber()\n  .then(function (published) {\n    expect(this.draft + published, 'draft + published').to.equal(\n      this.all,\n    )\n  })",
