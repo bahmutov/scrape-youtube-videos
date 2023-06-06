@@ -1,5 +1,19 @@
 [
   {
+    "videoId": "nDXAaWdj6tw",
+    "title": "cy.contains And Regular Expressions Examples",
+    "description": "You can use the versatile cy.contains command to find elements on the page by text. You can also:\n- ignore the text case using \"matchCase: false\" option\n- use regular expressions\n- construct a regular expression if the string to find comes from a variable\nFor example:\nconst value = 'hello'\nconst regex = new RegExp('^' + value, 'i')\ncy.contains('#greeting', regex)\nFind this and many more examples at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-06-05T14:05:50Z",
+    "url": "https://youtu.be/nDXAaWdj6tw"
+  },
+  {
+    "videoId": "QkwYEQmf-VI",
+    "title": "Find Table Column Index",
+    "description": "You can find the index of a DOM element among its siblings. For example, to confirm that the \"Age\" column is the third column of the table, you can invoke the jQuery \"index\" method and confirm the yielded value\ncy.contains('table thead th', 'Age')\n  .invoke('index')\n  .should('equal', 3)\nFind this example and many more at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-06-04T16:52:03Z",
+    "url": "https://youtu.be/QkwYEQmf-VI"
+  },
+  {
     "videoId": "hLHYacIUO9I",
     "title": "Built-in Existence Assertion",
     "description": "Cypress querying commands like cy.get, cy.find, cy.contains have a built-in existence assertion. The following commands are equivalent:\ncy.get('selector').should('exist')\n// same as\ncy.get('selector')\nIf you are not sure if the element is there or not, you can disable the built-in existence assertion by providing your own \"should(callback)\" \n\ncy.get('#parentz').should(function ($el) {\n  if ($el && $el.length) {\n    expect($el.text()).to.equal('Hello')\n  }\n})\n\nFind this example at https://glebbahmutov.com/cypress-examples",
