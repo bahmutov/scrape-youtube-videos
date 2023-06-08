@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "iX5EKZtKKvQ",
+    "title": "Add Cypress AUTWindow Properties",
+    "description": "In this video, I show how to set the TypeScript properties for the application's window during Cypress tests. For example, you might need to pass something to the application from a Cypress test, but TS would complain that the property \"window.foo\" is invalid. By setting the \"foo\" property in the interface Cypress.AUTWindow you can let your TS compiler know about the optional property \"foo\" used by the test. This lesson comes from my course \"Testing The Swag Store\" https://cypress.tips/courses/swag-store",
+    "publishedAt": "2023-06-06T16:17:58Z",
+    "url": "https://youtu.be/iX5EKZtKKvQ"
+  },
+  {
     "videoId": "nDXAaWdj6tw",
     "title": "cy.contains And Regular Expressions Examples",
     "description": "You can use the versatile cy.contains command to find elements on the page by text. You can also:\n- ignore the text case using \"matchCase: false\" option\n- use regular expressions\n- construct a regular expression if the string to find comes from a variable\nFor example:\nconst value = 'hello'\nconst regex = new RegExp('^' + value, 'i')\ncy.contains('#greeting', regex)\nFind this and many more examples at https://glebbahmutov.com/cypress-examples",
