@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "bxUqLri-ywI",
+    "title": "Search My Cypress Courses",
+    "description": "I have finally scraped all my courses and added a search widget to https://cypress.tips/search and https://cypress.tips/courses pages that lets you search them. You can find any lesson, even from the courses you are not enrolled in yet.",
+    "publishedAt": "2023-06-08T14:57:19Z",
+    "url": "https://youtu.be/bxUqLri-ywI"
+  },
+  {
     "videoId": "iX5EKZtKKvQ",
     "title": "Add Cypress AUTWindow Properties",
     "description": "In this video, I show how to set the TypeScript properties for the application's window during Cypress tests. For example, you might need to pass something to the application from a Cypress test, but TS would complain that the property \"window.foo\" is invalid. By setting the \"foo\" property in the interface Cypress.AUTWindow you can let your TS compiler know about the optional property \"foo\" used by the test. This lesson comes from my course \"Testing The Swag Store\" https://cypress.tips/courses/swag-store",
