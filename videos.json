@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "rFUf7xdtt-I",
+    "title": "Cypress Component Testing Vs RTL and MSW: The Missing Comparison Part",
+    "description": "This video shows Murat Ozcan's \"Cypress Component Testing vs React Test Library - the complete comparison\" blog post (https://dev.to/muratkeremozcan/cypress-component-testing-vs-react-test-library-the-complete-comparison-28gn) and shows what I think is the most important part of comparing the two approaches for testing React components: the developer experience. Jest (with RTL) use the terminal JSDom, while Cypress gives you the real browser with time traveling debugger, making debugging errors so so so much simpler in Cypress. The test component examples come from the repo https://github.com/muratkeremozcan/tour-of-heroes-react-vite-cypress-ts For more, read my blog post https://glebbahmutov.com/blog/my-vision-for-component-tests/",
+    "publishedAt": "2023-06-09T20:23:08Z",
+    "url": "https://youtu.be/rFUf7xdtt-I"
+  },
+  {
     "videoId": "bxUqLri-ywI",
     "title": "Search My Cypress Courses",
     "description": "I have finally scraped all my courses and added a search widget to https://cypress.tips/search and https://cypress.tips/courses pages that lets you search them. You can find any lesson, even from the courses you are not enrolled in yet.",
