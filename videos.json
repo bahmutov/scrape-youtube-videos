@@ -1,5 +1,19 @@
 [
   {
+    "videoId": "_rlsKq6YscQ",
+    "title": "Store Values Using Should Callback Function",
+    "description": "Cypress retries querying commands like cy.contains and cy.get. You can attach assertions to the command to retry the command until the assertion passes: cy.get('#output').should('have.text', '42') You can even have \".should(callback)\" to write your own logic to check the current subject element. For example, you could store all values you see during retries and then later validate the seen values:\ncy.log('**shows 5 messages**')\nconst messages = new Set()\ncy.contains('button', 'Start').click()\ncy.get('#output').should(function ($el) {\n  const text = $el.text()\n  messages.add(text)\n  expect(text).to.equal('42')\n})\ncy.wrap(messages).then(Array.from).should('have.length.gte', 5)\nFind this recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-06-12T20:34:05Z",
+    "url": "https://youtu.be/_rlsKq6YscQ"
+  },
+  {
+    "videoId": "6vw47x6Nqc0",
+    "title": "Check N Checkboxes",
+    "description": "This video shows how to check multiple checkboxes and how to validate the number of checked and clear boxes in your Cypress tests\n// there are no checked boxes at first\ncy.get('input[type=checkbox]:checked').should('have.length', 0)\nconst n = Cypress._.random(1, 5)\ncy.log(`checking the first ${n} boxes`)\nfor (let k = 0; k less than n; k += 1) {\n  cy.get('input[type=checkbox]').eq(k).check()\n}\ncy.get('input[type=checkbox]:checked').should('have.length', n)\n// clear boxes\ncy.get('input[type=checkbox]:not(:checked)').should(\n  'have.length',\n  5 - n,\n)\nFind this recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-06-12T19:53:14Z",
+    "url": "https://youtu.be/6vw47x6Nqc0"
+  },
+  {
     "videoId": "rFUf7xdtt-I",
     "title": "Cypress Component Testing Vs RTL and MSW: The Missing Comparison Part",
     "description": "This video shows Murat Ozcan's \"Cypress Component Testing vs React Test Library - the complete comparison\" blog post (https://dev.to/muratkeremozcan/cypress-component-testing-vs-react-test-library-the-complete-comparison-28gn) and shows what I think is the most important part of comparing the two approaches for testing React components: the developer experience. Jest (with RTL) use the terminal JSDom, while Cypress gives you the real browser with time traveling debugger, making debugging errors so so so much simpler in Cypress. The test component examples come from the repo https://github.com/muratkeremozcan/tour-of-heroes-react-vite-cypress-ts For more, read my blog post https://glebbahmutov.com/blog/my-vision-for-component-tests/",
