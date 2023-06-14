@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "ZslHKPtwIhA",
+    "title": "Spying On The Console Log Method",
+    "description": "We can spy on the console.log calls the application makes. We can even confirm that event listeners registered using \"once: true\" option in fact fire only for the first user event and do not fire after that. Find the full source code at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-06-13T15:31:15Z",
+    "url": "https://youtu.be/ZslHKPtwIhA"
+  },
+  {
     "videoId": "_rlsKq6YscQ",
     "title": "Store Values Using Should Callback Function",
     "description": "Cypress retries querying commands like cy.contains and cy.get. You can attach assertions to the command to retry the command until the assertion passes: cy.get('#output').should('have.text', '42') You can even have \".should(callback)\" to write your own logic to check the current subject element. For example, you could store all values you see during retries and then later validate the seen values:\ncy.log('**shows 5 messages**')\nconst messages = new Set()\ncy.contains('button', 'Start').click()\ncy.get('#output').should(function ($el) {\n  const text = $el.text()\n  messages.add(text)\n  expect(text).to.equal('42')\n})\ncy.wrap(messages).then(Array.from).should('have.length.gte', 5)\nFind this recipe at https://glebbahmutov.com/cypress-examples",
