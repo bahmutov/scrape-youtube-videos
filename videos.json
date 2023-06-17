@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "DHtWLKueA3o",
+    "title": "Find Input Element By The Current Value",
+    "description": "This video shows how to find an input element by its \"value\" attribute. You can find elements using the exact static value, or its prefix, or suffix, or even matching part of the string value. But what about the input elements with the value set dynamically by the application? You no longer have the attribute to select the element, you must filter the input elements yourself. For example, to find the input element with the string \"0\" in its current value you could write:\ncy.get('input#area').type('404')\ncy.get('input')\n  .filter(function (k, input) {\n    return input.value.includes('0')\n  })\n  .should('have.value', '404')\nThis recipe comes from http://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2023-06-16T17:33:00Z",
+    "url": "https://youtu.be/DHtWLKueA3o"
+  },
+  {
     "videoId": "BQKO6w5EST0",
     "title": "Click And Count Each Element",
     "description": "Imagine you have a table. Each row has a button that you must click to reveal a number in the next cell. We need to get those numbers from every row and add them all up and confirm the total sum is 18. This video shows how to correctly use cy.each and cy.then command to order all actions. Find this recipe at http://glebbahmutov.com/cypress-examples/",
