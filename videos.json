@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "BWuWf8mqe3k",
+    "title": "The Text Of Each Element Starts With The Given String",
+    "description": "Let's confirm the search results when searching for text \"mi\" all start with this text (ignoring the case)\ncy.get('[name=state]').type('mi')\ncy.get('#search-results li')\n  .should('exist')\n  .each(function ($li, k) {\n    const text = $li.text()\n    expect(text, `state ${k + 1}`).to.match(/^mi/i)\n  })\nFind this example at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2023-06-28T13:48:34Z",
+    "url": "https://youtu.be/BWuWf8mqe3k"
+  },
+  {
     "videoId": "DHtWLKueA3o",
     "title": "Find Input Element By The Current Value",
     "description": "This video shows how to find an input element by its \"value\" attribute. You can find elements using the exact static value, or its prefix, or suffix, or even matching part of the string value. But what about the input elements with the value set dynamically by the application? You no longer have the attribute to select the element, you must filter the input elements yourself. For example, to find the input element with the string \"0\" in its current value you could write:\ncy.get('input#area').type('404')\ncy.get('input')\n  .filter(function (k, input) {\n    return input.value.includes('0')\n  })\n  .should('have.value', '404')\nThis recipe comes from http://glebbahmutov.com/cypress-examples/",
