@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "T2Ez3jt6Kpc",
+    "title": "Cypress Random Data And Custom Commands Example",
+    "description": "In this video, I show using NPM module \"Chance\" to generate random sentences to use during Cypress end-to-end tests. The video shows the difference between generating random data inside a custom command vs passing the generated text as an argument. Find the source code in the repo https://github.com/bahmutov/cypress-random-data",
+    "publishedAt": "2023-07-06T14:16:13Z",
+    "url": "https://youtu.be/T2Ez3jt6Kpc"
+  },
+  {
     "videoId": "9uHEBxx_CDI",
     "title": "Test Element Overflow Using A Custom Cypress Chai Assertion",
     "description": "In this video, I add a custom Chai assertion that checks if a DOM element is overflowing with content. Find the full recipe at https://glebbahmutov.com/cypress-examples",
