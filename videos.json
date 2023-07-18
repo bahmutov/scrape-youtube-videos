@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "x9fTpOwp600",
+    "title": "Filter And Parse Table Cells To Confirm The Sum Of Prices",
+    "description": "In this video, I show how to get the right cells from the table, parse their text, and then confirm the sum of prices is equal to $8. Find the full recipe at https://glebbahmutov.com/cypress-examples\nfunction sumCaPrices(state) {\n  return cy\n    .get('table#prices tbody tr td:nth-child(2)')\n    .filter(function (k, el) { return el.innerText.startsWith(state) })\n}\nsumCaPrices('CA')\n  .map('innerText')\n  .mapInvoke('split', '$')\n  .mapInvoke('at', 1)\n  .map(Number)\n  .reduce(function (sum, current) { return sum + current }, 0)\n  .should('equal', 8)\nTip: cy.map, cy.mapInvoke, cy.print, cy.reduce come from my plugin https://github.com/bahmutov/cypress-map",
+    "publishedAt": "2023-07-17T14:41:30Z",
+    "url": "https://youtu.be/x9fTpOwp600"
+  },
+  {
     "videoId": "T2Ez3jt6Kpc",
     "title": "Cypress Random Data And Custom Commands Example",
     "description": "In this video, I show using NPM module \"Chance\" to generate random sentences to use during Cypress end-to-end tests. The video shows the difference between generating random data inside a custom command vs passing the generated text as an argument. Find the source code in the repo https://github.com/bahmutov/cypress-random-data",
