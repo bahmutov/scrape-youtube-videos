@@ -1,5 +1,19 @@
 [
   {
+    "videoId": "zdjjBRt6Z74",
+    "title": "Verify Cypress Component Prop Calls Using Stubs, cypress-map, and cy-spok",
+    "description": "This video shows how to mount a react-number-format component in a Cypress component spec and pass a Sinon stub as a prop. Then we can interact with the component: clear it, then type a number. We can verify the stub was called correctly in several ways. My favorite is to use either cypress-map command \"cy.map\" (https://github.com/bahmutov/cypress-map) and \"deep.equal\" assertion, or by using cy-spok plugin (https://github.com/bahmutov/cy-spok). You should also read the blog post \"Testing React Number Format Component Example\" https://glebbahmutov.com/blog/test-react-number-format/",
+    "publishedAt": "2023-07-20T18:15:19Z",
+    "url": "https://youtu.be/zdjjBRt6Z74"
+  },
+  {
+    "videoId": "OXiEJDjozQo",
+    "title": "Remove Numbers From Strings",
+    "description": "This video shows how to take multiple elements, remove numbers from each text, trim those strings, and confirm them. \ncy.get('#fruit li') // jQuery Element[]\n  .map('innerText') // string[]\n  .mapInvoke('replace', /[\\d\\s]/g, '') // string[]\n  .should('deep.equal', ['Apples', 'Grapes', 'Kiwi'])\nThe retryable query commands \"cy.map\" and \"cy.mapInvoke\" come from my plugin https://github.com/bahmutov/cypress-map The full example is at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-07-20T15:34:01Z",
+    "url": "https://youtu.be/OXiEJDjozQo"
+  },
+  {
     "videoId": "B6LqwUHXCcg",
     "title": "Compare Text In An Element Against Several Possible Values Using oneOf Assertion",
     "description": "You can confirm an element has text that matches string A OR string B OR string C etc using the Chai \"oneOf\" assertion.\ncy.get('#guest-name')\n  .invoke('text')\n  .should('be.oneOf', ['Joe', 'Mary', 'Anna'])\nI prefer the above code to a regular expression. Find this example at https://glebbahmutov.com/cypress-examples",
