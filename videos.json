@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "QfOR5IwndiE",
+    "title": "Test AG Grid Table Using Cypress And Cypress-Map Plugin",
+    "description": "This video shows how I would confirm the column of values in the AG Grid table component using Cypress with cypress-map plugin. For more information, see:\n- https://github.com/bahmutov/cypress-map\n- https://cypress.tips/courses\n- https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-07-24T15:38:33Z",
+    "url": "https://youtu.be/QfOR5IwndiE"
+  },
+  {
     "videoId": "zdjjBRt6Z74",
     "title": "Verify Cypress Component Prop Calls Using Stubs, cypress-map, and cy-spok",
     "description": "This video shows how to mount a react-number-format component in a Cypress component spec and pass a Sinon stub as a prop. Then we can interact with the component: clear it, then type a number. We can verify the stub was called correctly in several ways. My favorite is to use either cypress-map command \"cy.map\" (https://github.com/bahmutov/cypress-map) and \"deep.equal\" assertion, or by using cy-spok plugin (https://github.com/bahmutov/cy-spok). You should also read the blog post \"Testing React Number Format Component Example\" https://glebbahmutov.com/blog/test-react-number-format/",
@@ -12,6 +19,13 @@
     "description": "This video shows how to take multiple elements, remove numbers from each text, trim those strings, and confirm them. \ncy.get('#fruit li') // jQuery Element[]\n  .map('innerText') // string[]\n  .mapInvoke('replace', /[\\d\\s]/g, '') // string[]\n  .should('deep.equal', ['Apples', 'Grapes', 'Kiwi'])\nThe retryable query commands \"cy.map\" and \"cy.mapInvoke\" come from my plugin https://github.com/bahmutov/cypress-map The full example is at https://glebbahmutov.com/cypress-examples",
     "publishedAt": "2023-07-20T15:34:01Z",
     "url": "https://youtu.be/OXiEJDjozQo"
+  },
+  {
+    "videoId": "oNMmMZWOQnA",
+    "title": "Cypress vs Playwright Course Announcement",
+    "description": "We live in the golden age of web application testing. We have two leading testing tools Cypress and Playwright being actively developed and widely used. This course teaches both tools using the same web application examples. I will try highlighting the differences between the two test runners and the strengths of each one. The course lessons are available at https://cypress.tips/courses",
+    "publishedAt": "2023-07-19T17:51:36Z",
+    "url": "https://youtu.be/oNMmMZWOQnA"
   },
   {
     "videoId": "B6LqwUHXCcg",
