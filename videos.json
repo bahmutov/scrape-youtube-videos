@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "tMeKIIfEhyo",
+    "title": "Iterate Over DOM Elements Using cy.each, jQuery each and map, and cypress-map Plugin Commands",
+    "description": "This video shows how to iterate over DOM elements found using commands like cy.each, jQuery methods, and queries from my plugin \"cypress-map\". Find the full iteration recipe with all these tests at https://glebbahmutov.com/cypress-examples and the plugin at https://github.com/bahmutov/cypress-map",
+    "publishedAt": "2023-07-26T15:46:26Z",
+    "url": "https://youtu.be/tMeKIIfEhyo"
+  },
+  {
     "videoId": "hMzqiSUVGwA",
     "title": "Escape Regular Expression Text When Using cy.contains Command",
     "description": "This video shows how to escape special characters like \"$\", \"[]\", and \"^\" when creating regular expressions to use with cy.contains command. You can escape the characters yourself or use the Lodash method Cypress._.escapeRegExp bundled with Cypress to do it for you\nconst suffix = '$/day'\nconst regex = new RegExp(Cypress._.escapeRegExp(suffix))\ncy.contains(regex).should('have.id', 'rate')\nFind the full recipe at https://glebbahmutov.com/cypress-examples",
