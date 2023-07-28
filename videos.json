@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "qCqzS3LtSeI",
+    "title": "Dispatch Custom HTML Events From Cypress Tests",
+    "description": "Sometimes an element on the page subscribes to custom events. You can dispatch events using plain HTML method \"el.dispatchEvent\" or by using Cypress command \"cy.trigger\"\ncy.get('#signal').then(function ($el) {\n  $el[0].dispatchEvent(new CustomEvent('go'))\n})\n// using cy.trigger\ncy.get('#signal').trigger('warn')\nFind the full example recipe at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2023-07-27T17:23:17Z",
+    "url": "https://youtu.be/qCqzS3LtSeI"
+  },
+  {
     "videoId": "tMeKIIfEhyo",
     "title": "Iterate Over DOM Elements Using cy.each, jQuery each and map, and cypress-map Plugin Commands",
     "description": "This video shows how to iterate over DOM elements found using commands like cy.each, jQuery methods, and queries from my plugin \"cypress-map\". Find the full iteration recipe with all these tests at https://glebbahmutov.com/cypress-examples and the plugin at https://github.com/bahmutov/cypress-map",
