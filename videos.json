@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "sVb5MU2AkqE",
+    "title": "Confirm Sorted Attributes",
+    "description": "If you need to get an attribute from each DOM element, and you don't care about the order, you should compare sorted arrays. This video shows how to grab a \"data-...\" attribute using plain Cypress syntax and cypress-map plugins. Find the full recipe at https://glebbahmutov.com/cypress-examples Here is the cypress-map solution\n// the expected SKU numbers\nconst skus = ['00991C', '00100C', '00500A', '0044B'].sort()\ncy.get('#purchases li')\n  .map('dataset.sku')\n  .invoke('sort')\n  .print()\n  .should('deep.equal', skus)",
+    "publishedAt": "2023-07-28T18:19:45Z",
+    "url": "https://youtu.be/sVb5MU2AkqE"
+  },
+  {
     "videoId": "qCqzS3LtSeI",
     "title": "Dispatch Custom HTML Events From Cypress Tests",
     "description": "Sometimes an element on the page subscribes to custom events. You can dispatch events using plain HTML method \"el.dispatchEvent\" or by using Cypress command \"cy.trigger\"\ncy.get('#signal').then(function ($el) {\n  $el[0].dispatchEvent(new CustomEvent('go'))\n})\n// using cy.trigger\ncy.get('#signal').trigger('warn')\nFind the full example recipe at https://glebbahmutov.com/cypress-examples/",
