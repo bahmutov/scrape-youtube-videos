@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "4tiwHmi3pdk",
+    "title": "Shrink The Time Gap",
+    "description": "This video shows how to guard against unexpected elements that might appear during the test execution. Find the full discussion in the blog post \"Shrink The Time Gap\" at https://glebbahmutov.com/blog/shrink-the-time-gap/ The final solution checks if the element goes away, and then checks for the final state to appear without any time delay by using the \"timeout:0\" option:\ncy.contains('button', 'load').click()\ncy.contains('button', 'Loading')\ncy.contains('button', 'Loading').should('not.exist')\ncy.contains('Loaded', { timeout: 0 })",
+    "publishedAt": "2023-07-31T14:55:14Z",
+    "url": "https://youtu.be/4tiwHmi3pdk"
+  },
+  {
     "videoId": "sVb5MU2AkqE",
     "title": "Confirm Sorted Attributes",
     "description": "If you need to get an attribute from each DOM element, and you don't care about the order, you should compare sorted arrays. This video shows how to grab a \"data-...\" attribute using plain Cypress syntax and cypress-map plugins. Find the full recipe at https://glebbahmutov.com/cypress-examples Here is the cypress-map solution\n// the expected SKU numbers\nconst skus = ['00991C', '00100C', '00500A', '0044B'].sort()\ncy.get('#purchases li')\n  .map('dataset.sku')\n  .invoke('sort')\n  .print()\n  .should('deep.equal', skus)",
