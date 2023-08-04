@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "my1s6US7KKY",
+    "title": "Prepare To Spy On A Method Added Dynamically",
+    "description": "This video teaches you two things:\n- how to wait for the method to exist before spying on it\n- how to start spying on the method _immediately_ when the application creates it.\nFind the full recipe at https://glebbahmutov.com/cypress-examples/#spies-and-stubs",
+    "publishedAt": "2023-08-03T16:21:00Z",
+    "url": "https://youtu.be/my1s6US7KKY"
+  },
+  {
     "videoId": "4tiwHmi3pdk",
     "title": "Shrink The Time Gap",
     "description": "This video shows how to guard against unexpected elements that might appear during the test execution. Find the full discussion in the blog post \"Shrink The Time Gap\" at https://glebbahmutov.com/blog/shrink-the-time-gap/ The final solution checks if the element goes away, and then checks for the final state to appear without any time delay by using the \"timeout:0\" option:\ncy.contains('button', 'load').click()\ncy.contains('button', 'Loading')\ncy.contains('button', 'Loading').should('not.exist')\ncy.contains('Loaded', { timeout: 0 })",
