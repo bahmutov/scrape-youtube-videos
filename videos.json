@@ -2,7 +2,7 @@
   {
     "videoId": "5faeSbvCJQY",
     "title": "Await Cypress Command Results",
-    "description": "It would be really cool if one could write something like this in Cypress specs using the \"await\" syntax to get the results:\nawait cy.visit('/')\nconst n = await cy.get('#projects-count').invoke('text').then(parseInt)\ncy.log(n)\nexpect(n, 'number of projects').to.be.within(350, 400)\nNow it is possible. I will publish the code later. If you want to stay tuned, subscribe to this youtube channel and to my monthly newsletter at https://cypresstips.substack.com/",
+    "description": "It would be really cool if one could write something like this in Cypress specs using the \"await\" syntax to get the results:\nawait cy.visit('/')\nconst n = await cy.get('#projects-count').invoke('text').then(parseInt)\ncy.log(n)\nexpect(n, 'number of projects').to.be.within(350, 400)\nNow it is possible. I will publish the code later. If you want to stay tuned, subscribe to this youtube channel and to my monthly newsletter at https://cypresstips.substack.com/ The code for this video is in https://github.com/bahmutov/cy-await but this is very very very ALPHA",
     "publishedAt": "2023-08-05T20:34:29Z",
     "url": "https://youtu.be/5faeSbvCJQY"
   },
