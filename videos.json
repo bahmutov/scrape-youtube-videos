@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "PLP5Bq7KHTk",
+    "title": "cypress-if Plugin Supports Cypress v12+: Close The Popup Dialog If It Is Visible",
+    "description": "This short video shows the new release of cypress-if plugin for writing conditional logic in Cypress tests. The plugin finally supports Cypress v12+ thanks to the pull request https://github.com/bahmutov/cypress-if/pull/65 \nThe test to conditionally close the popup dialog is:\ncy.get('aside.banner')\n  .if('visible')\n  .wait(1000)\n  .contains('button', 'Agree')\n  .click()\n  .else()\n  .log('**not visible**')\ncy.get('aside.banner').should('not.be.visible')\nFor more see the plugin's README https://github.com/bahmutov/cypress-if",
+    "publishedAt": "2023-08-08T14:19:15Z",
+    "url": "https://youtu.be/PLP5Bq7KHTk"
+  },
+  {
     "videoId": "5faeSbvCJQY",
     "title": "Await Cypress Command Results",
     "description": "It would be really cool if one could write something like this in Cypress specs using the \"await\" syntax to get the results:\nawait cy.visit('/')\nconst n = await cy.get('#projects-count').invoke('text').then(parseInt)\ncy.log(n)\nexpect(n, 'number of projects').to.be.within(350, 400)\nNow it is possible. I will publish the code later. If you want to stay tuned, subscribe to this youtube channel and to my monthly newsletter at https://cypresstips.substack.com/ The code for this video is in https://github.com/bahmutov/cy-await but this is very very very ALPHA",
