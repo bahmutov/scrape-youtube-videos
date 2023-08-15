@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "DgUIfQLFOcM",
+    "title": "Cypress Pagination Challenge",
+    "description": "I have set up a small web example to challenge you to write a Cypress test. Can you click on the \"Next\" button until you get to the last page of the data table using plain Cypress syntax or any plugins? Find the starting code at https://github.com/bahmutov/cypress-pagination-challenge and try your hand at writing Cypress tests. I will start announcing my solutions in September by posting them as lessons to my \"Cypress Plugins\" course first https://cypress.tips/courses/cypress-plugins and then making them public after a few days. Can you come up with a better solution? I am sure you can try!",
+    "publishedAt": "2023-08-14T12:44:24Z",
+    "url": "https://youtu.be/DgUIfQLFOcM"
+  },
+  {
     "videoId": "PLP5Bq7KHTk",
     "title": "cypress-if Plugin Supports Cypress v12+: Close The Popup Dialog If It Is Visible",
     "description": "This short video shows the new release of cypress-if plugin for writing conditional logic in Cypress tests. The plugin finally supports Cypress v12+ thanks to the pull request https://github.com/bahmutov/cypress-if/pull/65 \nThe test to conditionally close the popup dialog is:\ncy.get('aside.banner')\n  .if('visible')\n  .wait(1000)\n  .contains('button', 'Agree')\n  .click()\n  .else()\n  .log('**not visible**')\ncy.get('aside.banner').should('not.be.visible')\nFor more see the plugin's README https://github.com/bahmutov/cypress-if",
