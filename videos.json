@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "xvoVVya5_Rc",
+    "title": "Add A Cypress Test To Confirm The Filtered List Of Projects",
+    "description": "In this video, I start testing my personal website https://glebbahmutov.com/ to make sure it shows the correct number of projects when filtered by the user.",
+    "publishedAt": "2023-08-16T16:46:43Z",
+    "url": "https://youtu.be/xvoVVya5_Rc"
+  },
+  {
     "videoId": "DgUIfQLFOcM",
     "title": "Cypress Pagination Challenge",
     "description": "I have set up a small web example to challenge you to write a Cypress test. Can you click on the \"Next\" button until you get to the last page of the data table using plain Cypress syntax or any plugins? Find the starting code at https://github.com/bahmutov/cypress-pagination-challenge and try your hand at writing Cypress tests. I will start announcing my solutions in September by posting them as lessons to my \"Cypress Plugins\" course first https://cypress.tips/courses/cypress-plugins and then making them public after a few days. Can you come up with a better solution? I am sure you can try!",
