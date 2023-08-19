@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "opOopVq5AmA",
+    "title": "cypress-await Sync Mode Example",
+    "description": "This video shows how my plugin https://github.com/bahmutov/cypress-await sync mode preprocessor can automatically transform Cypress specs to allow direct assignment of values in Cypress to avoid a pyramid of callbacks. This plugin allows you to simply get the value:\nconst text = cy.get(selector).invoke('text')\nconst n = cy.wait(alias).its('response.body.length')\nFind the full application example at https://github.com/bahmutov/cypress-todomvc-await-example and read the blog post \"Use Async Await In Cypress Specs\" https://glebbahmutov.com/blog/use-async-await-in-cypress-specs/",
+    "publishedAt": "2023-08-18T17:23:16Z",
+    "url": "https://youtu.be/opOopVq5AmA"
+  },
+  {
     "videoId": "xvoVVya5_Rc",
     "title": "Add A Cypress Test To Confirm The Filtered List Of Projects",
     "description": "In this video, I start testing my personal website https://glebbahmutov.com/ to make sure it shows the correct number of projects when filtered by the user.",
