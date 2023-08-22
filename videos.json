@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "IQpc3pJM49g",
+    "title": "See All Chrome Browser Command Line Flags Cypress Uses To Launch The Browser",
+    "description": "Cypress sets a lot of command line switches to control the launched browser to ensure consistent testing behavior. You can see these flags by opening the special URL \"chrome://version\". If you want to modify or add new flags, see Cypress docs at https://on.cypress.io/browser-launch-api For more tips, check out \"Cypress v10 Tips & Tricks\" https://glebbahmutov.com/blog/cypress-v10-tips/",
+    "publishedAt": "2023-08-21T22:01:29Z",
+    "url": "https://youtu.be/IQpc3pJM49g"
+  },
+  {
     "videoId": "opOopVq5AmA",
     "title": "cypress-await Sync Mode Example",
     "description": "This video shows how my plugin https://github.com/bahmutov/cypress-await sync mode preprocessor can automatically transform Cypress specs to allow direct assignment of values in Cypress to avoid a pyramid of callbacks. This plugin allows you to simply get the value:\nconst text = cy.get(selector).invoke('text')\nconst n = cy.wait(alias).its('response.body.length')\nFind the full application example at https://github.com/bahmutov/cypress-todomvc-await-example and read the blog post \"Use Async Await In Cypress Specs\" https://glebbahmutov.com/blog/use-async-await-in-cypress-specs/",
