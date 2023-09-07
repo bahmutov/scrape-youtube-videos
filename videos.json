@@ -8,7 +8,7 @@
   },
   {
     "videoId": "Z4nDKbWMkJc",
-    "title": "Type Placeholders Into The Form: manp and cypress-await example",
+    "title": "Type Placeholders Into The Form: manpm and cypress-await example",
     "description": "This video shows how Cypress can read the \"placeholder\" attributes and type them into the input fields. I also show how cypress-await plugin can help simplify the test syntax. For more, see https://github.com/bahmutov/type-placeholders\n- manpm is at https://github.com/bahmutov/manpm\n- cypress-await is at https://github.com/bahmutov/cypress-await",
     "publishedAt": "2023-09-05T18:48:13Z",
     "url": "https://youtu.be/Z4nDKbWMkJc"
