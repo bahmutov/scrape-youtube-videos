@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "hmbx_f5Nlfs",
+    "title": "Disable ServiceWorker In Cypress Test",
+    "description": "In Cypress v13 the ServiceWorker serving the index page seems to break the cy.visit command. This video shows a workaround: disabling the ServiceWorker in your browser. You can find this workaround in the blog post \"Cypress Tips And Tricks\" https://glebbahmutov.com/blog/cypress-tips-and-tricks/ that you can find by searching my site https://cypress.tips/search",
+    "publishedAt": "2023-09-08T13:54:49Z",
+    "url": "https://youtu.be/hmbx_f5Nlfs"
+  },
+  {
     "videoId": "uB__3tHRHyA",
     "title": "Set Up Cypress Test Replay On GitHub Actions",
     "description": "This is the first test of Cypress Test Replay v13.1.0 using GitHub Actions CI. Find the source code in repo https://github.com/bahmutov/type-placeholders",
