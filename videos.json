@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "uKpJZbEc6HY",
+    "title": "Confirm The Number Of Elements In Different Scenarios",
+    "description": "This video shows how to confirm / print the number of elements in the list in various scenarios:\n- static list\n- dynamic list\n- list loads slowly\n- print the number of elements\n- number of elements could be one of different values\n- number of elements should follow a rule\nFind these recipes at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-09-12T13:26:00Z",
+    "url": "https://youtu.be/uKpJZbEc6HY"
+  },
+  {
     "videoId": "hmbx_f5Nlfs",
     "title": "Disable ServiceWorker In Cypress Test",
     "description": "In Cypress v13 the ServiceWorker serving the index page seems to break the cy.visit command. This video shows a workaround: disabling the ServiceWorker in your browser. You can find this workaround in the blog post \"Cypress Tips And Tricks\" https://glebbahmutov.com/blog/cypress-tips-and-tricks/ that you can find by searching my site https://cypress.tips/search",
