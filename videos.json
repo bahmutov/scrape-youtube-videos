@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "qL5R0C-0_-Y",
+    "title": "Zero Or Three Elements After Loading The Data",
+    "description": "This video shows a more advanced test case: confirming the number of list elements shown by the application after the initial data load when there could be zero items. We can use a separate HTML attribute to signal from the application the load has finished, and this simplifies and speeds up the test. Find the full source code at https://glebbahmutov.com/cypress-examples/recipes/number-of-elements.html",
+    "publishedAt": "2023-09-18T22:32:08Z",
+    "url": "https://youtu.be/qL5R0C-0_-Y"
+  },
+  {
     "videoId": "uKpJZbEc6HY",
     "title": "Confirm The Number Of Elements In Different Scenarios",
     "description": "This video shows how to confirm / print the number of elements in the list in various scenarios:\n- static list\n- dynamic list\n- list loads slowly\n- print the number of elements\n- number of elements could be one of different values\n- number of elements should follow a rule\nFind these recipes at https://glebbahmutov.com/cypress-examples",
