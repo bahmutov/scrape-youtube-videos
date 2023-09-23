@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "ZJcJNwli10I",
+    "title": "Check N Items Or That Nothing Was Found",
+    "description": "This video explains how to verify that the dynamic list loads 3 items OR shows \"Nothing found\" zero state element. Find the full source code at https://glebbahmutov.com/cypress-examples/recipes/number-of-elements.html Note: \":contains(text)\" is a jQuery selector, not a built-in CSS selector",
+    "publishedAt": "2023-09-22T13:16:15Z",
+    "url": "https://youtu.be/ZJcJNwli10I"
+  },
+  {
     "videoId": "qL5R0C-0_-Y",
     "title": "Zero Or Three Elements After Loading The Data",
     "description": "This video shows a more advanced test case: confirming the number of list elements shown by the application after the initial data load when there could be zero items. We can use a separate HTML attribute to signal from the application the load has finished, and this simplifies and speeds up the test. Find the full source code at https://glebbahmutov.com/cypress-examples/recipes/number-of-elements.html",
