@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "KFgXqV0zuDw",
+    "title": "Lesson n2: Table Pagination Solution",
+    "description": "This is a solution to the Cypress Pagination Challenge https://cypress.tips/courses/cypress-plugins/lessons/n1 using plain Cypress syntax recursion. Find the source code and derivation in the blog post and in the free lesson \"Lesson n2: Table pagination solution\" https://cypress.tips/courses/cypress-plugins/lessons/n2 Find the starting source code in the repository https://github.com/bahmutov/cypress-pagination-challenge For more, read the blog post https://glebbahmutov.com/blog/cypress-pagination-challenge/",
+    "publishedAt": "2023-09-29T15:04:58Z",
+    "url": "https://youtu.be/KFgXqV0zuDw"
+  },
+  {
     "videoId": "ZJcJNwli10I",
     "title": "Check N Items Or That Nothing Was Found",
     "description": "This video explains how to verify that the dynamic list loads 3 items OR shows \"Nothing found\" zero state element. Find the full source code at https://glebbahmutov.com/cypress-examples/recipes/number-of-elements.html Note: \":contains(text)\" is a jQuery selector, not a built-in CSS selector",
