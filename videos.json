@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "xUiCl0p8J84",
+    "title": "Table Pagination Solution Using Plain DOM Methods",
+    "description": "This is another solution to the Cypress Pagination Challenge using plain JavaScript DOM methods and a \"while\" loop. Find the code at https://glebbahmutov.com/blog/cypress-pagination-challenge/",
+    "publishedAt": "2023-10-06T16:42:16Z",
+    "url": "https://youtu.be/xUiCl0p8J84"
+  },
+  {
     "videoId": "KFgXqV0zuDw",
     "title": "Lesson n2: Table Pagination Solution",
     "description": "This is a solution to the Cypress Pagination Challenge https://cypress.tips/courses/cypress-plugins/lessons/n1 using plain Cypress syntax recursion. Find the source code and derivation in the blog post and in the free lesson \"Lesson n2: Table pagination solution\" https://cypress.tips/courses/cypress-plugins/lessons/n2 Find the starting source code in the repository https://github.com/bahmutov/cypress-pagination-challenge For more, read the blog post https://glebbahmutov.com/blog/cypress-pagination-challenge/",
