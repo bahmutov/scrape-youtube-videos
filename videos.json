@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "6KmpQjBduY8",
+    "title": "last-of-type And first-of-type CSS Selectors Examples",
+    "description": "Two less-known CSS selectors that let you pick one element among siblings quickly: \":last-of-type\" and \":first-of-type\". \ncy.get('dl dd:last-of-type')\n  .should('have.css', 'border')\n  .should('be.a', 'string')\n  .should('include', 'solid')\ncy.get('dt:first-of-type').should('have.text', 'Vegetables:')\nFind more examples at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-10-11T16:05:09Z",
+    "url": "https://youtu.be/6KmpQjBduY8"
+  },
+  {
     "videoId": "xUiCl0p8J84",
     "title": "Table Pagination Solution Using Plain DOM Methods",
     "description": "This is another solution to the Cypress Pagination Challenge using plain JavaScript DOM methods and a \"while\" loop. Find the code at https://glebbahmutov.com/blog/cypress-pagination-challenge/",
