@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "Emvz1PDRl3M",
+    "title": "Cy Within Command Does Not Retry",
+    "description": "This video shows an example of cy.within using a stale DOM element, causing the test to fail. I explain why this happens and how to solve it. Find the full recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-10-17T16:47:38Z",
+    "url": "https://youtu.be/Emvz1PDRl3M"
+  },
+  {
     "videoId": "6KmpQjBduY8",
     "title": "last-of-type And first-of-type CSS Selectors Examples",
     "description": "Two less-known CSS selectors that let you pick one element among siblings quickly: \":last-of-type\" and \":first-of-type\". \ncy.get('dl dd:last-of-type')\n  .should('have.css', 'border')\n  .should('be.a', 'string')\n  .should('include', 'solid')\ncy.get('dt:first-of-type').should('have.text', 'Vegetables:')\nFind more examples at https://glebbahmutov.com/cypress-examples",
