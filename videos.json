@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "8IXrq9BEWSg",
+    "title": "Compare Two Lists Of Elements Examples",
+    "description": "Imagine we have two lists of LI elements on the page and want to confirm that the items:\n- have the same exact text in the same order\n- or have the same text regardless of the order\n- or one list is a subset of another list\n- or lists load dynamically\nThis video shows and explains how to write Cypress tests in each case. Find the source code and lots more examples at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-10-18T13:38:35Z",
+    "url": "https://youtu.be/8IXrq9BEWSg"
+  },
+  {
     "videoId": "Emvz1PDRl3M",
     "title": "Cy Within Command Does Not Retry",
     "description": "This video shows an example of cy.within using a stale DOM element, causing the test to fail. I explain why this happens and how to solve it. Find the full recipe at https://glebbahmutov.com/cypress-examples",
