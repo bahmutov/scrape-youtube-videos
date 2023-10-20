@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "sppI7xabyoA",
+    "title": "Confirm That Every Element With A Data Attribute Has The HREF Attribute Too",
+    "description": "Imagine you want to find all elements that have some \"data-*\" attribute and confirm they also have \"href\" attribute. How would you select them? This video shows how to select all elements using wildcard selector \"*\" and then filter the elements using cy.filter command before checking each element using cy.each. Find the full example at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-10-19T15:57:43Z",
+    "url": "https://youtu.be/sppI7xabyoA"
+  },
+  {
     "videoId": "8IXrq9BEWSg",
     "title": "Compare Two Lists Of Elements Examples",
     "description": "Imagine we have two lists of LI elements on the page and want to confirm that the items:\n- have the same exact text in the same order\n- or have the same text regardless of the order\n- or one list is a subset of another list\n- or lists load dynamically\nThis video shows and explains how to write Cypress tests in each case. Find the source code and lots more examples at https://glebbahmutov.com/cypress-examples",
