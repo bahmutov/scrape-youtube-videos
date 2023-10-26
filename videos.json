@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "YpbkEBE42QI",
+    "title": "Find The Right Item Using The cy.within Command Or The Parent Selector",
+    "description": "Sometimes finding an item can give a wrong match. In this video, I explain my strategy for finding the right item inside the right parent element. You can either use cy.within or combine selectors to target both the right parent and the item.\ncy.get('#items').within(function () {\n  // there should be several items\n  cy.get('li').should('have.length.above', 0)\n  // find the product we are looking for\n  cy.contains('li', 'Apples')\n    // and confirm its \"data\" attributes\n    .should('have.attr', 'data-product-id', '190')\n    .and('have.attr', 'data-price', '299')\n})\nFind the full recipe with more solutions at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2023-10-25T16:46:36Z",
+    "url": "https://youtu.be/YpbkEBE42QI"
+  },
+  {
     "videoId": "sppI7xabyoA",
     "title": "Confirm That Every Element With A Data Attribute Has The HREF Attribute Too",
     "description": "Imagine you want to find all elements that have some \"data-*\" attribute and confirm they also have \"href\" attribute. How would you select them? This video shows how to select all elements using wildcard selector \"*\" and then filter the elements using cy.filter command before checking each element using cy.each. Find the full example at https://glebbahmutov.com/cypress-examples",
