@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "lWWzQFt-0BI",
+    "title": "Check Cards Test Refactoring",
+    "description": "🎉🎉🎉🎉🎉 Cypress Tips video 500 🎉🎉🎉🎉🎉\nIn this video, I refactor an example test to be shorter and to work correctly. Find the full refactoring at https://glebbahmutov.com/cypress-examples and I will probably write a blog post about it, follow RSS feed at https://glebbahmutov.com/blog/",
+    "publishedAt": "2023-11-01T16:31:43Z",
+    "url": "https://youtu.be/lWWzQFt-0BI"
+  },
+  {
     "videoId": "YpbkEBE42QI",
     "title": "Find The Right Item Using The cy.within Command Or The Parent Selector",
     "description": "Sometimes finding an item can give a wrong match. In this video, I explain my strategy for finding the right item inside the right parent element. You can either use cy.within or combine selectors to target both the right parent and the item.\ncy.get('#items').within(function () {\n  // there should be several items\n  cy.get('li').should('have.length.above', 0)\n  // find the product we are looking for\n  cy.contains('li', 'Apples')\n    // and confirm its \"data\" attributes\n    .should('have.attr', 'data-product-id', '190')\n    .and('have.attr', 'data-price', '299')\n})\nFind the full recipe with more solutions at https://glebbahmutov.com/cypress-examples",
