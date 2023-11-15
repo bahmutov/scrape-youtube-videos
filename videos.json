@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "28Q9aJFpgwQ",
+    "title": "Wrap Asynchronous Function",
+    "description": "In this video, I show how Cypress can call asynchronous functions and then use their results without any boilerplate code, just using cy.wrap or cy.then commands. Find the full source code at https://glebbahmutov.com/cypress-examples/recipes/wrap-promises.html and read the \"The Zen Of Cypress Data Setup\" blog post at https://glebbahmutov.com/blog/setup-cypress-data/",
+    "publishedAt": "2023-11-14T15:28:32Z",
+    "url": "https://youtu.be/28Q9aJFpgwQ"
+  },
+  {
     "videoId": "70kRnoMuzds",
     "title": "Filter Elements And Items With Retries",
     "description": "This video shows how to filter DOM elements using the cy.filter command and how to filter items in an array using the cy.invoke command that uses the \"filter\" Array method. Find the full source code in the repo https://github.com/bahmutov/cypress-map Tip: by chaining these query command we retry getting the data or elements if the assertion fails.",
