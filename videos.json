@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "wIEW7jSzDVQ",
+    "title": "Set Aliased Value TypeScript Type Value In Cypress Tests",
+    "description": "Whenever you get an aliased value using cy.get(alias name) command, it assumes by default that the value is a jQuery object. But if you store an alias to a string, for example, TypeScript will complain:\ncy.wrap(\"hello\").as(\"greeting\")\ncy.get(\"@greeting\")\n// TypeScript thinks you are checking a jQuery object :(\n  .should(\"equal\", \"hello\")\nThis video shows a fix from my course \"Testing The Swag Store\" https://cypress.tips/courses/swag-store where I declare the type for the yielded value when calling \"cy.get\". Since YouTube does not allow angular brackets, I will use LT and RT strings\ncy.get LT string RT (\"@greeting\")\n  // TS knows the current value is a string\n  .should(\"equal\", \"hello\")\nFor more tips, read my blog post \"Cypress v10 Tips and Tricks\" https://glebbahmutov.com/blog/cypress-v10-tips/",
+    "publishedAt": "2023-11-22T18:22:14Z",
+    "url": "https://youtu.be/wIEW7jSzDVQ"
+  },
+  {
     "videoId": "28Q9aJFpgwQ",
     "title": "Wrap Asynchronous Function",
     "description": "In this video, I show how Cypress can call asynchronous functions and then use their results without any boilerplate code, just using cy.wrap or cy.then commands. Find the full source code at https://glebbahmutov.com/cypress-examples/recipes/wrap-promises.html and read the \"The Zen Of Cypress Data Setup\" blog post at https://glebbahmutov.com/blog/setup-cypress-data/",
