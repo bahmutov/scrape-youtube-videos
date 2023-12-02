@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "iktuHW7tyiY",
+    "title": "Handle Telephone And Other Custom Protocol Links In Cypress Tests",
+    "description": "In this video, I show how you can confirm the A links are leading to the right telephone numbers when the app sets window.navigator.href=\"tel:+1...\" which usually open another application that is registered to handle \"tel:\" links. Find the full source code at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2023-12-01T18:00:32Z",
+    "url": "https://youtu.be/iktuHW7tyiY"
+  },
+  {
     "videoId": "wIEW7jSzDVQ",
     "title": "Set Aliased Value TypeScript Type Value In Cypress Tests",
     "description": "Whenever you get an aliased value using cy.get(alias name) command, it assumes by default that the value is a jQuery object. But if you store an alias to a string, for example, TypeScript will complain:\ncy.wrap(\"hello\").as(\"greeting\")\ncy.get(\"@greeting\")\n// TypeScript thinks you are checking a jQuery object :(\n  .should(\"equal\", \"hello\")\nThis video shows a fix from my course \"Testing The Swag Store\" https://cypress.tips/courses/swag-store where I declare the type for the yielded value when calling \"cy.get\". Since YouTube does not allow angular brackets, I will use LT and RT strings\ncy.get LT string RT (\"@greeting\")\n  // TS knows the current value is a string\n  .should(\"equal\", \"hello\")\nFor more tips, read my blog post \"Cypress v10 Tips and Tricks\" https://glebbahmutov.com/blog/cypress-v10-tips/",
