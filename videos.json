@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "lnYd0cPnCa8",
+    "title": "Refactor Cypress Tests Checking Alerts And Modals",
+    "description": "This video shows a quick refactoring of Cypress tests that check alerts and modals. Find the \"before\" and \"after\" source code in the repo https://github.com/bahmutov/webdriverSite For more information:\n- sinon spies and stubs https://glebbahmutov.com/cypress-examples/commands/spies-stubs-clocks.html\n- negative assertions https://glebbahmutov.com/blog/negative-assertions/\n- cy.intercept and network testing: my course https://cypress.tips/courses/network-testing\n- command - action - command - action approach to writing E2E tests see my open source Cypress Basics workshop https://github.com/bahmutov/cypress-workshop-basics",
+    "publishedAt": "2023-12-04T17:38:32Z",
+    "url": "https://youtu.be/lnYd0cPnCa8"
+  },
+  {
     "videoId": "iktuHW7tyiY",
     "title": "Handle Telephone And Other Custom Protocol Links In Cypress Tests",
     "description": "In this video, I show how you can confirm the A links are leading to the right telephone numbers when the app sets window.navigator.href=\"tel:+1...\" which usually open another application that is registered to handle \"tel:\" links. Find the full source code at https://glebbahmutov.com/cypress-examples/",
