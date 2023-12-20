@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "Cn3Xx4w0OeQ",
+    "title": "Parse RGB Color With Retries",
+    "description": "This video shows how to build a chain of query commands that extract the CSS color of an element which is a string like \"rgb(red, green, blue)\" and then parse it using named capturing groups, then convert strings into numbers and assert each number. Because we use only queries, the entire chain will retry until the element does change its color into the expected red-only value. Find the full source code at https://glebbahmutov.com/cypress-examples/. Tip: I use \"cypress-map\" plugin to bring queries like cy.print and cy.map into my specs https://github.com/bahmutov/cypress-map",
+    "publishedAt": "2023-12-19T16:46:08Z",
+    "url": "https://youtu.be/Cn3Xx4w0OeQ"
+  },
+  {
     "videoId": "Tm3y2Lw2Jic",
     "title": "Select Hidden Or Visible Elements",
     "description": "This video shows jQuery selectors \":hidden\" and \":visible\" you can use in your Cypress tests. For example, to find hidden LI elements inside the parent with id \"people\" you could write cy.get('#people li:hidden') Similarly, to find visible elements you can use cy.get('#people li:visible') Find the full example at https://glebbahmutov.com/cypress-examples/",
