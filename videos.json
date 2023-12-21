@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "mdNuuKl2dpw",
+    "title": "DOM Element With ID Becomes Property Of The Window Object",
+    "description": "If you have a DOM element with \"id=value\" attribute, then it is automatically attached to the DOM \"window\" object under the property \"value\". Find the full source code at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2023-12-20T17:36:04Z",
+    "url": "https://youtu.be/mdNuuKl2dpw"
+  },
+  {
     "videoId": "Cn3Xx4w0OeQ",
     "title": "Parse RGB Color With Retries",
     "description": "This video shows how to build a chain of query commands that extract the CSS color of an element which is a string like \"rgb(red, green, blue)\" and then parse it using named capturing groups, then convert strings into numbers and assert each number. Because we use only queries, the entire chain will retry until the element does change its color into the expected red-only value. Find the full source code at https://glebbahmutov.com/cypress-examples/. Tip: I use \"cypress-map\" plugin to bring queries like cy.print and cy.map into my specs https://github.com/bahmutov/cypress-map",
