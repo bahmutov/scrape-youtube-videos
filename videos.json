@@ -1,5 +1,19 @@
 [
   {
+    "videoId": "48fmryvaTNE",
+    "title": "Attributes Vs Properties",
+    "description": "This video explains the difference between HTML attributes and DOM element properties and how to check each type from the Cypress tests. Find the full recipe at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2024-01-05T19:55:19Z",
+    "url": "https://youtu.be/48fmryvaTNE"
+  },
+  {
+    "videoId": "uJF2tnxN1dk",
+    "title": "Check Broken Images On The Page",
+    "description": "This video shows how Cypress test can check if an image on the page truly loads or not. I am showing the solution for a single image or for all images on the page. Find the full source code in the recipe \"Image Has Loaded\" at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2024-01-04T21:23:24Z",
+    "url": "https://youtu.be/uJF2tnxN1dk"
+  },
+  {
     "videoId": "mdNuuKl2dpw",
     "title": "DOM Element With ID Becomes Property Of The Window Object",
     "description": "If you have a DOM element with \"id=value\" attribute, then it is automatically attached to the DOM \"window\" object under the property \"value\". Find the full source code at https://glebbahmutov.com/cypress-examples/",
