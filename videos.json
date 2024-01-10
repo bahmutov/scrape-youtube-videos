@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "s7qFSFa4eT8",
+    "title": "Check All Boxes",
+    "description": "This video shows how to deal with multiple checkboxes in your Cypress tests. We will select them, test their values, check the boxes, etc. Find the full recipe at https://glebbahmutov.com/cypress-examples/ and the cypress-map plugin at https://github.com/bahmutov/cypress-map",
+    "publishedAt": "2024-01-09T15:27:13Z",
+    "url": "https://youtu.be/s7qFSFa4eT8"
+  },
+  {
     "videoId": "48fmryvaTNE",
     "title": "Attributes Vs Properties",
     "description": "This video explains the difference between HTML attributes and DOM element properties and how to check each type from the Cypress tests. Find the full recipe at https://glebbahmutov.com/cypress-examples/",
