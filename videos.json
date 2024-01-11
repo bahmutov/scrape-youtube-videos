@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "ir3pNnyGVM4",
+    "title": "Checkboxes With Confirmation",
+    "description": "Imagine that the application asks the user to confirm before checking the box. This video shows how to check each unchecked box and assert the \"window.confirm\" method was called with the right message by using Cypress method stub. Find the full recipe at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2024-01-10T18:26:16Z",
+    "url": "https://youtu.be/ir3pNnyGVM4"
+  },
+  {
     "videoId": "s7qFSFa4eT8",
     "title": "Check All Boxes",
     "description": "This video shows how to deal with multiple checkboxes in your Cypress tests. We will select them, test their values, check the boxes, etc. Find the full recipe at https://glebbahmutov.com/cypress-examples/ and the cypress-map plugin at https://github.com/bahmutov/cypress-map",
