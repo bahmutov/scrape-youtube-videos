@@ -1,5 +1,19 @@
 [
   {
+    "videoId": "Tv0turO2ywA",
+    "title": "Use Sanity Assertions",
+    "description": "This video shows how to compare two numbers shown on the page. There are few different cases I consider:\n- two static numbers\n- a number could be a NaN\n- numbers are loaded dynamically\n- why negative assertions are dangerous\n- using known data\nFind the full source code at https://glebbahmutov.com/cypress-examples/recipes/use-sanity-assertions.html",
+    "publishedAt": "2024-01-12T20:30:41Z",
+    "url": "https://youtu.be/Tv0turO2ywA"
+  },
+  {
+    "videoId": "Pn-nGTHiCds",
+    "title": "Select DOM Elements Using CSS OR Selector",
+    "description": "This video shows how to use CSS OR selector comma operator to grab multiple elements from the page. Remember: the order of the elements will be the order of the elements in the document NOT in the order specified in the selector. I also show how to expand the number of selected elements inside the jQuery subject by invoking the jQuery method \"add\" https://api.jquery.com/add/ Find this recipe at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2024-01-12T15:15:46Z",
+    "url": "https://youtu.be/Pn-nGTHiCds"
+  },
+  {
     "videoId": "ir3pNnyGVM4",
     "title": "Checkboxes With Confirmation",
     "description": "Imagine that the application asks the user to confirm before checking the box. This video shows how to check each unchecked box and assert the \"window.confirm\" method was called with the right message by using Cypress method stub. Find the full recipe at https://glebbahmutov.com/cypress-examples/",
