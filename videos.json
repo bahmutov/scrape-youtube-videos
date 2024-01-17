@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "lyiGPnJ2-3g",
+    "title": "Conditional Accept",
+    "description": "In this video, I show how I would run one of the two possible testing flows depending on the dialog the application shows (a case of A/B testing). We will use jQuery OR selector and then check which case we hit using jQuery \"is(selector)\" method. Depending on the match, we can run different Cypress commands. Find the full source code at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2024-01-16T18:20:51Z",
+    "url": "https://youtu.be/lyiGPnJ2-3g"
+  },
+  {
     "videoId": "Tv0turO2ywA",
     "title": "Use Sanity Assertions",
     "description": "This video shows how to compare two numbers shown on the page. There are few different cases I consider:\n- two static numbers\n- a number could be a NaN\n- numbers are loaded dynamically\n- why negative assertions are dangerous\n- using known data\nFind the full source code at https://glebbahmutov.com/cypress-examples/recipes/use-sanity-assertions.html",
