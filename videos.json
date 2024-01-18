@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "MvPd_NR11hU",
+    "title": "Confirm Input Labels Using DOM Element Property",
+    "description": "DOM input elements have a property \"labels\" that links the label elements for that input element. In this video, I show how to access a single label and how to check each label one by one. Find the full source code at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2024-01-17T16:51:59Z",
+    "url": "https://youtu.be/MvPd_NR11hU"
+  },
+  {
     "videoId": "lyiGPnJ2-3g",
     "title": "Conditional Accept",
     "description": "In this video, I show how I would run one of the two possible testing flows depending on the dialog the application shows (a case of A/B testing). We will use jQuery OR selector and then check which case we hit using jQuery \"is(selector)\" method. Depending on the match, we can run different Cypress commands. Find the full source code at https://glebbahmutov.com/cypress-examples",
