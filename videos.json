@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "3BjwoG1dW7o",
+    "title": "Query Multiple Elements In Order",
+    "description": "If you query multiple elements in order, you can easily attach a single \"should(callback)\" and verify the contents of the found elements. In my video, I need the numbers in 3 elements to add up to the value shown in the 4th element, with elements loading dynamically. Find the full example at https://glebbahmutov.com/cypress-examples/recipes/query-multiple-elements.html and for the best solution I use \"cy.getInOrder\" query command from the plugin https://github.com/bahmutov/cypress-map",
+    "publishedAt": "2024-01-17T20:14:57Z",
+    "url": "https://youtu.be/3BjwoG1dW7o"
+  },
+  {
     "videoId": "MvPd_NR11hU",
     "title": "Confirm Input Labels Using DOM Element Property",
     "description": "DOM input elements have a property \"labels\" that links the label elements for that input element. In this video, I show how to access a single label and how to check each label one by one. Find the full source code at https://glebbahmutov.com/cypress-examples",
