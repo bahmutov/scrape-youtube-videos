@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "0axmFrUzNc0",
+    "title": "Split The cy.within Block",
+    "description": "If the outer element is fully replaced, the cy.within might have the stale element and never find the new content, forcing all commands inside the within callback to fail. This video shows an example of this situation when there are assertions before the cy.within command. I show a couple of solutions. My favorite solution is to split the cy.within callback and move all commands after the action that makes the element re-render to the outside of the first within callback. Find the full source code at https://glebbahmutov.com/cypress-examples/recipes/within-does-not-retry.html",
+    "publishedAt": "2024-01-22T19:19:31Z",
+    "url": "https://youtu.be/0axmFrUzNc0"
+  },
+  {
     "videoId": "GrRUnQ2r7Wk",
     "title": "Element's Text Becomes Stable",
     "description": "In this video, I show a custom Cypress query command that checks if the text remains the same for N milliseconds. There is an example implementation plus using cy.sample command from my cypress-map plugin https://github.com/bahmutov/cypress-map Find the full recipe at https://glebbahmutov.com/cypress-examples/recipes/element-is-stable.html",
