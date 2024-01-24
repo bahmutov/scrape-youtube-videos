@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "sxCZKuAdTGY",
+    "title": "Select An Option Manually By Setting An Attribute",
+    "description": "Sometimes an option can have characters that break the cy.select command. This video shows how you can escape the selector and change the value by invoking the jQuery \"attr\" method on the option. You should also make sure the element is visible and enabled before acting on it to make sure you act like a human user. Find the full source code at https://glebbahmutov.com/cypress-examples/recipes/selected-value.html",
+    "publishedAt": "2024-01-23T18:36:24Z",
+    "url": "https://youtu.be/sxCZKuAdTGY"
+  },
+  {
     "videoId": "0axmFrUzNc0",
     "title": "Split The cy.within Block",
     "description": "If the outer element is fully replaced, the cy.within might have the stale element and never find the new content, forcing all commands inside the within callback to fail. This video shows an example of this situation when there are assertions before the cy.within command. I show a couple of solutions. My favorite solution is to split the cy.within callback and move all commands after the action that makes the element re-render to the outside of the first within callback. Find the full source code at https://glebbahmutov.com/cypress-examples/recipes/within-does-not-retry.html",
