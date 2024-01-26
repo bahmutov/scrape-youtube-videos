@@ -1,5 +1,19 @@
 [
   {
+    "videoId": "15F5cK4V-vo",
+    "title": "Checkbox Input Element Value",
+    "description": "This video shows the difference between the value of a checkbox and its \"checked\" property in Cypress tests. Find the full code at https://glebbahmutov.com/cypress-examples/recipes/input-element-value.html",
+    "publishedAt": "2024-01-25T16:13:20Z",
+    "url": "https://youtu.be/15F5cK4V-vo"
+  },
+  {
+    "videoId": "1gmudzqQWFg",
+    "title": "Input Element Value",
+    "description": "This video shows different ways of getting the input HTML element value in Cypress tests:\n- regular element text\n- string input element's value\n- number input element's value\n- checking if the value is stable\nFind the full list of examples with code at https://glebbahmutov.com/cypress-examples/recipes/input-element-value.html",
+    "publishedAt": "2024-01-25T15:39:43Z",
+    "url": "https://youtu.be/1gmudzqQWFg"
+  },
+  {
     "videoId": "sxCZKuAdTGY",
     "title": "Select An Option Manually By Setting An Attribute",
     "description": "Sometimes an option can have characters that break the cy.select command. This video shows how you can escape the selector and change the value by invoking the jQuery \"attr\" method on the option. You should also make sure the element is visible and enabled before acting on it to make sure you act like a human user. Find the full source code at https://glebbahmutov.com/cypress-examples/recipes/selected-value.html",
