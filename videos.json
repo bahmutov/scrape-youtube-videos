@@ -1,5 +1,19 @@
 [
   {
+    "videoId": "HWePftvroI4",
+    "title": "Simplify Cypress Parallel Workflow With A Reusable cypress-split Workflow",
+    "description": "This video shows how to simplify cypress-map GitHub Actions workflow that uses cypress-split plugin to run Cypress specs in parallel. We are using the \"split\" workflow from https://github.com/bahmutov/cypress-workflows that abstracts all the complexity of running multiple testing containers. For more examples, see the course https://cypress.tips/courses/cypress-split",
+    "publishedAt": "2024-01-26T19:56:19Z",
+    "url": "https://youtu.be/HWePftvroI4"
+  },
+  {
+    "videoId": "jvBzNs0pRXU",
+    "title": "Cut Cypress Execution In Half By Running Tests In Parallel Using cypress-split And GitHub Actions",
+    "description": "This video shows how I apply cypress-split plugin to cut the execution time of my Cypress specs in cypress-map repo by half. No external services needed. For more, see the course https://cypress.tips/courses/cypress-split\n- https://github.com/bahmutov/cypress-split\n- https://github.com/bahmutov/cypress-map",
+    "publishedAt": "2024-01-25T19:53:31Z",
+    "url": "https://youtu.be/jvBzNs0pRXU"
+  },
+  {
     "videoId": "15F5cK4V-vo",
     "title": "Checkbox Input Element Value",
     "description": "This video shows the difference between the value of a checkbox and its \"checked\" property in Cypress tests. Find the full code at https://glebbahmutov.com/cypress-examples/recipes/input-element-value.html",
