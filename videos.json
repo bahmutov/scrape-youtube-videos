@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "gZtTN9LaD7U",
+    "title": "Use cy.second and cy.third Commands",
+    "description": "I have added cy.second and cy.third queries to my cypress-map plugin to make writing tests more natural. The plugin documentation is at https://github.com/bahmutov/cypress-map\ncy.get('...').second().should('have.text', '...')",
+    "publishedAt": "2024-01-30T16:06:48Z",
+    "url": "https://youtu.be/gZtTN9LaD7U"
+  },
+  {
     "videoId": "HWePftvroI4",
     "title": "Simplify Cypress Parallel Workflow With A Reusable cypress-split Workflow",
     "description": "This video shows how to simplify cypress-map GitHub Actions workflow that uses cypress-split plugin to run Cypress specs in parallel. We are using the \"split\" workflow from https://github.com/bahmutov/cypress-workflows that abstracts all the complexity of running multiple testing containers. For more examples, see the course https://cypress.tips/courses/cypress-split",
