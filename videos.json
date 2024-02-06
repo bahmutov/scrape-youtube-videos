@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "zB2LYB0yFwQ",
+    "title": "Remove Class From Sampled Elements",
+    "description": "This video shows how to randomly pick two elements and then remove class \"Secret\" from them using jQuery method \"$.removeClass\". We are going to use cy.sample command from https://github.com/bahmutov/cypress-map plugin. Full source code is at https://glebbahmutov.com/cypress-examples\n// cy.sample commands comes from the cypress-map\ncy.get('#names li').sample(2).invoke('removeClass', 'secret')\n// verify the the result\ncy.get('#names li.secret').should('have.length', 2)\ncy.get('#names li:not(.secret)').should('have.length', 2)",
+    "publishedAt": "2024-02-05T19:54:16Z",
+    "url": "https://youtu.be/zB2LYB0yFwQ"
+  },
+  {
     "videoId": "gZtTN9LaD7U",
     "title": "Use cy.second and cy.third Commands",
     "description": "I have added cy.second and cy.third queries to my cypress-map plugin to make writing tests more natural. The plugin documentation is at https://github.com/bahmutov/cypress-map\ncy.get('...').second().should('have.text', '...')",
