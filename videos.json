@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "SC6p0LTRg9Y",
+    "title": "Click In Parallel",
+    "description": "This video shows how you can click on a button while Cypress is running another command. We can use jQuery \"trigger\" method to send the \"click\" event while a Cypress command is running. This is certainly a rare case, but maybe you need this feature. I also show how to access elements using their id from the \"window\" object, both from the application code and from the test code. Find the full code at https://glebbahmutov.com/cypress-examples/recipes/click-in-parallel.html",
+    "publishedAt": "2024-02-08T15:50:57Z",
+    "url": "https://youtu.be/SC6p0LTRg9Y"
+  },
+  {
     "videoId": "zB2LYB0yFwQ",
     "title": "Remove Class From Sampled Elements",
     "description": "This video shows how to randomly pick two elements and then remove class \"Secret\" from them using jQuery method \"$.removeClass\". We are going to use cy.sample command from https://github.com/bahmutov/cypress-map plugin. Full source code is at https://glebbahmutov.com/cypress-examples\n// cy.sample commands comes from the cypress-map\ncy.get('#names li').sample(2).invoke('removeClass', 'secret')\n// verify the the result\ncy.get('#names li.secret').should('have.length', 2)\ncy.get('#names li:not(.secret)').should('have.length', 2)",
