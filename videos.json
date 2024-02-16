@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "Kl6H3258wCQ",
+    "title": "Quick Toast Test",
+    "description": "In this video I am showing how Cypress can test the Toast element from the demo page https://primeng.org/toast We will \"catch\" the popup so we can inspect it in the DOM snapshots to find the right selector and the structure. Then we will confirm the popup has \"successful\" attribute, then the popup goes away. Find the full source code at https://github.com/bahmutov/cypress-toast-example",
+    "publishedAt": "2024-02-15T16:40:21Z",
+    "url": "https://youtu.be/Kl6H3258wCQ"
+  },
+  {
     "videoId": "SC6p0LTRg9Y",
     "title": "Click In Parallel",
     "description": "This video shows how you can click on a button while Cypress is running another command. We can use jQuery \"trigger\" method to send the \"click\" event while a Cypress command is running. This is certainly a rare case, but maybe you need this feature. I also show how to access elements using their id from the \"window\" object, both from the application code and from the test code. Find the full code at https://glebbahmutov.com/cypress-examples/recipes/click-in-parallel.html",
