@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "F5uoYgCenFg",
+    "title": "Check If A Button Is Enabled Before Clicking",
+    "description": "An example of conditional testing: clicking a button if it is enabled. \ncy.contains('#btn', 'Click Me').invoke('is', ':enabled') ...\nFind the full source code at https://glebbahmutov.com/cypress-examples/recipes/conditional-testing.html",
+    "publishedAt": "2024-02-20T18:26:51Z",
+    "url": "https://youtu.be/F5uoYgCenFg"
+  },
+  {
     "videoId": "Kl6H3258wCQ",
     "title": "Quick Toast Test",
     "description": "In this video I am showing how Cypress can test the Toast element from the demo page https://primeng.org/toast We will \"catch\" the popup so we can inspect it in the DOM snapshots to find the right selector and the structure. Then we will confirm the popup has \"successful\" attribute, then the popup goes away. Find the full source code at https://github.com/bahmutov/cypress-toast-example",
