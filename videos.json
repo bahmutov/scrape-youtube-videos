@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "H04FSnH-6U0",
+    "title": "Click Button If Enabled Using cypress-if And cypress-await Plugins",
+    "description": "This video shows how to do conditional testing (click a button only if it is enabled) using my plugins cypress-if and cypress-await.\n// cypress-if solution\ncy.contains('button', 'Click Me')\n  // tests using Chai assertion \"be.enabled\"\n  .if('enabled')\n  .click()\n  .should('have.text', 'Clicked')\n  .else('Nothing to click')\n// cypress-await solution\nconst enabled = cy.contains('button', 'Click Me').invoke('is', ':enabled')\ncy.log(`enabled? ${enabled}`)\nif (enabled) {\n  cy.contains('button', 'Click Me').click().should('have.text', 'Clicked')\n} else {\n  cy.log('Nothing to click')\n}\n\nPlugins repos are https://github.com/bahmutov/cypress-if and https://github.com/bahmutov/cypress-await Look for a blog post with code examples for this video by following https://glebbahmutov.com/blog/",
+    "publishedAt": "2024-02-21T15:59:47Z",
+    "url": "https://youtu.be/H04FSnH-6U0"
+  },
+  {
     "videoId": "F5uoYgCenFg",
     "title": "Check If A Button Is Enabled Before Clicking",
     "description": "An example of conditional testing: clicking a button if it is enabled. \ncy.contains('#btn', 'Click Me').invoke('is', ':enabled') ...\nFind the full source code at https://glebbahmutov.com/cypress-examples/recipes/conditional-testing.html",
