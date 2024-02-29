@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "KrcTbp7lV4A",
+    "title": "Refactor A Test Part Two: Data-Driven Tests For Multiple Viewports",
+    "description": "In this video, I refactor another spec to replace manual data-driven testing with cypress-each plugin. Find the source code at https://github.com/bahmutov/basta-spring-2024-cypress-and-playwright and the final code in the branch \"updated\" Find the plugin at https://github.com/bahmutov/cypress-each",
+    "publishedAt": "2024-02-27T16:56:15Z",
+    "url": "https://youtu.be/KrcTbp7lV4A"
+  },
+  {
     "videoId": "CgmKKs8nmjE",
     "title": "Refactor A Test: Part One",
     "description": "In this video I refactor a couple of tests from the presentation \"Cypress And Playwright\" https://speakerdeck.com/rainerhahnekamp/basta-spring-2024-cypress-und-playwright to how I would code them. Find the initial tests in the repo https://github.com/bahmutov/basta-spring-2024-cypress-and-playwright and the refactored tests in the branch \"updated\". Part 2 is coming",
