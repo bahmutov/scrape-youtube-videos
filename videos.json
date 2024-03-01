@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "VHLJA_9EJx0",
+    "title": "Refactor A Test Part 3: Checking A Paginated List",
+    "description": "This is part 3 of refactoring Cypress tests. In this video, I show writing a recursive test that checks a paginated list shown by the app to ensure the deleted user name does not appear in the list. But there are a couple of pitfalls in the application that make writing such tests hard(er). I summarized these tough cases and how to solve them in my blog post \"Solve Tough Pagination Cases Using Cypress\" https://glebbahmutov.com/blog/solve-tough-pagination-cases-using-cypress/ Find the full source code in the repo https://github.com/bahmutov/basta-spring-2024-cypress-and-playwright",
+    "publishedAt": "2024-02-29T20:17:22Z",
+    "url": "https://youtu.be/VHLJA_9EJx0"
+  },
+  {
     "videoId": "KrcTbp7lV4A",
     "title": "Refactor A Test Part Two: Data-Driven Tests For Multiple Viewports",
     "description": "In this video, I refactor another spec to replace manual data-driven testing with cypress-each plugin. Find the source code at https://github.com/bahmutov/basta-spring-2024-cypress-and-playwright and the final code in the branch \"updated\" Find the plugin at https://github.com/bahmutov/cypress-each",
