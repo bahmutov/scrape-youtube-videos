@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "hDTpRhcOmjs",
+    "title": "Refactor A Test Part 4: A Better Delete Method",
+    "description": "In this video, I refactor the page object method that deletes a customer.\n- add a log message\n- use cy.contains(selector, text) rather than the longer cy.get(selector).contains(text)\n- explicit \"confirm\" stub and check that the stub was called with expected argument\n- confirm the application routes to the correct URL after deleting\ndelete() {\n  cy.log('**deleting the customer**');\n  cy.on(\n    'window:confirm',\n    cy\n      .stub()\n      .returns(true)\n      // @ts-expect-error\n      .as('confirm')\n  );\n  cy.contains('button', 'Delete').click();\n  cy.get('@confirm').should('have.been.calledOnceWith', 'Really delete?');\n  cy.location('pathname').should('eq', '/customer');\n}\nFind the original code at https://github.com/bahmutov/basta-spring-2024-cypress-and-playwright",
+    "publishedAt": "2024-03-01T21:17:44Z",
+    "url": "https://youtu.be/hDTpRhcOmjs"
+  },
+  {
     "videoId": "VHLJA_9EJx0",
     "title": "Refactor A Test Part 3: Checking A Paginated List",
     "description": "This is part 3 of refactoring Cypress tests. In this video, I show writing a recursive test that checks a paginated list shown by the app to ensure the deleted user name does not appear in the list. But there are a couple of pitfalls in the application that make writing such tests hard(er). I summarized these tough cases and how to solve them in my blog post \"Solve Tough Pagination Cases Using Cypress\" https://glebbahmutov.com/blog/solve-tough-pagination-cases-using-cypress/ Find the full source code in the repo https://github.com/bahmutov/basta-spring-2024-cypress-and-playwright",
