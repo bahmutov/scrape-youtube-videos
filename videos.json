@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "RKgSBN2fk_s",
+    "title": "cy.difference Command With Predicates",
+    "description": "This video shows the cy.difference command from cypress-map. The command can compare object values against expected values. It can also check values by passing them through predicate functions. Find the source code in the repo https://github.com/bahmutov/cypress-prices-check and the cypress-map plugin at https://github.com/bahmutov/cypress-map",
+    "publishedAt": "2024-03-07T16:21:10Z",
+    "url": "https://youtu.be/RKgSBN2fk_s"
+  },
+  {
     "videoId": "WKVaJjst_-8",
     "title": "Check Multiple Properties At Once Using cy.difference Query",
     "description": "This video shows custom query commands from cypress-map plugin. I explain how the \"cy.difference\" command can help compare a large object of extracted text from the page and show a nice error message if several values are different. Read the blog post \"Check Fees And Totals Using Cypress\" https://glebbahmutov.com/blog/check-fees-using-cypress/ and find the source code in the repo https://github.com/bahmutov/cypress-prices-check Plugin cypress-map can be found at https://github.com/bahmutov/cypress-map",
