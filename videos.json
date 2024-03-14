@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "iHDZ53gLltc",
+    "title": "Cypress Flaky Test Exercise: Level 1",
+    "description": "I have set up several examples of Cypress flaky tests in the repo https://github.com/bahmutov/flaky-test-cypress This video shows the \"level 1\" exercise and my solution to fix the test for good.",
+    "publishedAt": "2024-03-13T16:47:11Z",
+    "url": "https://youtu.be/iHDZ53gLltc"
+  },
+  {
     "videoId": "RKgSBN2fk_s",
     "title": "cy.difference Command With Predicates",
     "description": "This video shows the cy.difference command from cypress-map. The command can compare object values against expected values. It can also check values by passing them through predicate functions. Find the source code in the repo https://github.com/bahmutov/cypress-prices-check and the cypress-map plugin at https://github.com/bahmutov/cypress-map",
