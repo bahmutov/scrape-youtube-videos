@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "BsOIhxEVe4s",
+    "title": "Cypress Flaky Test Exercise: Level 5",
+    "description": "This video shows a flaky Cypress test caused by the app re-rendering part of the page and removing the element the test is using. Find the starting source code in the repo https://github.com/bahmutov/flaky-test-cypress in the branch \"level5\". For more hands-on Cypress exercises, check out my courses at https://cypress.tips/courses",
+    "publishedAt": "2024-03-15T13:28:06Z",
+    "url": "https://youtu.be/BsOIhxEVe4s"
+  },
+  {
     "videoId": "iHjPHX2rYiM",
     "title": "Cypress Flaky Test Exercise: Level 4",
     "description": "In this video, the flake comes from the application \"losing\" the first couple of letters when the user types the email address. How would you fix it? Find the starting source code in the repo https://github.com/bahmutov/flaky-test-cypress branch \"level4\" If you like hands-on testing coding challenges, check out my Cypress/Playwright courses at https://cypress.tips/courses",
