@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "ae6QkkWUTog",
+    "title": "Cypress Flaky Test Exercise: Level 6",
+    "description": "In this video, the flake comes from the application slowly loading the data while the test is adding the first record. How would you fix it? Find the starting source code in the repo https://github.com/bahmutov/flaky-tes... branch \"level6\" If you like hands-on testing coding challenges, check out my Cypress/Playwright courses at https://cypress.tips/courses",
+    "publishedAt": "2024-03-19T13:16:46Z",
+    "url": "https://youtu.be/ae6QkkWUTog"
+  },
+  {
     "videoId": "BsOIhxEVe4s",
     "title": "Cypress Flaky Test Exercise: Level 5",
     "description": "This video shows a flaky Cypress test caused by the app re-rendering part of the page and removing the element the test is using. Find the starting source code in the repo https://github.com/bahmutov/flaky-test-cypress in the branch \"level5\". For more hands-on Cypress exercises, check out my courses at https://cypress.tips/courses",
