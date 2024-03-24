@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "tza6cM9E_q0",
+    "title": "Cypress Flaky Test Exercise: Level 7",
+    "description": "In this video, there is some flaky due to the UI updating before the app actually makes the \"POST /students\" call to save the data. I fix the flake for good by spying on the network call using the cy.intercept command. The starting code is in the repo https://github.com/bahmutov/flaky-test-cypress in the branch \"level7\". For more examples and flake exercises, read the blog post https://glebbahmutov.com/blog/cypress-flaky-tests-exercises/ For more \"cy.intercept\" exercises, see my course \"Cypress Network Testing Exercises\" https://cypress.tips/courses/network-testing",
+    "publishedAt": "2024-03-23T18:50:57Z",
+    "url": "https://youtu.be/tza6cM9E_q0"
+  },
+  {
     "videoId": "ae6QkkWUTog",
     "title": "Cypress Flaky Test Exercise: Level 6",
     "description": "In this video, the flake comes from the application slowly loading the data while the test is adding the first record. How would you fix it? Find the starting source code in the repo https://github.com/bahmutov/flaky-tes... branch \"level6\" If you like hands-on testing coding challenges, check out my Cypress/Playwright courses at https://cypress.tips/courses",
