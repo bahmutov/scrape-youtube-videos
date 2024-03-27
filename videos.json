@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "jU6-FtlL5KU",
+    "title": "Cypress Flaky Test Exercise: Level 8",
+    "description": "This video shows a situation when the iframe inside the app takes a little bit longer to load, causing a problem. I show how to access the elements inside the iframe with command retry-ability (avoid using cy.then). Find the source code in the branch \"level8\" of the repo https://github.com/bahmutov/flaky-test-cypress and read the blog post \"Working with iframes in Cypress\" https://www.cypress.io/blog/2020/02/12/working-with-iframes-in-cypress",
+    "publishedAt": "2024-03-26T15:35:53Z",
+    "url": "https://youtu.be/jU6-FtlL5KU"
+  },
+  {
     "videoId": "tza6cM9E_q0",
     "title": "Cypress Flaky Test Exercise: Level 7",
     "description": "In this video, there is some flaky due to the UI updating before the app actually makes the \"POST /students\" call to save the data. I fix the flake for good by spying on the network call using the cy.intercept command. The starting code is in the repo https://github.com/bahmutov/flaky-test-cypress in the branch \"level7\". For more examples and flake exercises, read the blog post https://glebbahmutov.com/blog/cypress-flaky-tests-exercises/ For more \"cy.intercept\" exercises, see my course \"Cypress Network Testing Exercises\" https://cypress.tips/courses/network-testing",
