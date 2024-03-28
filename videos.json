@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "L4EQT2L7yLY",
+    "title": "Cypress Flaky Test Exercise: Level 9",
+    "description": "Often an application shows a random greeting popup when the user visits the page. This video shows how to investigate it and set the local storage item to prevent the popup from opening. Find the source code in the branch \"level9\" of the repo https://github.com/bahmutov/flaky-test-cypress",
+    "publishedAt": "2024-03-27T15:15:59Z",
+    "url": "https://youtu.be/L4EQT2L7yLY"
+  },
+  {
     "videoId": "jU6-FtlL5KU",
     "title": "Cypress Flaky Test Exercise: Level 8",
     "description": "This video shows a situation when the iframe inside the app takes a little bit longer to load, causing a problem. I show how to access the elements inside the iframe with command retry-ability (avoid using cy.then). Find the source code in the branch \"level8\" of the repo https://github.com/bahmutov/flaky-test-cypress and read the blog post \"Working with iframes in Cypress\" https://www.cypress.io/blog/2020/02/12/working-with-iframes-in-cypress",
