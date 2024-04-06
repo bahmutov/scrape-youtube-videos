@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "9PA6NGuTW3g",
+    "title": "Required Input Attributes",
+    "description": "This video shows how to check the input elements with the \"required\" attribute. We can confirm the elements that have this attribute and we can cross-reference them with their label elements. Find the full recipe at https://glebbahmutov.com/cypress-examples/recipes/required-attributes.html",
+    "publishedAt": "2024-04-05T15:56:44Z",
+    "url": "https://youtu.be/9PA6NGuTW3g"
+  },
+  {
     "videoId": "L4EQT2L7yLY",
     "title": "Cypress Flaky Test Exercise: Level 9",
     "description": "Often an application shows a random greeting popup when the user visits the page. This video shows how to investigate it and set the local storage item to prevent the popup from opening. Find the source code in the branch \"level9\" of the repo https://github.com/bahmutov/flaky-test-cypress",
