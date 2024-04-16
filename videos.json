@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "NWc-sI-gPkA",
+    "title": "Bonus 132: Prove the Qwik event handler download",
+    "description": "A video showing how to confirm on-demand JavaScript downloads used by Qwik framework to speed up the applications. The full lesson with source code is available in the course \"Cypress Network Testing Exercises\" https://cypress.tips/courses/network-testing",
+    "publishedAt": "2024-04-15T15:26:04Z",
+    "url": "https://youtu.be/NWc-sI-gPkA"
+  },
+  {
     "videoId": "9PA6NGuTW3g",
     "title": "Required Input Attributes",
     "description": "This video shows how to check the input elements with the \"required\" attribute. We can confirm the elements that have this attribute and we can cross-reference them with their label elements. Find the full recipe at https://glebbahmutov.com/cypress-examples/recipes/required-attributes.html",
