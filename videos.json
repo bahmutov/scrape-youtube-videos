@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "eQJyz2UEMvY",
+    "title": "cy.then Callback With Retries Inside",
+    "description": "The \"cy.then\" command does not retry its callback function, but the code inside the callback can still use normal Cypress commands with retries. This video shows one such example and then refactors it for simplicity. Find the full recipe on my site https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2024-06-04T18:43:57Z",
+    "url": "https://youtu.be/eQJyz2UEMvY"
+  },
+  {
     "videoId": "NWc-sI-gPkA",
     "title": "Bonus 132: Prove the Qwik event handler download",
     "description": "A video showing how to confirm on-demand JavaScript downloads used by Qwik framework to speed up the applications. The full lesson with source code is available in the course \"Cypress Network Testing Exercises\" https://cypress.tips/courses/network-testing",
