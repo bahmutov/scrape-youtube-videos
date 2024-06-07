@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "-9pGivsOho8",
+    "title": "Better Scroll Behavior In Your Tests",
+    "description": "By default, Cypress scrolls elements to the top of the viewport before clicking or typing. Often this hides important information, and I prefer to change the scroll behavior to scroll the element to the center of the viewport. See https://on.cypress.io/interacting-with-elements#scrolling for details and find the example shown in this video in the repo https://github.com/bahmutov/scroll-behavior-example",
+    "publishedAt": "2024-06-06T16:50:25Z",
+    "url": "https://youtu.be/-9pGivsOho8"
+  },
+  {
     "videoId": "eQJyz2UEMvY",
     "title": "cy.then Callback With Retries Inside",
     "description": "The \"cy.then\" command does not retry its callback function, but the code inside the callback can still use normal Cypress commands with retries. This video shows one such example and then refactors it for simplicity. Find the full recipe on my site https://glebbahmutov.com/cypress-examples",
