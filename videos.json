@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "loYkE80cJEc",
+    "title": "Cypress Quiz With Yevhen Laichenkov",
+    "description": "In this video, Yevhen Laichenkov and I discuss his https://cypressquiz.com/ fun project. We go through the questions and try to answer each one, discussing the intricacies of some Cypress commands. Check out Yevhen's work at:\n- https://github.com/elaichenkov\n- https://www.linkedin.com/in/elaichenkov\nWe also mentioned several other resources:\n- https://cypress.tips/search\n- https://docs.cypress.io/",
+    "publishedAt": "2024-06-07T16:18:43Z",
+    "url": "https://youtu.be/loYkE80cJEc"
+  },
+  {
     "videoId": "-9pGivsOho8",
     "title": "Better Scroll Behavior In Your Tests",
     "description": "By default, Cypress scrolls elements to the top of the viewport before clicking or typing. Often this hides important information, and I prefer to change the scroll behavior to scroll the element to the center of the viewport. See https://on.cypress.io/interacting-with-elements#scrolling for details and find the example shown in this video in the repo https://github.com/bahmutov/scroll-behavior-example",
