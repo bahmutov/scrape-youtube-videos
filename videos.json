@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "zGO3LNx-agk",
+    "title": "Refactor Cypress API Tests Part 1: Use cy-spok Plugin",
+    "description": "In this video, I refactor API tests found in the repo https://github.com/EvgeniiDolzhenko/cypress-conduit-api You can find my refactoring in the branch \"refactor1\" of the repo https://github.com/bahmutov/cypress-conduit-api\n- I will use cy-spok plugin https://github.com/bahmutov/cy-spok to write more powerful and shorter assertions for the response objects\n- I will remove \"cy.then\" callbacks that simply check a property in the current subject\n- I will validate the env settings value before using it\nFor more lessons showing cy-spok and cypress-plugin-api, see my \"Cypress Plugins\" course https://cypress.tips/courses/cypress-plugins\nVSCode color theme: \"Dark Theme by Marcelo\"",
+    "publishedAt": "2024-06-11T16:34:47Z",
+    "url": "https://youtu.be/zGO3LNx-agk"
+  },
+  {
     "videoId": "loYkE80cJEc",
     "title": "Cypress Quiz With Yevhen Laichenkov",
     "description": "In this video, Yevhen Laichenkov and I discuss his https://cypressquiz.com/ fun project. We go through the questions and try to answer each one, discussing the intricacies of some Cypress commands. Check out Yevhen's work at:\n- https://github.com/elaichenkov\n- https://www.linkedin.com/in/elaichenkov\nWe also mentioned several other resources:\n- https://cypress.tips/search\n- https://docs.cypress.io/",
