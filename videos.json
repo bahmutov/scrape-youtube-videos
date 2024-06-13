@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "yS9G0xe4yOc",
+    "title": "Refactor Cypress Api Tests Part 2: Set up The IntelliSense",
+    "description": "I am continuing to refactor API tests in the repo https://github.com/bahmutov/cypress-conduit-api In this short video I set up the IntelliSense to give my correct types for \"cy\" global object and \"cy.api\" custom command. For more details, see https://glebbahmutov.com/blog/use-typescript-with-cypress/",
+    "publishedAt": "2024-06-11T19:49:42Z",
+    "url": "https://youtu.be/yS9G0xe4yOc"
+  },
+  {
     "videoId": "zGO3LNx-agk",
     "title": "Refactor Cypress API Tests Part 1: Use cy-spok Plugin",
     "description": "In this video, I refactor API tests found in the repo https://github.com/EvgeniiDolzhenko/cypress-conduit-api You can find my refactoring in the branch \"refactor1\" of the repo https://github.com/bahmutov/cypress-conduit-api\n- I will use cy-spok plugin https://github.com/bahmutov/cy-spok to write more powerful and shorter assertions for the response objects\n- I will remove \"cy.then\" callbacks that simply check a property in the current subject\n- I will validate the env settings value before using it\nFor more lessons showing cy-spok and cypress-plugin-api, see my \"Cypress Plugins\" course https://cypress.tips/courses/cypress-plugins\nVSCode color theme: \"Dark Theme by Marcelo\"",
