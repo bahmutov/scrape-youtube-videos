@@ -1,5 +1,19 @@
 [
   {
+    "videoId": "XlXQm2sybQQ",
+    "title": "cy.root Command Example",
+    "description": "This video shows an example of \"cy.root\" command that allows checking attributes of the parent \"cy.within\" element. Find the full example in a recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2024-06-14T17:21:16Z",
+    "url": "https://youtu.be/XlXQm2sybQQ"
+  },
+  {
+    "videoId": "tIabUupPo-A",
+    "title": "Refactor Cypress Api Tests Part 4: Use deep.include Assertion",
+    "description": "In this video, I refactor the user spec tests. We will combine multiple tests into a single one using \"deep.include\" assertion to check one or many known properties of an object. Then we will improve the page object method, and then I will switch to use cy-spok plugin to simplify checking nested properties. Find the code in the branch \"refactor-user-spec\" of the repo https://github.com/bahmutov/cypress-conduit-api",
+    "publishedAt": "2024-06-14T12:18:56Z",
+    "url": "https://youtu.be/tIabUupPo-A"
+  },
+  {
     "videoId": "YIkOirPEQRM",
     "title": "Refactor Cypress Api Tests Part 3: Use cypress-map",
     "description": "In this video, I simplify the tests and the \"beforeEach\" hooks using query commands from the cypress-map plugin. Find the starting code in the repo https://github.com/bahmutov/cypress-conduit-api and the cypress-map plugin documentation in the repo https://github.com/bahmutov/cypress-map",
@@ -8,7 +22,7 @@
   },
   {
     "videoId": "yS9G0xe4yOc",
-    "title": "Refactor Cypress Api Tests Part 2: Set up The IntelliSense",
+    "title": "Refactor Cypress Api Tests Part 2: Set Up The IntelliSense",
     "description": "I am continuing to refactor API tests in the repo https://github.com/bahmutov/cypress-conduit-api In this short video I set up the IntelliSense to give my correct types for \"cy\" global object and \"cy.api\" custom command. For more details, see https://glebbahmutov.com/blog/use-typescript-with-cypress/",
     "publishedAt": "2024-06-11T19:49:42Z",
     "url": "https://youtu.be/yS9G0xe4yOc"
