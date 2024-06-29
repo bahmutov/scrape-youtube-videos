@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "L-fyfaUUXFA",
+    "title": "Run Just The Last Failed Tests Using cypress-plugin-last-failed",
+    "description": "In this video, I am showing the new plugin https://github.com/dennisbergevin/cypress-plugin-last-failed that lets you run only the last failed tests in the interactive and non-interactive modes. The source code is in the repo https://github.com/bahmutov/demo-cypress-plugin-last-failed branch \"demo1\"",
+    "publishedAt": "2024-06-28T15:53:14Z",
+    "url": "https://youtu.be/L-fyfaUUXFA"
+  },
+  {
     "videoId": "XlXQm2sybQQ",
     "title": "cy.root Command Example",
     "description": "This video shows an example of \"cy.root\" command that allows checking attributes of the parent \"cy.within\" element. Find the full example in a recipe at https://glebbahmutov.com/cypress-examples",
