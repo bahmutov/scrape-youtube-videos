@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "f9o1WgmY3Jw",
+    "title": "Check If All Images Have Loaded Using cy.each Command",
+    "description": "You can check multiple images on the page to verify they load using Cypress \"cy.get(...).each\" command. Inside, you can verify the property \"naturalWidth\" or \"naturalHeight\" and if it is above zero, then the image has loaded.\nexpect($el, `image ${k + 1}`)\n    .to.have.prop('naturalWidth')\n    .be.greaterThan(0)\nYou can find the full source code at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2024-07-25T14:28:08Z",
+    "url": "https://youtu.be/f9o1WgmY3Jw"
+  },
+  {
     "videoId": "L-fyfaUUXFA",
     "title": "Run Just The Last Failed Tests Using cypress-plugin-last-failed",
     "description": "In this video, I am showing the new plugin https://github.com/dennisbergevin/cypress-plugin-last-failed that lets you run only the last failed tests in the interactive and non-interactive modes. The source code is in the repo https://github.com/bahmutov/demo-cypress-plugin-last-failed branch \"demo1\"",
