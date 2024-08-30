@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "sdYs0AKx7ng",
+    "title": "Testing window.close Method From Cypress",
+    "description": "This video shows how to set a \"window.close\" method stub using cy.window and cy.stub method calls. Then we can click on the button and confirm the method call was indeed made. Find the full code at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2024-08-29T17:00:22Z",
+    "url": "https://youtu.be/sdYs0AKx7ng"
+  },
+  {
     "videoId": "f9o1WgmY3Jw",
     "title": "Check If All Images Have Loaded Using cy.each Command",
     "description": "You can check multiple images on the page to verify they load using Cypress \"cy.get(...).each\" command. Inside, you can verify the property \"naturalWidth\" or \"naturalHeight\" and if it is above zero, then the image has loaded.\nexpect($el, `image ${k + 1}`)\n    .to.have.prop('naturalWidth')\n    .be.greaterThan(0)\nYou can find the full source code at https://glebbahmutov.com/cypress-examples/",
