@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "ngmB4r4-m6U",
+    "title": "Skip Dependent Cypress Tests On Failure",
+    "description": "If your Cypress tests depend on each other, if a test fails, all tests after that fail. I wrote a plugin https://github.com/bahmutov/cypress-skip-this-test that automatically skips the tests if any of the previous tests in the same suite fails. This video shows the plugin in action. For more details, see the blog post https://glebbahmutov.com/blog/skip-dependent-tests-on-failure/",
+    "publishedAt": "2024-09-05T15:38:45Z",
+    "url": "https://youtu.be/ngmB4r4-m6U"
+  },
+  {
     "videoId": "sdYs0AKx7ng",
     "title": "Testing window.close Method From Cypress",
     "description": "This video shows how to set a \"window.close\" method stub using cy.window and cy.stub method calls. Then we can click on the button and confirm the method call was indeed made. Find the full code at https://glebbahmutov.com/cypress-examples",
