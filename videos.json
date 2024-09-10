@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "qdBM08WBU_Q",
+    "title": "Parse The Account Number Explained",
+    "description": "This video solves a Cypress test problem the user asked. The application shows an account number: a 9-digit number. The test should wait for the number and then compare its value. I explain the problem with the initial solution and then show how to write this test. Find the full code at https://glebbahmutov.com/cypress-examples/recipes/parse-account-number.html",
+    "publishedAt": "2024-09-06T20:12:55Z",
+    "url": "https://youtu.be/qdBM08WBU_Q"
+  },
+  {
     "videoId": "ngmB4r4-m6U",
     "title": "Skip Dependent Cypress Tests On Failure",
     "description": "If your Cypress tests depend on each other, if a test fails, all tests after that fail. I wrote a plugin https://github.com/bahmutov/cypress-skip-this-test that automatically skips the tests if any of the previous tests in the same suite fails. This video shows the plugin in action. For more details, see the blog post https://glebbahmutov.com/blog/skip-dependent-tests-on-failure/",
