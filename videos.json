@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "JpqU7Y-BVxc",
+    "title": "Retry Network Requests",
+    "description": "This video shows how to use plugins cypress-recurse and cy-spok to retry calling the backend until it responds with the expected result. Read the blog post https://glebbahmutov.com/blog/retry-network-requests/ for all source code. Find the plugins at https://github.com/bahmutov/cypress-recurse and https://github.com/bahmutov/cy-spok",
+    "publishedAt": "2024-09-13T14:55:09Z",
+    "url": "https://youtu.be/JpqU7Y-BVxc"
+  },
+  {
     "videoId": "qdBM08WBU_Q",
     "title": "Parse The Account Number Explained",
     "description": "This video solves a Cypress test problem the user asked. The application shows an account number: a 9-digit number. The test should wait for the number and then compare its value. I explain the problem with the initial solution and then show how to write this test. Find the full code at https://glebbahmutov.com/cypress-examples/recipes/parse-account-number.html",
