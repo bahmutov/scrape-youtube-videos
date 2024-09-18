@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "52KW-t2wWaE",
+    "title": "Find Elements Without An Attribute",
+    "description": "This video shows how to find all the elements that do not have a specific attribute. For example, let's find all buttons that don't have attribute \"data-cy\"\ncy.get(\"button:not([data-cy])\")\nFind the recipe at https://glebbahmutov.com/cypress-examples",
+    "publishedAt": "2024-09-17T16:43:43Z",
+    "url": "https://youtu.be/52KW-t2wWaE"
+  },
+  {
     "videoId": "JpqU7Y-BVxc",
     "title": "Retry Network Requests",
     "description": "This video shows how to use plugins cypress-recurse and cy-spok to retry calling the backend until it responds with the expected result. Read the blog post https://glebbahmutov.com/blog/retry-network-requests/ for all source code. Find the plugins at https://github.com/bahmutov/cypress-recurse and https://github.com/bahmutov/cy-spok",
