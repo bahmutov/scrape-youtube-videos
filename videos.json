@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "5OTqNxJyhxo",
+    "title": "Test Layout Shift",
+    "description": "This video shows how you can detect even 1 pixel layout shifts during testing. All you need is to \"remember\" the starting \"offsetTop / offsetLeft\" properties and then check them again after interacting with the page. Find the full recipe at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2024-09-30T15:52:13Z",
+    "url": "https://youtu.be/5OTqNxJyhxo"
+  },
+  {
     "videoId": "52KW-t2wWaE",
     "title": "Find Elements Without An Attribute",
     "description": "This video shows how to find all the elements that do not have a specific attribute. For example, let's find all buttons that don't have attribute \"data-cy\"\ncy.get(\"button:not([data-cy])\")\nFind the recipe at https://glebbahmutov.com/cypress-examples",
