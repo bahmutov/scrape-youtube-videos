@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "YCyOxdBfYQM",
+    "title": "Vertical Center",
+    "description": "This video shows how the Cypress test can confirm the vertical alignment of two elements. We get the bounding client rectangle from both elements and then compare the centers' values. We use \"closeTo\" assertion since floating-point values might disagree by a tiny amount. We can simplify the test using \"cypress-map\" plugin and even make the entire chain retryable. Find the source code at https://glebbahmutov.com/cypress-examples/recipes/vertical-center.html",
+    "publishedAt": "2024-10-22T16:21:43Z",
+    "url": "https://youtu.be/YCyOxdBfYQM"
+  },
+  {
     "videoId": "5OTqNxJyhxo",
     "title": "Test Layout Shift",
     "description": "This video shows how you can detect even 1 pixel layout shifts during testing. All you need is to \"remember\" the starting \"offsetTop / offsetLeft\" properties and then check them again after interacting with the page. Find the full recipe at https://glebbahmutov.com/cypress-examples/",
