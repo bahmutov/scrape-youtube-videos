@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "OxZHBG1OUww",
+    "title": "Lesson d2: Halloween pumpkins",
+    "description": "This is a video from a free lesson in my online course teaching test-driven development using Cypress where I code a small web calculator https://cypress.tips/courses/tdd-calculator In this lesson, we replace the orange operator button backgrounds with an image of a pumpkin. We confirm the image is downloaded by the browser, it is applied via the CSS property \"background-image\" plus the button becomes larger when the user hovers over it. Check out the full course if you want to see more lessons or do the hands-on exercises. Until Nov 11th, 2024 you can use the promo code TDDHALLOWEEN to get 25% off this course.",
+    "publishedAt": "2024-10-31T15:06:10Z",
+    "url": "https://youtu.be/OxZHBG1OUww"
+  },
+  {
     "videoId": "TQyDJuwLJGs",
     "title": "Same Height",
     "description": "This video shows Cypress test that confirms that the element does not change its height after some user action. You need to compare heights as numbers and with a tolerance. Find the full recipe at https://glebbahmutov.com/cypress-examples/",
