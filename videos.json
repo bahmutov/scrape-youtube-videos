@@ -1,5 +1,19 @@
 [
   {
+    "videoId": "VklJ76TfeQk",
+    "title": "Run Tests Separately Using cypress-magic-backend Playback Mode",
+    "description": "One nice side benefit of using cypress-magic-backend plugin in the Playback mode is that you can now run tests that depend on the backend state independently of each other. This video shows how running the second test by itself in a spec where the first test sets everything up is now working.",
+    "publishedAt": "2025-01-10T21:38:50Z",
+    "url": "https://youtu.be/VklJ76TfeQk"
+  },
+  {
+    "videoId": "ZhF0SDC1Q0g",
+    "title": "Make E2E Tests Super Fast With cypress-magic-backend Plugin",
+    "description": "This video introduces the plugin \"cypress-magic-backend\" that can record all your API network calls and then replay them. This is useful when you want to concentrate your testing on the front-end code, or the backend is too slow or even unavailable during tests. Find the plugin at https://github.com/bahmutov/cypress-magic-backend and the example shown in the branch \"video1\" of the repo https://github.com/bahmutov/cypress-magic-backend-example",
+    "publishedAt": "2025-01-10T14:59:43Z",
+    "url": "https://youtu.be/ZhF0SDC1Q0g"
+  },
+  {
     "videoId": "OxZHBG1OUww",
     "title": "Lesson d2: Halloween pumpkins",
     "description": "This is a video from a free lesson in my online course teaching test-driven development using Cypress where I code a small web calculator https://cypress.tips/courses/tdd-calculator In this lesson, we replace the orange operator button backgrounds with an image of a pumpkin. We confirm the image is downloaded by the browser, it is applied via the CSS property \"background-image\" plus the button becomes larger when the user hovers over it. Check out the full course if you want to see more lessons or do the hands-on exercises. Until Nov 11th, 2024 you can use the promo code TDDHALLOWEEN to get 25% off this course.",
