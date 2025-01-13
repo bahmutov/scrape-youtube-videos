@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "_1fnFiPMYf8",
+    "title": "Record And Replay Several API Definitions",
+    "description": "The plugin cypress-magic-backend lets you define multiple explicit API routes to intercept, see https://github.com/bahmutov/cypress-magic-backend?tab=readme-ov-file#configuration In this video, I show how to better target \"GET and POST calls to /todos\" and \"DELETE calls to /todos/:id\" APIs",
+    "publishedAt": "2025-01-12T18:58:43Z",
+    "url": "https://youtu.be/_1fnFiPMYf8"
+  },
+  {
     "videoId": "VklJ76TfeQk",
     "title": "Run Tests Separately Using cypress-magic-backend Playback Mode",
     "description": "One nice side benefit of using cypress-magic-backend plugin in the Playback mode is that you can now run tests that depend on the backend state independently of each other. This video shows how running the second test by itself in a spec where the first test sets everything up is now working.",
