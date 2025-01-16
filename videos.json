@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "37zTpG4tDxA",
+    "title": "Detect API Call Duration Changes During Cypress Tests",
+    "description": "This video shows how the plugin cypress-magic-backend can detect and warn you about API network calls that suddenly changed their duration. For example, if a \"GET /todos\" call took 500ms before and now takes 1100ms, the plugin will warn you about it. Find the plugin and more details at https://github.com/bahmutov/cypress-magic-backend",
+    "publishedAt": "2025-01-14T17:18:52Z",
+    "url": "https://youtu.be/37zTpG4tDxA"
+  },
+  {
     "videoId": "_1fnFiPMYf8",
     "title": "Record And Replay Several API Definitions",
     "description": "The plugin cypress-magic-backend lets you define multiple explicit API routes to intercept, see https://github.com/bahmutov/cypress-magic-backend?tab=readme-ov-file#configuration In this video, I show how to better target \"GET and POST calls to /todos\" and \"DELETE calls to /todos/:id\" APIs",
