@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "J-E-8eBxFaQ",
+    "title": "cypress-magic-backend And Your Test Network Intercepts",
+    "description": "This video shows how cypress-magic-backend synthetic backend works with your cy.intercept spies and stubs. In a nutshell: cypress-magic-backend is an \"intercept of the last resort\" that is applied last, after your cy.intercept calls are made. So you don't have to worry about it!",
+    "publishedAt": "2025-01-15T20:07:09Z",
+    "url": "https://youtu.be/J-E-8eBxFaQ"
+  },
+  {
     "videoId": "37zTpG4tDxA",
     "title": "Detect API Call Duration Changes During Cypress Tests",
     "description": "This video shows how the plugin cypress-magic-backend can detect and warn you about API network calls that suddenly changed their duration. For example, if a \"GET /todos\" call took 500ms before and now takes 1100ms, the plugin will warn you about it. Find the plugin and more details at https://github.com/bahmutov/cypress-magic-backend",
