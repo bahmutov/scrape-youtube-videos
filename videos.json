@@ -1,5 +1,26 @@
 [
   {
+    "videoId": "DrW6fptyjiE",
+    "title": "Use Callbacks Or Command Chaining Or Cypress Aliases",
+    "description": "This video shows how to connect utility page object methods to the rest of the testing code:\n- using a callback function (my least favorite method)\n- returning Cypress chain with the value (works pretty well)\n- saving value under a Cypress alias (works really well)\nFind the final source code and individual commits in the pull request https://github.com/bahmutov/todomvc-callback-example/pull/2\nFor more, read my blog posts https://glebbahmutov.com/blog/ and go through the Testing The Swag Store course at https://cypress.tips/courses",
+    "publishedAt": "2025-01-31T18:59:58Z",
+    "url": "https://youtu.be/DrW6fptyjiE"
+  },
+  {
+    "videoId": "R-i76RPegfw",
+    "title": "How I Create Page Objects (In Cypress)",
+    "description": "This video shows how I create page objects for my Cypress end-to-end tests:\n- wait for at least a few tests to be finished and working\n- find common functionality on the page: visiting and waiting for the page to load, data reset, adding new items\n- create page object methods (I use simply static objects)\n- think about what the page method returns. Typically void, but some methods can return Cypress chain command so we can add additional commands and assertions\nFind the full source code in the pull request https://github.com/bahmutov/todomvc-callback-example/pull/1",
+    "publishedAt": "2025-01-31T16:39:36Z",
+    "url": "https://youtu.be/R-i76RPegfw"
+  },
+  {
+    "videoId": "H_am4icAnR8",
+    "title": "TDD Example: Add data- Attribute",
+    "description": "This video shows how I practice test-driven development using end-to-end Cypress tests while modifying the application. We need to add \"data-todo-id\" attribute with the item's unique id. Before modifying the HTML / Vue markup I update the test to check for that attribute. The test fails, since the attribute does not exist yet. To make the test pass, I update the application. Once the test is green again, the feature is done. Find the source code in the repo https://github.com/bahmutov/todomvc-callback-example and my entire course about TDD with Cypress at https://cypress.tips/courses",
+    "publishedAt": "2025-01-31T15:17:28Z",
+    "url": "https://youtu.be/H_am4icAnR8"
+  },
+  {
     "videoId": "J-E-8eBxFaQ",
     "title": "cypress-magic-backend And Your Test Network Intercepts",
     "description": "This video shows how cypress-magic-backend synthetic backend works with your cy.intercept spies and stubs. In a nutshell: cypress-magic-backend is an \"intercept of the last resort\" that is applied last, after your cy.intercept calls are made. So you don't have to worry about it!",
