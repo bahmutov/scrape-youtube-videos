@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "IYehQYrMJUo",
+    "title": "Add Random Todo Example",
+    "description": "Using page object methods to add a todo item with a random title, while yielding both the title and the id to the next command. Important: if \"cy.then\" callback uses \"cy\" commands and a plain \"return\", then Cypress does not know which value to yield. So you need to use \"cy.wrap(...)\" instead of the return statement. See the code at https://github.com/bahmutov/todomvc-callback-example/pull/3/files",
+    "publishedAt": "2025-01-31T22:20:35Z",
+    "url": "https://youtu.be/IYehQYrMJUo"
+  },
+  {
     "videoId": "DrW6fptyjiE",
     "title": "Use Callbacks Or Command Chaining Or Cypress Aliases",
     "description": "This video shows how to connect utility page object methods to the rest of the testing code:\n- using a callback function (my least favorite method)\n- returning Cypress chain with the value (works pretty well)\n- saving value under a Cypress alias (works really well)\nFind the final source code and individual commits in the pull request https://github.com/bahmutov/todomvc-callback-example/pull/2\nFor more, read my blog posts https://glebbahmutov.com/blog/ and go through the Testing The Swag Store course at https://cypress.tips/courses",
