@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "MeN_LKH9CAI",
+    "title": "Control Data Randomness From The Test",
+    "description": "The simplest end-to-end Cypress tests are tests that control the data and remove all randomness. In this video, I show how to stub the \"Math.random\" method the application calls to get random item ids. By stubbing this method, the test forces the application to always create items with the same deterministic id. Checking if that item is shown in the DOM becomes declarative command, without any need for \"cy.then\" or aliases. Find the source code in the pull request https://github.com/bahmutov/todomvc-callback-example/pull/4",
+    "publishedAt": "2025-02-03T20:50:08Z",
+    "url": "https://youtu.be/MeN_LKH9CAI"
+  },
+  {
     "videoId": "IYehQYrMJUo",
     "title": "Add Random Todo Example",
     "description": "Using page object methods to add a todo item with a random title, while yielding both the title and the id to the next command. Important: if \"cy.then\" callback uses \"cy\" commands and a plain \"return\", then Cypress does not know which value to yield. So you need to use \"cy.wrap(...)\" instead of the return statement. See the code at https://github.com/bahmutov/todomvc-callback-example/pull/3/files",
