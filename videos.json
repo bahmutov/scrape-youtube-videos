@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "BdTbpmyNKW4",
+    "title": "Lesson 1 From \"99 Cypress.io Tips\" Course",
+    "description": "This video announces the new course by Filip Hric \"99 Cypress.io Tips\" available at https://filiphric.com/course/99-cypress-tips I then go through the code examples from the first lesson \"01: Use Should With A Callback\". Find my code at https://glebbahmutov.com/cypress-examples/#_99-cypress-tips",
+    "publishedAt": "2025-02-04T16:27:56Z",
+    "url": "https://youtu.be/BdTbpmyNKW4"
+  },
+  {
     "videoId": "MeN_LKH9CAI",
     "title": "Control Data Randomness From The Test",
     "description": "The simplest end-to-end Cypress tests are tests that control the data and remove all randomness. In this video, I show how to stub the \"Math.random\" method the application calls to get random item ids. By stubbing this method, the test forces the application to always create items with the same deterministic id. Checking if that item is shown in the DOM becomes declarative command, without any need for \"cy.then\" or aliases. Find the source code in the pull request https://github.com/bahmutov/todomvc-callback-example/pull/4",
