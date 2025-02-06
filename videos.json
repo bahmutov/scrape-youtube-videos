@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "lnehIEzJhlI",
+    "title": "Intro To The cypress-cli-select Plugin",
+    "description": "The plugin https://github.com/dennisbergevin/cypress-cli-select works together with plugin https://github.com/bahmutov/cy-grep to let you interactively pick the specs / test titles / test tags in your project. The example repo I used is https://github.com/bahmutov/cypress-grep-example",
+    "publishedAt": "2025-02-05T20:11:37Z",
+    "url": "https://youtu.be/lnehIEzJhlI"
+  },
+  {
     "videoId": "BdTbpmyNKW4",
     "title": "Lesson 1 From \"99 Cypress.io Tips\" Course",
     "description": "This video announces the new course by Filip Hric \"99 Cypress.io Tips\" available at https://filiphric.com/course/99-cypress-tips I then go through the code examples from the first lesson \"01: Use Should With A Callback\". Find my code at https://glebbahmutov.com/cypress-examples/#_99-cypress-tips",
