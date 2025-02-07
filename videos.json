@@ -1,5 +1,19 @@
 [
   {
+    "videoId": "1yPuK57Eqho",
+    "title": "Lesson 11: Check Multiple Links Quickly",
+    "description": "This video goes into checking multiple links using the cy.request command, following the example from the course \"99 Cypress.io Tips\" https://filiphric.com/course/99-cypress-tips Check the full example code at https://glebbahmutov.com/cypress-examples/#_99-cypress-tips",
+    "publishedAt": "2025-02-06T19:21:22Z",
+    "url": "https://youtu.be/1yPuK57Eqho"
+  },
+  {
+    "videoId": "u66poGcpyyQ",
+    "title": "cypress-plugin-grep-boxes Plugin Demo",
+    "description": "This video shows the plugin https://github.com/dennisbergevin/cypress-plugin-grep-boxes in action: pick the tests you want to run via checkboxes right in the Cypress UI 🎉 The example project I used is https://github.com/bahmutov/cypress-grep-example",
+    "publishedAt": "2025-02-06T14:36:25Z",
+    "url": "https://youtu.be/u66poGcpyyQ"
+  },
+  {
     "videoId": "lnehIEzJhlI",
     "title": "Intro To The cypress-cli-select Plugin",
     "description": "The plugin https://github.com/dennisbergevin/cypress-cli-select works together with plugin https://github.com/bahmutov/cy-grep to let you interactively pick the specs / test titles / test tags in your project. The example repo I used is https://github.com/bahmutov/cypress-grep-example",
