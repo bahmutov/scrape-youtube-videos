@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "R1u73hgA1_Q",
+    "title": "Chai Nested Property Assertion In Cypress",
+    "description": "This video shows a lesser known Chai assertion \"have.nested.property\" The assertion works very well with objects and arrays:\ncy.wrap({ name: { first: 'Joe' } })\n  .should('have.nested.property', 'name.first', 'Joe')\n// array example\ncy.wrap([\n  { sum: 42 },\n  { sum: 101 },\n  { sum: { errors: ['Invalid operation'] } },\n]).should(\n  'have.nested.property',\n  '2.sum.errors.0',\n  'Invalid operation',\n)\nThe code examples are at https://glebbahmutov.com/cypress-examples/recipes/lesser-known-chai-assertions.html",
+    "publishedAt": "2025-02-07T18:35:04Z",
+    "url": "https://youtu.be/R1u73hgA1_Q"
+  },
+  {
     "videoId": "1yPuK57Eqho",
     "title": "Lesson 11: Check Multiple Links Quickly",
     "description": "This video goes into checking multiple links using the cy.request command, following the example from the course \"99 Cypress.io Tips\" https://filiphric.com/course/99-cypress-tips Check the full example code at https://glebbahmutov.com/cypress-examples/#_99-cypress-tips",
