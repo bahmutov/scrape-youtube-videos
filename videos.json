@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "HHxkL-BPyjA",
+    "title": "The Possess Assertion From cypress-map Plugin",
+    "description": "This video shows how you can validate a complex object using the \"possess\" assertion from the plugin https://github.com/bahmutov/cypress-map Find the full source code at https://glebbahmutov.com/cypress-examples/recipes/dont-change-the-subject.html",
+    "publishedAt": "2025-02-08T19:58:53Z",
+    "url": "https://youtu.be/HHxkL-BPyjA"
+  },
+  {
     "videoId": "R1u73hgA1_Q",
     "title": "Chai Nested Property Assertion In Cypress",
     "description": "This video shows a lesser known Chai assertion \"have.nested.property\" The assertion works very well with objects and arrays:\ncy.wrap({ name: { first: 'Joe' } })\n  .should('have.nested.property', 'name.first', 'Joe')\n// array example\ncy.wrap([\n  { sum: 42 },\n  { sum: 101 },\n  { sum: { errors: ['Invalid operation'] } },\n]).should(\n  'have.nested.property',\n  '2.sum.errors.0',\n  'Invalid operation',\n)\nThe code examples are at https://glebbahmutov.com/cypress-examples/recipes/lesser-known-chai-assertions.html",
