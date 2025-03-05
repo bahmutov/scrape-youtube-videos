@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "BWkNZ3qQ7C8",
+    "title": "Test CSS Property :user-invalid Using Cypress E2E Test",
+    "description": "This video shows the new CSS property \":user-invalid\" that is available in the latest browsers. This property is turned on when the user has interacted with an input field, removed the focus, and the field does not pass its validations. \n- more about the CSS property at https://developer.mozilla.org/en-US/docs/Web/CSS/:user-invalid\n- this full example at https://glebbahmutov.com/cypress-examples/recipes/user-invalid-form-validation.html part of https://glebbahmutov.com/cypress-examples/\n- I used the \"cypress-real-events\" plugin to type into the field to trigger the CSS state https://github.com/dmtrKovalenko/cypress-real-events\n- to get the \"::before\" CSS object, I used helper queries from the https://github.com/bahmutov/cypress-map plugin",
+    "publishedAt": "2025-03-04T16:43:33Z",
+    "url": "https://youtu.be/BWkNZ3qQ7C8"
+  },
+  {
     "videoId": "HHxkL-BPyjA",
     "title": "The Possess Assertion From cypress-map Plugin",
     "description": "This video shows how you can validate a complex object using the \"possess\" assertion from the plugin https://github.com/bahmutov/cypress-map Find the full source code at https://glebbahmutov.com/cypress-examples/recipes/dont-change-the-subject.html",
