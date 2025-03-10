@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "TxCB1QDw6qY",
+    "title": "Cypress Custom Commands With Multiple DOM Snapshots",
+    "description": "This video shows how to write Cypress custom commands with multiple DOM snapshots showing the app in different stages. We will use \"Cypress.log\" to create a log instance and then call \"log.snapshot\" to create instant DOM snapshots. Two things to remember:\n- log.snapshot is a synchronous method call, so we want to make sure it runs after the previous Cypress command finishes. Use \"cy.then(callback)\" for this\n- call log.end to signal the official end to the custom command logging\nFind the full recipe at https://glebbahmutov.com/cypress-examples/",
+    "publishedAt": "2025-03-09T20:11:37Z",
+    "url": "https://youtu.be/TxCB1QDw6qY"
+  },
+  {
     "videoId": "BWkNZ3qQ7C8",
     "title": "Test CSS Property :user-invalid Using Cypress E2E Test",
     "description": "This video shows the new CSS property \":user-invalid\" that is available in the latest browsers. This property is turned on when the user has interacted with an input field, removed the focus, and the field does not pass its validations. \n- more about the CSS property at https://developer.mozilla.org/en-US/docs/Web/CSS/:user-invalid\n- this full example at https://glebbahmutov.com/cypress-examples/recipes/user-invalid-form-validation.html part of https://glebbahmutov.com/cypress-examples/\n- I used the \"cypress-real-events\" plugin to type into the field to trigger the CSS state https://github.com/dmtrKovalenko/cypress-real-events\n- to get the \"::before\" CSS object, I used helper queries from the https://github.com/bahmutov/cypress-map plugin",
