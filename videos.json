@@ -1,5 +1,19 @@
 [
   {
+    "videoId": "3x4rZaoBuUQ",
+    "title": "Cypress realHover Vs jQuery Show Method",
+    "description": "If you need to click on an element that becomes visible on hover, you can either use the \"cy.realHover\" native command from the plugin https://github.com/dmtrKovalenko/cypress-real-events or call the jQuery \"show\" method to make the element visible and clickable.",
+    "publishedAt": "2025-03-11T19:00:44Z",
+    "url": "https://youtu.be/3x4rZaoBuUQ"
+  },
+  {
+    "videoId": "AzJx-8VD6yI",
+    "title": "Custom Should Read Assertion From Cypress-map Plugin",
+    "description": "This video shows a custom \"read\" assertion that checks the text of a single or multiple elements using strings or regular expressions:\ncy.get('li').should('read', [\n  'Write code',\n  'Add tests',\n  /^Pay \\$\\d+ fine$/,\n])\nThe assertion is part of my \"cypress-map\" plugin https://github.com/bahmutov/cypress-map and the full recipe I am showing in this video is at https://glebbahmutov.com/cypress-examples/recipes/should-read.html",
+    "publishedAt": "2025-03-11T15:38:52Z",
+    "url": "https://youtu.be/AzJx-8VD6yI"
+  },
+  {
     "videoId": "TxCB1QDw6qY",
     "title": "Cypress Custom Commands With Multiple DOM Snapshots",
     "description": "This video shows how to write Cypress custom commands with multiple DOM snapshots showing the app in different stages. We will use \"Cypress.log\" to create a log instance and then call \"log.snapshot\" to create instant DOM snapshots. Two things to remember:\n- log.snapshot is a synchronous method call, so we want to make sure it runs after the previous Cypress command finishes. Use \"cy.then(callback)\" for this\n- call log.end to signal the official end to the custom command logging\nFind the full recipe at https://glebbahmutov.com/cypress-examples/",
