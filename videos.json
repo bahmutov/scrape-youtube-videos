@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "rss6trsE2tA",
+    "title": "cypress-plugin-steps Demo",
+    "description": "This video shows the plugin https://www.npmjs.com/package/cypress-plugin-steps in action: installation, defining sections and steps, and how the plugin shows the steps in the Command Log. Bonus: the plugin adds text with the completed steps to the error message if the test fails. Plugin made by @filip_hric",
+    "publishedAt": "2025-03-13T17:40:26Z",
+    "url": "https://youtu.be/rss6trsE2tA"
+  },
+  {
     "videoId": "3x4rZaoBuUQ",
     "title": "Cypress realHover Vs jQuery Show Method",
     "description": "If you need to click on an element that becomes visible on hover, you can either use the \"cy.realHover\" native command from the plugin https://github.com/dmtrKovalenko/cypress-real-events or call the jQuery \"show\" method to make the element visible and clickable.",
