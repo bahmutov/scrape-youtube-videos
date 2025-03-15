@@ -1,8 +1,15 @@
 [
   {
+    "videoId": "ZenyLL7hUSg",
+    "title": "Use Cypress Network Stub With TanStack Router",
+    "description": "This video shows how you can use Cypress E2E test and cy.intercept network stub to supply data to the TanStack Router component. Such test avoids a need for a separate \"local API\" server. Find more such tests for this application at https://github.com/bahmutov/my-router-app and more Cypress network testing lessons in my course https://cypress.tips/courses/network-testing",
+    "publishedAt": "2025-03-14T14:38:36Z",
+    "url": "https://youtu.be/ZenyLL7hUSg"
+  },
+  {
     "videoId": "rss6trsE2tA",
     "title": "cypress-plugin-steps Demo",
-    "description": "This video shows the plugin https://www.npmjs.com/package/cypress-plugin-steps in action: installation, defining sections and steps, and how the plugin shows the steps in the Command Log. Bonus: the plugin adds text with the completed steps to the error message if the test fails. Plugin made by @filip_hric",
+    "description": "This video shows the plugin https://www.npmjs.com/package/cypress-plugin-steps in action: installation, defining sections and steps, and how the plugin shows the steps in the Command Log. Bonus: the plugin adds text with the completed steps to the error message if the test fails. Plugin made by @filip_hric For more videos on Cypress plugins, check out my course https://cypress.tips/courses/cypress-plugins",
     "publishedAt": "2025-03-13T17:40:26Z",
     "url": "https://youtu.be/rss6trsE2tA"
   },
