@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "bkCh7KNuq3U",
+    "title": "Stub The Method That Returns The Data To TanStack Router",
+    "description": "Cypress E2E tests can mock network calls or method calls, as long as we have the reference to the object being called. In this example, I mock the \"EmployeesAPI.get\" method my route component is making to load a list of employees. Find the full source code in the repo https://github.com/bahmutov/my-router-app and see more \"cy.stub\" examples at https://glebbahmutov.com/cypress-examples/commands/spies-stubs-clocks.html",
+    "publishedAt": "2025-03-14T15:04:56Z",
+    "url": "https://youtu.be/bkCh7KNuq3U"
+  },
+  {
     "videoId": "ZenyLL7hUSg",
     "title": "Use Cypress Network Stub With TanStack Router",
     "description": "This video shows how you can use Cypress E2E test and cy.intercept network stub to supply data to the TanStack Router component. Such test avoids a need for a separate \"local API\" server. Find more such tests for this application at https://github.com/bahmutov/my-router-app and more Cypress network testing lessons in my course https://cypress.tips/courses/network-testing",
