@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "vhk4pgWrTPc",
+    "title": "Testing The TanStack Router \"Stale Then Revalidate\" Fetching Using Cypress",
+    "description": "This video show how you can confirm that the Tanstack Router is showing the stale data for a route component while fetching the new data from the server. Find the full source code at https://github.com/bahmutov/my-router-app and if you want to practice Cypress network testing commands, check out my online course https://cypress.tips/courses/network-testing",
+    "publishedAt": "2025-03-14T18:05:58Z",
+    "url": "https://youtu.be/vhk4pgWrTPc"
+  },
+  {
     "videoId": "bkCh7KNuq3U",
     "title": "Stub The Method That Returns The Data To TanStack Router",
     "description": "Cypress E2E tests can mock network calls or method calls, as long as we have the reference to the object being called. In this example, I mock the \"EmployeesAPI.get\" method my route component is making to load a list of employees. Find the full source code in the repo https://github.com/bahmutov/my-router-app and see more \"cy.stub\" examples at https://glebbahmutov.com/cypress-examples/commands/spies-stubs-clocks.html",
