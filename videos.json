@@ -1,5 +1,19 @@
 [
   {
+    "videoId": "jg0th7iOaOY",
+    "title": "Testing Data Preload In TanStack Router",
+    "description": "TanStack router preloads the component's data by default when the user hovers over the link to the component. This test confirms the network request on hover. Find the full source code in https://github.com/bahmutov/my-router-app",
+    "publishedAt": "2025-03-17T14:59:27Z",
+    "url": "https://youtu.be/jg0th7iOaOY"
+  },
+  {
+    "videoId": "49Aarc6eprQ",
+    "title": "Test How TanStack Router Refreshes Stale Data",
+    "description": "This video shows an E2E Cypress test that confirms that TanStack router does not request the data update if the data has been fetched within its \"staleTime\" parameter. The test also confirms that if the data is older than the \"staleTime\" parameter, TanStack makes a network call to refresh it. Tip: we use cy.clock and cy.tick commands to fast forward the application clock to make the test run within 1 second. Find the test at https://github.com/bahmutov/my-router-app and more Cypress network testing examples in my course https://cypress.tips/courses/network-testing",
+    "publishedAt": "2025-03-15T14:54:09Z",
+    "url": "https://youtu.be/49Aarc6eprQ"
+  },
+  {
     "videoId": "vhk4pgWrTPc",
     "title": "Testing The TanStack Router \"Stale Then Revalidate\" Fetching Using Cypress",
     "description": "This video show how you can confirm that the Tanstack Router is showing the stale data for a route component while fetching the new data from the server. Find the full source code at https://github.com/bahmutov/my-router-app and if you want to practice Cypress network testing commands, check out my online course https://cypress.tips/courses/network-testing",
