@@ -1,5 +1,19 @@
 [
   {
+    "videoId": "JXM5ei6d8DI",
+    "title": "GitHub Copilot Vs Cursor AI: Change Comments Into Commands Example",
+    "description": "In this video I am showing how VSCode GH Copilot helps me modify several comments into log calls. Then I show the same refactoring using Cursor AI. What we want to do in the spec file is change each comment into a cy.log command:\n// comment here\ncy.log(\"comment here\")\nGH Copilot does not really help, while Cursor AI makes this transformation super quick. I plan to look into Cursor AI in the future, so stay tuned:\n- https://www.youtube.com/glebbahmutov\n- https://linkedin.com/in/bahmutov\n- https://bsky.app/profile/bahmutov.bsky.social\n- https://cypress.tips/courses",
+    "publishedAt": "2025-03-21T17:08:55Z",
+    "url": "https://youtu.be/JXM5ei6d8DI"
+  },
+  {
+    "videoId": "ebVbam8Mzzw",
+    "title": "Testing Nested TanStack Route",
+    "description": "This video shows how one can test a nested route in TanStack using the same fixture data. We can define multiple Cypress intercepts, one to load the entire list, another to load a particular object. Find the full source code at https://github.com/bahmutov/my-router-app",
+    "publishedAt": "2025-03-18T19:37:40Z",
+    "url": "https://youtu.be/ebVbam8Mzzw"
+  },
+  {
     "videoId": "jg0th7iOaOY",
     "title": "Testing Data Preload In TanStack Router",
     "description": "TanStack router preloads the component's data by default when the user hovers over the link to the component. This test confirms the network request on hover. Find the full source code in https://github.com/bahmutov/my-router-app",
