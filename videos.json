@@ -51,7 +51,7 @@
   {
     "videoId": "rss6trsE2tA",
     "title": "cypress-plugin-steps Demo",
-    "description": "This video shows the plugin https://www.npmjs.com/package/cypress-plugin-steps in action: installation, defining sections and steps, and how the plugin shows the steps in the Command Log. Bonus: the plugin adds text with the completed steps to the error message if the test fails. Plugin made by @filip_hric For more videos on Cypress plugins, check out my course https://cypress.tips/courses/cypress-plugins",
+    "description": "This video shows the plugin https://www.npmjs.com/package/cypress-plugin-steps in action: installation, defining sections and steps, and how the plugin shows the steps in the Command Log. Bonus: the plugin adds text with the completed steps to the error message if the test fails. Plugin made by @filip_hric For more about this plugin, read the blog post \"Cypress Steps Plugin\" https://glebbahmutov.com/blog/cypress-steps-plugin/ For more videos on Cypress plugins, check out my course https://cypress.tips/courses/cypress-plugins",
     "publishedAt": "2025-03-13T17:40:26Z",
     "url": "https://youtu.be/rss6trsE2tA"
   },
