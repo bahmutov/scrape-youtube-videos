@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "AgQS9Pcneto",
+    "title": "99% Code Coverage In 9 Minutes",
+    "description": "This video shows how I combine plugins https://github.com/bahmutov/cypress-code-coverage and https://github.com/bahmutov/cypress-rest-easy to instrument an app on the fly and write Cypress tests following the code coverage report. Cursor IDE provides a boost of speed by correctly inferring the tests I want to write. Find the full source code in the repo https://github.com/bahmutov/called-urls-examples/tree/demo-cc. Find an entire course on writing Cypress tests using Cursor at my site https://cypress.tips/courses",
+    "publishedAt": "2025-04-02T17:50:57Z",
+    "url": "https://youtu.be/AgQS9Pcneto"
+  },
+  {
     "videoId": "kbLHAc6VeFA",
     "title": "cypress-rest-easy Plugin Introduction",
     "description": "This video shows the cypress-rest-easy plugin in action, serving a mock REST api right inside a Cypress end-to-end test. Find the plugin at https://github.com/bahmutov/cypress-rest-easy and a blog post about it at https://glebbahmutov.com/blog/rest-easy/",
