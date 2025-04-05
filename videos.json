@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "V0lBxg-1kSg",
+    "title": "Add Number Of Team Players Cypress Plus Cursor Example",
+    "description": "In this video, I add a small feature to my \"Gametime\" application using Cypress test-driven development and Cursor AI. Find the pull request at https://github.com/bahmutov/gametime/pull/34 If you want to learn \"Cypress + Cursor\", check out my online course at https://cypress.tips/courses",
+    "publishedAt": "2025-04-04T14:05:57Z",
+    "url": "https://youtu.be/V0lBxg-1kSg"
+  },
+  {
     "videoId": "AgQS9Pcneto",
     "title": "99% Code Coverage In 9 Minutes",
     "description": "This video shows how I combine plugins https://github.com/bahmutov/cypress-code-coverage and https://github.com/bahmutov/cypress-rest-easy to instrument an app on the fly and write Cypress tests following the code coverage report. Cursor IDE provides a boost of speed by correctly inferring the tests I want to write. Find the full source code in the repo https://github.com/bahmutov/called-urls-examples/tree/demo-cc. Find an entire course on writing Cypress tests using Cursor at my site https://cypress.tips/courses",
