@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "GuOflMp0oK4",
+    "title": "Demo Of The New cy.press Command In Cypress v14.3.0",
+    "description": "Cypress v14.3.0 includes the new cy.press command that send the native \"Tab\" key press to the window and lets you navigate the DOM elements in the \"tabindex\" order. In this video, I write a Cypress test that fills the login form using \"cy.press\" and \"should be focused\" assertions. \n- source code at https://github.com/bahmutov/cypress-press-example\n- Cursor and network testing courses at https://cypress.tips/courses",
+    "publishedAt": "2025-04-09T22:01:49Z",
+    "url": "https://youtu.be/GuOflMp0oK4"
+  },
+  {
     "videoId": "V0lBxg-1kSg",
     "title": "Add Number Of Team Players Cypress Plus Cursor Example",
     "description": "In this video, I add a small feature to my \"Gametime\" application using Cypress test-driven development and Cursor AI. Find the pull request at https://github.com/bahmutov/gametime/pull/34 If you want to learn \"Cypress + Cursor\", check out my online course at https://cypress.tips/courses",
