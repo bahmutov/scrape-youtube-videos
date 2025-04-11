@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "JbE315rKjps",
+    "title": "GitHub Copilot Agent Mode",
+    "description": "This video shows code and Cypress test refactoring across multiple files using the GitHub Copilot experimental Agent mode. Find more \"Cypress and Copilot\" information and lessons in my course at https://cypress.tips/courses",
+    "publishedAt": "2025-04-10T20:32:13Z",
+    "url": "https://youtu.be/JbE315rKjps"
+  },
+  {
     "videoId": "GuOflMp0oK4",
     "title": "Demo Of The New cy.press Command In Cypress v14.3.0",
     "description": "Cypress v14.3.0 includes the new cy.press command that send the native \"Tab\" key press to the window and lets you navigate the DOM elements in the \"tabindex\" order. In this video, I write a Cypress test that fills the login form using \"cy.press\" and \"should be focused\" assertions. \n- source code at https://github.com/bahmutov/cypress-press-example\n- Cursor and network testing courses at https://cypress.tips/courses",
